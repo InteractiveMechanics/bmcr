@@ -34,6 +34,7 @@ function create_response() {
             'menu_position' => 15,
             'supports' => array( 'title', 'editor', 'author', 'revisions', 'excerpt', 'comments', 'thumbnail', 'custom-fields' ),
             'rewrite'     => array( 'slug' => 'response' ), // my custom slug
+            'taxonomies' => array( 'post_tag' ),
             'has_archive' => true
         )
     );
