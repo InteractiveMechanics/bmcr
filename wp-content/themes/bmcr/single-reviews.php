@@ -24,26 +24,35 @@
 <main>
 	
 	<article id="post-<?php the_ID(); ?>">
+		
+		<div class="entry-header">
 	
-		<small>BMCR <?php echo $bmcr_id; ?></small>
-		
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-		
-		<p><?php echo $citation; ?></p>
-		
-		<?php if ($book_preview): ?>
-		
-			<a href="<?php echo $book_preview; ?>" target="_blank">Book Preview</a>
+			<small>BMCR <?php echo $bmcr_id; ?></small>
 			
-		<?php endif; ?>
+			<h1 class="entry-title"><?php the_title(); ?></h1>
+			
+			<p><?php echo $citation; ?></p>
+			
+			<?php if ($book_preview): ?>
+			
+				<a href="<?php echo $book_preview; ?>" target="_blank">Book Preview</a>
+				
+			<?php endif; ?>
+			
+			<?php if ($purchase_book): ?>
+			
+				<a href="<?php echo $purchase_book; ?>" target="_blank">Purchase Book</a>
+			
+			<?php endif; ?>
+			
+			<?php if (get_field('relationships')): ?>
+			
+			<a href="#responses"><p><?php echo $relationship_count = count(get_field('relationships')); ?> Responses</p></a>
+			
+			<?php endif; ?>
 		
-		<?php if ($purchase_book): ?>
+		</div>
 		
-			<a href="<?php echo $purchase_book; ?>" target="_blank">Purchase Book</a>
-		
-		<?php endif; ?>
-		
-		<!--TODO: sort out how to include responses-->
 		
 		<div class="entry-meta">
 			
@@ -95,7 +104,7 @@
 			
 		</aside>
 		
-		<aside>
+		<aside id="responses">
 			<h2>Responses</h2>
 			<small><a href="#">Response Guidelines</a></small>
 			<small><a href="#">Submit a Response</a></small>
@@ -120,10 +129,7 @@
 				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 			<?php endif; ?>
 			
-			<?php //TODO: configure responses ??>
-			
-			
-			
+					
 		
 		</aside>
 		
