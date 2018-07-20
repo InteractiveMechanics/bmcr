@@ -84,6 +84,7 @@
 				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 				        <?php setup_postdata($post); ?>
 				        <li>
+				        	<?php //TODO Configure custom fields for related publications ?>
 				            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 				        </li>
 				    <?php endforeach; ?>
@@ -96,8 +97,30 @@
 		
 		<aside>
 			<h2>Responses</h2>
+			<small><a href="#">Response Guidelines</a></small>
+			<small><a href="#">Submit a Response</a></small>
 			
+			<?php 
+
+				$posts = get_field('relationships');
+				
+				if( $posts ): ?>
+				    <div>
+				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+				        <?php setup_postdata($post); ?>
+				        <div>
+				            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+				            <p>Original Review by</p>
+				            <p>Response by</p>
+				    
+				            
+				        </div>
+				    <?php endforeach; ?>
+				    </div>
+				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+			<?php endif; ?>
 			
+			<?php //TODO: configure responses ??>
 			
 			
 			
