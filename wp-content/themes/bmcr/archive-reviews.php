@@ -78,11 +78,9 @@ get_header(); ?>
 		get_template_part( 'template-parts/content', 'none' );
 		
 	
-	<?php endif; ?>
+	endif; ?>
 
-			
-	<?php endif; ?>	
-
+		
 </main>
 
 <?php get_footer(); ?>
