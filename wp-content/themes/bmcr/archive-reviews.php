@@ -24,7 +24,8 @@ get_header(); ?>
 			
 			
 			<?php while ( have_posts() ) :  the_post();
-				$post_id = get_the_ID(); 
+				$post_id = get_the_ID();
+				$bmcr_id = get_field('bmcr_id', $post_id); 
 				$isbn = get_field('isbn', $post_id);
 				$book_author = get_field('book_author', $post_id);
 				$publisher = get_field('publisher', $post_id);
@@ -33,6 +34,7 @@ get_header(); ?>
 				
 			?>
 
+				<h5>BMCR <?php echo $bmcr_id; ?></h5>
 				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 				<p><?php echo $book_author; ?></p>
 				<p>
