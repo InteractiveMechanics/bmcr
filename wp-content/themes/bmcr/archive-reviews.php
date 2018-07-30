@@ -13,7 +13,7 @@ get_header(); ?>
 	<?php if ( have_posts() ) : ?>
 
 			<div class="page-header">
-				<h1>Available Books</h1>
+				<h1 class="page-title">Available Books</h1>
 				<ul>
 					<li><a href="">All</a>
 					<li><a href="">Author</a></li>
@@ -72,6 +72,13 @@ get_header(); ?>
 				<p><a href="#">Apply to review this book</a></p>
 
 			<?php endwhile; ?>
+			
+	<?php else: 
+	
+		get_template_part( 'template-parts/content', 'none' );
+		
+	
+	<?php endif; ?>
 
 			
 	<?php endif; ?>	

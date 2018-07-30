@@ -13,7 +13,7 @@ get_header(); ?>
 	<?php if ( have_posts() ) : ?>
 	
 		<div class="page-header">
-			<h1>Publications</h1>
+			<h1 class="page-title">Publications</h1>
 			
 			<ul>
 				<li><a href="">All</a></li>
@@ -36,6 +36,11 @@ get_header(); ?>
 			<p>By Still Have to Sort out Author Data</p>		
 		
 		<?php endwhile; ?>
+	
+	
+	<?php else: 
+	
+		get_template_part( 'template-parts/content', 'none' );
 		
 	
 	<?php endif; ?>
