@@ -17,6 +17,7 @@ get_header(); ?>
 				<ul>
 					<li><a href="">All</a>
 					<li><a href="">Author</a></li>
+					<li><a href="">Subject</a></li>
 									
 			</div><!-- .page-header -->
 			
@@ -28,12 +29,18 @@ get_header(); ?>
 				$book_author = get_field('book_author', $post_id);
 				$publisher = get_field('publisher', $post_id);
 				$pub_date = get_field('pub_date', $post_id);
+				$pub_location = get_field('pub_location', $post_id);
 				
 			?>
 
 				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 				<p><?php echo $book_author; ?></p>
 				<p>
+					<?php if ($pub_location): ?>
+						<?php echo $pub_location . "; "; ?>
+					<?php endif; ?>
+					
+					
 					<?php if ($publisher): ?>
 					
 						<?php echo $publisher; ?>;
