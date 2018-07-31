@@ -49,7 +49,7 @@ get_header();
 	<div class="recent-posts">
 		<h2>Recent Publications</h2>
 		
-	<ul>
+	<div>
 	<?php
 		$args = array(
 			'numberposts' => 20,
@@ -64,18 +64,41 @@ get_header();
 	
 		foreach( $recent_posts as $recent ): 
 			$pub_id = get_field('bmcr_id', $recent['ID']);
+			$post_type = get_post_type($recent['ID']);
+			$publisher = get_field('publisher', $recent['ID']);
+			$pub_date = get_field('pub_date', $recent['ID']);
+			
 		
 		?>
+		
+			<?php if ($post_type == 'reviews'): ?>
 			
 			
-		<li>BMCR <?php echo $pub_id; ?> <a href="<?php echo get_permalink($recent['ID']); ?>"><?php echo $recent["post_title"] ?></a></li>
+			<div>
+				<?php
+					$post = $recent['ID']; 
+					setup_postdata( $post );
+					get_template_part( 'template-parts/content', 'referencereview' );
+					wp_reset_postdata(); 		
+				?>
+			</div>
+				
+			<?php elseif ($post_type == 'articles'): ?>
+			
+			<li>BMCR <?php echo $pub_id; ?> <a href="<?php echo get_permalink($recent['ID']); ?>"><?php echo $recent["post_title"] ?></a></li>
+			
+			<?php elseif ($post_type == 'responses'): ?>
+
+			<li>BMCR <?php echo $pub_id; ?> <a href="<?php echo get_permalink($recent['ID']); ?>"><?php echo $recent["post_title"] ?></a></li>
+			
+			<?php endif; ?>
 		
 	
 		<?php endforeach; 	
 		
 		wp_reset_query(); ?>
 
-	</ul>
+	</div>
 	</div>
 	
 		
