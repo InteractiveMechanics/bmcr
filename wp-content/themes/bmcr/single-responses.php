@@ -19,7 +19,10 @@
 			
 		<?php 
 
+			//if the response refers to a review
 			$posts = get_field('relationships');
+			//if thre response refers to another response
+			$responses = get_field('response_relationships');
 
 			if( $posts ): ?>
 			
@@ -27,8 +30,31 @@
 		
 					<h1 class="entry-title">Response: <?php the_title(); ?>. Response to <a href="<?php echo get_the_permalink($p->ID); ?>"><?php echo the_field('bmcr_id', $p->ID); ?></a></h1>
 			
-				<?php endforeach; ?>
-			<?php endif; ?>
+				<?php endforeach; 
+			
+			elseif ( $responses ):
+			
+				foreach( $responses as $r ): // variable must NOT be called $post (IMPORTANT) ?>
+		
+					<h1 class="entry-title">Response: <?php the_title(); ?>. Response to <a href="<?php echo get_the_permalink($r->ID); ?>"><?php echo the_field('bmcr_id', $r->ID); ?></a></h1>
+			
+				<?php endforeach; 
+
+			endif;
+				 
+					
+		?>
+		
+		
+		
+		<?php if (get_field('response_relationships') && get_field('relationships') ): ?>
+			
+			<a href="#responses"><p><?php echo $relationship_count = count(get_field('response_relationships')); ?> Responses</p></a>
+			
+		<?php endif; ?>
+			
+			
+			
 		
 		
 		</div>
@@ -84,6 +110,35 @@
 			<?php endif; ?>
 			
 		</aside>
+		
+		<aside id="responses">
+			<h2>Responses</h2>
+			<small><a href="#">Response Guidelines</a></small>
+			<small><a href="#">Submit a Response</a></small>
+			
+			<?php 
+
+				$posts = get_field('response_relationships');
+				
+				if( get_field('response_relationships') && get_field('relationships') ): ?>
+				    <div>
+				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+				        <?php setup_postdata($post); ?>
+				        <div>
+				            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+				            <p>Response by</p>
+				    
+				            
+				        </div>
+				    <?php endforeach; ?>
+				    </div>
+				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+			<?php endif; ?>
+			
+					
+		
+		</aside>
+
 		
 				
 		<aside>

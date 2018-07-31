@@ -216,6 +216,7 @@ function bidirectional_acf_update_value( $value, $post_id, $field  ) {
 add_filter('acf/update_value/name=relationships', 'bidirectional_acf_update_value', 10, 3);
 
 
+
 /**
  * Enqueue scripts and styles.
  */
