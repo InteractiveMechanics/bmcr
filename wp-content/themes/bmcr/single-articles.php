@@ -45,11 +45,6 @@
 		
 		<div class="entry-footer">
 			
-			<?php
-				if(get_the_tag_list()) {
-				echo get_the_tag_list('<ul><li>','</li><li>','</li></ul>');
-				}
-			?>
 			
 		</div>
 			
