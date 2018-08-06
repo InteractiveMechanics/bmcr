@@ -85,12 +85,29 @@ get_header();
 				
 			<?php elseif ($post_type == 'articles'): ?>
 			
-			<li>BMCR <?php echo $pub_id; ?> <a href="<?php echo get_permalink($recent['ID']); ?>"><?php echo $recent["post_title"] ?></a></li>
+			<div>
+				<?php
+					$post = $recent['ID']; 
+					setup_postdata( $post );
+					get_template_part( 'template-parts/content', 'referencearticle' );
+					wp_reset_postdata(); 		
+				?>
+			</div>
 			
+						
 			<?php elseif ($post_type == 'responses'): ?>
 
-			<li>BMCR <?php echo $pub_id; ?> <a href="<?php echo get_permalink($recent['ID']); ?>"><?php echo $recent["post_title"] ?></a></li>
-			
+			<div>
+				<?php
+					$post = $recent['ID']; 
+					setup_postdata( $post );
+					get_template_part( 'template-parts/content', 'referenceresponse' );
+					wp_reset_postdata(); 		
+				?>
+			</div>
+
+
+						
 			<?php endif; ?>
 		
 	
