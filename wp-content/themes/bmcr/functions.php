@@ -117,6 +117,17 @@ function bmcr_widgets_init() {
 add_action( 'widgets_init', 'bmcr_widgets_init' );
 
 
+
+add_action( 'pre_get_posts', 'add_custom_post_types_to_loop' );
+
+function add_custom_post_types_to_loop( $query ) {
+	if ( is_home() || $query->is_main_query() )
+		$query->set( 'post_type', array( 'post', 'articles', 'reviews', 'responses' ) );
+	return $query;
+}
+
+
+
 // enables relationships field to update between CPTs; that is, if a response is connected to a review, it will automatically update on the review's record and vice versa
 function bidirectional_acf_update_value( $value, $post_id, $field  ) {
 	
