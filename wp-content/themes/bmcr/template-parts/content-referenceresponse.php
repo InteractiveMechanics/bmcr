@@ -20,5 +20,5 @@
 		endif; 
 	
 	?>
-	Authors Name | Response by Reviewer's name
+	Authors Name | Response by <?php the_author(); ?>
 </p>		

@@ -10,6 +10,7 @@
 <?php get_header(); ?>
 
 <?php while ( have_posts() ) : the_post();
+	$author_id =  get_the_author_meta('ID');
 ?>
 
 <main>
@@ -28,9 +29,9 @@
 		
 		<div class="entry-meta">
 			
-			<h4>Article by Sort out What is Happening with Article Authors</h4>
+			<h4>Article by <?php the_author(); ?></h4>
 			
-			<h4>Affiliation, <a href="mailto:someone@example.com" target="_top">email address</a></h4>
+			<h4><?php the_author_meta('description'); ?>, <a href="mailto:<?php the_author_meta('user_email', $author_id); ?>" target="_top"><?php the_author_meta('user_email', $author_id); ?></a></h4>
 			
 			<h4><?php the_date(); ?></h4>
 		

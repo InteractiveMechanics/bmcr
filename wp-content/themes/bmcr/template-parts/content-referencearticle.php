@@ -5,4 +5,4 @@
 
 <small>BMCR <?php echo $bmcr_id; ?></small> 
 <p><a href="<?php echo get_permalink(); ?>"><?php echo the_title(); ?></a></p>
-<p>By Author Data goes here</p>		
+<p>By <?php the_author(); ?></p>		
