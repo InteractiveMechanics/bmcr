@@ -97,13 +97,27 @@
 
 				if( $posts ): ?>
 				    <ul>
-				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-				        <?php setup_postdata($post); ?>
-				        <li>
-				        	<?php //TODO Configure custom fields for related publications ?>
-				            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-				        </li>
-				    <?php endforeach; ?>
+					  <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+				        <?php setup_postdata($post);
+				        
+				        	 
+						$post_type = get_post_type( $post->ID ); if ($post_type == 'reviews'):
+						 
+						get_template_part( 'template-parts/content', 'referencereview' );
+						
+						elseif ($post_type == 'articles'):
+						
+						get_template_part( 'template-parts/content', 'referencearticle' );
+						
+						else:
+						
+						get_template_part( 'template-parts/content', 'referenceresponse' );
+						
+						endif;
+
+	      
+					endforeach; ?>
+
 				    </ul>
 				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 				    
@@ -122,15 +136,12 @@
 				
 				if( get_field('response_relationships') && get_field('relationships') ): ?>
 				    <div>
-				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-				        <?php setup_postdata($post); ?>
-				        <div>
-				            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-				            <p>Response by</p>
-				    
-				            
-				        </div>
-				    <?php endforeach; ?>
+				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) 
+				       
+				       get_template_part( 'template-parts/content', 'referenceresponse' );
+
+				       
+				    endforeach; ?>
 				    </div>
 				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 			<?php endif; ?>
