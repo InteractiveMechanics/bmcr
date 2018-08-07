@@ -1,0 +1,65 @@
+#capabilities_wrapper {
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#capabilities_wrapper h4 {
+    color: #333333;
+    line-height: 1.3em;
+    font-size: 13px;
+    border-bottom: 3px solid #655997;
+    text-align: left;
+    padding: 0 0 8px 8px;
+    font-weight: bold;
+}
+
+#capabilities_groups,
+#capabilities_fields {
+    padding: 0 1%;
+}
+
+#capabilities_groups ul,
+#capabilities_fields ul {
+    background: #ffffff;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#capabilities_groups {
+    position: relative;
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+
+#capabilities_fields {
+    position: relative;
+    float: right;
+    width: 65%;
+    height: 100%;
+    border-left: 3px solid #f1f1f1;
+}
+
+#capabilities_groups li {
+    cursor: pointer;
+    height: 35px;
+    background: #f6f6f6;
+    box-sizing: border-box;
+    padding: 8px 10px;
+}
+
+#capabilities_groups li span{
+    color: #d9d9d9;
+    float: right;
+}
+
+#capabilities_groups li.selected {
+    font-weight: bold;
+    background: #eaeaea;
+}
+
+#capabilities_groups li.selected span {
+    color: #818181;
+}

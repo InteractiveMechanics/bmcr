@@ -1,0 +1,70 @@
+<form action="{{ form_action }}"
+      method="post"
+      id="managecapabilities"
+      name="managecapabilities">
+
+    <div class="wrap">
+        <div>
+            <ul class="subsubsub">
+                {% for i, role in roles %}
+                    {% if i > 0 %}
+                        &nbsp;|&nbsp;
+                    {% endif %}
+
+                    <li class="role.name">
+                        <a href="admin.php?page=pp-manage-capabilities&role={{ role.name }}"
+                           class="{{ (current_role == role.name) ? 'current' : '' }}"
+                           aria-current="page"
+                           title="{{ role.name }}">
+
+                            {{ role.display_name }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <br clear="both"/>
+
+        <div id="capabilities_wrapper">
+            <div id="capabilities_groups">
+                <h4>{{ labels.groups }}</h4>
+
+                <ul class="groups">
+                    {% for group, label in groups %}
+                        <li data-group="{{ group }}" class="{{ (group == 'publishpress') ? 'selected' : '' }}">
+                            <a href="#" data-group="{{ group }}">{{ label }}</a>
+                            <span class="dashicons dashicons-arrow-right-alt2"></span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div id="capabilities_fields">
+                <h4>{{ labels.permissions }}</h4>
+
+                <ul class="capabilities">
+                    <li class="loading"><span class="dashicons dashicons-update"></span>&nbsp;{{ labels.loading }}</li>
+                    {% for capability, data in capabilities %}
+                        <li class="{{ data.groups|join(' ') }}" style="display: none;">
+                            <input type="checkbox"
+                                   id="capability_{{ capability }}"
+                                   name="capabilities[{{ capability }}]"
+                                   value="1"
+                                    {{ (capability in current_capabilities) ? 'checked' : '' }}/>
+
+                            <label for="capability_{{ capability }}">{{ data.label }}</label>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    {{ nonce_field('manage_capabilities')|raw }}
+    <input type="hidden" name="action" value="save"/>
+
+    {{ submit_button()|raw }}
+</form>
+
+

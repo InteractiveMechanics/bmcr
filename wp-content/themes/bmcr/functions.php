@@ -121,7 +121,7 @@ add_action( 'widgets_init', 'bmcr_widgets_init' );
 add_action( 'pre_get_posts', 'add_custom_post_types_to_loop' );
 
 function add_custom_post_types_to_loop( $query ) {
-	if ( is_home() || is_archive() && $query->is_main_query() )
+	if ( $query->is_front_page() && $query->is_main_query() || $query->is_home() && $query->is_main_query() )
 		$query->set( 'post_type', array( 'post', 'page', 'articles', 'reviews', 'responses' ) );
 	return $query;
 }

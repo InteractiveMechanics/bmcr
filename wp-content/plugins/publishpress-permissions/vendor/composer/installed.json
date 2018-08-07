@@ -1,0 +1,200 @@
+[
+    {
+        "name": "pimple/pimple",
+        "version": "v3.2.3",
+        "version_normalized": "3.2.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/silexphp/Pimple.git",
+            "reference": "9e403941ef9d65d20cba7d54e29fe906db42cf32"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/silexphp/Pimple/zipball/9e403941ef9d65d20cba7d54e29fe906db42cf32",
+            "reference": "9e403941ef9d65d20cba7d54e29fe906db42cf32",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0",
+            "psr/container": "^1.0"
+        },
+        "require-dev": {
+            "symfony/phpunit-bridge": "^3.2"
+        },
+        "time": "2018-01-21T07:42:36+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.2.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Pimple": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            }
+        ],
+        "description": "Pimple, a simple Dependency Injection Container",
+        "homepage": "http://pimple.sensiolabs.org",
+        "keywords": [
+            "container",
+            "dependency injection"
+        ]
+    },
+    {
+        "name": "psr/container",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-fig/container.git",
+            "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-fig/container/zipball/b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+            "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2017-02-14T16:28:37+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Psr\\Container\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common Container Interface (PHP FIG PSR-11)",
+        "homepage": "https://github.com/php-fig/container",
+        "keywords": [
+            "PSR-11",
+            "container",
+            "container-interface",
+            "container-interop",
+            "psr"
+        ]
+    },
+    {
+        "name": "publishpress/edd-license-handler",
+        "version": "1.6.14.3",
+        "version_normalized": "1.6.14.3",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/OSTraining/EDD-License-handler",
+            "reference": "0cf8447b2dd73d4a916b2bdcf1e364c89218b25d"
+        },
+        "time": "2018-02-07T10:08:34+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "files": [
+                "EDD_License_Handler.php",
+                "EDD_SL_Plugin_Updater.php"
+            ]
+        },
+        "license": [
+            "GPL-2"
+        ],
+        "authors": [
+            {
+                "name": "EasyDigitalDownloads",
+                "email": "contact@easydigitaldownloads.com"
+            },
+            {
+                "name": "PublishPress",
+                "email": "help@publishpress.com"
+            }
+        ]
+    },
+    {
+        "name": "publishpress/wordpress-edd-license-integration",
+        "version": "2.2.0",
+        "version_normalized": "2.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/OSTraining/WordPress-EDD-License-Integration",
+            "reference": "69541b06921821bdf93db37d57cef4853745e39d"
+        },
+        "require": {
+            "pimple/pimple": "~3.2",
+            "publishpress/edd-license-handler": "~1.6"
+        },
+        "require-dev": {
+            "lucatume/wp-browser": "~1.22"
+        },
+        "time": "2018-03-01T18:52:52+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "PublishPress\\EDD_License\\Core\\": "src/core/"
+            }
+        },
+        "license": [
+            "GPL-2"
+        ],
+        "authors": [
+            {
+                "name": "PublishPress",
+                "email": "help@publishpress.com"
+            }
+        ]
+    },
+    {
+        "name": "publishpress/wordpress-plugin-builder",
+        "version": "2.1.4",
+        "version_normalized": "2.1.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/OSTraining/WordPress-Plugin-Builder",
+            "reference": "6658ad5e35ec32877ee941e3680702bfb86986e5"
+        },
+        "time": "2018-03-01T22:09:46+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "PublishPress\\Builder\\": "src/"
+            }
+        },
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "PublishPress",
+                "email": "help@publishpress.com",
+                "homepage": "https://publishpress.com"
+            }
+        ],
+        "description": "Base class for WordPress plugin builder"
+    }
+]
