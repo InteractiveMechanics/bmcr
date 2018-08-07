@@ -1,0 +1,94 @@
+.pp-multiple-authors-layout-simple_list ul,
+.pp-multiple-authors-layout-boxed ul {
+    padding-left: 0;
+}
+
+.pp-multiple-authors-layout-simple_list ul li {
+    list-style: none;
+    position: relative;
+    min-height: 35px;
+    border-bottom: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+    padding: 0.5em 0;
+    margin-top: -1px;
+}
+
+.pp-multiple-authors-layout-simple_list .avatar {
+    position: absolute;
+    right: 0;
+    width: 25px;
+    height: 25px;
+}
+
+.pp-multiple-authors-layout-boxed ul li {
+    list-style: none;
+    position: relative;
+    min-height: 120px;
+    border: 1px solid #dddddd;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.pp-multiple-authors-layout-boxed .avatar {
+    position: static;
+    float: left;
+    margin-right: 1em;
+    width: 80px;
+    height: 80px;
+}
+
+.pp-multiple-authors-layout-boxed a {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.pp-multiple-authors-layout-boxed p {
+    font-size: 0.85em;
+}
+
+.pp-multiple-authors-layout-boxed .pp-ma-links {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.pp-multiple-authors-layout-centered .pp-ma-links a,
+.pp-multiple-authors-layout-boxed .pp-ma-links a {
+    color: #dddddd;
+    text-decoration: none;
+    border-bottom: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.pp-multiple-authors-layout-centered ul li {
+    list-style: none;
+    position: relative;
+    min-height: 120px;
+    border: 1px solid #dddddd;
+    padding: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.pp-multiple-authors-layout-centered .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+
+.pp-multiple-authors-layout-centered a {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.pp-multiple-authors-layout-centered p {
+    font-size: 0.85em;
+}

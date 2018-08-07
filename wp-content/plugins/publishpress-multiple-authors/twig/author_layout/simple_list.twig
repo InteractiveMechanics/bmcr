@@ -1,0 +1,18 @@
+{% extends 'author_layout/master_layout.twig' %}
+
+{% block title %}
+    {% if show_title %}
+        <h2 class="widget-title">{{ title }}</h2>
+    {% endif %}
+{% endblock %}
+
+{% block authors %}
+    <ul>
+        {% for author in authors %}
+            <li class="author_index_{{ loop.index }}">
+                <a href="{{ author.link }}" class="{{ item_class }}" rel="author">{{ author.display_name }}</a>
+                {{ get_avatar( author.user_email, 50 )|raw }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
