@@ -49,66 +49,54 @@ get_header();
 	<div class="recent-posts">
 		<h2>Recent Publications</h2>
 		
+	<!-- add Month in Review selection -->
+		
 	<div>
 	<?php
 		$args = array(
-			'numberposts' => 20,
+			'posts_per_page' => 20,
 			'offset' => 0,
 			'orderby' => 'post_date',
 			'order' => 'DESC',
 			'post_type' => array( 'articles', 'reviews', 'responses')
 		);
 		
-		$recent_posts = wp_get_recent_posts( $args );
+		$recent_posts = new WP_query( $args );
 	
 	
-		foreach( $recent_posts as $recent ): 
-			$post_type = get_post_type($recent['ID']);		
+		if ($recent_posts->have_posts() ):
+			while ($recent_posts->have_posts() ):
+				$recent_posts->the_post();
+			 
+				$post_type = get_post_type( $post->ID );		
 		?>
 		
 			<?php if ($post_type == 'reviews'): ?>
 			
 			
 			<div>
-				<?php
-					$post = $recent['ID']; 
-					setup_postdata( $post );
-					get_template_part( 'template-parts/content', 'referencereview' );
-					wp_reset_postdata(); 		
-				?>
+					<?php get_template_part( 'template-parts/content', 'referencereview' ); ?>
 			</div>
 				
 			<?php elseif ($post_type == 'articles'): ?>
 			
 			<div>
-				<?php
-					$post = $recent['ID']; 
-					setup_postdata( $post );
-					get_template_part( 'template-parts/content', 'referencearticle' );
-					wp_reset_postdata(); 		
-				?>
+				<?php get_template_part( 'template-parts/content', 'referencearticle' ); ?>
 			</div>
-			
-						
+					
 			<?php elseif ($post_type == 'responses'): ?>
 
 			<div>
-				<?php
-					$post = $recent['ID']; 
-					setup_postdata( $post );
-					get_template_part( 'template-parts/content', 'referenceresponse' );
-					wp_reset_postdata(); 		
-				?>
+				<?php get_template_part( 'template-parts/content', 'referenceresponse' ); ?>
 			</div>
-
-
-						
+	
 			<?php endif; ?>
 		
 	
-		<?php endforeach; 	
-		
-		wp_reset_query(); ?>
+		<?php endwhile; 
+			
+		endif;
+		?>
 
 	</div>
 	</div>
