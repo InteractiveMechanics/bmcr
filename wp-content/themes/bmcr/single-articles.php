@@ -29,11 +29,8 @@
 		
 		<div class="entry-meta">
 			
-			<h4>Article by <?php the_author(); ?></h4>
-			
-			<h4><?php the_author_meta('description'); ?>, <a href="mailto:<?php the_author_meta('user_email', $author_id); ?>" target="_top"><?php the_author_meta('user_email', $author_id); ?></a></h4>
-			
-			<h4><?php the_date(); ?></h4>
+			<h4>Article by
+			<?php get_template_part( 'template-parts/content', 'entrymeta' ); ?>
 		
 		</div>
 		

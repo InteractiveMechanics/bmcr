@@ -1,5 +1,6 @@
 <?php
 	$bmcr_id = get_field('bmcr_id');
+	$author_id =  get_the_author_meta('ID');
 ?>
 
 

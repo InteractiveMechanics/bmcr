@@ -63,12 +63,7 @@ get_header();
 	
 	
 		foreach( $recent_posts as $recent ): 
-			$pub_id = get_field('bmcr_id', $recent['ID']);
-			$post_type = get_post_type($recent['ID']);
-			$publisher = get_field('publisher', $recent['ID']);
-			$pub_date = get_field('pub_date', $recent['ID']);
-			
-		
+			$post_type = get_post_type($recent['ID']);		
 		?>
 		
 			<?php if ($post_type == 'reviews'): ?>

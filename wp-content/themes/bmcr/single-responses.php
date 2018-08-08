@@ -63,11 +63,8 @@
 		
 		<div class="entry-meta">
 			
-			<h4>Response by <?php the_author(); ?></h4>
-			
-			<h4>Affiliation, <a href="mailto:someone@example.com" target="_top"><?php echo get_aut</a></h4>
-			
-			<h4><?php the_date(); ?></h4>
+			<h4>Response by
+			<?php get_template_part( 'template-parts/content', 'entrymeta' ); ?>
 		
 		</div>
 		

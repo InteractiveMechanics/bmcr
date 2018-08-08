@@ -56,11 +56,9 @@
 		
 		<div class="entry-meta">
 			
-			<h4>Review by Sort out Reviewer Data</h4>
+			<h4>Review by 
 			
-			<h4>Affiliation, <a href="mailto:someone@example.com" target="_top">email address</a></h4>
-			
-			<h4><?php the_date(); ?></h4>
+			<?php get_template_part( 'template-parts/content', 'entrymeta' ); ?>
 		
 		</div>
 		
