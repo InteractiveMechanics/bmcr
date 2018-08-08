@@ -9,6 +9,7 @@
 
 <small>BMCR <?php echo $bmcr_id; ?></small> 
 <p><a href="<?php echo get_permalink(); ?>"><?php echo the_title(); ?></a></p>
+<p>Review by <?php the_author(); ?>
 <p>
 	<?php 
 		if ($publisher): 
