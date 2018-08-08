@@ -38,6 +38,30 @@
 			
 			<?php the_content(); ?>
 			
+			<?php if (get_field('month_in_review')):
+			
+				$posts = get_field('mir_selections');
+
+					if( $posts ): ?>
+    
+					<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+					
+					<?php setup_postdata($post); ?>
+					
+						<div>
+							
+						<?php the_field('citation'); ?>
+						
+						</div> 
+					
+					<?php endforeach; ?>
+   
+					<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+					
+					<?php endif; ?>
+			
+			<?php endif; ?>
+			
 		</div>
 		
 		
