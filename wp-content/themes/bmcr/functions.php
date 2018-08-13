@@ -126,6 +126,44 @@ function add_custom_post_types_to_loop( $query ) {
 	return $query;
 }
 
+add_filter('ninja_forms_render_options','my_pre_population_callback', 10, 2);
+function my_pre_population_callback($options, $settings) {
+  
+  // target only the field with this key
+  if( $settings['key'] == 'listselect_1534176698515' ) {
+
+    // write the query to fetch the data
+    $args = array(
+      'post_type' => 'reviews',
+      'post_status' => 'publish'
+    );
+
+    $posts = new WP_Query( $args );
+
+    if ( $posts->have_posts() ) {
+
+      $options = array();
+
+      while ( $posts->have_posts() ) {
+
+        $posts->the_post();
+        
+        // $options is the variable which contains tha values rendered
+        // we will use the post title as lable and the ID as value
+        $options[] = array(
+          'label' => get_the_title(),
+          'value' => get_the_ID()
+        );
+      } // endwhile
+    } // endif
+
+    wp_reset_postdata();
+  }
+
+  return $options;
+}
+
+
 
 
 // enables relationships field to update between CPTs; that is, if a response is connected to a review, it will automatically update on the review's record and vice versa
