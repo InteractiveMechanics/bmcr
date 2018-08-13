@@ -14,19 +14,33 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
+		<div class="newsletter-wrapper">
+			<h3><?php the_field('newsletter_heading', 'option'); ?></h3>
+			<small><?php the_field('newsletter_subheading', 'option'); ?></small>
+			<button><?php the_field('newsletter_button_text', 'option'); ?></button>
+		</div>
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bmcr' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'bmcr' ), 'WordPress' );
-				?>
+			<h3>Contact Us</h3>
+			<small>
+				<?php the_field('address_1', 'option'); ?>
+			</small>
+			<address>
+			<a href="https://goo.gl/maps/M4cbPNJ8Zsx" target="_blank">
+				<?php the_field('address_2', 'option'); ?>, 
+				<?php the_field('city', 'option'); ?>
+				<?php the_field('state', 'option'); ?>
+				<?php the_field('zip', 'option'); ?>
 			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'bmcr' ), 'bmcr', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
+			</address>
+			<small>
+			<?php the_field('site_info_email', 'option'); ?>|
+			<?php the_field('phone', 'option'); ?>
+			</small>
 		</div><!-- .site-info -->
+		<div class="social">
+			<h3>Follow Us</h3>
+			<a href="http://www.twitter.com/<?php the_field('twitter', 'option'); ?>">Twitter</a> 
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
