@@ -4,6 +4,7 @@
 	$bkgr_img_url = $bkgr_img['url'];
 	$bkgr_img_alt = $bkgr_img['alt'];
 	$hero_title = get_field('hero_title');
+	$intro_text = get_field('intro_text');
 ?>
 
 <!-- check if there is a background image -->
@@ -18,6 +19,7 @@
 <?php endif; ?>
 	
 	<h1><?php echo $hero_title; ?></h1>
+	<p><?php echo $intro_text; ?></p>
 			
 <?php if( have_rows('hero_btns') ): 
 		
