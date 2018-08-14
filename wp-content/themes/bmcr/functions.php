@@ -149,9 +149,9 @@ function my_pre_population_callback($options, $settings) {
         $posts->the_post();
         
         // $options is the variable which contains tha values rendered
-        // we will use the post title as lable and the ID as value
+        // we will use the post title as label and the ID as value
         $options[] = array(
-          'label' => get_the_title(),
+          'label' => get_the_title() . ', ' . get_field('book_author'),
           'value' => get_the_ID()
         );
       } // endwhile

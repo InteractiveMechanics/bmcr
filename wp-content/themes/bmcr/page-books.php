@@ -53,6 +53,7 @@ get_header();
 	
 	 
 	?>
+	<div>
 	<small>BMCR <?php echo $bmcr_id; ?></small> 
 	<h4><?php echo the_title(); ?></h4>
 	<p><?php echo $book_author; ?> 
@@ -82,7 +83,8 @@ get_header();
 	
 	</p>
 	
-	<a href="<?php echo get_page_link(2); ?>" target="_blank">Apply to review this book</a>		
+	<a href="<?php echo get_page_link(2); ?>" target="_blank">Apply to review this book</a>	
+	</div>	
 		 
 	<?php endforeach; 
 	wp_reset_postdata();
