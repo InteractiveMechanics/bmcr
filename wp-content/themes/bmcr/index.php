@@ -30,13 +30,20 @@ get_header();
 					<li><a href="">Reviewer</a></li>
 					<li><a href="">Author</a></li>
 					<li><a href="">Year</a></li>
-					<ul><a href="">Type</a></ul>
-					<ul>
+					<li><a href="">Type</a></li>
+					<li>
 					<?php wp_get_archives('type=yearly'); ?>
-					</ul>
-		
-					<li><a href="">Subject</a></li>
-					</ul>
+					</li>
+					<li> Subject
+						<ul>
+							<?php 
+								$tags = get_tags(); 
+								foreach ($tags as $tag): ?>
+							<li><a href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a></li>										<?php endforeach; ?>
+						</ul>
+					</li>
+				</ul>
+
 										
 			</div><!-- .page-header -->
 
