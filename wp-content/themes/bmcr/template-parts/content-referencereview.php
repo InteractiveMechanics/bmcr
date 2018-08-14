@@ -4,12 +4,13 @@
 	$publisher = get_field('publisher');
 	$pub_date = get_field('pub_date');
 	$isbn = get_field('isbn');
+	$book_author = get_field('book_author');
 ?>
 
 
 <small>BMCR <?php echo $bmcr_id; ?></small> 
 <p><a href="<?php echo get_permalink(); ?>"><?php echo the_title(); ?></a></p>
-<p>Review by <?php the_author(); ?>
+<p><?php echo $book_author; ?> | Review by <?php the_author(); ?></p>
 <p>
 	<?php 
 		if ($publisher): 

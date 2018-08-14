@@ -33,43 +33,18 @@ get_header(); ?>
 				$pub_location = get_field('pub_location', $post_id);
 				
 			?>
+			
+			<?php if (get_post_status() !== 'publish'): ?>
+			
+			<?php get_template_part( 'template-parts/content', 'referencereview' ); ?>
+			
+			<h1>i am a thing</h1>
+			
+			<?php else: ?>
 
-				<h5>BMCR <?php echo $bmcr_id; ?></h5>
-				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-				<p><?php echo $book_author; ?></p>
-				<p>
-					<?php if ($pub_location): ?>
-						<?php echo $pub_location . "; "; ?>
-					<?php endif; ?>
-					
-					
-					<?php if ($publisher): ?>
-					
-						<?php echo $publisher; ?>;
-						
-					<?php endif; ?>
-					
-					<?php if ($pub_date): ?>
-					
-						<?php echo $pub_date; ?>
-					
-					<?php endif; ?>
-					
-					<?php if ($publisher || $pub_date): ?>
-					
-						<?php echo 	'|'; ?>
-					
-					<?php endif; ?>
-					
-					
-					<?php if ($isbn): ?>
-					
-						ISBN <?php echo $isbn; ?>
-					 
-					<?php endif; ?>
-					
-					 </p>
-				<p><a href="#">Apply to review this book</a></p>
+			<p><a href="#">Apply to review this book</a></p>
+			
+			<?php endif; ?>
 
 			<?php endwhile; ?>
 			

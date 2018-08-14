@@ -135,7 +135,7 @@ function my_pre_population_callback($options, $settings) {
     // write the query to fetch the data
     $args = array(
       'post_type' => 'reviews',
-      'post_status' => 'publish'
+      'post_status' => 'pitch'
     );
 
     $posts = new WP_Query( $args );
