@@ -2,7 +2,6 @@
 	<li><a href="">All</a></li>
 	<li><a href="">Reviewer</a></li>
 	<li><a href="">Author</a></li>
-	<li><a href="">Year</a></li>
 	<li>Type
 		<ul>				
 			<li><a href="<?php echo get_post_type_archive_link( 'articles' ); ?>">Articles</a></li>
@@ -10,8 +9,10 @@
 			<li><a href="<?php echo get_post_type_archive_link( 'reviews' ); ?>">Reviews</a></li>
 		</ul>
 	</li>
-	<li>
+	<li>Year
+		<ul>
 		<?php wp_get_archives('type=yearly'); ?>
+		</ul>
 	</li>
 	<li> Subject
 		<ul>
