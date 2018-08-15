@@ -1,5 +1,5 @@
 <ul>
-	<li><a href="">All</a></li>
+	<li><a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" target="_blank">All</a></li>
 	<li><a href="">Reviewer</a></li>
 	<li><a href="">Author</a></li>
 	<li>Type
