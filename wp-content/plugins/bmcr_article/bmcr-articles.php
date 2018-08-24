@@ -28,12 +28,27 @@ function create_article() {
                 'not_found_in_trash' => 'No Articles found in Trash',
                 'parent' => 'Parent Article'
             ),
- 
             'public' => true,
+            'map_meta_cap'=> true,
+            'capability_type' => array('bmcrarticle', 'bmcrarticles'),
+            'capabilities' => array(
+                'publish_posts' => 'publish_bmcrarticles',
+                'edit_posts' => 'edit_mbcrarticle',
+                'edit_post' => 'edit_memberimage',
+                'edit_others_posts' => 'edit_others_bmcrarticles',
+                'delete_posts' => 'delete_bmcrarticles',
+                'delete_post' => 'delete_bmcrarticle',
+                'delete_others_posts' => 'delete_others_bmcrarticles',
+                'manage_posts' => 'manage_bmcrarticles',
+                'read_private_posts' => 'read_private_bmcrarticles',
+                'read_post' => 'read_bmcrarticles',
+            ),
             'menu_icon' => 'dashicons-media-text',
             'menu_position' => 15,
             'supports' => array( 'title', 'editor', 'author', 'revisions', 'excerpt', 'comments', 'thumbnail', 'custom-fields' ),
-            'rewrite'     => array( 'slug' => 'article' ), // my custom slug
+            'rewrite'     => array( 
+            	'slug' => 'article',
+            ),
             'taxonomies' => array( 'post_tag' ),
             'has_archive' => true
         )

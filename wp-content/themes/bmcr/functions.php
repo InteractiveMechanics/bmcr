@@ -117,14 +117,13 @@ function bmcr_widgets_init() {
 add_action( 'widgets_init', 'bmcr_widgets_init' );
 
 
-
-add_action( 'pre_get_posts', 'add_custom_post_types_to_loop' );
-
 function add_custom_post_types_to_loop( $query ) {
-	if ( $query->is_front_page() && $query->is_main_query() || $query->is_home() && $query->is_main_query() || $query->is_archive() && $query->is_main_query() )
+	if ( $query->is_front_page() && $query->is_main_query() || $query->is_home() && $query->is_main_query() )
 		$query->set( 'post_type', array( 'post', 'page', 'articles', 'reviews', 'responses' ) );
 	return $query;
 }
+add_action( 'pre_get_posts', 'add_custom_post_types_to_loop' );
+
 
 add_filter('ninja_forms_render_options','my_pre_population_callback', 10, 2);
 function my_pre_population_callback($options, $settings) {
@@ -152,7 +151,7 @@ function my_pre_population_callback($options, $settings) {
         // we will use the post title as label and the ID as value
         $options[] = array(
           'label' => get_the_title() . ', ' . get_field('book_author'),
-          'value' => get_the_ID()
+          'value' => get_the_title()
         );
       } // endwhile
     } // endif
@@ -162,6 +161,14 @@ function my_pre_population_callback($options, $settings) {
 
   return $options;
 }
+
+
+
+
+
+
+
+
 
 /*
 * Register ACF options pages
@@ -175,7 +182,7 @@ if( function_exists('acf_add_options_page') ) {
         'page_title'    => 'Theme General Settings',
         'menu_title'    => 'Theme Settings',
         'menu_slug'     => 'theme-general-settings',
-        'capability'    => 'edit_posts',
+        'capability'    => 'edit_posts', 
         'redirect'      => false
     ));
     

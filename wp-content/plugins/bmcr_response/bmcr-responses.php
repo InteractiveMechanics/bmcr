@@ -28,8 +28,21 @@ function create_response() {
                 'not_found_in_trash' => 'No Responses found in Trash',
                 'parent' => 'Parent Response'
             ),
- 
             'public' => true,
+            'map_meta_cap'=> true,
+            'capability_type' => array('bmcrresponse', 'bmcrresponses'),
+            'capabilities' => array(
+                'publish_posts' => 'publish_bmcrresponses',
+                'edit_posts' => 'edit_bmcrresponses',
+                'edit_post' => 'edit_bmcrresponse',
+                'edit_others_posts' => 'edit_others_bmcrresponses',
+                'delete_posts' => 'delete_bmcrresponses',
+                'delete_post' => 'delete_bmcrresponse',
+                'delete_others_posts' => 'delete_others_bmcrresponses',
+                'manage_posts' => 'manage_bmcrresponses',
+                'read_private_posts' => 'read_private_bmcrresponses',
+                'read_post' => 'read_bmcrresponses',
+            ),
             'menu_icon' => 'dashicons-testimonial',
             'menu_position' => 15,
             'supports' => array( 'title', 'editor', 'author', 'revisions', 'excerpt', 'comments', 'thumbnail', 'custom-fields' ),
