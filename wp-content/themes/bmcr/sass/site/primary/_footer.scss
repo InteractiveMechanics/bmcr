@@ -1,0 +1,54 @@
+footer {
+	padding: 34px 0px;
+	background-color: $blue;
+	color: $white;
+	h4 {
+		color: $white;
+		font-size: 20px;
+		-webkit-font-smoothing: antialiased;
+	}
+	h6 {
+		color: $white;
+		font-family: $noto-sans;
+		font-size: 14px;
+		font-weight: 700;
+		-webkit-font-smoothing: antialiased;
+	}
+	small {
+		font-size: 16px;
+		-webkit-font-smoothing: antialiased;
+	}
+}
+
+.newsletter-wrapper {
+	small {
+		display: block;
+		margin-bottom: 16px;
+		font-size: 16px;
+		font-style: italic;
+	}
+	button {
+		width: 100%;
+		font-size: 20px;
+	}
+}
+
+#address-line,
+#footer-email {
+	color: $white2;
+}
+
+#footer-email {
+	border-bottom: 1px solid rgba(250, 250, 250, 0.3);
+	padding-bottom: 1px;
+	padding-right: 3px;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.social {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}

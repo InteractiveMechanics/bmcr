@@ -34,7 +34,15 @@ input[type="submit"],
 .btn-secondary {
 	@extend .btn-primary;
 	border-left: .20em solid $yellow;
-	background: linear-gradient(to right, $blue 50%, $white 50%);
+	background: linear-gradient(to right, $yellow 50%, $white 50%);
+	background-size: 200% 100%;
+	background-position: right bottom;
+	transition: all .5s ease-out;
+	box-shadow: 3px 3px 2px rgba(0,0,0,0.04);
+	&:hover {
+		border-left: .20em solid $yellow;
+	}
+
 }
 
 .btn-success {
