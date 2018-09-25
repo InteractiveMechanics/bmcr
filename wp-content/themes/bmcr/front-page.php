@@ -16,12 +16,14 @@ get_header();
 	<?php get_template_part( 'template-parts/content', 'hero' ); ?>
 			
 	
-	<div class="recent-posts">
+	<div class="recent-posts" class="container-fluid">
+	<div class="row">
+	<div class="col-sm-10 offset-sm-1">
 		<h2>Recent Publications</h2>
 		
 	<!-- add Month in Review selection -->
 		
-	<div>
+	<div class="post-list-wrapper">
 	<?php
 		$args = array(
 			'posts_per_page' => 20,
@@ -68,8 +70,10 @@ get_header();
 		endif;
 		?>
 
-	</div>
-	</div>
+	</div><!--.publications-wrapper -->
+	</div><!--.col-sm-10 -->
+	</div><!--.row -->
+	</div><!--.container-fluid -->
 	
 		
 

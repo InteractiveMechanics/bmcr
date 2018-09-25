@@ -10,16 +10,21 @@
 <!-- check if there is a background image -->
 <?php if($bkgr_img): ?>
 	
-<div class="jumbotron" style="background-image: url('<?php echo $bkgr_img_url; ?>')" alt="<?php echo $bkgr_img_alt; ?>">
+<div class="jumbotron jumbotron-fluid" style="background-image: url('<?php echo $bkgr_img_url; ?>')" alt="<?php echo $bkgr_img_alt; ?>">
 	
 <?php else: ?>
 		
-<div class="jumbotron">
+<div class="jumbotron jumbotron-fluid">
 	
 <?php endif; ?>
+			<div class="row">
+				<div class="col-sm-10 offset-sm-1">
+					<h1><?php echo $hero_title; ?></h1>
+					<p><?php echo $intro_text; ?></p>
+				</div>
+			</div>
 	
-	<h1><?php echo $hero_title; ?></h1>
-	<p><?php echo $intro_text; ?></p>
+	
 			
 <?php if( have_rows('hero_btns') ): 
 		
