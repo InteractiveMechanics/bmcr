@@ -880,7 +880,7 @@ a > p {
   display: block; }
 
 /*--------------------------------------------------------------
-## Comments
+## Footer
 --------------------------------------------------------------*/
 footer {
   padding: 34px 0px;
@@ -924,6 +924,53 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center; }
+
+/*--------------------------------------------------------------
+## References
+--------------------------------------------------------------*/
+.ref-wrapper {
+  display: block;
+  padding: 17px 21px;
+  margin-bottom: 20px;
+  background-color: #FFFFFF; }
+  .ref-wrapper:hover {
+    text-decoration: none;
+    opacity: 0.5; }
+
+.ref-id {
+  font-family: "Noto Serif", serif;
+  -webkit-font-smoothing: antialiased;
+  font-style: italic;
+  font-size: 14px;
+  color: #B4B4B4;
+  text-decoration: none; }
+
+.ref-title {
+  margin: 0px;
+  font-family: "Noto Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 21px;
+  font-weight: 700;
+  color: #5D5D5D;
+  text-decoration: none; }
+
+.ref-author {
+  margin: 0px;
+  font-family: "Noto Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  font-weight: 400;
+  color: #7F7F7F;
+  text-decoration: none; }
+
+.ref-details {
+  margin: 0px;
+  font-family: "Noto Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 13px;
+  font-weight: 400;
+  color: #7F7F7F;
+  text-decoration: none; }
 
 /*--------------------------------------------------------------
 # Infinite scroll

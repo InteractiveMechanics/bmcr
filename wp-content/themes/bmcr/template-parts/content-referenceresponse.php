@@ -9,10 +9,10 @@
 	$response_rels = get_field('response_relationships'); //if responding to another review
 ?>
 
-
-<small>BMCR <?php echo $bmcr_id; ?></small> 
-<p><a href="<?php echo get_permalink(); ?>"><?php echo the_title(); ?></a></p>
-<p>Original 
+<a href="<?php echo get_permalink(); ?>"  class="ref-wrapper">
+<small class="ref-id">BMCR <?php echo $bmcr_id; ?></small> 
+<p class="ref-title"><?php echo the_title(); ?></p>
+<p class="ref-author">Original 
 	<?php 
 		if ($response_type === 'review'): 
 			
@@ -52,4 +52,5 @@
 	?>
 	
 		| Response by <?php the_author(); ?>
-</p>		
+</p>
+</a>		

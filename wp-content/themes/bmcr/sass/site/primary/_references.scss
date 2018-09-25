@@ -1,0 +1,51 @@
+.ref-wrapper {
+	display: block;
+	padding: 17px 21px;
+	margin-bottom: 20px;
+	background-color: $white;
+	&:hover {
+		text-decoration: none;
+		opacity: 0.5;
+	}
+}
+
+.ref-id {
+	font-family: $noto-serif;
+	-webkit-font-smoothing: antialiased;
+	font-style: italic;
+	font-size: 14px;
+	color: $grey8;
+	text-decoration: none;
+}
+
+.ref-title {
+	margin: 0px;
+	font-family: $noto-sans;
+	-webkit-font-smoothing: antialiased;
+	font-size: 21px;
+	font-weight: 700;
+	color: $grey3;
+	text-decoration: none;
+}
+
+.ref-author {
+	margin: 0px;
+	font-family: $noto-sans;
+	-webkit-font-smoothing: antialiased;
+	font-size: 16px;
+	font-weight: 400;
+	color: $grey6;
+	text-decoration: none;
+}
+
+.ref-details {
+	margin: 0px;
+	font-family: $noto-sans;
+	-webkit-font-smoothing: antialiased;
+	font-size: 13px;
+	font-weight: 400;
+	color: $grey6;
+	text-decoration: none;
+}
+
+

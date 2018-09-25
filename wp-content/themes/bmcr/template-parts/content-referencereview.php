@@ -7,11 +7,11 @@
 	$book_author = get_field('book_author');
 ?>
 
-
-<small>BMCR <?php echo $bmcr_id; ?></small> 
-<p><a href="<?php echo get_permalink(); ?>"><?php echo the_title(); ?></a></p>
-<p><?php echo $book_author; ?> | Review by <?php the_author(); ?></p>
-<p>
+<a href="<?php echo get_permalink(); ?>" class="ref-wrapper">
+<small class="ref-id">BMCR <?php echo $bmcr_id; ?></small> 
+<p class="ref-title"><?php echo the_title(); ?></p>
+<p class="ref-author"><?php echo $book_author; ?> | Review by <?php the_author(); ?></p>
+<p class="ref-details">
 	<?php 
 		if ($publisher): 
 			echo $publisher . ', ';
@@ -30,5 +30,6 @@
 		endif;
 	?>
 
-</p>		
+</p>
+</a>		
 		 
