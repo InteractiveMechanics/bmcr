@@ -3,17 +3,40 @@ ul, ol {
 }
 
 ul {
-	list-style: disc;
+	list-style: none;
 }
 
 ol {
-	list-style: decimal;
+	list-style: none;
+	counter-reset: my-awesome-counter;
 }
 
 li > ul,
 li > ol {
 	margin-bottom: 0;
 	margin-left: 1.5em;
+}
+
+/* replace black dot with solid yellow circle */
+ul li:before {
+	content: '';
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: $yellow;
+}
+
+ol li {
+	counter-increment: my-awesome-counter;
+}
+
+
+ol li:before {
+	content: counter(my-awesome-counter);
+	color: navy;
+	font-weight: bold;
+	font-family: $rubik;
+	font-size: 24px;
 }
 
 dt {

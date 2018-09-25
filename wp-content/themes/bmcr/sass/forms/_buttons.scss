@@ -1,18 +1,28 @@
+/* in an ideal world, button is a mixin and you just have to define the color */
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
-	border: 1px solid;
-	border-color: $color__border-button;
-	border-radius: 3px;
-	background: $color__background-button;
-	color: rgba(0, 0, 0, .8);
-	@include font-size(0.75);
+input[type="submit"],
+.btn,
+.btn-primary {
+	padding: 0.6em 0.88em; 
+	border: none;
+	border-left: .20em solid $blue;
+	border-color: none;
+	border-radius: 0px;
+	background: linear-gradient(to right, $blue 50%, $white 50%);
+	background-size: 200% 100%;
+	background-position: right bottom;
+	transition: all .5s ease-out;
+	box-shadow: 3px 3px 2px rgba(0,0,0,0.04);
+	
 	line-height: 1;
-	padding: .6em 1em .4em;
+	font-family: $noto-sans;
+	color: $grey4;
 
 	&:hover {
-		border-color: $color__border-button-hover;
+		background-position: left bottom;
+		color: $white;
 	}
 
 	&:active,
@@ -20,3 +30,22 @@ input[type="submit"] {
 		border-color: $color__border-button-focus;
 	}
 }
+
+.btn-secondary {
+	@extend .btn-primary;
+	border-left: .20em solid $yellow;
+	background: linear-gradient(to right, $blue 50%, $white 50%);
+}
+
+.btn-success {
+	@extend .btn-primary;
+	border-left: .20em solid $green;
+	background: linear-gradient(to right, $green 50%, $white 50%);
+}
+
+.btn-danger {
+	@extend .btn-primary;
+	border-left: .20em solid $red;
+	background: linear-gradient(to right, $red 50%, $white 50%);
+}
+

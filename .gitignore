@@ -37,3 +37,7 @@ wp-includes/
 /wp-signup.php
 /wp-trackback.php
 /xmlrpc.php
+
+wp-content/themes/bmcr/node_modules/
+wp-content/themes/bmcr/bower_components
+wp-content/themes/bmcr/dist

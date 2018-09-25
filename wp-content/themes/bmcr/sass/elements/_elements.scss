@@ -9,11 +9,11 @@ html {
 }
 
 body {
-	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	background: $white3; /* Fallback for when there is no custom background color defined. */
 }
 
 hr {
-	background-color: $color__background-hr;
+	background-color: $blue;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;

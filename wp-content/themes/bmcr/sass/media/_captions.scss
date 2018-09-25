@@ -1,16 +1,22 @@
 .wp-caption {
 	margin-bottom: 1.5em;
+	padding: 16px 23px 8px;
 	max-width: 100%;
+	box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.04);
 
 	img[class*="wp-image-"] {
 		@include center-block;
 	}
 
 	.wp-caption-text {
+		color: $grey4;
+		font-family: $noto-sans;
+		font-style: italic;
+		font-size: 20px;
 		margin: 0.8075em 0;
 	}
 }
 
 .wp-caption-text {
-	text-align: center;
+	text-align: left;
 }

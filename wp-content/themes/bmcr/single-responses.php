@@ -21,12 +21,16 @@
 
 			//if the response refers to a review
 			$posts = get_field('relationships');
-			//if thre response refers to another response
+			//if the response refers to another response
 			$responses = get_field('response_relationships');
+			//we only want to get the first response we don't want to get child responses
+			$i = 0;
+			$max = 1;
 
 			if( $posts ): ?>
 			
 				<?php foreach( $posts as $p ): // variable must NOT be called $post (IMPORTANT) ?>
+				
 		
 					<h1 class="entry-title">Response: <?php the_title(); ?>. Response to <a href="<?php echo get_the_permalink($p->ID); ?>"><?php echo the_field('bmcr_id', $p->ID); ?></a></h1>
 			

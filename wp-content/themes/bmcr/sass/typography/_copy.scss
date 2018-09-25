@@ -1,5 +1,8 @@
 p {
-	margin-bottom: 1.5em;
+	font-family: $noto-serif;
+	font-size: 20px;
+	line-height: 32px;
+	color: $grey;
 }
 
 dfn, cite, em, i {
@@ -7,7 +10,12 @@ dfn, cite, em, i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	background-color: $white;
+	padding: 30px;
+	border-left: 7px solid $yellow;
+	box-shadow: 3px 3px 2px rgba(0,0,0, 0.04);
+	font-size: 24px;
+	color: $grey4;
 }
 
 address {
@@ -15,10 +23,10 @@ address {
 }
 
 pre {
-	background: $color__background-pre;
-	font-family: $font__pre;
+	background: $white;
+	font-family: $noto-serif;
 	@include font-size(0.9375);
-	line-height: $font__line-height-pre;
+	line-height: 1.4;
 	margin-bottom: 1.6em;
 	max-width: 100%;
 	overflow: auto;
@@ -26,17 +34,17 @@ pre {
 }
 
 code, kbd, tt, var {
-	font-family: $font__code;
+	font-family: $noto-serif;
 	@include font-size(0.9375);
 }
 
 abbr, acronym {
-	border-bottom: 1px dotted $color__border-abbr;
+	border-bottom: 1px dotted $yellow;
 	cursor: help;
 }
 
 mark, ins {
-	background: $color__background-ins;
+	background: $white;
 	text-decoration: none;
 }
 
