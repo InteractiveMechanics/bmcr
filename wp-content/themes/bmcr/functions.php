@@ -315,7 +315,9 @@ add_filter('acf/update_value/name=relationships', 'bidirectional_acf_update_valu
 function bmcr_scripts() {
 	wp_enqueue_style( 'bmcr-style', get_stylesheet_uri() );
 	
-	wp_enqueue_style( 'bmcr-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');	
+	wp_enqueue_style( 'bootstrap-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+	
+	wp_enqueue_style( 'bootstrapselect-style', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css');	
 
 	wp_enqueue_script( 'bmcr-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -325,6 +327,7 @@ function bmcr_scripts() {
 
 	wp_enqueue_script( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', array('jquery'), null, true );
 	
+	wp_enqueue_script( 'bootstrapselect', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.js', array('jquery'), null, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
