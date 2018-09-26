@@ -480,7 +480,7 @@ hr {
   margin-bottom: 1.5em; }
 
 ul, ol {
-  margin: 0 0 1.5em 3em; }
+  padding-inline-start: 0px; }
 
 ul {
   list-style: none; }
@@ -557,7 +557,8 @@ input[type="submit"],
   box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.04);
   line-height: 1;
   font-family: "Noto Sans", sans-serif;
-  color: #707070; }
+  color: #707070 !important;
+  /* important needed here to override other styles */ }
   button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
@@ -568,7 +569,8 @@ input[type="submit"],
   .btn-success:hover,
   .btn-danger:hover {
     background-position: left bottom;
-    color: #FFFFFF; }
+    color: #FFFFFF !important;
+    /* important needed here to override $grey4 */ }
   button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
@@ -861,10 +863,9 @@ a > p {
 .updated:not(.published) {
   display: none; }
 
-.page-content,
 .entry-content,
-.entry-summary {
-  margin: 1.5em 0 0; }
+.entry-header {
+  margin-top: 40px; }
 
 .page-links {
   clear: both;
@@ -982,6 +983,36 @@ footer {
 /*--------------------------------------------------------------
 ## Jumbotron
 --------------------------------------------------------------*/
+.jumbotron {
+  background-color: #8C8C8C; }
+  .jumbotron h2, .jumbotron p {
+    color: #FFFFFF; }
+  .jumbotron p {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 35px; }
+  .jumbotron .btn-secondary {
+    margin-left: 25px; }
+
+/*--------------------------------------------------------------
+## Entry meta
+--------------------------------------------------------------*/
+.entry-meta h4 {
+  margin: 0px;
+  font-size: 22px;
+  -webkit-font-smoothing: antialiased; }
+.entry-meta a {
+  color: #707070;
+  border-bottom: 1px solid #B4B4B4;
+  padding-bottom: 1px; }
+  .entry-meta a:hover {
+    text-decoration: none; }
+
+.meta-affiliation,
+.meta-date {
+  font-weight: 400; }
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/

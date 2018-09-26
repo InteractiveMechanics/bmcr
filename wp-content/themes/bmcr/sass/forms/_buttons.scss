@@ -18,11 +18,11 @@ input[type="submit"],
 	
 	line-height: 1;
 	font-family: $noto-sans;
-	color: $grey4;
+	color: $grey4 !important; /* important needed here to override other styles */
 
 	&:hover {
 		background-position: left bottom;
-		color: $white;
+		color: $white !important; /* important needed here to override $grey4 */
 	}
 
 	&:active,

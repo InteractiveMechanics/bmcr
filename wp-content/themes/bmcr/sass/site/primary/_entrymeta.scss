@@ -1,0 +1,20 @@
+.entry-meta {
+	h4 {
+		margin: 0px;
+		font-size: 22px;
+		-webkit-font-smoothing: antialiased;
+	}
+	a {
+		color: $grey4;
+		border-bottom: 1px solid $grey8;
+		padding-bottom: 1px;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.meta-affiliation,
+.meta-date {
+	font-weight: 400;
+}

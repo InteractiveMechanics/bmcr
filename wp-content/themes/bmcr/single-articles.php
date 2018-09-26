@@ -15,26 +15,36 @@
 
 <main>
 	
-	<article id="post-<?php the_ID(); ?>">
+	<article id="post-<?php the_ID(); ?>" class="container-fluid">
 		
-		<div class="entry-header">
-	
+		<div class="entry-header row">
 			
-			<h1 class="entry-title"><?php the_title(); ?></h1>
+			<div class="col-sm-10 offset-sm-1">
 			
+				<h2 class="entry-title"><?php the_title(); ?></h2>
+			
+			</div>
 			
 		
 		</div>
 		
 		
-		<div class="entry-meta">
+		<div class="entry-meta row">
+			
+			<div class="col-sm-10 offset-sm-1">
 			
 			<h4>Article by
 			<?php get_template_part( 'template-parts/content', 'entrymeta' ); ?>
+			<!-- the closing h4 tag is included in the entrymeta content partial -->
+			
+			</div>
+			
 		
 		</div>
 		
-		<div class="entry-content">
+		<div class="entry-content row">
+			
+			<div class="col-sm-10 offset-sm-1">
 			
 			<?php the_content(); ?>
 			
@@ -61,16 +71,21 @@
 					<?php endif; ?>
 			
 			<?php endif; ?>
+		
+			</div>
 			
 		</div>
 		
 		
-		<div class="entry-footer">
+		<div class="entry-footer row">
 			
 			
 		</div>
 			
-		<aside>
+		<aside class="row">
+			
+			<div class="col-sm-10 offset-sm-1">
+				
 			<h2>Related publications</h2>
 			
 			<?php 
@@ -105,10 +120,15 @@
 				    
 			<?php endif; ?>
 			
+			</div>
+			
 		</aside>
 		
 				
-		<aside>
+		<aside class="row">
+			
+			<div class="col-sm-10 offset-sm-1">
+				
 			<h2>Comments</h2>
 			
 			<?php  //If comments are open or we have at least one comment, load up the comment template. 
@@ -119,6 +139,8 @@
 					
 				endif;
 			?>
+			
+			</div>
 		
 		</aside>
 			
