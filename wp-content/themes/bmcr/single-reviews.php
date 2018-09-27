@@ -23,102 +23,142 @@
 
 <main>
 	
-	<article id="post-<?php the_ID(); ?>">
+	<article id="post-<?php the_ID(); ?>" class="container-fluid">
 		
-		<div class="entry-header">
-	
-			<small>BMCR <?php echo $bmcr_id; ?></small>
+		<div class="entry-header row">
 			
-			<h1 class="entry-title"><?php the_title(); ?></h1>
-			
-			<p><?php echo $citation; ?></p>
-			
-			<?php if ($book_preview): ?>
-			
-				<a href="<?php echo $book_preview; ?>" target="_blank">Book Preview</a>
+			<div class="col-sm-10 offset-sm-1">
+		
+				<small class="ref-id">BMCR <?php echo $bmcr_id; ?></small>
 				
-			<?php endif; ?>
+				<h2 class="entry-title"><?php the_title(); ?></h2>
+				
+				<div class="entry-citation"><?php echo $citation; ?></div>
 			
-			<?php if ($purchase_book): ?>
+				<div class="entry-links">
+				
+				<div class="entry-btns">
+								
+					<?php if ($book_preview): ?>
+					
+						<a href="<?php echo $book_preview; ?>" class="btn btn-primary" target="_blank">Book Preview</a>
+						
+					<?php endif; ?>
+					
+					<?php if ($purchase_book): ?>
+					
+						<a href="<?php echo $purchase_book; ?>" class="btn btn-secondary" target="_blank">Purchase Book</a>
+					
+					<?php endif; ?>
+				
+				</div>
+				
+				<?php if (get_field('relationships')): ?>
+				
+				<a href="#responses" class="responses-anchor"><p><?php echo $relationship_count = count(get_field('relationships')); ?> Responses</p></a>
+				
+				<?php endif; ?>
+				
+				</div>
 			
-				<a href="<?php echo $purchase_book; ?>" target="_blank">Purchase Book</a>
-			
-			<?php endif; ?>
-			
-			<?php if (get_field('relationships')): ?>
-			
-			<a href="#responses"><p><?php echo $relationship_count = count(get_field('relationships')); ?> Responses</p></a>
-			
-			<?php endif; ?>
+			</div>
 		
-		</div>
+		</div><!-- .entry-header -->
 		
 		
-		<div class="entry-meta">
+		<div class="entry-meta row">
 			
-			<h4>Review by 
+			<div class="col-sm-10 offset-sm-1">
 			
-			<?php get_template_part( 'template-parts/content', 'entrymeta' ); ?>
-		
-		</div>
-		
-		<div class="entry-content">
+				<h4>Review by 
+				
+				<?php get_template_part( 'template-parts/content', 'entrymeta' ); ?>
+				
+				</h4>
 			
-			<?php the_content(); ?>
+			</div>
+		
+		</div><!-- .entry-meta -->
+		
+		<div class="entry-content row">
 			
-		</div>
+			<div class="col-sm-10 offset-sm-1">
+			
+				<?php the_content(); ?>
+			
+			</div>
+			
+		</div><!-- .entry-content -->
 		
 		
-		<div class="entry-footer">
+		<div class="entry-footer row">
+			
+			<div class="col-sm-10 offset-sm-1">
 			
 			<?php
 				if(get_the_tag_list()) {
-				echo get_the_tag_list('<ul><li>','</li><li>','</li></ul>');
+				echo get_the_tag_list('<ul class="tag-wrapper"><li>','</li><li>','</li></ul>');
 				}
 			?>
 			
-		</div>
+			</div>
 			
-		<aside>
-			<h2>Related publications</h2>
+		</div><!-- .entry-footer -->
 			
-			<?php 
-
-				$posts = get_field('rel_pubs');
-
-				if( $posts ): ?>
-				    <ul>
-				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT)
-				        
-				        setup_postdata($post);
-				        
-				        $post_type = get_post_type( $post->ID ); if ($post_type == 'reviews'):
-						 
-						get_template_part( 'template-parts/content', 'referencereview' );
-						
-						elseif ($post_type == 'articles'):
-						
-						get_template_part( 'template-parts/content', 'referencearticle' );
-						
-						else:
-						
-						get_template_part( 'template-parts/content', 'referenceresponse' );
-						
-						endif;
-				        
-				      
-				    endforeach; ?>
-				    </ul>
-				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-				    
-			<?php endif; ?>
+		<aside id="rel-pubs" class="row">
 			
-		</aside>
+				<div class="col-sm-10 offset-sm-1">
+				
+				<?php 
+	
+					$posts = get_field('rel_pubs');
+	
+					if( $posts ): ?>
+							
+						<h2>Related publications</h2>
+					
+					    <ul>
+					    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT)
+					        
+					        setup_postdata($post);
+					        
+					        $post_type = get_post_type( $post->ID ); if ($post_type == 'reviews'):
+							 
+							get_template_part( 'template-parts/content', 'referencereview' );
+							
+							elseif ($post_type == 'articles'):
+							
+							get_template_part( 'template-parts/content', 'referencearticle' );
+							
+							else:
+							
+							get_template_part( 'template-parts/content', 'referenceresponse' );
+							
+							endif;
+					        
+					      
+					    endforeach; ?>
+					    </ul>
+					    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+					    
+				<?php endif; ?>
+			
+			</div>
+			
+		</aside><!-- /#rel-pubs -->
 		
-		<aside id="responses">
-			<h2>Responses</h2>
-			<small><a href="#">Response Guidelines</a></small>
-			<small><a href="#">Submit a Response</a></small>
+		<aside id="responses" class="row">
+			
+			<div class="col-sm-10 offset-sm-1">
+			
+			<div class="responses-header">
+				
+				<h2>Responses</h2>
+				
+				<a href="#"><p>Response Guidelines</p></a>
+				<a href="#"><p>Submit a Response</p></a>
+				
+			</div>
 			
 			<?php 
 
@@ -137,23 +177,28 @@
 				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 			<?php endif; ?>
 			
-					
+			</div>	
 		
-		</aside>
+		</aside><!--/#responses -->
 		
-		<aside>
+		<aside id="comments-wrapper" class="row">
+			
+			<div class="col-sm-10 offset-sm-1">
+			
 			<h2>Comments</h2>
-			
-			<?php  //If comments are open or we have at least one comment, load up the comment template. 
-			
-				if ( comments_open() || get_comments_number() ) :
 				
-					comments_template();
+				<?php  //If comments are open or we have at least one comment, load up the comment template. 
+				
+					if ( comments_open() || get_comments_number() ) :
 					
-				endif;
-			?>
+						comments_template();
+						
+					endif;
+				?>
+			
+			</div>
 		
-		</aside>
+		</aside><!-- /#comments -->
 			
 	
 	</article>

@@ -18,8 +18,36 @@
 
 
 .entry-content,
-.entry-header {
+.entry-header,
+#rel-pubs,
+#responses,
+#comments-wrapper {
 	margin-top: 40px;
+}
+
+.entry-citation {
+	margin: 0px;
+	p {
+		font-family: $noto-sans;
+		-webkit-font-smoothing: antialiased;
+		font-size: 21px;
+		font-weight: 700;
+		color: $grey3;
+		text-decoration: none;
+	}
+}
+
+.entry-links {
+	display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.responses-anchor {
+	p {
+		margin: 0px;
+		line-height: 1.1;
+	}
 }
 
 .page-links {
@@ -35,4 +63,29 @@
 
 .post-list-wrapper {
 	padding-top: 20px;
+}
+
+.tag-wrapper {
+	margin: 20px 0px;
+	li {
+		display: inline-block;
+		margin-left: 20px;
+		&:first-child {
+			margin-left: 0px;
+		}
+	}
+}
+
+.responses-header {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	a {
+		display: block;
+		margin-left: 20px;
+		p {
+			margin: 0px;
+			line-height: 1;
+		}
+	}
 }
