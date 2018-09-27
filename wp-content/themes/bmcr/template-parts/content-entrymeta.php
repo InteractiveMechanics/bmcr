@@ -4,7 +4,7 @@
 			
 	<h4 class="meta-affiliation">
 		
-		<?php if (the_author_meta('description')): ?>
+		<?php if (get_the_author_meta('description')): ?>
 		
 		<?php the_author_meta('description'); ?>, 
 		
