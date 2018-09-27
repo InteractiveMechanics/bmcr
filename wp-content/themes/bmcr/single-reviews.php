@@ -37,27 +37,27 @@
 			
 				<div class="entry-links">
 				
-				<div class="entry-btns">
-								
-					<?php if ($book_preview): ?>
-					
-						<a href="<?php echo $book_preview; ?>" class="btn btn-primary" target="_blank">Book Preview</a>
+					<div class="entry-btns">
+									
+						<?php if ($book_preview): ?>
 						
+							<a href="<?php echo $book_preview; ?>" class="btn btn-primary" target="_blank">Book Preview</a>
+							
+						<?php endif; ?>
+						
+						<?php if ($purchase_book): ?>
+						
+							<a href="<?php echo $purchase_book; ?>" class="btn btn-secondary" target="_blank">Purchase Book</a>
+						
+						<?php endif; ?>
+					
+					</div>
+				
+					<?php if (get_field('relationships')): ?>
+					
+					<a href="#responses" class="responses-anchor"><p><?php echo $relationship_count = count(get_field('relationships')); ?> Responses</p></a>
+					
 					<?php endif; ?>
-					
-					<?php if ($purchase_book): ?>
-					
-						<a href="<?php echo $purchase_book; ?>" class="btn btn-secondary" target="_blank">Purchase Book</a>
-					
-					<?php endif; ?>
-				
-				</div>
-				
-				<?php if (get_field('relationships')): ?>
-				
-				<a href="#responses" class="responses-anchor"><p><?php echo $relationship_count = count(get_field('relationships')); ?> Responses</p></a>
-				
-				<?php endif; ?>
 				
 				</div>
 			

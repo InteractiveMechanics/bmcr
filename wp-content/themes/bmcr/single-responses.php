@@ -13,9 +13,11 @@
 
 <main>
 	
-	<article id="post-<?php the_ID(); ?>">
+	<article id="post-<?php the_ID(); ?>" class="container-fluid">
 	
-		<div class="entry-header">
+		<div class="entry-header row">
+		
+		<div class="col-sm-10 offset-sm-1">
 			
 		<?php 
 
@@ -32,7 +34,7 @@
 				<?php foreach( $posts as $p ): // variable must NOT be called $post (IMPORTANT) ?>
 				
 		
-					<h1 class="entry-title">Response: <?php the_title(); ?>. Response to <a href="<?php echo get_the_permalink($p->ID); ?>"><?php echo the_field('bmcr_id', $p->ID); ?></a></h1>
+					<h2 class="entry-title">Response: <?php the_title(); ?>. Response to <a href="<?php echo get_the_permalink($p->ID); ?>"><?php echo the_field('bmcr_id', $p->ID); ?></a></h2>
 			
 				<?php endforeach; 
 			
@@ -40,7 +42,7 @@
 			
 				foreach( $responses as $r ): // variable must NOT be called $post (IMPORTANT) ?>
 		
-					<h1 class="entry-title">Response: <?php the_title(); ?>. Response to <a href="<?php echo get_the_permalink($r->ID); ?>"><?php echo the_field('bmcr_id', $r->ID); ?></a></h1>
+					<h2 class="entry-title">Response: <?php the_title(); ?>. Response to <a href="<?php echo get_the_permalink($r->ID); ?>"><?php echo the_field('bmcr_id', $r->ID); ?></a></h2>
 			
 				<?php endforeach; 
 
@@ -49,54 +51,76 @@
 					
 		?>
 		
-		
+		<div class="entry-links response-entry-links">
 		
 		<?php if (get_field('response_relationships') && get_field('relationships') ): ?>
 			
-			<a href="#responses"><p><?php echo $relationship_count = count(get_field('response_relationships')); ?> Responses</p></a>
+			<a href="#responses" class="responses-anchor"><p><?php echo $relationship_count = count(get_field('response_relationships')); ?> Responses</p></a>
 			
 		<?php endif; ?>
-			
-			
-			
-		
 		
 		</div>
+			
+			
+			
+		</div>
+		
+		</div><!-- /.entry-header -->
 		
 		<!--TODO: sort out how to include responses-->
 		
-		<div class="entry-meta">
+		<div class="entry-meta row">
 			
-			<h4>Response by
-			<?php get_template_part( 'template-parts/content', 'entrymeta' ); ?>
+			<div class="col-sm-10 offset-sm-1">
+			
+				<h4>Response by
+				<?php get_template_part( 'template-parts/content', 'entrymeta' ); ?>
+				
+				</h4>
+			
+			</div>
 		
-		</div>
+		</div><!--/.entry-meta -->
 		
-		<div class="entry-content">
+		<div class="entry-content row">
+			
+			<div class="col-sm-10 offset-sm-1">
 			
 			<?php the_content(); ?>
 			
-		</div>
+			</div>
+			
+		</div><!--/.entry-content -->
 		
 		
-		<div class="entry-footer">
+		<div class="entry-footer row">
+			
+			<div class="col-sm-10 offset-sm-1">
 			
 			<?php
 				if(get_the_tag_list()) {
-				echo get_the_tag_list('<ul><li>','</li><li>','</li></ul>');
+				echo get_the_tag_list('<ul class="tag-wrapper"><li>','</li><li>','</li></ul>');
 				}
 			?>
 			
+			</div>
+			
 		</div>
 			
-		<aside>
-			<h2>Related publications</h2>
+		<aside id="rel-pubs" class="row">
+			
+			<div class="col-sm-10 offset-sm-1">
+			
 			
 			<?php 
 
 				$posts = get_field('rel_pubs');
+				
 
 				if( $posts ): ?>
+				
+					<h2>Related publications</h2>
+				
 				    <ul>
 					  <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 				        <?php setup_postdata($post);
@@ -126,10 +150,20 @@
 			
 		</aside>
 		
-		<aside id="responses">
-			<h2>Responses</h2>
-			<small><a href="#">Response Guidelines</a></small>
-			<small><a href="#">Submit a Response</a></small>
+		<aside id="responses" class="row">
+			
+			
+			<div class="col-sm-10 offset-sm-1">
+			
+			<div class="responses-header">
+				
+				<h2>Responses</h2>
+				
+				<a href="#"><p>Response Guidelines</p></a>
+				<a href="#"><p>Submit a Response</p></a>
+				
+			</div>
+
 			
 			<?php 
 
@@ -148,22 +182,27 @@
 			<?php endif; ?>
 			
 					
+			</div>
 		
-		</aside>
+		</aside><!--/#responses -->
 
 		
 				
-		<aside>
-			<h2>Comments</h2>
+		<aside  id="comments-wrapper" class="row">
 			
-			<?php  //If comments are open or we have at least one comment, load up the comment template. 
-			
-				if ( comments_open() || get_comments_number() ) :
+			<div class="col-sm-10 offset-sm-1">
+				<h2>Comments</h2>
 				
-					comments_template();
+				<?php  //If comments are open or we have at least one comment, load up the comment template. 
+				
+					if ( comments_open() || get_comments_number() ) :
 					
-				endif;
-			?>
+						comments_template();
+						
+					endif;
+				?>
+			
+			</div>
 		
 		</aside>
 			
