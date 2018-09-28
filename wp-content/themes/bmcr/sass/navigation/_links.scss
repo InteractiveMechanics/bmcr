@@ -47,3 +47,9 @@ a.btn-secondary {
 a[rel="tag"] {
 	@extend .btn-secondary;
 }
+
+.apply-link {
+	position: absolute;
+    bottom: 28px;
+    right: 21px;
+}

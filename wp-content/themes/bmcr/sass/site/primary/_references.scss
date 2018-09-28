@@ -52,4 +52,12 @@
 	border-bottom: none;
 }
 
+.ref-status-pitch {
+	position: relative;
+	&:hover {
+		opacity: 1;
+	}
+}
+
+
 

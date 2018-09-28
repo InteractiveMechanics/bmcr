@@ -721,6 +721,11 @@ a.btn-secondary:active,
 a[rel="tag"]:active {
   opacity: 1; }
 
+.apply-link {
+  position: absolute;
+  bottom: 28px;
+  right: 21px; }
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -1061,6 +1066,11 @@ footer {
   color: #7F7F7F;
   text-decoration: none;
   border-bottom: none; }
+
+.ref-status-pitch {
+  position: relative; }
+  .ref-status-pitch:hover {
+    opacity: 1; }
 
 /*--------------------------------------------------------------
 ## Jumbotron

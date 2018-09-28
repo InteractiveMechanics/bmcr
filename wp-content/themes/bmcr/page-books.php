@@ -30,7 +30,8 @@ get_header();
 		
 	
 		
-	
+	<div class="row">
+		<div class="col-sm-10 offset-sm-1">
 	
 	<?php 
 	global $post;
@@ -45,18 +46,24 @@ get_header();
 
 	
 
-	foreach ( $myposts as $post ) : setup_postdata( $post );
+	foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 	
-	get_template_part( 'template-parts/content', 'referencereview' );
+	<div class="ref-wrapper ref-status-pitch">
+	
+	<?php get_template_part( 'template-parts/content', 'referencebook' );
 	?>
 	
-	</div>	
-		 
+	<a href="#" class="btn btn-secondary apply-link">Apply to Review this book</a>
+	
+	</div>
+			 
 	<?php endforeach; 
 	wp_reset_postdata();
 	?>
-
-	</div><!--/.container-fluid -->
+				
+					</div><!--/.col-sm-10 -->
+				</div><!--/.row -->
+			</div><!--/.container-fluid -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
