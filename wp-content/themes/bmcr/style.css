@@ -904,6 +904,7 @@ a[rel="tag"]:active {
 
 .entry-content,
 .entry-header,
+.page-header,
 #rel-pubs,
 #responses,
 #comments-wrapper {
@@ -960,6 +961,31 @@ a[rel="tag"]:active {
     .responses-header a p {
       margin: 0px;
       line-height: 1; }
+
+.page-header-wrapper {
+  display: flex;
+  align-items: center; }
+  .page-header-wrapper ul {
+    display: flex;
+    margin: 0px 0px 0px 20px; }
+  .page-header-wrapper div {
+    display: flex;
+    margin: 0px 0px 0px 20px; }
+    .page-header-wrapper div a {
+      margin-left: 20px; }
+      .page-header-wrapper div a p {
+        margin: 0;
+        line-height: 1; }
+
+.card {
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+  margin-bottom: 20px; }
+  .card ul {
+    display: flex; }
+    .card ul li {
+      margin-left: 20px; }
 
 /*--------------------------------------------------------------
 ## Comments

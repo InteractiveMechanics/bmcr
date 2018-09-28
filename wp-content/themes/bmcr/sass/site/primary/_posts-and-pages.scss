@@ -19,6 +19,7 @@
 
 .entry-content,
 .entry-header,
+.page-header,
 #rel-pubs,
 #responses,
 #comments-wrapper {
@@ -92,4 +93,37 @@
 			line-height: 1;
 		}
 	}
+}
+
+.page-header-wrapper {
+	display: flex;
+    align-items: center;
+    ul {
+	    display: flex;
+		margin: 0px 0px 0px 20px;
+    }
+    div {
+	    display: flex;
+		margin: 0px 0px 0px 20px;
+		a {
+			margin-left: 20px;
+			p {
+				margin: 0;
+				line-height: 1;
+			}
+		}
+    }
+}
+
+.card {
+	background-color: transparent;
+    border: none;
+    border-radius: 0px;
+    margin-bottom: 20px;
+    ul {
+	    display: flex;
+	    li {
+		    margin-left: 20px;
+	    }
+    }
 }

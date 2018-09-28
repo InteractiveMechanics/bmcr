@@ -17,16 +17,49 @@ get_header();
 
 	<div class="container-fluid">	
 		<div class="page-header" class="row">
-			<div class="col-sm-10 offset-sm-1">
+			<div class="col-sm-10 offset-sm-1 page-header-wrapper">
 				<h2 class="page-title">Available Books</h2>
 					
-				<ul>
-					<li><a href="">All</a></li>
-					<li><a href="">Author</a></li>
-					<li><a href="">Subject</a></li>
-				</ul>
-			</div>
-		</div>
+				<div>
+					<a href=""><p>All</p></a>
+					<a data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+						 <p>Authors</p>
+					</a>
+					<a data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
+						 <p>Subjects</p>
+					</a>
+					
+				</div>
+			</div><!--/.page-header-wrapper -->
+		</div><!--/.row -->
+		
+		<div class="row">
+			<div class="col-sm-10 offset-sm-1">
+			<div class="collapse multi-collapse" id="multiCollapseExample1">
+				<div class="card card-body">
+					<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+								
+	      		</div><!-- /.card -->
+	    	</div><!-- /.collapse -->
+	    	
+	    	<div class="collapse multi-collapse" id="multiCollapseExample2">
+				<div class="card card-body">
+					<ul>
+						<?php 
+							$tags = get_tags(); 
+							foreach ($tags as $tag): ?>
+							<li><a href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a></li>
+						<?php endforeach; ?>
+					</ul>
+
+								
+	      		</div><!-- /.card -->
+	    	</div><!-- /.collapse -->
+
+			</div><!--/.co-sm-10 -->
+		</div><!--/.row-->
+
+	
 		
 	
 		
