@@ -84,6 +84,18 @@ endif;
 add_action( 'after_setup_theme', 'bmcr_setup' );
 
 /**
+* register custom navigation walker
+*
+* github repo: https://github.com/wp-bootstrap/wp-bootstrap-navwalker
+*
+*/
+
+require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+
+
+
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.

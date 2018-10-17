@@ -667,6 +667,29 @@ textarea {
   font-family: "Noto Sans", sans-serif;
   font-style: italic; }
 
+.form-control.header-search {
+  font-size: 16px;
+  padding: 7px 20px; }
+
+/* styling related to Ninja Forms related classes, ids, els, etc. */
+.nf-form-cont {
+  font-family: "Noto Sans", sans-serif; }
+
+.nf-field-label label {
+  color: #5D5D5D;
+  font-weight: 400 !important;
+  font-size: 24px; }
+
+.nf-form-fields-required {
+  margin-bottom: 25px; }
+
+.nf-error-msg, .ninja-forms-req-symbol {
+  color: #CB4534 !important; }
+
+/* do not display application status */
+#nf-field-16-wrap {
+  display: none; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -791,6 +814,83 @@ a[rel="tag"]:active {
   text-align: right;
   width: 50%; }
 
+.navbar {
+  display: block;
+  padding-bottom: 0px; }
+
+.brand-wrapper,
+.nav-wrapper {
+  padding: 0px; }
+
+.brand-wrapper {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #03335F; }
+
+.site-title {
+  color: #707070;
+  font-family: "Noto Serif", serif;
+  font-size: 32px;
+  line-height: 43px;
+  font-weight: 400; }
+
+.nav-item a {
+  color: #868686; }
+.nav-item:hover {
+  color: #03335F; }
+
+.nav-link-wrapper {
+  margin: 0px; }
+
+.dropdown-menu {
+  padding: 0px;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: 5px solid #03335F;
+  border-radius: 0px; }
+
+.dropdown-toggle::after {
+  border: none; }
+
+.dropdown {
+  width: 140px;
+  border-left: 5px solid transparent; }
+
+.dropdown.show {
+  border-left: 5px solid #03335F; }
+  .dropdown.show .dropdown-toggle {
+    color: #03335F;
+    font-weight: 700;
+    opacity: 1; }
+
+.dropdown-item {
+  padding: 11px 18px; }
+  .dropdown-item:hover {
+    background-color: rgba(140, 140, 140, 0.2);
+    color: #03335F;
+    opacity: 1; }
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  left: -5px;
+  top: 38px;
+  background-color: #FCFCFC; }
+
+.login-wrapper {
+  background: #03335F; }
+  .login-wrapper .col-sm-10 {
+    height: 47px;
+    display: flex;
+    justify-content: flex-end; }
+  .login-wrapper p {
+    margin: 0;
+    position: relative;
+    top: 5px; }
+    .login-wrapper p a {
+      font-family: "Noto Sans", sans-serif;
+      color: #FFFFFF;
+      border-bottom: 1px solid white; }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -899,6 +999,9 @@ a[rel="tag"]:active {
 .hentry {
   margin: 0 0 1.5em; }
 
+.site-header {
+  border-bottom: 1px solid #03335F; }
+
 .updated:not(.published) {
   display: none; }
 
@@ -909,6 +1012,9 @@ a[rel="tag"]:active {
 #responses,
 #comments-wrapper {
   margin-top: 40px; }
+
+#main {
+  margin-bottom: 80px; }
 
 .entry-citation {
   margin: 0px; }

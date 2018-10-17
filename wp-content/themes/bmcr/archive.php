@@ -15,7 +15,10 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<div class="container-fluid">	
+				<div class="page-header" class="row">
+					<div class="col-sm-10 offset-sm-1 page-header-wrapper">
+				
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				?>
@@ -23,7 +26,10 @@ get_header();
 					
 				<?php get_template_part( 'template-parts/content', 'pageheader'); ?>													
 				
-			</header><!-- .page-header -->
+			<?php /* closing tags for .page-header-wrapper and .row are in the pageheader template part */ ?>
+			
+			<div class="row">
+				<div class="col-sm-10 offset-sm-1">
 
 			<?php
 			/* Start the Loop */
@@ -42,11 +48,10 @@ get_header();
 				elseif ($post_type === 'articles'):
 				
 				get_template_part( 'template-parts/content', 'referencearticle' );
-				
+								
 				elseif ($post_type === 'responses'):
 				
-				get_template_part( 'template-parts/content', 'referenceresponse' );
-			
+				get_template_part( 'template-parts/content', 'referenceresponse' );			
 				
 				endif;
 
@@ -60,6 +65,10 @@ get_header();
 
 		endif;
 		?>
+		
+		</div><!--/.col-sm-10 -->
+		</div><!--/.row -->
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -105,3 +105,101 @@
 		width: 50%;
 	}
 }
+
+.navbar {
+	display: block;
+	padding-bottom: 0px;
+}
+
+.brand-wrapper,
+.nav-wrapper {
+	padding: 0px;
+}
+
+.brand-wrapper {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid $blue;
+}
+
+.site-title {
+	color: $grey4;
+	font-family: $noto-serif;
+	font-size: 32px;
+	line-height: 43px;
+    font-weight: 400;
+}
+
+.nav-item {
+	a {
+		color: $grey5;
+	}
+	&:hover {
+		color: $blue;
+	}
+}
+
+.nav-link-wrapper {
+	margin: 0px;
+}
+
+.dropdown-menu {
+	padding: 0px;
+	border-top: none;
+	border-right: none;
+	border-bottom: none;
+	border-left: 5px solid $blue; 
+	border-radius: 0px;
+}
+
+.dropdown-toggle::after {
+	border: none;
+}
+
+.dropdown {
+	width: 140px;
+	border-left: 5px solid transparent;
+}
+
+.dropdown.show {
+	border-left: 5px solid $blue;
+	.dropdown-toggle {
+		color: $blue;
+		font-weight: 700;
+		opacity: 1;
+	}
+}
+
+.dropdown-item {
+	padding: 11px 18px;
+	&:hover {
+		background-color: rgba(140, 140, 140, 0.2); //$grey7 at 20%
+		color: $blue;
+		opacity: 1;
+	}
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+	left: -5px;
+	top: 38px;
+	background-color: $white2;
+}
+
+.login-wrapper {
+	background: $blue;
+	.col-sm-10 {
+	    height: 47px;
+		display: flex;
+		justify-content: flex-end;
+	}
+	p{
+		margin: 0;
+		position: relative;
+		top: 5px;
+		a {
+			font-family: $noto-sans;
+			color: $white;
+			border-bottom: 1px solid white;
+		}
+	}
+}

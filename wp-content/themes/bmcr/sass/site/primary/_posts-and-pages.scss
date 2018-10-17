@@ -6,6 +6,10 @@
 	margin: 0 0 1.5em;
 }
 
+.site-header {
+	border-bottom: 1px solid $blue;
+}
+
 .updated:not(.published) {
 	display: none;
 }
@@ -17,6 +21,7 @@
 }
 
 
+
 .entry-content,
 .entry-header,
 .page-header,
@@ -24,6 +29,10 @@
 #responses,
 #comments-wrapper {
 	margin-top: 40px;
+}
+
+#main {
+	margin-bottom: 80px;
 }
 
 .entry-citation {

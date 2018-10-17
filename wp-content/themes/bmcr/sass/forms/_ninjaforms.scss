@@ -1,0 +1,24 @@
+/* styling related to Ninja Forms related classes, ids, els, etc. */
+
+.nf-form-cont {
+	font-family: $noto-sans;
+}
+
+.nf-field-label label {
+	color: $grey3;
+	font-weight: 400 !important;
+	font-size: 24px;
+}
+
+.nf-form-fields-required {
+	margin-bottom: 25px;
+}
+
+.nf-error-msg, .ninja-forms-req-symbol {
+	color: $red !important;
+}
+
+/* do not display application status */
+#nf-field-16-wrap {
+	display: none;
+}

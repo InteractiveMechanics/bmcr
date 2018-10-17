@@ -25,6 +25,73 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bmcr' ); ?></a>
 
 	<header id="masthead" class="site-header">
+		<div class="login-wrapper container-fluid">
+			<div class="row">
+				<div class="col-sm-10 offset-sm-1">
+					<p><a href="<?php echo wp_login_url(); ?>" title="Login">Login</a></p>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg container-fluid">
+			<div class="row">
+				<div class="col-sm-10 offset-sm-1 brand-wrapper">
+					<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><h1 class="site-title"><?php bloginfo( 'name' ); ?></h1></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2 header-search" type="search" placeholder="Search" aria-label="Search">
+    				</form>
+				</div><!--/.col-sm-10 -->
+			</div><!--/.row -->
+			<div class="row">
+				<div class="col-sm-10 offset-sm-1 nav-wrapper">
+					<?php wp_nav_menu( array(
+						'theme_location'  => 'menu-1',
+						'depth'	          => 2, // 1 = no dropdowns, 2 = with dropdowns.
+						'container'       => 'div',
+						'container_class' => 'collapse navbar-collapse',
+						'container_id'    => 'navbarSupportedContent',
+						'menu_class'      => 'navbar-nav mr-auto',
+						'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+						'walker'          => new WP_Bootstrap_Navwalker(),
+					) ); ?>
+					
+<!--
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item active">
+								<a class="nav-link" href="#">Publications</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          For Reviewers
+        						</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item" href="#">Action</a>
+									<a class="dropdown-item" href="#">Another action</a>
+									<a class="dropdown-item" href="#">Something else here</a>
+        						</div>
+							</li>
+
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          For Publishers
+        						</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item" href="#">Books For Review</a>
+									<a class="dropdown-item" href="#">Reviewer Guidlines</a>
+									<a class="dropdown-item" href="#">Apply to Be a Reviewer</a>
+        						</div>
+							</li>
+    					</ul>
+    					<p class="nav-link-wrapper"><a class="nav-link" href="#">About BMCR</a></p>
+  					</div>
+--><!-- /.collapse -->
+  				</div><!-- /.col-sm-10 -->
+  			</div><!-- /.row -->
+</nav>
+<!--
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -42,8 +109,10 @@
 				?>
 				<p class="site-description"><?php echo $bmcr_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
-		</div><!-- .site-branding -->
+		</div>
+--><!-- .site-branding -->
 
+<!--
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bmcr' ); ?></button>
 			<?php
@@ -52,7 +121,8 @@
 				'menu_id'        => 'primary-menu',
 			) );
 			?>
-		</nav><!-- #site-navigation -->
+		</nav>
+--><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

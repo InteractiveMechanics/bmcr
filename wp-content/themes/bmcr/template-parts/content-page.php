@@ -9,18 +9,23 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="container-fluid">
+	<header class="entry-header row">
+		<div class="col-sm-10 offset-sm-1 testing">
+
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		</div>
 	</header><!-- .entry-header -->
 
 	<?php bmcr_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="entry-content row">
+		<div class="col-sm-10 offset-sm-1">
+	
 		<?php
 		the_content();
-
 		?>
+		</div>
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
