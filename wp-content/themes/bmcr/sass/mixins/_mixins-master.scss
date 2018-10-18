@@ -1,3 +1,100 @@
+//Media queries
+
+@mixin screen-xxs {
+  @media (#{$screen-xxs}) {
+    @content;
+  }
+}
+
+@mixin screen-xs {
+  @media (#{$screen-xs}) {
+    @content;
+  }
+}
+
+@mixin screen-sm {
+  @media (#{$screen-sm}) {
+    @content;
+  }
+}
+
+@mixin screen-md {
+  @media (#{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin screen-lg {
+  @media (#{$screen-lg}) {
+    @content;
+  }
+}
+
+@mixin screen-xl {
+  @media (#{$screen-xl}) {
+    @content;
+  }
+}
+
+@mixin screen-ltmd  {
+  @media (#{$screen-ltmd}) {
+    @content;
+  }
+}
+
+@mixin screen-ltlg  {
+  @media (#{$screen-ltlg}) {
+    @content;
+  }
+}
+
+@mixin screen-ltxl  {
+  @media (#{$screen-ltxl}) {
+    @content;
+  }
+}
+
+@mixin screen-gtxs  {
+  @media (#{$screen-gtxs}) {
+    @content;
+  }
+}
+
+@mixin screen-gtsm  {
+  @media (#{$screen-gtsm}) {
+    @content;
+  }
+}
+
+@mixin screen-gtmd  {
+  @media (#{$screen-gtmd}) {
+    @content;
+  }
+}
+
+@mixin screen-landscape {
+  @media (#{$screen-landscape}) {
+    @content;
+  }
+}
+
+@mixin screen-portrait {
+	@media (#{$screen-portrait}) {
+		@content;
+	}
+}
+
+@mixin screen-landscape-xs {
+	@media  (#{$screen-xs}) and (#{$screen-landscape}) {
+		@content;
+	}
+}
+
+
+
+
+
+
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
 	font-size: ($sizeValue * 16) * 1px;

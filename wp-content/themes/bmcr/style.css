@@ -822,6 +822,9 @@ a[rel="tag"]:active {
 .nav-wrapper {
   padding: 0px; }
 
+.nav-wrapper {
+  display: flex; }
+
 .brand-wrapper {
   display: flex;
   justify-content: space-between;
@@ -834,8 +837,47 @@ a[rel="tag"]:active {
   line-height: 43px;
   font-weight: 400; }
 
+/*
+#menu-menu-1.navbar-nav li{
+	&:first-child {
+		margin-right: 20px;
+	}
+}
+*/
+.navbar-nav {
+  height: 47px;
+  font-size: 20px;
+  line-height: 32px; }
+  .navbar-nav li > a {
+    position: relative;
+    top: 11px;
+    padding: 0 !important;
+    margin-right: 40px;
+    line-height: 22px; }
+    .navbar-nav li > a:hover {
+      color: #03335F; }
+
 .nav-item a {
   color: #868686; }
+  .nav-item a:after {
+    content: "";
+    border-bottom: 1px solid #03335F;
+    position: absolute;
+    margin-right: 0px;
+    left: 50%;
+    height: 2px;
+    background: transparent;
+    width: 0%;
+    bottom: 0px;
+    transition: width 0.5s ease, left 0.5s ease; }
+  .nav-item a:hover {
+    color: #03335F;
+    opacity: 1; }
+    .nav-item a:hover:after {
+      right: 0;
+      height: 2px;
+      width: 100%;
+      left: 0; }
 .nav-item:hover {
   color: #03335F; }
 
@@ -851,17 +893,17 @@ a[rel="tag"]:active {
   border-radius: 0px; }
 
 .dropdown-toggle::after {
-  border: none; }
+  border: none;
+  margin-left: 0px; }
 
 .dropdown {
-  width: 140px;
+  padding: 0px 0px 0px 10px;
   border-left: 5px solid transparent; }
 
 .dropdown.show {
   border-left: 5px solid #03335F; }
   .dropdown.show .dropdown-toggle {
     color: #03335F;
-    font-weight: 700;
     opacity: 1; }
 
 .dropdown-item {
@@ -874,7 +916,17 @@ a[rel="tag"]:active {
 .navbar-expand-lg .navbar-nav .dropdown-menu {
   left: -5px;
   top: 38px;
-  background-color: #FCFCFC; }
+  background-color: #FCFCFC;
+  box-shadow: 2px 3px 9px rgba(0, 0, 0, 0.15); }
+  .navbar-expand-lg .navbar-nav .dropdown-menu li > a {
+    position: initial;
+    top: initial;
+    padding: 10px !important; }
+    .navbar-expand-lg .navbar-nav .dropdown-menu li > a:hover:after {
+      width: 0%; }
+
+.navbar-nav.nav-right > li > a {
+  margin: 0; }
 
 .login-wrapper {
   background: #03335F; }

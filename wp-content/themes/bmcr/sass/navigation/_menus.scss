@@ -116,6 +116,10 @@
 	padding: 0px;
 }
 
+.nav-wrapper {
+	display: flex;
+}
+
 .brand-wrapper {
 	display: flex;
 	justify-content: space-between;
@@ -130,9 +134,55 @@
     font-weight: 400;
 }
 
+/*
+#menu-menu-1.navbar-nav li{
+	&:first-child {
+		margin-right: 20px;
+	}
+}
+*/
+
+.navbar-nav {
+	height: 47px;
+    font-size: 20px;
+    line-height: 32px;
+    li>a {
+	    position: relative;
+		top: 11px;
+		padding: 0 !important; //needed to over-ride very specific - 3 classes - bootstrap styling
+		margin-right: 40px;
+		line-height: 22px;
+	    &:hover {
+			color: $blue;
+	    }
+    }
+}
+
 .nav-item {
 	a {
 		color: $grey5;
+		&:after {
+			content: "";
+		    border-bottom: 1px solid $blue;
+		    position: absolute;
+		    margin-right: 0px;
+		    left: 50%;
+		    height: 2px;
+		    background: transparent;
+		    width: 0%;
+		    bottom: 0px;
+		    transition: width 0.5s ease, left 0.5s ease;
+		}
+		&:hover {
+			color: $blue;
+			opacity: 1;
+			&:after {
+				right: 0;
+				height: 2px;
+				width: 100%;
+				left: 0;
+			}
+		}
 	}
 	&:hover {
 		color: $blue;
@@ -154,10 +204,12 @@
 
 .dropdown-toggle::after {
 	border: none;
+	margin-left: 0px;
 }
 
 .dropdown {
-	width: 140px;
+	//width: 170px;
+	padding: 0px 0px 0px 10px;
 	border-left: 5px solid transparent;
 }
 
@@ -165,7 +217,7 @@
 	border-left: 5px solid $blue;
 	.dropdown-toggle {
 		color: $blue;
-		font-weight: 700;
+		//font-weight: 700;
 		opacity: 1;
 	}
 }
@@ -183,6 +235,22 @@
 	left: -5px;
 	top: 38px;
 	background-color: $white2;
+	box-shadow: 2px 3px 9px rgba(0,0,0, 0.15);
+	li>a {
+		position: initial;
+		top: initial;
+		padding: 10px !important;
+		&:hover {
+			&:after {
+				width: 0%;
+			}
+		}
+		
+	}
+}
+
+.navbar-nav.nav-right>li>a{
+	margin: 0;
 }
 
 .login-wrapper {

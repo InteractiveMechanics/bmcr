@@ -35,7 +35,7 @@
 		<nav class="navbar navbar-expand-lg container-fluid">
 			<div class="row">
 				<div class="col-sm-10 offset-sm-1 brand-wrapper">
-					<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><h1 class="site-title"><?php bloginfo( 'name' ); ?></h1></a>
+					<a class="navbar-brand navbar-brand-lg" href="<?php echo esc_url( home_url( '/' ) ); ?>"><h1 class="site-title"><?php the_field('site_full_name', 'option'); ?></h1></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
@@ -56,6 +56,18 @@
 						'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
 						'walker'          => new WP_Bootstrap_Navwalker(),
 					) ); ?>
+					
+					<?php wp_nav_menu( array(
+						'theme_location'  => 'menu-2',
+						'depth'	          => 2, // 1 = no dropdowns, 2 = with dropdowns.
+						'container'       => 'div',
+						'container_class' => '',
+						'container_id'    => '',
+						'menu_class'      => 'navbar-nav mr-auto nav-right',
+						'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+						'walker'          => new WP_Bootstrap_Navwalker(),
+					) ); ?>
+					
 					
 <!--
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
