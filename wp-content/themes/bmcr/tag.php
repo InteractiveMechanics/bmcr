@@ -3,19 +3,24 @@
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 	
-	<header class="page-header">
-			
+		
+	
+	<div class="container-fluid">	
+		<div class="page-header" class="row">
+			<div class="col-sm-10 offset-sm-1 page-header-wrapper">
 		
 				<h1 class="page-title">Publications: <?php echo single_tag_title('', false); ?></h1>
 				
 				<?php get_template_part( 'template-parts/content', 'pageheader'); ?>
+				<?php /* closing tags for .page-header-wrapper and .row are in the pageheader template part */ ?>
 
 																		
 				
-	</header><!-- .page-header -->
 	
-	<!-- section -->
-		<section>
+	
+			
+		<div class="row">
+				<div class="col-sm-10 offset-sm-1">
 
 			
 		<?php
@@ -65,11 +70,13 @@
 			
 		endif;
 		?>
+		
+		</div><!--/.col-sm-10 -->
+		</div><!--/.row -->
 			
 
 
-		</section>
-		<!-- /section -->	
+		
 	
 	</main>
 </div>

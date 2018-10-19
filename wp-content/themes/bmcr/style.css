@@ -1148,12 +1148,17 @@ a[rel="tag"]:active {
 .card {
   background-color: transparent;
   border: none;
+  border-bottom: 1px solid #03335F;
   border-radius: 0px;
   margin-bottom: 20px; }
   .card ul {
     display: flex; }
     .card ul li {
-      margin-left: 20px; }
+      margin-right: 20px;
+      font-size: 20px;
+      font-family: "Noto Sans", sans-serif; }
+      .card ul li a {
+        color: #707070; }
 
 /*--------------------------------------------------------------
 ## Comments

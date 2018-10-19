@@ -127,12 +127,19 @@
 .card {
 	background-color: transparent;
     border: none;
+    border-bottom: 1px solid $blue;
     border-radius: 0px;
     margin-bottom: 20px;
+    
     ul {
 	    display: flex;
 	    li {
-		    margin-left: 20px;
+		    margin-right: 20px;
+		    font-size: 20px;
+		    font-family: $noto-sans;
+		    a {
+			    color: $grey4;
+		    }
 	    }
     }
 }
