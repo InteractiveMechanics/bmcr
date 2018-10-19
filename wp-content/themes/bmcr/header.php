@@ -36,6 +36,8 @@
 			<div class="row">
 				<div class="col-sm-10 offset-sm-1 brand-wrapper">
 					<a class="navbar-brand navbar-brand-lg" href="<?php echo esc_url( home_url( '/' ) ); ?>"><h1 class="site-title"><?php the_field('site_full_name', 'option'); ?></h1></a>
+					<a class="navbar-brand navbar-brand-sm" href="<?php echo esc_url( home_url( '/' ) ); ?>"><h1 class="site-title"><?php the_field('site_acronym', 'option'); ?></h1><small><?php the_field('site_full_name', 'option'); ?></small></a>
+
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>

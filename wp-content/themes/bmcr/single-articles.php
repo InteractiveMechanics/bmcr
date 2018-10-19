@@ -28,7 +28,7 @@
 		
 		</div>
 		
-		
+		<?php if( get_field('show_entrymeta') ): ?>
 		<div class="entry-meta row">
 			
 			<div class="col-sm-10 offset-sm-1">
@@ -37,10 +37,10 @@
 			<?php get_template_part( 'template-parts/content', 'entrymeta' ); ?>
 			<!-- the closing h4 tag is included in the entrymeta content partial -->
 			
-			</div>
-			
+			</div>			
 		
 		</div>
+		<?php endif; ?>	
 		
 		<div class="entry-content row">
 			
@@ -86,13 +86,15 @@
 			
 			<div class="col-sm-10 offset-sm-1">
 				
-			<h2>Related publications</h2>
+<!-- 			<h2>Related publications</h2> -->
 			
 			<?php 
 
 				$posts = get_field('rel_pubs');
 
 				if( $posts ): ?>
+					<h2>Related publications</h2>
+				
 				    <ul>
 				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 				        <?php setup_postdata($post);

@@ -271,3 +271,19 @@
 		}
 	}
 }
+
+
+.navbar-brand-lg {
+	@include screen-ltmd {
+		display: none;
+	}
+}
+
+.navbar-brand-sm {
+	@include screen-gtsm {
+		display: none;
+	}
+	.site-title {
+		margin-bottom: 0px;
+	}
+}

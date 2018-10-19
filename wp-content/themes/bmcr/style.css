@@ -943,6 +943,16 @@ a[rel="tag"]:active {
       color: #FFFFFF;
       border-bottom: 1px solid white; }
 
+@media (max-width: 991px) {
+  .navbar-brand-lg {
+    display: none; } }
+
+@media (min-width: 992px) {
+  .navbar-brand-sm {
+    display: none; } }
+.navbar-brand-sm .site-title {
+  margin-bottom: 0px; }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
