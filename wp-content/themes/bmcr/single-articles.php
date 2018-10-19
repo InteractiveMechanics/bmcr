@@ -28,19 +28,24 @@
 		
 		</div>
 		
-		<?php if( get_field('show_entrymeta') ): ?>
 		<div class="entry-meta row">
 			
 			<div class="col-sm-10 offset-sm-1">
 			
-			<h4>Article by
-			<?php get_template_part( 'template-parts/content', 'entrymeta' ); ?>
-			<!-- the closing h4 tag is included in the entrymeta content partial -->
 			
-			</div>			
+			<?php if( get_field('show_entrymeta') ): ?>
+				<h4>Article by
+					<?php get_template_part( 'template-parts/content', 'entrymeta' ); ?>
+					<!-- the closing h4 tag is included in the entrymeta content partial -->
+			<?php else: ?>
+				<h4 class="meta-date"><?php the_date(); ?></h4>
+			<?php endif; ?>
+			
+			</div>
+						
 		
 		</div>
-		<?php endif; ?>	
+		
 		
 		<div class="entry-content row">
 			
@@ -126,7 +131,7 @@
 			
 		</aside>
 		
-				
+		<?php if( get_field('show_comments') ): ?>	
 		<aside class="row">
 			
 			<div class="col-sm-10 offset-sm-1">
@@ -145,7 +150,7 @@
 			</div>
 		
 		</aside>
-			
+		<?php endif; ?>	
 	
 	</article>
 
