@@ -23,6 +23,7 @@ get_header();
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				?>
 				
+				
 					
 				<?php get_template_part( 'template-parts/content', 'pageheader'); ?>													
 				

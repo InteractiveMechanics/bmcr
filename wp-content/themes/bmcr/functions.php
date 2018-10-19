@@ -131,8 +131,8 @@ add_action( 'widgets_init', 'bmcr_widgets_init' );
 
 
 function add_custom_post_types_to_loop( $query ) {
-	if ( $query->is_front_page() && $query->is_main_query() || $query->is_home() && $query->is_main_query() )
-		$query->set( 'post_type', array( 'post', 'page', 'articles', 'reviews', 'responses' ) );
+	if ( $query->is_front_page() && $query->is_main_query() || $query->is_home() && $query->is_main_query() || is_archive() && $query->is_main_query() && !is_post_type_archive() )
+		$query->set( 'post_type', array( 'articles', 'reviews', 'responses' ) );
 	return $query;
 }
 add_action( 'pre_get_posts', 'add_custom_post_types_to_loop' );
