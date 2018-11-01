@@ -23,19 +23,21 @@
 			<div class="site-info col-sm-4 offset-sm-1">
 				<h4>Contact Us</h4>
 				<small>
-					<?php the_field('address_1', 'option'); ?>
+					<?php the_field('address_1', 'option'); ?><br/>
+                    <?php the_field('address_2', 'option'); ?>
 				</small>
 				<address>
 				<a href="https://goo.gl/maps/M4cbPNJ8Zsx" target="_blank" id="address-line">
-					<?php the_field('address_2', 'option'); ?>, 
+                    <?php the_field('address_3', 'option'); ?>, 
 					<?php the_field('city', 'option'); ?>
 					<?php the_field('state', 'option'); ?>
 					<?php the_field('zip', 'option'); ?>
 				</a>
 				</address>
 				<small>
-				<a href="mailto:<?php the_field('site_info_email', 'option'); ?>" target="_blank" id="footer-email"><?php the_field('site_info_email', 'option'); ?></a>|
-				<?php the_field('phone', 'option'); ?>
+				    <a href="mailto:<?php the_field('site_info_email', 'option'); ?>" target="_blank" id="footer-email"><?php the_field('site_info_email', 'option'); ?></a>
+                    &nbsp;|&nbsp;
+                    <a href="tel:<?php the_field('phone', 'option'); ?>" target="_blank" id="footer-email"><?php the_field('phone', 'option'); ?></a>
 				</small>
 			</div><!-- .site-info -->
 			<div class="social col-sm-1">
