@@ -5,7 +5,6 @@ this partial only contains the text of the reference. this is so you can apply t
 
 <?php
 	$pub_id = get_the_ID();
-	$bmcr_id = get_field('bmcr_id');
 	$publisher = get_field('publisher');
 	$pub_date = get_field('pub_date');
 	$isbn = get_field('isbn');
@@ -13,7 +12,6 @@ this partial only contains the text of the reference. this is so you can apply t
 ?>
 
 
-<small class="ref-id">BMCR <?php echo $bmcr_id; ?></small> 
 <p class="ref-title"><?php echo the_title(); ?></p>
 <p class="ref-author"><?php echo $book_author; ?></p>
 <p class="ref-details">

@@ -12,7 +12,10 @@
 <a href="<?php echo get_permalink(); ?>"  class="ref-wrapper">
 <small class="ref-id">BMCR <?php echo $bmcr_id; ?></small> 
 <p class="ref-title"><?php echo the_title(); ?></p>
-<p class="ref-author">Original 
+<p class="ref-author">
+    Response by <?php the_author(); ?> | 
+
+    Original 
 	<?php 
 		if ($response_type === 'review'): 
 			
@@ -50,7 +53,5 @@
 		
 		
 	?>
-	
-		| Response by <?php the_author(); ?>
 </p>
 </a>		

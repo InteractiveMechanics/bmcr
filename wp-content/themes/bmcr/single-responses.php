@@ -106,49 +106,6 @@
 			</div>
 			
 		</div>
-			
-		<aside id="rel-pubs" class="row">
-			
-			<div class="col-sm-10 offset-sm-1">
-			
-			
-			<?php 
-
-				$posts = get_field('rel_pubs');
-				
-
-				if( $posts ): ?>
-				
-					<h2>Related publications</h2>
-				
-				    <ul>
-					  <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-				        <?php setup_postdata($post);
-				        
-				        	 
-						$post_type = get_post_type( $post->ID ); if ($post_type == 'reviews'):
-						 
-						get_template_part( 'template-parts/content', 'referencereview' );
-						
-						elseif ($post_type == 'articles'):
-						
-						get_template_part( 'template-parts/content', 'referencearticle' );
-						
-						else:
-						
-						get_template_part( 'template-parts/content', 'referenceresponse' );
-						
-						endif;
-
-	      
-					endforeach; ?>
-
-				    </ul>
-				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-				    
-			<?php endif; ?>
-			
-		</aside>
 		
 		<aside id="responses" class="row">
 			
@@ -186,7 +143,47 @@
 		
 		</aside><!--/#responses -->
 
-		
+		<?php 
+
+			$posts = get_field('rel_pubs');
+			
+			if( $posts ): ?>
+        		<aside id="rel-pubs" class="row">
+        			
+        			<div class="col-sm-10 offset-sm-1">
+			
+			
+
+				
+    					<h2>Related publications</h2>
+    				
+    				    <ul>
+    					  <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+    				        <?php setup_postdata($post);
+    				        
+    				        	 
+    						$post_type = get_post_type( $post->ID ); if ($post_type == 'reviews'):
+    						 
+    						get_template_part( 'template-parts/content', 'referencereview' );
+    						
+    						elseif ($post_type == 'articles'):
+    						
+    						get_template_part( 'template-parts/content', 'referencearticle' );
+    						
+    						else:
+    						
+    						get_template_part( 'template-parts/content', 'referenceresponse' );
+    						
+    						endif;
+    
+    	      
+    					endforeach; ?>
+    
+    				    </ul>
+				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+			
+                </aside>
+        <?php endif; ?>
 				
 		<aside  id="comments-wrapper" class="row">
 			

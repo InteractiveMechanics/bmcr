@@ -47,7 +47,7 @@ get_header();
 			
 			
 			<div>
-					<?php get_template_part( 'template-parts/content', 'referencereview' ); ?>
+				<?php get_template_part( 'template-parts/content', 'referencereview' ); ?>
 			</div>
 				
 			<?php elseif ($post_type == 'articles'): ?>
