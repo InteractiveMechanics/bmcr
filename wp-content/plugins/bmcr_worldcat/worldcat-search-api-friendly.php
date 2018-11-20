@@ -1,7 +1,7 @@
 <?php
 
-$key    = 'BeQ2PIcGJgBnfrlP1ds8IlsWAGsR46MnS2BSD766x7V9NlCf9ygKmj4UVW2acFOpzNX6XwP3Gp9QsoSs';
-$url    = 'http://www.worldcat.org/webservices/catalog/content/';
+$key    = 'fwG2m6dl6mBw63uBLRKvXNfPAfuIhKV5JFj3kF9iz2O8dYs2zGpiInIcdmQ3OeIoM33R1lghfinuIXho';
+$url    = 'http://www.worldcat.org/webservices/catalog/content/isbn/';
 $oclc   = $_GET['oclc'];
 
 $ch = curl_init( $url . $oclc . '?wskey=' . $key );

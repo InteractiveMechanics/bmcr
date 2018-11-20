@@ -22,7 +22,7 @@ $(function() {
         var $worldcat_extent = $(this).parents('.acf-fields').find('[data-name="extent"] .acf-input input');
         var $worldcat_lssn = $(this).parents('.acf-fields').find('[data-name="lssn"] .acf-input input');
         var $worldcat_issn = $(this).parents('.acf-fields').find('[data-name="issn"] .acf-input input');
-        var $worldcat_isbn = $(this).parents('.acf-fields').find('[data-name="isbn"] .acf-input input');
+        var $worldcat_oclc = $(this).parents('.acf-fields').find('[data-name="oclc_number"] .acf-input input');
 
         if ($worldcat_oclc) {
             if (!$worldcat_title.val() && 
@@ -33,7 +33,7 @@ $(function() {
                 !$worldcat_extent.val() && 
                 !$worldcat_lssn.val() && 
                 !$worldcat_issn.val() && 
-                !$worldcat_isbn.val()) {
+                !$worldcat_oclc.val()) {
                     getWorldCatValues($(this));
             } else {
                 if (confirm("Values already exist for this book. Are you sure you want to override with WorldCat data?")) {
@@ -71,7 +71,7 @@ $(function() {
         var $worldcat_extent = that.parents('.acf-fields').find('[data-name="extent"] .acf-input input');
         var $worldcat_lssn = that.parents('.acf-fields').find('[data-name="lssn"] .acf-input input');
         var $worldcat_issn = that.parents('.acf-fields').find('[data-name="issn"] .acf-input input');
-        var $worldcat_isbn = that.parents('.acf-fields').find('[data-name="isbn"] .acf-input input');
+        var $worldcat_oclc = that.parents('.acf-fields').find('[data-name="oclc_number"] .acf-input input');
 
         $.ajax({
             url: plugin_url + $worldcat_oclc
@@ -112,8 +112,8 @@ $(function() {
             var issn = 
                 ($(xml).find('datafield[tag="022"]:first subfield[code="a"]').text());
 
-            var isbn = 
-                ($(xml).find('datafield[tag="020"]:first subfield[code="a"]').text());
+            var oclc = 
+                ($(xml).find('controlfield[tag="001"]:first').text());
 
             $worldcat_title.val(title);
             $worldcat_series_title.val(seriestitle);
@@ -122,9 +122,9 @@ $(function() {
             $worldcat_pub_location.val(pub_location);
             $worldcat_pub_date.val(pub_date);
             $worldcat_extent.val(extent);
-            $worldcat_lssn.val(isbn);
-            $worldcat_issn.val(isbn);
-            $worldcat_isbn.val(isbn);
+            $worldcat_lssn.val(lssn);
+            $worldcat_issn.val(issn);
+            $worldcat_oclc.val(oclc);
         });
     }
 });

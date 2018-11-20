@@ -4,10 +4,10 @@
 <div>
 	<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>"><p>All</p></a>
 	<a data-toggle="collapse" href="#toggle-reviewers" role="button" aria-expanded="false" aria-controls="toggle-reviewers"><p>Reviewer</p></a>
-	<a data-toggle="collapse" href="#toggle-authors" role="button" aria-expanded="false" aria-controls="toggle-authors"><p>Author</p></a>
+	<a data-toggle="collapse" href="#toggle-authors" role="button" aria-expanded="false" aria-controls="toggle-authors"><p>Author of Work</p></a>
 	<a data-toggle="collapse" href="#toggle-types" role="button" aria-expanded="false" aria-controls="toggle-types"><p>Type</p></a>
 	<a data-toggle="collapse" href="#toggle-years" role="button" aria-expanded="false" aria-controls="toggle-years"><p>Year</p></a>
-	<a data-toggle="collapse" href="#toggle-subjects" role="button" aria-expanded="false" aria-controls="toggle-subjects"><p>Subject</p></a>		
+	<a data-toggle="collapse" href="#toggle-subjects" role="button" aria-expanded="false" aria-controls="toggle-subjects" class="d-none"><p>Subject</p></a>	
 </div>
 
 <?php /* .opening tags for page-header-wrapper and .row are in the template */ ?>

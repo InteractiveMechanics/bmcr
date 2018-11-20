@@ -15,7 +15,7 @@ get_header(); ?>
 		<div class="container-fluid">	
 				<div class="page-header" class="row">
 					<div class="col-sm-10 offset-sm-1 page-header-wrapper">
-						<h1 class="page-title">Publications</h1>
+						<h1 class="page-title">Articles</h1>
 			
 			<?php get_template_part( 'template-parts/content', 'pageheader'); ?>
 									

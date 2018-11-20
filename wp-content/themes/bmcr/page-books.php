@@ -25,10 +25,6 @@ get_header();
         					<a data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
         						 <p>Authors</p>
         					</a>
-        					<a data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
-        						 <p>Subjects</p>
-        					</a>
-        					
         				</div>
         			</div><!--/.page-header-wrapper -->
         		</div><!--/.row -->
