@@ -1,35 +1,41 @@
 <?php
 	$pub_id = get_the_ID();
-	$bmcr_id = get_field('bmcr_id');
-	$publisher = get_field('publisher');
-	$pub_date = get_field('pub_date');
-	$isbn = get_field('isbn');
-	$book_author = get_field('book_author');
+
 ?>
 
 <a href="<?php echo get_permalink(); ?>" class="ref-wrapper">
-<small class="ref-id">BMCR <?php echo $bmcr_id; ?></small> 
-<p class="ref-title"><?php echo the_title(); ?></p>
-<p class="ref-author"><?php echo $book_author; ?> | Review by <?php the_author(); ?></p>
-<p class="ref-details">
-	<?php 
-		if ($publisher): 
-			echo $publisher . ', ';
-		endif;
-	
-		if ($pub_date):
-			echo $pub_date;
-		endif;
-		
-		if ($pub_date || $publisher): 
-			echo '|';
-		endif;
-		
-		if ($isbn):
-			echo 'ISBN ' . $isbn;
-		endif;
-	?>
+    <small class="ref-id">BMCR <?php echo the_field('bmcr_id'); ?></small> 
+    <p class="ref-title"><?php echo the_title(); ?></p>
 
-</p>
+    <p class="ref-author">Reviewed by 
+        <?php if( have_rows('reviewers') ): ?>
+            <?php while ( have_rows('reviewers') ) : the_row(); ?>
+                <?php echo the_sub_field('reviewer_first_name'); ?> 
+                <?php echo the_sub_field('reviewer_last_name'); ?><span class="comma">,&nbsp;</span>
+            <?php endwhile; ?>
+        <?php endif; ?>
+    </p>
+
+    <p class="ref-details">
+        <?php if( have_rows('books') ): ?>
+            <?php while ( have_rows('books') ) : the_row(); ?>
+
+                <em><?php echo the_sub_field('title'); ?></em>
+                <span class="slash">&nbsp;/&nbsp;</span>
+                By <?php echo the_sub_field('book_author_full'); ?>
+                <span class="slash">&nbsp;/&nbsp;</span>
+            	<?php 
+            		if (get_sub_field('publisher')): 
+            			echo the_sub_field('publisher') . ', ';
+            		endif;
+            	
+            		if (get_sub_field('pub_date')):
+            			echo the_sub_field('pub_date');
+            		endif;
+            	?>
+
+            <?php endwhile; ?>
+        <?php endif; ?>
+    </p>
 </a>		
 		 

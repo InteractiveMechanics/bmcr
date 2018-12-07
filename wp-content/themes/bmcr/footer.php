@@ -18,7 +18,9 @@
 			<div class="newsletter-wrapper col-sm-4 offset-sm-1">
 				<h4><?php the_field('newsletter_heading', 'option'); ?></h4>
 				<small><?php the_field('newsletter_subheading', 'option'); ?></small>
-				<button class="btn-secondary"><?php the_field('newsletter_button_text', 'option'); ?></button>
+				<a target="_blank"
+                   href="https://brynmawr.us1.list-manage.com/subscribe?u=c302ee634698194cc76ef8a8b&id=dec0468354" 
+                   class="btn-secondary"><?php the_field('newsletter_button_text', 'option'); ?></a>
 			</div>
 			<div class="site-info col-sm-4 offset-sm-1">
 				<h4>Contact Us</h4>

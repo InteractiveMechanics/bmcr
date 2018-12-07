@@ -13,68 +13,102 @@
  */
 
 get_header();
+
+$args = array(
+    'post_type' => array(
+        'reviews', 'responses', 'articles'
+    )
+);
+
+if(isset($_GET['auth'])){
+    $author = $_GET['auth'];
+    $args = array(
+        'post_type' => array(
+            'reviews', 'responses'
+        ),
+        'meta_query' => array(
+            array(
+                'key'		=> 'books_$_book_author_last',
+                'value'		=> '^[' . strtoupper($author) . strtolower($author) . ']',
+                'compare'	=> 'REGEXP'
+            )
+        )
+    );
+}
+
+if(isset($_GET['reviewer'])){
+    $reviewer = $_GET['reviewer'];
+    $args = array(
+        'post_type' => array(
+            'reviews', 'responses'
+        ),
+        'meta_query' => array(
+            array(
+                'key'		=> 'reviewers_$_reviewer_last_name',
+                'value'		=> '^[' . strtoupper($reviewer) . strtolower($reviewer) . ']',
+                'compare'	=> 'REGEXP'
+            )
+        )
+    );
+}
+
+$query = new WP_Query($args);
+
 ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<?php
-		if ( have_posts() ) : ?>
 
-			
-			<div class="container-fluid">	
+            <div class="container-fluid">	
 				<div class="page-header" class="row">
 					<div class="col-sm-10 offset-sm-1 page-header-wrapper">
 					<h1 class="page-title">Publications</h1>
 				
 				<?php get_template_part( 'template-parts/content', 'pageheader'); ?>
 
-			<?php /* closing tags for .page-header-wrapper and .row are in the pageheader template part */ ?>
-			
-				
-				
-							
-			<div class="row">
-				<div class="col-sm-10 offset-sm-1">
+    			<?php /* closing tags for .page-header-wrapper and .row are in the pageheader template part */ ?>
+    							
+    			<div class="row">
+    				<div class="col-sm-10 offset-sm-1">
 
-			<?php
-				
-			
-			/* Start the Loop */
-			while (have_posts() ) :
-				the_post();
-			
+                		<?php
+                		if ( $query->have_posts() ) :
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				 
-				$post_type = get_post_type( $post->ID ); if ($post_type === 'reviews'):
-				 
-				get_template_part( 'template-parts/content', 'referencereview' );
-				
-				elseif ($post_type === 'articles'):
-				
-				get_template_part( 'template-parts/content', 'referencearticle' );
-				
-				elseif ($post_type === 'responses') :
-				
-				get_template_part( 'template-parts/content', 'referenceresponse' );
-				
-				endif;
+                			/* Start the Loop */
+                			while ($query->have_posts() ) :
+                				$query->the_post();
+                			
+                				/*
+                				 * Include the Post-Type-specific template for the content.
+                				 * If you want to override this in a child theme, then include a file
+                				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+                				 */
+                				 
+                				$post_type = get_post_type( $post->ID ); if ($post_type === 'reviews'):
+                				 
+                				get_template_part( 'template-parts/content', 'referencereview' );
+                				
+                				elseif ($post_type === 'articles'):
+                				
+                				get_template_part( 'template-parts/content', 'referencearticle' );
+                				
+                				elseif ($post_type === 'responses') :
+                				
+                				get_template_part( 'template-parts/content', 'referenceresponse' );
+                				
+                				endif;
+                
+                			endwhile;
+            
+                		else :
+                
+                			get_template_part( 'template-parts/content', 'none' );
+                
+                		endif;
 
-			endwhile;
+            		?>
 
-	
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
 				</div><!--/.col-sm-10 -->
 			</div><!--/.row -->
 

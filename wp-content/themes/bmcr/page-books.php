@@ -21,23 +21,27 @@ get_header();
         				<h2 class="page-title">Available Books</h2>
         					
         				<div>
-        					<a href=""><p>All</p></a>
-        					<a data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
-        						 <p>Authors</p>
-        					</a>
+        					<a href="<?php echo get_permalink(); ?>"><p>All</p></a>
+        					<a data-toggle="collapse" href="#toggle-authors" role="button" aria-expanded="false" aria-controls="toggle-authors"><p>Authors</p></a>
         				</div>
         			</div><!--/.page-header-wrapper -->
         		</div><!--/.row -->
 		
         		<div class="row">
         			<div class="col-sm-10 offset-sm-1">
-            			<div class="collapse multi-collapse" id="multiCollapseExample1">
+            			<div class="collapse multi-collapse" id="toggle-authors">
             				<div class="card card-body">
-            					<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+            					<ul class="list-inline">
+                                    <?php $array = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; ?>
+                
+                                    <?php foreach($array as $key => $value): ?>
+                                        <li class="list-inline-item"><a href="?auth=<?php echo $value; ?>"><?php echo $value; ?></a></li>
+                                    <?php endforeach; ?>
+                                </ul>
             	      		</div><!-- /.card -->
             	    	</div><!-- /.collapse -->
         	    	
-            	    	<div class="collapse multi-collapse" id="multiCollapseExample2">
+            	    	<div class="collapse multi-collapse" id="toggle-tags">
             				<div class="card card-body">
             					<ul>
             						<?php 
@@ -55,27 +59,54 @@ get_header();
             		<div class="col-sm-10 offset-sm-1">
             	
                     	<?php 
-                        	global $post;
-                        	$args = array( 
-                        		'posts_per_page' => 20,
+                            $args = array(
+                                'posts_per_page' => 20,
                         		'post_type' => 'reviews',
                         		'post_status' => 'pitch'
-                        		
-                        	);
+                            );
+                            
+                            if(isset($_GET['auth'])){
+                                $author = $_GET['auth'];
+                                $args = array(
+                                    'post_type' => array(
+                                        'reviews', 'responses'
+                                    ),
+                                    'meta_query' => array(
+                                        array(
+                                            'key'		=> 'books_$_book_author_last',
+                                            'value'		=> '^[' . strtoupper($author) . strtolower($author) . ']',
+                                            'compare'	=> 'REGEXP'
+                                        )
+                                    )
+                                );
+                            }
                         
-                        	$myposts = get_posts( $args );
+                        	$query = new WP_Query($args); ?>
                                         
-                            foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+                            <?php
+                        		if ( $query->have_posts() ) :
+        
+                        			/* Start the Loop */
+                        			while ($query->have_posts() ) :
+                        				$query->the_post(); ?>
                     	
-                                <div class="ref-wrapper ref-status-pitch">
+                                        <div class="ref-wrapper ref-status-pitch">
                     	
-                                    <?php get_template_part( 'template-parts/content', 'referencebook' ); ?>
+                                            <?php get_template_part( 'template-parts/content', 'referencebook' ); ?>
                     	
-                                    <a href="<?php echo get_page_link(2); ?>" class="btn btn-secondary apply-link">Apply to Review this Book</a>
+                                            <a href="<?php echo get_page_link(2); ?>" class="btn btn-secondary apply-link">Apply to Review this Book</a>
                     	
-                    	        </div>
+                    	                </div>
                     			 
-                    	<?php endforeach; wp_reset_postdata(); ?>
+                                    <?php endwhile;
+            
+                                else :
+                
+                                    get_template_part( 'template-parts/content', 'none' );
+                
+                                endif;
+
+            		        wp_reset_postdata(); ?>
 				
 					</div><!--/.col-sm-10 -->
 				</div><!--/.row -->

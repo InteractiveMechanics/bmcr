@@ -48,8 +48,9 @@ function create_review() {
             'menu_position' => 15,
             'supports' => array( 'title', 'editor', 'author', 'revisions', 'excerpt', 'comments', 'thumbnail', 'custom-fields' ),
             'taxonomies' => array( 'post_tag' ),
-            'rewrite'     => array( 'slug' => 'review' ), // my custom slug
-            'has_archive' => true
+            'rewrite'     => array( 'slug' => 'reviews', 'with_front' => false ), // my custom slug
+            'has_archive' => true,
+            'query_var' => false
         )
     );
 }

@@ -1,6 +1,3 @@
-
-
-
 <div>
 	<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>"><p>All</p></a>
 	<a data-toggle="collapse" href="#toggle-reviewers" role="button" aria-expanded="false" aria-controls="toggle-reviewers"><p>Reviewer</p></a>
@@ -19,15 +16,23 @@
 	<div class="col-sm-10 offset-sm-1">
 		<div class="collapse" id="toggle-reviewers">
 			<div class="card card-body">
-				<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
-								
+				<ul class="list-inline">
+                    <?php $array = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; ?>
+
+                    <?php foreach($array as $key => $value): ?>
+                        <li class="list-inline-item"><a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>?reviewer=<?php echo $value; ?>"><?php echo $value; ?></a></li>
+                    <?php endforeach; ?>
+                </ul>
 	      	</div><!-- /.card -->
 	    </div><!-- /.collapse -->
 	    
 	    <div class="collapse" id="toggle-authors">
 			<div class="card card-body">
-				<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
-								
+				<ul class="list-inline">
+                    <?php foreach($array as $key => $value): ?>
+                        <li class="list-inline-item"><a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>?auth=<?php echo $value; ?>"><?php echo $value; ?></a></li>
+                    <?php endforeach; ?>
+                </ul>
 	      	</div><!-- /.card -->
 	    </div><!-- /.collapse -->
 	    
@@ -60,15 +65,7 @@
 				</ul>
 	      	</div><!-- /.card -->
 	    </div><!-- /.collapse -->
-	    
-	    
-
-	    
-	    
-	    
-	    
-	    
-</div><!--/.co-sm-10 -->
+    </div><!--/.co-sm-10 -->
 </div><!--/.row-->
 
 

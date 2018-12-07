@@ -11,7 +11,7 @@ $(function() {
 
 
     $('.worldcat-merge').on('click', function(){
-        var $worldcat_oclc = $(this).prev().val();
+        var $worldcat_isbn = $(this).prev().val();
 
         var $worldcat_title = $(this).parents('.acf-fields').find('[data-name="title"] .acf-input textarea');
         var $worldcat_series_title = $(this).parents('.acf-fields').find('[data-name="series_title"] .acf-input input');
@@ -24,7 +24,7 @@ $(function() {
         var $worldcat_issn = $(this).parents('.acf-fields').find('[data-name="issn"] .acf-input input');
         var $worldcat_oclc = $(this).parents('.acf-fields').find('[data-name="oclc_number"] .acf-input input');
 
-        if ($worldcat_oclc) {
+        if ($worldcat_isbn) {
             if (!$worldcat_title.val() && 
                 !$worldcat_series_title.val() && 
                 !$worldcat_book_author.val() && 
@@ -60,7 +60,9 @@ $(function() {
     }
 
     function getWorldCatValues(that) {
-        var $worldcat_oclc = that.prev().val();
+        var $worldcat_isbn = that.prev().val();
+
+        console.log($worldcat_isbn);
 
         var $worldcat_title = that.parents('.acf-fields').find('[data-name="title"] .acf-input textarea');
         var $worldcat_series_title = that.parents('.acf-fields').find('[data-name="series_title"] .acf-input input');
@@ -74,7 +76,7 @@ $(function() {
         var $worldcat_oclc = that.parents('.acf-fields').find('[data-name="oclc_number"] .acf-input input');
 
         $.ajax({
-            url: plugin_url + $worldcat_oclc
+            url: plugin_url + $worldcat_isbn
         }).done(function(data) {
             var xml = $.parseXML(data);
             

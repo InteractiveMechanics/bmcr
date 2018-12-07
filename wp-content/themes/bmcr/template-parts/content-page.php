@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="container-fluid">
 	<header class="entry-header row">
-		<div class="col-sm-10 offset-sm-1 testing">
+		<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</div>
@@ -20,7 +20,7 @@
 	<?php bmcr_post_thumbnail(); ?>
 
 	<div class="entry-content row">
-		<div class="col-sm-10 offset-sm-1">
+		<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
 	
 		<?php
 		the_content();
@@ -28,26 +28,4 @@
 		</div>
 	</div><!-- .entry-content -->
 
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-			edit_post_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'bmcr' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

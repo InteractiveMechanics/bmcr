@@ -9,7 +9,9 @@
 
 <?php get_header(); ?>
 
-<?php while ( have_posts() ) : the_post();
+<?php while ( have_posts() ) : the_post();  
+
+    $bmcr_id = get_field('bmcr_id');
 	$author_id =  get_the_author_meta('ID');
 ?>
 
@@ -19,9 +21,10 @@
 		
 		<div class="entry-header row">
 			
-			<div class="col-sm-10 offset-sm-1">
+			<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
 			
-				<h2 class="entry-title"><?php the_title(); ?></h2>
+                <small class="ref-id">BMCR <?php echo $bmcr_id; ?></small>
+				<h1 class="entry-title"><?php the_title(); ?></h1>
 			
 			</div>
 			
@@ -30,7 +33,7 @@
 		
 		<div class="entry-meta row">
 			
-			<div class="col-sm-10 offset-sm-1">
+			<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
 			
 			
 			<?php if( get_field('show_entrymeta') ): ?>
@@ -49,7 +52,7 @@
 		
 		<div class="entry-content row">
 			
-			<div class="col-sm-10 offset-sm-1">
+			<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
 			
 			<?php the_content(); ?>
 			
@@ -80,76 +83,21 @@
 			</div>
 			
 		</div>
-		
-		
-		<div class="entry-footer row">
-			
-			
-		</div>
-			
-		<aside class="row">
-			
-			<div class="col-sm-10 offset-sm-1">
-				
-<!-- 			<h2>Related publications</h2> -->
-			
-			<?php 
+					
+        <?php 
 
-				$posts = get_field('rel_pubs');
-
-				if( $posts ): ?>
-					<h2>Related publications</h2>
-				
-				    <ul>
-				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-				        <?php setup_postdata($post);
-				        
-				        	 
-						$post_type = get_post_type( $post->ID ); if ($post_type == 'reviews'):
-						 
-						get_template_part( 'template-parts/content', 'referencereview' );
-						
-						elseif ($post_type == 'articles'):
-						
-						get_template_part( 'template-parts/content', 'referencearticle' );
-						
-						else:
-						
-						get_template_part( 'template-parts/content', 'referenceresponse' );
-						
-						endif;
-
-
-				      
-					endforeach; ?>
-				    </ul>
-				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-				    
-			<?php endif; ?>
+			$posts = get_field('rel_pubs');
 			
-			</div>
-			
-		</aside>
+			if( $posts ): ?>
+
+                <?php get_template_part( 'template-parts/content', 'related' ); ?>
+        		
+        <?php endif; ?>
 		
 		<?php if( get_field('show_comments') ): ?>	
-		<aside class="row">
-			
-			<div class="col-sm-10 offset-sm-1">
-				
-			<h2>Comments</h2>
-			
-			<?php  //If comments are open or we have at least one comment, load up the comment template. 
-			
-				if ( comments_open() || get_comments_number() ) :
-				
-					comments_template();
-					
-				endif;
-			?>
-			
-			</div>
-		
-		</aside>
+    		
+            <?php get_template_part( 'template-parts/content', 'comments' ); ?>
+
 		<?php endif; ?>	
 	
 	</article>

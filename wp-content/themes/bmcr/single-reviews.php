@@ -13,12 +13,6 @@
 	
 	//static fields
 	$bmcr_id = get_field('bmcr_id');
-	$citation = get_field('citation'); 
-	$book_title = get_field('title');
-	$isbn = get_field('isbn');
-	$oclc_number = get_field('oclc_number');
-	$book_preview = get_field('book_preview');
-	$purchase_book = get_field('purchase_book');
 ?>
 
 <main>
@@ -27,13 +21,53 @@
 		
 		<div class="entry-header row">
 			
-			<div class="col-sm-10 offset-sm-1">
+			<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
 		
 				<small class="ref-id">BMCR <?php echo $bmcr_id; ?></small>
+				<h1 class="entry-title"><?php the_title(); ?></h1>
 				
-				<h2 class="entry-title"><?php the_title(); ?></h2>
-				
-				<div class="entry-citation"><?php echo $citation; ?></div>
+                <?php 
+                    if( have_rows('books') ):
+                        while ( have_rows('books') ) : the_row(); ?>
+
+                            <?php if (get_sub_field('citation')): ?>
+                                <div class="entry-citation"><?php echo the_sub_field('citation'); ?></div>
+                            <?php else : ?>
+                                
+                                <div class="entry-citation">
+                                    <?php if (get_sub_field('book_author_full')): ?>
+                                        <?php echo the_sub_field('book_author_full'); ?>, 
+                                    <?php endif; ?>
+
+                                    <?php if (get_sub_field('title')): ?>
+                                        <em><?php echo the_sub_field('title'); ?>.</em>
+                                    <?php endif; ?>
+                                    <?php if (get_sub_field('series_title')): ?>
+                                        <em><?php echo the_sub_field('series_title'); ?></em>. 
+                                    <?php endif; ?>
+
+                                    <?php if (get_sub_field('publisher')): ?>
+                                        <?php echo the_sub_field('pub_location'); ?>: 
+                                        <?php echo the_sub_field('publisher'); ?>, 
+                                        <?php echo the_sub_field('pub_date'); ?>.
+                                    <?php endif; ?>
+
+                                    <?php if (get_sub_field('extent')): ?>
+                                        <?php echo the_sub_field('extent'); ?>. 
+                                    <?php endif; ?>
+
+                                    <?php if (get_sub_field('isbn')): ?>
+                                        ISBN <?php echo the_sub_field('isbn'); ?>
+                                    <?php endif; ?>
+
+                                    <?php if (get_sub_field('price')): ?>
+                                        <?php echo the_sub_field('price'); ?>.
+                                    <?php endif; ?>
+                                </div>
+
+                            <?php endif; ?>
+
+                <?php endwhile; endif; ?>
 			
 				<div class="entry-links">
 				
@@ -68,21 +102,19 @@
 		
 		<div class="entry-meta row">
 			
-			<div class="col-sm-10 offset-sm-1">
+			<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
 			
-				<h4>Review by 
+				<h4>Review by</h4>
 				
 				<?php get_template_part( 'template-parts/content', 'entrymeta' ); ?>
-				
-				</h4>
-			
+							
 			</div>
 		
 		</div><!-- .entry-meta -->
 		
 		<div class="entry-content row">
 			
-			<div class="col-sm-10 offset-sm-1">
+			<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
 			
 				<?php the_content(); ?>
 			
@@ -93,7 +125,7 @@
 		
 		<div class="entry-footer row">
 			
-			<div class="col-sm-10 offset-sm-1">
+			<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
 			
 			<?php
 				if(get_the_tag_list()) {
@@ -105,97 +137,49 @@
 			
 		</div><!-- .entry-footer -->
 		
-		<aside id="responses" class="row">
-			
-			<div class="col-sm-10 offset-sm-1">
-			
-			<div class="responses-header">
-				
-				<h2>Responses</h2>
-				
-				<a href="#"><p>Response Guidelines</p></a>
-				<a href="#"><p>Submit a Response</p></a>
-				
-			</div>
-			
-			<?php 
-
-				$posts = get_field('relationships');
-				
-				if( $posts ): ?>
-				    <div>
-				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT)
-					    
-				        setup_postdata($post);
-					        
-					    get_template_part( 'template-parts/content', 'referenceresponse' );
-						
-					endforeach; ?>
-				    </div>
-				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-			<?php endif; ?>
-			
-			</div>	
-		
-		</aside><!--/#responses -->
-
         <?php 
-			$posts = get_field('rel_pubs');
 
+			$posts = get_field('relationships');
+			
 			if( $posts ): ?>
-                <aside id="rel-pubs" class="row">
+        		<aside id="responses" class="row">
+        			
+        			<div class="col-sm-10 offset-sm-1">
+        			
+            			<div class="responses-header">
+            				
+            				<h2>Responses</h2>
+            				
+            				<a href="<?php echo esc_url( get_page_link(180) ); ?>"><p>Response Guidelines</p></a>
+            				<a href="mailto:bmcr@bmcreview.org"><p>Submit a Response</p></a>
+            				
+            			</div>
+    				    <div>
+    				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT)
+    					    
+    				        setup_postdata($post);
+    					        
+    					    get_template_part( 'template-parts/content', 'referenceresponse' );
+    						
+    					endforeach; ?>
+    				    </div>
+    				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+        			</div>	
+        		
+        		</aside><!--/#responses -->
+
+        <?php endif; ?>
+        <?php 
+
+			$posts = get_field('rel_pubs');
 			
-				    <div class="col-sm-10 offset-sm-1">				
-							
-						<h2>Related publications</h2>
-					
-					    <ul>
-					    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT)
-					        
-					        setup_postdata($post);
-					        
-					        $post_type = get_post_type( $post->ID ); if ($post_type == 'reviews'):
-							 
-							get_template_part( 'template-parts/content', 'referencereview' );
-							
-							elseif ($post_type == 'articles'):
-							
-							get_template_part( 'template-parts/content', 'referencearticle' );
-							
-							else:
-							
-							get_template_part( 'template-parts/content', 'referenceresponse' );
-							
-							endif;
-					        
-					      
-					    endforeach; ?>
-					    </ul>
-					    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-			
-			        </div>
-			
-		        </aside><!-- /#rel-pubs -->
+			if( $posts ): ?>
+
+                <?php get_template_part( 'template-parts/content', 'related' ); ?>
+        		
         <?php endif; ?>
 		
-		<aside id="comments-wrapper" class="row">
-			
-			<div class="col-sm-10 offset-sm-1">
-			
-			<h2>Comments</h2>
-				
-				<?php  //If comments are open or we have at least one comment, load up the comment template. 
-				
-					if ( comments_open() || get_comments_number() ) :
-					
-						comments_template();
-						
-					endif;
-				?>
-			
-			</div>
-		
-		</aside><!-- /#comments -->
+		<?php get_template_part( 'template-parts/content', 'comments' ); ?>
 			
 	
 	</article>

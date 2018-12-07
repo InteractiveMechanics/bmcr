@@ -41,8 +41,8 @@
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
-					<form class="form-inline my-2 my-lg-0">
-						<input class="form-control mr-sm-2 header-search" type="search" placeholder="Search" aria-label="Search">
+					<form class="form-inline my-2 my-lg-0" method="get" action="<?php echo home_url( '/' ); ?>">
+						<input class="form-control mr-sm-2 header-search" type="search" placeholder="Search" aria-label="Search" name="s">
     				</form>
 				</div><!--/.col-sm-10 -->
 			</div><!--/.row -->

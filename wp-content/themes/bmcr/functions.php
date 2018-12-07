@@ -334,6 +334,8 @@ function bmcr_scripts() {
 
 	wp_enqueue_script( 'bmcr-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
+    wp_enqueue_script( 'bmcr-notes', get_template_directory_uri() . '/js/notes.js', array('jquery'), null, true );
+
 	wp_enqueue_script( 'bmcr-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 	
 	wp_enqueue_script( 'popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', array('jquery'), null, true );
@@ -375,3 +377,45 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+remove_filter('sanitize_title', 'sanitize_title_with_dashes');
+function sanitize_title_with_dots_and_dashes($title) {
+        $title = strip_tags($title);
+        // Preserve escaped octets.
+        $title = preg_replace('|%([a-fA-F0-9][a-fA-F0-9])|', '---$1---', $title);
+        // Remove percent signs that are not part of an octet.
+        $title = str_replace('%', '', $title);
+        // Restore octets.
+        $title = preg_replace('|---([a-fA-F0-9][a-fA-F0-9])---|', '%$1', $title);
+        $title = remove_accents($title);
+        if (seems_utf8($title)) {
+                if (function_exists('mb_strtolower')) {
+                        $title = mb_strtolower($title, 'UTF-8');
+                }
+                $title = utf8_uri_encode($title);
+        }
+        $title = strtolower($title);
+        $title = preg_replace('/&.+?;/', '', $title); // kill entities
+        $title = preg_replace('/[^%a-z0-9 ._-]/', '', $title);
+        $title = preg_replace('/\s+/', '-', $title);
+        $title = preg_replace('|-+|', '-', $title);
+        $title = trim($title, '-');
+        $title = str_replace('-.-', '.', $title);
+        $title = str_replace('-.', '.', $title);
+        $title = str_replace('.-', '.', $title);
+        $title = preg_replace('|([^.])\.$|', '$1', $title);
+        $title = trim($title, '-'); // yes, again
+        return $title;
+}
+add_filter('sanitize_title', 'sanitize_title_with_dots_and_dashes');
+
+
+function filter_posts_where( $where ) {
+    if ( isset( $_GET['auth'] )){ 
+	    $where = str_replace("meta_key = 'books_$", "meta_key LIKE 'books_%", $where);
+    }
+    if ( isset( $_GET['reviewer'] )){ 
+	    $where = str_replace("meta_key = 'reviewers_$", "meta_key LIKE 'reviewers_%", $where);
+    }
+	return $where;
+}
+add_filter('posts_where', 'filter_posts_where');

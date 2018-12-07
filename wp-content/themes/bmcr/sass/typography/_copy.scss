@@ -5,7 +5,14 @@ p {
 	color: $grey;
 }
 
-dfn, cite, em, i {
+div[type="notes"] {
+    font-family: $noto-serif;
+	font-size: 20px;
+	line-height: 32px;
+	color: $grey;
+}
+
+dfn, cite, em, i, emph[rend="italic"] {
 	font-style: italic;
 }
 

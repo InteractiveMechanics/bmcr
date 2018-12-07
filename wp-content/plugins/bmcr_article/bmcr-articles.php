@@ -46,11 +46,10 @@ function create_article() {
             'menu_icon' => 'dashicons-media-text',
             'menu_position' => 15,
             'supports' => array( 'title', 'editor', 'author', 'revisions', 'excerpt', 'comments', 'thumbnail', 'custom-fields' ),
-            'rewrite'     => array( 
-            	'slug' => 'article',
-            ),
             'taxonomies' => array( 'post_tag' ),
-            'has_archive' => true
+            'rewrite'     => array( 'slug' => 'articles', 'with_front' => false ), // my custom slug
+            'has_archive' => true,
+            'query_var' => false
         )
     );
 }

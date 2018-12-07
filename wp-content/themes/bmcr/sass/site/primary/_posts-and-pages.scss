@@ -7,7 +7,7 @@
 }
 
 .site-header {
-	border-bottom: 1px solid $blue;
+
 }
 
 .updated:not(.published) {
@@ -31,17 +31,32 @@
 	margin-top: 40px;
 }
 
+#responses, #rel-pubs {
+    border-top: 1px solid $blue;
+    padding: 40px 0 0;
+}
+
+#responses + #rel-pubs {
+    border-top: none;
+    padding: 0;
+}
+
 #main {
 	margin-bottom: 80px;
 }
 
 .entry-citation {
 	margin: 0px;
+    font-family: $noto-sans;
+	-webkit-font-smoothing: antialiased;
+	font-size: 21px;
+	color: $grey3;
+	text-decoration: none;
+
 	p {
 		font-family: $noto-sans;
 		-webkit-font-smoothing: antialiased;
 		font-size: 21px;
-		font-weight: 700;
 		color: $grey3;
 		text-decoration: none;
 	}
@@ -141,5 +156,24 @@
 			    color: $grey4;
 		    }
 	    }
+    }
+}
+
+div[type="notes"] {
+    br {
+        display: none;
+    }
+}
+note {
+    padding-left: 40px;
+    display: block;
+    
+    a {
+        font-weight: 700;
+        color: $blue;
+
+        &:hover, &:active, &:visited, &:focus {
+            color: $blue;
+        }
     }
 }

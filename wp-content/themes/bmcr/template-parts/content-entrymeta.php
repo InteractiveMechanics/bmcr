@@ -1,15 +1,12 @@
-<?php $author_id = get_the_author_meta('ID'); ?>
+<?php if( have_rows('reviewers') ):
+    while ( have_rows('reviewers') ) : the_row(); ?>
 
-<?php the_author(); ?></h4>
-		
-<h4 class="meta-affiliation">
+    <h4 class="meta-affiliation">
 	
-	<?php if (get_the_author_meta('description')): ?>
-	
-	    <?php the_author_meta('description'); ?>, 
-	
-	<?php endif; ?>
-			
-	<a href="mailto:<?php the_author_meta('user_email', $author_id); ?>" target="_top"><?php the_author_meta('user_email', $author_id); ?></a></h4>
-		
-<h4 class="meta-date"><?php the_date(); ?></h4>
+        <?php echo the_sub_field('reviewer_first_name'); ?>
+    	<?php echo the_sub_field('reviewer_last_name'); ?><?php if (get_sub_field('reviewer_affiliation')): ?>, <?php echo the_sub_field('reviewer_affiliation'); ?><?php endif; ?>
+    	<?php if (get_sub_field('reviewer_email')): ?>. <a href="mailto:<?php echo the_sub_field('reviewer_email'); ?>" target="_top"><?php echo the_sub_field('reviewer_email'); ?></a><?php endif; ?>
+
+    </h4>
+
+<?php endwhile; endif; ?>

@@ -26,10 +26,6 @@ function toggle_bmcr_id_editable() {
 }
 
 
-// TODO: 
-// - Incrementing isn't working properly, figure that out
-// - Add action for saving the post, probabyl a different function
-
 add_action( 'publish_articles', 'set_bmcr_id_on_publish', 10, 2 );
 add_action( 'publish_responses', 'set_bmcr_id_on_publish', 10, 2 );
 add_action( 'publish_reviews', 'set_bmcr_id_on_publish', 10, 2 );
@@ -44,10 +40,10 @@ function set_bmcr_id_on_publish() {
     if (!$cur_id || empty($cur_id)) {
         $now_year   = date("Y");
         $now_mo     = date("m");
-
-        if ($now_mo !== $last_mo) {
-            $now_inc = (int)$last_inc++;
-            if ($now_inc < 10) { $now_inc = '0' . (string)$now_inc; }
+        
+        if ((int)$now_mo == (int)$last_mo) {
+            $now_inc = (int)$last_inc + 1;
+            if ((int)$now_inc < 10) { $now_inc = '0' . (string)$now_inc; }
         } else {
             $now_inc = '01';
         }
@@ -59,6 +55,18 @@ function set_bmcr_id_on_publish() {
     } else {
         update_option($name, $cur_id);
     }
+}
+
+
+add_action( 'save_post', 'save_bmcr_id' );
+
+function save_bmcr_id($post_id, $post, $update) {
+    
+    $post_type  = get_post_type($post_id);
+
+    if ( $post_type !== "articles" || "reviews" || "responses" ){ return; }
+
+    update_option($name, $cur_id);
 }
 
 ?>
