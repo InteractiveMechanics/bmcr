@@ -20,3 +20,9 @@
 .meta-date {
 	font-weight: 400;
 }
+
+.ref-author {
+	.comma:last-of-type {
+		display: none;
+	}
+}

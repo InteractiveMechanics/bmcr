@@ -145,15 +145,28 @@
     border-bottom: 1px solid $blue;
     border-radius: 0px;
     margin-bottom: 20px;
+    padding: 0 1rem 20px;
     
     ul {
-	    display: flex;
+	    margin-bottom: 0;
+		display: flex;
+	    
 	    li {
 		    margin-right: 20px;
 		    font-size: 20px;
 		    font-family: $noto-sans;
+		    
 		    a {
 			    color: $grey4;
+		    }
+	    }
+	    
+	    &.list-alpha {	
+		    display: block;
+		    	    
+		    li {
+			    padding: 0 5px;
+				text-transform: uppercase;
 		    }
 	    }
     }

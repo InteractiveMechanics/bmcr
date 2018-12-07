@@ -6,7 +6,7 @@ Tags: publishpress, permissions
 Requires at least: 4.6
 Requires PHP: 5.4
 Tested up to: 4.9.3
-Stable tag: 2.0.4
+Stable tag: 2.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,23 @@ There're two ways to install PublishPress plugin:
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
+
+= [2.2.0] - 2018-11-08 =
+
+* Fixed PHP warning when the Permissions module is not loaded;
+* Added new permission: Select notification channel in the profile page;
+* Added new permission: Access the Dashboard, the admin bar, and the “Your Profile” page;
+* Added new permission: Change the role of other users;
+
+= [2.1.0] - 2018-09-19 =
+
+*Fixed:*
+
+* Updated the POT file;
+
+*Added:*
+
+* Added capability field for "upload_files" capability in posts;
 
 = [2.0.4] - 2018-07-02 =
 

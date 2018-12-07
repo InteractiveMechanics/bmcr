@@ -138,7 +138,7 @@ function add_custom_post_types_to_loop( $query ) {
 add_action( 'pre_get_posts', 'add_custom_post_types_to_loop' );
 
 
-add_filter('ninja_forms_render_options','my_pre_population_callback', 10, 2);
+add_filter('ninja_forms_render_options', 'my_pre_population_callback', 10, 2);
 function my_pre_population_callback($options, $settings) {
   
   // target only the field with this key
@@ -147,7 +147,7 @@ function my_pre_population_callback($options, $settings) {
     // write the query to fetch the data
     $args = array(
       'post_type' => 'reviews',
-      'post_status' => 'pitch'
+      'post_status' => 'title-added'
     );
 
     $posts = new WP_Query( $args );
@@ -160,12 +160,26 @@ function my_pre_population_callback($options, $settings) {
 
         $posts->the_post();
         
+        if (isset($_GET['bid'])){
+	        $bid = $_GET['bid'];
+        }
+        
         // $options is the variable which contains tha values rendered
         // we will use the post title as label and the ID as value
-        $options[] = array(
-          'label' => get_the_title() . ', ' . get_field('book_author'),
-          'value' => get_the_title()
-        );
+        if ($bid == get_the_id()) {
+	        $options[] = array(
+	          'label' => get_the_title(),
+	          'value' => get_the_title(),
+	          'selected' => true
+	        );
+	    } else {
+		    $options[] = array(
+	          'label' => get_the_title(),
+	          'value' => get_the_title(),
+	          'selected' => false
+	        );
+	    }
+
       } // endwhile
     } // endif
 
@@ -328,7 +342,7 @@ add_filter('acf/update_value/name=relationships', 'bidirectional_acf_update_valu
 function bmcr_scripts() {	
 	wp_enqueue_style( 'bootstrap-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
 	
-	wp_enqueue_style( 'bootstrapselect-style', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css');
+	wp_enqueue_style( 'bootstrapselect-style', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css');
 	
 	wp_enqueue_style( 'bmcr-style', get_stylesheet_uri() );	
 
@@ -342,7 +356,7 @@ function bmcr_scripts() {
 
 	wp_enqueue_script( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', array('jquery'), null, true );
 	
-	wp_enqueue_script( 'bootstrapselect', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.js', array('jquery'), null, true );
+	wp_enqueue_script( 'bootstrapselect', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js', array('jquery', 'bootstrap'), null, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

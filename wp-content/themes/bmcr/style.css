@@ -465,6 +465,9 @@ small {
 big {
   font-size: 125%; }
 
+.slash {
+  color: #707070; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -665,7 +668,36 @@ textarea {
     box-shadow: 6px 6px 7px rgba(0, 0, 0, 0.08); }
 
 select {
-  border: 1px solid #ccc; }
+  height: 90px !important;
+  color: #7F7F7F;
+  border: none;
+  border-radius: 0px;
+  padding: 30px;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 20px;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.04);
+  background: white;
+  text-indent: 30px;
+  font-style: italic; }
+
+.select-wrapper {
+  position: relative; }
+  .select-wrapper .nf-field-element:after {
+    content: '\003e';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 90px;
+    background: #03335F;
+    width: 90px;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    pointer-events: none; }
 
 textarea {
   width: 100%; }
@@ -1168,8 +1200,10 @@ a[rel="tag"]:active {
   border: none;
   border-bottom: 1px solid #03335F;
   border-radius: 0px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  padding: 0 1rem 20px; }
   .card ul {
+    margin-bottom: 0;
     display: flex; }
     .card ul li {
       margin-right: 20px;
@@ -1177,6 +1211,11 @@ a[rel="tag"]:active {
       font-family: "Noto Sans", sans-serif; }
       .card ul li a {
         color: #707070; }
+    .card ul.list-alpha {
+      display: block; }
+      .card ul.list-alpha li {
+        padding: 0 5px;
+        text-transform: uppercase; }
 
 div[type="notes"] br {
   display: none; }
@@ -1339,6 +1378,9 @@ footer {
 .meta-affiliation,
 .meta-date {
   font-weight: 400; }
+
+.ref-author .comma:last-of-type {
+  display: none; }
 
 /*--------------------------------------------------------------
 # Infinite scroll

@@ -16,7 +16,7 @@
 	<div class="col-sm-10 offset-sm-1">
 		<div class="collapse" id="toggle-reviewers">
 			<div class="card card-body">
-				<ul class="list-inline">
+				<ul class="list-inline list-alpha">
                     <?php $array = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; ?>
 
                     <?php foreach($array as $key => $value): ?>
@@ -28,7 +28,7 @@
 	    
 	    <div class="collapse" id="toggle-authors">
 			<div class="card card-body">
-				<ul class="list-inline">
+				<ul class="list-inline list-alpha">
                     <?php foreach($array as $key => $value): ?>
                         <li class="list-inline-item"><a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>?auth=<?php echo $value; ?>"><?php echo $value; ?></a></li>
                     <?php endforeach; ?>
@@ -38,7 +38,7 @@
 	    
 	    <div class="collapse" id="toggle-types">
 			<div class="card card-body">
-				<ul>				
+				<ul class="list-inline">				
 					<li><a href="<?php echo get_post_type_archive_link( 'articles' ); ?>">Articles</a></li>
 					<li><a href="<?php echo get_post_type_archive_link( 'responses' ); ?>">Responses</a></li>
 					<li><a href="<?php echo get_post_type_archive_link( 'reviews' ); ?>">Reviews</a></li>
@@ -48,8 +48,12 @@
 	    
 	    <div class="collapse" id="toggle-years">
 			<div class="card card-body">
-				<ul>
-					<?php wp_get_archives('type=yearly'); ?>
+				<ul class="list-inline list-alpha">
+					<?php $startyear = 1990; ?>
+
+                    <?php for($startyear; $startyear <= intval(date('Y')); $startyear++): ?>
+                        <li class="list-inline-item"><a href="<?php echo get_home_url(); ?>/<?php echo $startyear; ?>"><?php echo $startyear; ?></a></li>
+                    <?php endfor; ?>
 				</ul>		
 	      	</div><!-- /.card -->
 	    </div><!-- /.collapse -->

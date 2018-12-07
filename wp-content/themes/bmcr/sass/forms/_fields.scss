@@ -28,7 +28,41 @@ textarea {
 }
 
 select {
-	border: 1px solid $color__border-input;
+	height: 90px !important;
+    color: #7F7F7F;
+    border: none;
+    border-radius: 0px;
+    padding: 30px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 20px;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.04);
+    background: white;
+    text-indent: 30px;
+    font-style: italic;
+}
+
+.select-wrapper {
+	position: relative;
+	
+	.nf-field-element {
+		&:after {
+			content: '\003e';
+		    display: block;
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		    bottom: 0;
+		    height: 90px;
+		    background: $blue;
+		    width: 90px;
+		    padding: 15px;
+		    color: white;
+		    text-align: center;
+		    font-weight: 700;
+		    font-size: 36px;
+		    pointer-events: none;
+	    }
+	}
 }
 
 textarea {

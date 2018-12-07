@@ -1,139 +1,396 @@
-# Copyright (C) 2018 PublishPress Permissions
-# This file is distributed under the same license as the PublishPress Permissions package.
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PublishPress Permissions 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/publishpress-permissions\n"
-"POT-Creation-Date: 2018-02-06 10:29-0200\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: PublishPress-Permissions\n"
+"POT-Creation-Date: 2018-09-19 15:10-0300\n"
+"PO-Revision-Date: 2016-04-22 07:37+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.1.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: publishpress-permissions.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
 
-#: freemius/includes/class-fs-plugin-updater.php:565
-msgid "Unable to connect to the filesystem. Please confirm your credentials."
-msgstr ""
-
-#: library/Plugin.php:91
+#. Author of the plugin/theme
+#: library/Plugin.php:147 modules/permissions/permissions.php:307
 msgid "PublishPress"
 msgstr ""
 
-#: library/Plugin.php:92
+#: library/Plugin.php:148
 msgid "PublishPress Permissions requires __plugin__ 1.3.0 or later. Please, update."
 msgstr ""
 
-#: modules/permissions/permissions.php:83
+#: modules/permissions/permissions.php:127
+#: modules/permissions/permissions.php:254
+#: modules/permissions/permissions.php:275
+#: modules/permissions/permissions.php:276
+#: modules/permissions/permissions.php:742
 msgid "Permissions"
 msgstr ""
 
-#: modules/permissions/permissions.php:84 modules/permissions/permissions.php:85
-msgid "Permissions allows you to control which users publish content and edit metadata."
+#: modules/permissions/permissions.php:308
+msgid "Posts"
 msgstr ""
 
-#: modules/permissions/permissions.php:196
-msgid "Licensing:"
+#: modules/permissions/permissions.php:309
+msgid "Pages"
 msgstr ""
 
-#: modules/permissions/permissions.php:203
-msgid "License key:"
+#: modules/permissions/permissions.php:326
+msgid "WooCommerce"
 msgstr ""
 
-#: modules/permissions/permissions.php:216
-msgid "Permissions:"
+#: modules/permissions/permissions.php:345
+msgid "Manage roles"
 msgstr ""
 
-#: modules/permissions/permissions.php:223
-msgid "Edit Metadata:"
+#: modules/permissions/permissions.php:349
+msgid "Manage permissions"
 msgstr ""
 
-#: modules/permissions/permissions.php:231
-msgid "Move Content to this Status:"
+#: modules/permissions/permissions.php:353
+msgid "View the calendar"
 msgstr ""
 
-#: modules/permissions/permissions.php:316
-msgid "Publish"
+#: modules/permissions/permissions.php:357
+msgid "View the content overview"
+msgstr ""
+
+#: modules/permissions/permissions.php:361
+msgid "Edit notification status for posts"
 msgstr ""
 
 #: modules/permissions/permissions.php:365
-msgid "Roles"
+msgid "Edit post metadata"
+msgstr ""
+
+#: modules/permissions/permissions.php:370
+msgid "Delete own posts"
 msgstr ""
 
 #: modules/permissions/permissions.php:374
-msgid "default"
+msgid "Delete others posts"
 msgstr ""
 
-#: vendor/publishpress/wordpress-edd-license-integration/lib/License.php:109
-msgid "An error occurred. Please, try again."
+#: modules/permissions/permissions.php:378
+msgid "Delete private posts"
 msgstr ""
 
-#: vendor/publishpress/wordpress-edd-license-integration/lib/Setting/Field/License_key.php:104
-msgid "Missing license"
+#: modules/permissions/permissions.php:382
+msgid "Delete published posts"
 msgstr ""
 
-#: vendor/publishpress/wordpress-edd-license-integration/lib/Setting/Field/License_key.php:107
-msgid "Your license key is expired"
+#: modules/permissions/permissions.php:386
+msgid "Edit own posts"
 msgstr ""
 
-#: vendor/publishpress/wordpress-edd-license-integration/lib/Setting/Field/License_key.php:110
-msgid "Your license key has been disabled"
+#: modules/permissions/permissions.php:390
+msgid "Edit other posts"
 msgstr ""
 
-#: vendor/publishpress/wordpress-edd-license-integration/lib/Setting/Field/License_key.php:114
-msgid "Invalid license"
+#: modules/permissions/permissions.php:394
+msgid "Edit private posts"
 msgstr ""
 
-#: vendor/publishpress/wordpress-edd-license-integration/lib/Setting/Field/License_key.php:117
-msgid "Your license is not active for this URL"
+#: modules/permissions/permissions.php:398
+msgid "Edit published posts"
 msgstr ""
 
-#: vendor/publishpress/wordpress-edd-license-integration/lib/Setting/Field/License_key.php:120
-msgid "This appears to be an invalid license key for this product"
+#: modules/permissions/permissions.php:402
+msgid "Publish posts"
 msgstr ""
 
-#: vendor/publishpress/wordpress-edd-license-integration/lib/Setting/Field/License_key.php:123
-msgid "Your license key has reached its activation limit"
+#: modules/permissions/permissions.php:406
+msgid "Read private posts"
 msgstr ""
 
-#: vendor/publishpress/wordpress-edd-license-integration/lib/Setting/Field/License_key.php:128
-msgid "Activated"
+#: modules/permissions/permissions.php:410
+msgid "Upload files"
 msgstr ""
 
-#: vendor/publishpress/wordpress-edd-license-integration/lib/Setting/Field/License_key.php:131
-msgid "Not validated yet"
+#: modules/permissions/permissions.php:415
+msgid "Delete pages"
 msgstr ""
 
-#: vendor/publishpress/wordpress-edd-license-integration/lib/Setting/Field/License_key.php:144
-msgid "Status"
+#: modules/permissions/permissions.php:419
+msgid "Delete others pages"
 msgstr ""
 
-#: vendor/publishpress/wordpress-edd-license-integration/lib/Setting/Field/License_key.php:146
-msgid "Click here to read more about licenses."
+#: modules/permissions/permissions.php:423
+msgid "Delete private pages"
 msgstr ""
 
-#: vendor/publishpress/wordpress-edd-license-integration/lib/Setting/Field/License_key.php:147
-msgid "More information"
+#: modules/permissions/permissions.php:427
+msgid "Delete published pages"
 msgstr ""
 
-#: vendor/publishpress/wordpress-edd-license-integration/lib/Updater.php:198
-msgid "There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+#: modules/permissions/permissions.php:431
+msgid "Edit pages"
 msgstr ""
 
-#: vendor/publishpress/wordpress-edd-license-integration/lib/Updater.php:206
-msgid ""
-"There is a new version of %1$s available. %2$sView version %3$s details%4$s or "
-"%5$supdate now%6$s."
+#: modules/permissions/permissions.php:435
+msgid "Edit others pages"
 msgstr ""
 
-#: vendor/publishpress/wordpress-edd-license-integration/lib/Updater.php:359
-msgid "You do not have permission to install plugin updates"
+#: modules/permissions/permissions.php:439
+msgid "Edit private pages"
 msgstr ""
 
-#: vendor/publishpress/wordpress-edd-license-integration/lib/Updater.php:359
-msgid "Error"
+#: modules/permissions/permissions.php:443
+msgid "Edit published pages"
+msgstr ""
+
+#: modules/permissions/permissions.php:447
+msgid "Publish pages"
+msgstr ""
+
+#: modules/permissions/permissions.php:451
+msgid "Read private pages"
+msgstr ""
+
+#: modules/permissions/permissions.php:464
+#, php-format
+msgid "Change post status to \"%s\""
+msgstr ""
+
+#: modules/permissions/permissions.php:485
+msgid "Assign shop coupon terms"
+msgstr ""
+
+#: modules/permissions/permissions.php:489
+msgid "Assign product terms"
+msgstr ""
+
+#: modules/permissions/permissions.php:493
+msgid "Assign shop order terms"
+msgstr ""
+
+#: modules/permissions/permissions.php:497
+msgid "Delete others products"
+msgstr ""
+
+#: modules/permissions/permissions.php:501
+msgid "Delete others shop coupons"
+msgstr ""
+
+#: modules/permissions/permissions.php:505
+msgid "Delete others shop orders"
+msgstr ""
+
+#: modules/permissions/permissions.php:509
+msgid "Delete private products"
+msgstr ""
+
+#: modules/permissions/permissions.php:513
+msgid "Delete private shop coupons"
+msgstr ""
+
+#: modules/permissions/permissions.php:517
+msgid "Delete private shop orders"
+msgstr ""
+
+#: modules/permissions/permissions.php:521
+msgid "Delete product"
+msgstr ""
+
+#: modules/permissions/permissions.php:525
+msgid "Delete product terms"
+msgstr ""
+
+#: modules/permissions/permissions.php:529
+msgid "Delete products"
+msgstr ""
+
+#: modules/permissions/permissions.php:533
+msgid "Delete published products"
+msgstr ""
+
+#: modules/permissions/permissions.php:537
+msgid "Delete published shop coupons"
+msgstr ""
+
+#: modules/permissions/permissions.php:541
+msgid "Delete published shop orders"
+msgstr ""
+
+#: modules/permissions/permissions.php:545
+msgid "Delete shop coupon"
+msgstr ""
+
+#: modules/permissions/permissions.php:549
+msgid "Delete shop coupon terms"
+msgstr ""
+
+#: modules/permissions/permissions.php:553
+msgid "Delete shop coupons"
+msgstr ""
+
+#: modules/permissions/permissions.php:557
+msgid "Delete shop order"
+msgstr ""
+
+#: modules/permissions/permissions.php:561
+msgid "Delete shop order terms"
+msgstr ""
+
+#: modules/permissions/permissions.php:565
+msgid "Delete shop orders"
+msgstr ""
+
+#: modules/permissions/permissions.php:569
+msgid "Edit others products"
+msgstr ""
+
+#: modules/permissions/permissions.php:573
+msgid "Edit others shop coupons"
+msgstr ""
+
+#: modules/permissions/permissions.php:577
+msgid "Edit others shop orders"
+msgstr ""
+
+#: modules/permissions/permissions.php:581
+msgid "Edit private products"
+msgstr ""
+
+#: modules/permissions/permissions.php:585
+msgid "Edit private shop coupons"
+msgstr ""
+
+#: modules/permissions/permissions.php:589
+msgid "Edit private shop orders"
+msgstr ""
+
+#: modules/permissions/permissions.php:593
+msgid "Edit product"
+msgstr ""
+
+#: modules/permissions/permissions.php:597
+msgid "Edit product terms"
+msgstr ""
+
+#: modules/permissions/permissions.php:601
+msgid "Edit products"
+msgstr ""
+
+#: modules/permissions/permissions.php:605
+msgid "Edit publihsed products"
+msgstr ""
+
+#: modules/permissions/permissions.php:609
+msgid "Edit published shop coupons"
+msgstr ""
+
+#: modules/permissions/permissions.php:613
+msgid "Edit published shop orders"
+msgstr ""
+
+#: modules/permissions/permissions.php:617
+msgid "Edit shop coupon"
+msgstr ""
+
+#: modules/permissions/permissions.php:621
+msgid "Edit shop coupon terms"
+msgstr ""
+
+#: modules/permissions/permissions.php:625
+msgid "Edit shop coupons"
+msgstr ""
+
+#: modules/permissions/permissions.php:629
+msgid "Edit shop order"
+msgstr ""
+
+#: modules/permissions/permissions.php:633
+msgid "Edit shop order terms"
+msgstr ""
+
+#: modules/permissions/permissions.php:637
+msgid "Edit shop orders"
+msgstr ""
+
+#: modules/permissions/permissions.php:641
+msgid "Manange product terms"
+msgstr ""
+
+#: modules/permissions/permissions.php:645
+msgid "Manage shop coupon terms"
+msgstr ""
+
+#: modules/permissions/permissions.php:649
+msgid "Manage shop order terms"
+msgstr ""
+
+#: modules/permissions/permissions.php:653
+msgid "Manage WooCommerce"
+msgstr ""
+
+#: modules/permissions/permissions.php:657
+msgid "Publish products"
+msgstr ""
+
+#: modules/permissions/permissions.php:661
+msgid "Publish shop coupons"
+msgstr ""
+
+#: modules/permissions/permissions.php:665
+msgid "Publish shop orders"
+msgstr ""
+
+#: modules/permissions/permissions.php:669
+msgid "Read private products"
+msgstr ""
+
+#: modules/permissions/permissions.php:673
+msgid "Read private shop coupons"
+msgstr ""
+
+#: modules/permissions/permissions.php:677
+msgid "Read private shop orders"
+msgstr ""
+
+#: modules/permissions/permissions.php:681
+msgid "Read product"
+msgstr ""
+
+#: modules/permissions/permissions.php:685
+msgid "Read shop coupon"
+msgstr ""
+
+#: modules/permissions/permissions.php:689
+msgid "Read shop order"
+msgstr ""
+
+#: modules/permissions/permissions.php:693
+msgid "View WooCommerce reports"
+msgstr ""
+
+#: modules/permissions/permissions.php:741
+msgid "Groups of Permissions"
+msgstr ""
+
+#: modules/permissions/permissions.php:743
+msgid "Loading..."
+msgstr ""
+
+#: modules/permissions/permissions.php:764
+msgid "Licensing:"
+msgstr ""
+
+#: modules/permissions/permissions.php:771
+msgid "License key:"
+msgstr ""
+
+#: modules/permissions/permissions.php:816
+msgid "Publish"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
@@ -146,10 +403,6 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid "Add permissions support for PublishPress"
-msgstr ""
-
-#. Author of the plugin/theme
-msgid "PublishPress"
 msgstr ""
 
 #. Author URI of the plugin/theme

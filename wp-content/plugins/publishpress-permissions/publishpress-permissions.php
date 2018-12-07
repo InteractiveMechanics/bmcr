@@ -12,7 +12,7 @@
  * @publishpress-permissions
  * Plugin Name: PublishPress Permissions
  * Plugin URI:  https://publishpress.com/
- * Version: 2.0.4
+ * Version: 2.2.0
  * Description: Add permissions support for PublishPress
  * Author:      PublishPress
  * Author URI:  https://publishpress.com
@@ -21,7 +21,7 @@
 
 require_once __DIR__ . '/includes.php';
 
-if ( defined( 'PP_PERMISSIONS_LOADED' ) ) {
-	$plugin = new PublishPress\Addon\Permissions\Plugin;
-	$plugin->init();
+if (defined('PP_PERMISSIONS_LOADED')) {
+    $plugin = new PublishPress\Addon\Permissions\Plugin;
+    $plugin->init();
 }

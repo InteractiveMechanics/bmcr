@@ -18,7 +18,7 @@ get_header();
 
         		<div class="page-header" class="row">
         			<div class="col-sm-10 offset-sm-1 page-header-wrapper">
-        				<h2 class="page-title">Available Books</h2>
+        				<h1 class="page-title">Available Books</h1>
         					
         				<div>
         					<a href="<?php echo get_permalink(); ?>"><p>All</p></a>
@@ -31,7 +31,7 @@ get_header();
         			<div class="col-sm-10 offset-sm-1">
             			<div class="collapse multi-collapse" id="toggle-authors">
             				<div class="card card-body">
-            					<ul class="list-inline">
+            					<ul class="list-inline list-alpha">
                                     <?php $array = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; ?>
                 
                                     <?php foreach($array as $key => $value): ?>
@@ -60,17 +60,17 @@ get_header();
             	
                     	<?php 
                             $args = array(
-                                'posts_per_page' => 20,
+                                'posts_per_page' => -1,
                         		'post_type' => 'reviews',
-                        		'post_status' => 'pitch'
+                        		'post_status' => 'title-added'
                             );
                             
                             if(isset($_GET['auth'])){
                                 $author = $_GET['auth'];
                                 $args = array(
-                                    'post_type' => array(
-                                        'reviews', 'responses'
-                                    ),
+                                    'posts_per_page' => -1,
+	                        		'post_type' => 'reviews',
+	                        		'post_status' => 'title-added',
                                     'meta_query' => array(
                                         array(
                                             'key'		=> 'books_$_book_author_last',
@@ -94,7 +94,7 @@ get_header();
                     	
                                             <?php get_template_part( 'template-parts/content', 'referencebook' ); ?>
                     	
-                                            <a href="<?php echo get_page_link(2); ?>" class="btn btn-secondary apply-link">Apply to Review this Book</a>
+                                            <a href="<?php echo get_page_link(2); ?>?bid=<?php echo get_the_id(); ?>" class="btn btn-secondary apply-link">Apply to Review this Book</a>
                     	
                     	                </div>
                     			 

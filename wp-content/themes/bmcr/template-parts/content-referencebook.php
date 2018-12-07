@@ -5,35 +5,28 @@ this partial only contains the text of the reference. this is so you can apply t
 
 <?php
 	$pub_id = get_the_ID();
-	$publisher = get_field('publisher');
-	$pub_date = get_field('pub_date');
-	$isbn = get_field('isbn');
-	$book_author = get_field('book_author');
 ?>
 
 
 <p class="ref-title"><?php echo the_title(); ?></p>
-<p class="ref-author"><?php echo $book_author; ?></p>
 <p class="ref-details">
-	<?php 
-		if ($publisher): 
-			echo $publisher . ', ';
-		endif;
-	
-		if ($pub_date):
-			echo $pub_date;
-		endif;
-		
-		if ($pub_date || $publisher): 
-			echo '|';
-		endif;
-		
-		if ($isbn):
-			echo 'ISBN ' . $isbn;
-		endif;
-	?>
+    <?php if( have_rows('books') ): ?>
+        <?php while ( have_rows('books') ) : the_row(); ?>
 
+            <em><?php echo the_sub_field('title'); ?></em>
+            <span class="slash">&nbsp;/&nbsp;</span>
+            By <?php echo the_sub_field('book_author_full'); ?>
+            <span class="slash">&nbsp;/&nbsp;</span>
+        	<?php 
+        		if (get_sub_field('publisher')): 
+        			echo the_sub_field('publisher') . ', ';
+        		endif;
+        	
+        		if (get_sub_field('pub_date')):
+        			echo the_sub_field('pub_date');
+        		endif;
+        	?>
+
+        <?php endwhile; ?>
+    <?php endif; ?>
 </p>
-
-		
-		 
