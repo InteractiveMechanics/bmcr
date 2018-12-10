@@ -1,0 +1,26 @@
+#search {
+	#searchform {
+		margin: 40px 0;
+		
+		label { display: none; }
+		input[type="text"] {
+		    padding: 30px;	    
+		    padding-left: 70px;
+		    width: 100%;    
+		    font-size: 27px;
+		    color: $grey9;
+		}
+		input[type="submit"] {
+			display: none;
+		}
+		
+		&:before {
+		    content: '\1F50D';
+		    display: block;
+			position: absolute;
+			font-size: 1.6rem;
+		    margin-top: 35px;
+		    left: 40px;
+		}
+	}	
+}

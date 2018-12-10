@@ -424,7 +424,7 @@ blockquote {
 address {
   font-family: "Noto Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
-  margin: 0 0 8px 0;
+  margin: 0 0 0 0;
   color: #FCFCFC; }
   address a {
     color: #FCFCFC;
@@ -1228,6 +1228,29 @@ note {
     color: #03335F; }
     note a:hover, note a:active, note a:visited, note a:focus {
       color: #03335F; }
+
+/*--------------------------------------------------------------
+## Search
+--------------------------------------------------------------*/
+#search #searchform {
+  margin: 40px 0; }
+  #search #searchform label {
+    display: none; }
+  #search #searchform input[type="text"] {
+    padding: 30px;
+    padding-left: 70px;
+    width: 100%;
+    font-size: 27px;
+    color: #3E3E3E; }
+  #search #searchform input[type="submit"] {
+    display: none; }
+  #search #searchform:before {
+    content: '\1F50D';
+    display: block;
+    position: absolute;
+    font-size: 1.6rem;
+    margin-top: 35px;
+    left: 40px; }
 
 /*--------------------------------------------------------------
 ## Comments

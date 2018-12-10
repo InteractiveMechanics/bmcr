@@ -12,22 +12,21 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'bmcr' ); ?></h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try heading back home?', 'bmcr' ); ?></p>
-					
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-
-
-					
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+		
+			<div class="row">
+        		<div class="col-sm-10 offset-sm-1">
+					<section class="error-404 not-found">
+						<header class="page-header">
+							<h1 class="page-title"><?php esc_html_e( 'That page can&rsquo;t be found.', 'bmcr' ); ?></h1>
+						</header><!-- .page-header -->
+		
+						<div class="page-content">
+							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try searching?', 'bmcr' ); ?></p>		
+		
+						</div><!-- .page-content -->
+					</section><!-- .error-404 -->
+        		</div>
+			</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

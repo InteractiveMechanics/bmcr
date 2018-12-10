@@ -22,14 +22,14 @@ get_header();
         					
         				<div>
         					<a href="<?php echo get_permalink(); ?>"><p>All</p></a>
-        					<a data-toggle="collapse" href="#toggle-authors" role="button" aria-expanded="false" aria-controls="toggle-authors"><p>Authors</p></a>
+        					<a data-toggle="collapse" data-target="#toggle-authors" role="button" aria-expanded="false" aria-controls="toggle-authors"><p>Authors</p></a>
         				</div>
         			</div><!--/.page-header-wrapper -->
         		</div><!--/.row -->
 		
         		<div class="row">
-        			<div class="col-sm-10 offset-sm-1">
-            			<div class="collapse multi-collapse" id="toggle-authors">
+        			<div class="col-sm-10 offset-sm-1" id="accordion">
+            			<div class="collapse multi-collapse" id="toggle-authors" data-parent="#accordion">
             				<div class="card card-body">
             					<ul class="list-inline list-alpha">
                                     <?php $array = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; ?>
@@ -41,7 +41,7 @@ get_header();
             	      		</div><!-- /.card -->
             	    	</div><!-- /.collapse -->
         	    	
-            	    	<div class="collapse multi-collapse" id="toggle-tags">
+            	    	<div class="collapse multi-collapse" id="toggle-tags" data-parent="#accordion">
             				<div class="card card-body">
             					<ul>
             						<?php 
