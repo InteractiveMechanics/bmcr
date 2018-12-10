@@ -433,3 +433,9 @@ function filter_posts_where( $where ) {
 	return $where;
 }
 add_filter('posts_where', 'filter_posts_where');
+
+function post_page_removal() {
+    remove_menu_page( 'edit.php' );
+}
+add_action( 'admin_menu', 'post_page_removal' );
+
