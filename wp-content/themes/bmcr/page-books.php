@@ -62,7 +62,9 @@ get_header();
                             $args = array(
                                 'posts_per_page' => -1,
                         		'post_type' => 'reviews',
-                        		'post_status' => 'title-added'
+                        		'post_status' => 'pitch',
+                        		'orderby' => 'title',
+								'order' => 'ASC'
                             );
                             
                             if(isset($_GET['auth'])){
@@ -70,7 +72,9 @@ get_header();
                                 $args = array(
                                     'posts_per_page' => -1,
 	                        		'post_type' => 'reviews',
-	                        		'post_status' => 'title-added',
+	                        		'post_status' => 'pitch',
+	                        		'orderby' => 'title',
+									'order' => 'ASC',
                                     'meta_query' => array(
                                         array(
                                             'key'		=> 'books_$_book_author_last',

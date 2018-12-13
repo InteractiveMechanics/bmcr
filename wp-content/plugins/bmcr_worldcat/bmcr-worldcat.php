@@ -16,7 +16,7 @@ add_action( 'admin_print_scripts-post.php', 'review_add_worldcat_script', 11 );
 function review_add_worldcat_script() {
     global $post_type;
     if ('reviews' == $post_type) {
-        wp_enqueue_script('bmcr-worldcat', plugin_dir_url(__FILE__) . 'bmcr-worldcat.js', array('jquery'));
+        wp_enqueue_script('bmcr-worldcat', plugin_dir_url(__FILE__) . 'bmcr-worldcat.js', array('jquery'), null, true);
     }
 }
 
