@@ -1,6 +1,79 @@
 #comments-wrapper {
     border-top: 1px solid $blue;
     padding: 40px 0 0;
+    
+    .comments-title {
+	    display: none;
+    }
+    .comment-list {
+	    .comment-body {
+		    margin-bottom: 20px;
+		    padding: 20px;
+			background: white;
+			box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.04);
+			
+			.comment-metadata,
+			.comment-author {
+				font-family: "Noto Sans", sans-serif;
+				font-size: 16px;
+				display: inline-block;
+			}
+		    
+		    .comment-metadata {
+			    float: right;
+			    
+			    @include screen-xs {
+				    float: none;
+			    }
+		    }
+		    
+		    .comment-meta {
+			    background: transparent;
+			    color: $grey4;
+			    padding: 0;
+			    
+			    .edit-link > a {
+				    text-decoration: underline;
+				    font-weight: 700;
+			    }
+		    }
+		    
+		    .comment-content {
+			    margin-top: 10px;
+			    
+			    p:last-of-type {
+				    margin-bottom: 0;
+			    }
+		    }
+		    
+		    .reply {
+			    display: none;
+		    }
+	    }
+    }
+    
+    form {
+	    label {
+		    display: block;
+	    }
+	    input[type="text"],
+	    input[type="url"],
+	    input[type="email"],
+	    textarea {
+		    width: 100%;
+	    }
+	    
+	    input[type="checkbox"] + label {
+		    display: inline-block;
+		    margin-left: 10px;
+		    font-size: 16px;
+		    font-style: italic;
+	    }
+	    
+	    .form-submit {
+		    text-align: center;
+	    }
+    }
 }
 
 .comment-content a {

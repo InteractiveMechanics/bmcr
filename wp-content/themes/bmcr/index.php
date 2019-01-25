@@ -14,7 +14,11 @@
 
 get_header();
 
+$posts_per_page = 20;
+$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 $args = array(
+	'posts_per_page' => $posts_per_page,
+	'paged' => $paged,
     'post_type' => array(
         'reviews', 'responses', 'articles'
     )
@@ -23,6 +27,8 @@ $args = array(
 if(isset($_GET['auth'])){
     $author = $_GET['auth'];
     $args = array(
+	    'posts_per_page' => $posts_per_page,
+	    'paged' => $paged,
         'post_type' => array(
             'reviews', 'responses'
         ),
@@ -39,6 +45,8 @@ if(isset($_GET['auth'])){
 if(isset($_GET['reviewer'])){
     $reviewer = $_GET['reviewer'];
     $args = array(
+	    'posts_per_page' => $posts_per_pagex,
+	    'paged' => $paged,
         'post_type' => array(
             'reviews', 'responses'
         ),
@@ -99,9 +107,27 @@ $query = new WP_Query($args);
                 				
                 				endif;
                 
-                			endwhile;
-            
-                		else :
+                			endwhile; ?>
+                			
+                			<nav aria-label="Pagination">
+								<ul class="pagination justify-content-center pagination-lg">
+									<?php if(get_query_var('paged') < 2): ?>
+										<li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">&laquo; Previous</a></li>
+									<?php else : ?>	
+										<li class="page-item"><?php previous_posts_link( '&laquo; Previous' ); ?></li>
+									<?php endif; ?>
+																		
+		                			<?php if(get_query_var('paged') == 0 && $query->max_num_pages == 1): ?>
+										<li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Next  &raquo;</a></li>
+									<?php elseif (get_query_var('paged') < $query->max_num_pages): ?>
+										<li class="page-item"><?php next_posts_link( 'Next  &raquo;' ); ?></li>
+									<?php else : ?>
+										<li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Next  &raquo;</a></li>
+									<?php endif; ?>
+								</ul>
+                			</nav>
+							
+                		<?php else :
                 
                 			get_template_part( 'template-parts/content', 'none' );
                 

@@ -8,6 +8,7 @@
  */
 
 get_header();
+global $wp_query;
 ?>
 
 	<div id="primary" class="content-area">
@@ -57,9 +58,27 @@ get_header();
 						endif;
 		
 		
-					endwhile;
+					endwhile; ?>
+					
+					<nav aria-label="Pagination">
+						<ul class="pagination justify-content-center pagination-lg">
+							<?php if(get_query_var('paged') < 2): ?>
+								<li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">&laquo; Previous</a></li>
+							<?php else : ?>	
+								<li class="page-item"><?php previous_posts_link( '&laquo; Previous' ); ?></li>
+							<?php endif; ?>
+																
+                			<?php if(get_query_var('paged') == 0 && $wp_query->max_num_pages == 1): ?>
+								<li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Next  &raquo;</a></li>
+							<?php elseif (get_query_var('paged') < $wp_query->max_num_pages): ?>
+								<li class="page-item"><?php next_posts_link( 'Next  &raquo;' ); ?></li>
+							<?php else : ?>
+								<li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Next  &raquo;</a></li>
+							<?php endif; ?>
+						</ul>
+        			</nav>
 		
-		
+				<?php 
 				else :
 		
 					get_template_part( 'template-parts/content', 'none' );

@@ -21,10 +21,15 @@
             <?php while ( have_rows('books') ) : the_row(); ?>
 
                 <em><?php echo the_sub_field('title'); ?></em>
-                <span class="slash">&nbsp;/&nbsp;</span>
-                By <?php echo the_sub_field('book_author_full'); ?>
-                <span class="slash">&nbsp;/&nbsp;</span>
+                <?php if (get_sub_field('book_author_full')): ?>
+                	<span class="slash">&nbsp;/&nbsp;</span>
+                	By <?php echo the_sub_field('book_author_full'); ?>
+				<?php endif; ?>
             	<?php 
+	            	if (get_sub_field('publisher') || get_sub_field('pub_date')):
+	            		echo '<span class="slash">&nbsp;/&nbsp;</span>';
+	            	endif;
+	            	
             		if (get_sub_field('publisher')): 
             			echo the_sub_field('publisher') . ', ';
             		endif;

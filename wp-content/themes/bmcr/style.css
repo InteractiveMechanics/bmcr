@@ -398,12 +398,8 @@ h5 {
   line-height: 34px; }
 
 /* no h6 */
-p {
-  font-family: "Noto Serif", serif;
-  font-size: 20px;
-  line-height: 32px;
-  color: #4D4D4D; }
-
+p,
+div[type="text"],
 div[type="notes"] {
   font-family: "Noto Serif", serif;
   font-size: 20px;
@@ -424,7 +420,7 @@ blockquote {
 address {
   font-family: "Noto Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
-  margin: 0 0 0 0;
+  margin: 0;
   color: #FCFCFC; }
   address a {
     color: #FCFCFC;
@@ -447,9 +443,7 @@ pre {
   padding: 1.6em; }
 
 code, kbd, tt, var {
-  font-family: "Noto Serif", serif;
-  font-size: 15px;
-  font-size: 0.9375rem; }
+  font-family: "Noto Serif", serif; }
 
 abbr, acronym {
   border-bottom: 1px dotted #F3B720;
@@ -607,6 +601,29 @@ a[rel="tag"],
   .btn-success:focus,
   .btn-danger:focus {
     border-color: #aaa #bbb #bbb; }
+  button.close,
+  input[type="button"].close,
+  input[type="reset"].close,
+  input[type="submit"].close,
+  .btn.close,
+  .btn-primary.close,
+  .close.btn-secondary,
+  a.close[rel="tag"],
+  .close.btn-success,
+  .close.btn-danger {
+    background: none;
+    box-shadow: none; }
+    button.close:hover,
+    input[type="button"].close:hover,
+    input[type="reset"].close:hover,
+    input[type="submit"].close:hover,
+    .btn.close:hover,
+    .btn-primary.close:hover,
+    .close.btn-secondary:hover,
+    a.close[rel="tag"]:hover,
+    .close.btn-success:hover,
+    .close.btn-danger:hover {
+      color: #575757 !important; }
 
 .btn-secondary, a[rel="tag"] {
   border-left: 0.2em solid #F3B720;
@@ -1217,6 +1234,7 @@ a[rel="tag"]:active {
         padding: 0 5px;
         text-transform: uppercase; }
 
+div[type="notes"] label,
 div[type="notes"] br {
   display: none; }
 
@@ -1228,6 +1246,12 @@ note {
     color: #03335F; }
     note a:hover, note a:active, note a:visited, note a:focus {
       color: #03335F; }
+
+.entry-content {
+  font-family: "Noto Serif", serif;
+  font-size: 20px;
+  line-height: 32px;
+  color: #4D4D4D; }
 
 /*--------------------------------------------------------------
 ## Search
@@ -1258,6 +1282,50 @@ note {
 #comments-wrapper {
   border-top: 1px solid #03335F;
   padding: 40px 0 0; }
+  #comments-wrapper .comments-title {
+    display: none; }
+  #comments-wrapper .comment-list .comment-body {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: white;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.04); }
+    #comments-wrapper .comment-list .comment-body .comment-metadata,
+    #comments-wrapper .comment-list .comment-body .comment-author {
+      font-family: "Noto Sans", sans-serif;
+      font-size: 16px;
+      display: inline-block; }
+    #comments-wrapper .comment-list .comment-body .comment-metadata {
+      float: right; }
+      @media (max-width: 767px) {
+        #comments-wrapper .comment-list .comment-body .comment-metadata {
+          float: none; } }
+    #comments-wrapper .comment-list .comment-body .comment-meta {
+      background: transparent;
+      color: #707070;
+      padding: 0; }
+      #comments-wrapper .comment-list .comment-body .comment-meta .edit-link > a {
+        text-decoration: underline;
+        font-weight: 700; }
+    #comments-wrapper .comment-list .comment-body .comment-content {
+      margin-top: 10px; }
+      #comments-wrapper .comment-list .comment-body .comment-content p:last-of-type {
+        margin-bottom: 0; }
+    #comments-wrapper .comment-list .comment-body .reply {
+      display: none; }
+  #comments-wrapper form label {
+    display: block; }
+  #comments-wrapper form input[type="text"],
+  #comments-wrapper form input[type="url"],
+  #comments-wrapper form input[type="email"],
+  #comments-wrapper form textarea {
+    width: 100%; }
+  #comments-wrapper form input[type="checkbox"] + label {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 16px;
+    font-style: italic; }
+  #comments-wrapper form .form-submit {
+    text-align: center; }
 
 .comment-content a {
   word-wrap: break-word; }
@@ -1377,7 +1445,6 @@ footer {
   .jumbotron p {
     font-family: "Noto Sans", sans-serif;
     font-size: 20px;
-    font-weight: 700;
     line-height: 35px; }
   .jumbotron .btn-secondary, .jumbotron a[rel="tag"] {
     margin-left: 25px; }

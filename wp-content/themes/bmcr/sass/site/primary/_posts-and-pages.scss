@@ -173,6 +173,7 @@
 }
 
 div[type="notes"] {
+	label, 
     br {
         display: none;
     }
@@ -190,3 +191,11 @@ note {
         }
     }
 }
+.entry-content {
+	font-family: "Noto Serif", serif;
+    font-size: 20px;
+    line-height: 32px;
+    color: #4D4D4D;
+}
+
+

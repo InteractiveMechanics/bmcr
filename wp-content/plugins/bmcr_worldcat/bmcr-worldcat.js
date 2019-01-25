@@ -10,7 +10,7 @@ $(function() {
     $worldcat_oclc_wrapper.find('.acf-input-wrap input:first-of-type').css({ "width": "50%", "margin-right": "10px" });
 
 
-    $('.worldcat-merge').on('click', function(){
+    $(document).on('click tap', '.worldcat-merge', function(){
         var $worldcat_isbn = $(this).prev().val();
 
         var $worldcat_title = $(this).parents('.acf-fields').find('[data-name="title"] .acf-input textarea');
@@ -45,7 +45,7 @@ $(function() {
         }
     });
 
-    $('.worldcat-show-result').on('click', function(){
+    $(document).on('click tap', '.worldcat-show-result', function(){
         var $worldcat_oclc = $(this).prev().prev().val();
 
         if ($worldcat_oclc) {

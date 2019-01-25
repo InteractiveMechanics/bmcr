@@ -441,3 +441,10 @@ function post_page_removal() {
 }
 add_action( 'admin_menu', 'post_page_removal' );
 
+function posts_link_attributes() {
+    return 'class="page-link"';
+}
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+

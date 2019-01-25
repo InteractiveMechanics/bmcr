@@ -107,7 +107,8 @@
 				<h4>Review by</h4>
 				
 				<?php get_template_part( 'template-parts/content', 'entrymeta' ); ?>
-							
+				
+				<hr/>
 			</div>
 		
 		</div><!-- .entry-meta -->

@@ -26,7 +26,7 @@ get_header();
 	<div class="post-list-wrapper">
 	<?php
 		$args = array(
-			'posts_per_page' => 20,
+			'posts_per_page' => 10,
 			'offset' => 0,
 			'orderby' => 'post_date',
 			'order' => 'DESC',

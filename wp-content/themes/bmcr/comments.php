@@ -51,8 +51,7 @@ if ( post_password_required() ) {
 		<ol class="comment-list">
 			<?php
 			wp_list_comments( array(
-				'style'      => 'ol',
-				'short_ping' => true,
+				'style'      => 'div'
 			) );
 			?>
 		</ol><!-- .comment-list -->
@@ -69,7 +68,12 @@ if ( post_password_required() ) {
 
 	endif; // Check for have_comments().
 
-	comment_form();
+	comment_form(array(
+		'comment_notes_before' => '<p class="comment-notes alert alert-info alert-dismissible fade show"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' . __( 'Your email address will not be published.' ) . ( $req ? $required_text : '' ) . '</p>',
+		'title_reply_before' => '<h3 id="reply-title" class="comment-reply-title d-none">',
+		'class_submit' => 'submit btn btn-lg',
+		'logged_in_as' => '<p class="logged-in-as alert alert-info alert-dismissible fade show"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) ) ) . '</p>'
+	));
 	?>
 
 </div><!-- #comments -->

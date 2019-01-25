@@ -1,10 +1,5 @@
-p {
-	font-family: $noto-serif;
-	font-size: 20px;
-	line-height: 32px;
-	color: $grey;
-}
-
+p,
+div[type="text"],
 div[type="notes"] {
     font-family: $noto-serif;
 	font-size: 20px;
@@ -55,7 +50,6 @@ pre {
 
 code, kbd, tt, var {
 	font-family: $noto-serif;
-	@include font-size(0.9375);
 }
 
 abbr, acronym {

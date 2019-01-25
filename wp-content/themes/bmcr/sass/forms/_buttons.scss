@@ -29,6 +29,15 @@ input[type="submit"],
 	&:focus {
 		border-color: $color__border-button-focus;
 	}
+	
+	&.close {
+		background: none;
+		box-shadow: none;
+		
+		&:hover {
+			color: darken($grey4, 10%) !important;
+		}
+	}
 }
 
 .btn-secondary {
