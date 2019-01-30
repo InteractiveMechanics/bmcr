@@ -1,10 +1,10 @@
 <div>
 	<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>"><p>All</p></a>
-	<a data-toggle="collapse" data-target="#toggle-reviewers" role="button" aria-expanded="false" aria-controls="toggle-reviewers"><p>Reviewer</p></a>
-	<a data-toggle="collapse" data-target="#toggle-authors" role="button" aria-expanded="false" aria-controls="toggle-authors"><p>Author of Work</p></a>
-	<a data-toggle="collapse" data-target="#toggle-types" role="button" aria-expanded="false" aria-controls="toggle-types"><p>Type</p></a>
-	<a data-toggle="collapse" data-target="#toggle-years" role="button" aria-expanded="false" aria-controls="toggle-years"><p>Year</p></a>
-	<a data-toggle="collapse" data-target="#toggle-subjects" role="button" aria-expanded="false" aria-controls="toggle-subjects" class="d-none"><p>Subject</p></a>	
+	<a href="#" data-toggle="collapse" data-target="#toggle-reviewers" role="button" aria-expanded="false" aria-controls="toggle-reviewers" class="d-none d-lg-block"><p>Reviewer</p></a>
+	<a href="#" data-toggle="collapse" data-target="#toggle-authors" role="button" aria-expanded="false" aria-controls="toggle-authors" class="d-none d-lg-block"><p>Author of Work</p></a>
+	<a href="#" data-toggle="collapse" data-target="#toggle-types" role="button" aria-expanded="false" aria-controls="toggle-types"><p>Type</p></a>
+	<a href="#" data-toggle="collapse" data-target="#toggle-years" role="button" aria-expanded="false" aria-controls="toggle-years"><p>Year</p></a>
+	<a href="#" data-toggle="collapse" data-target="#toggle-subjects" role="button" aria-expanded="false" aria-controls="toggle-subjects" class="d-none"><p>Subject</p></a>	
 </div>
 
 <?php /* .opening tags for page-header-wrapper and .row are in the template */ ?>

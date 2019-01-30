@@ -38,6 +38,10 @@ input[type="submit"],
 			color: darken($grey4, 10%) !important;
 		}
 	}
+	
+	@include screen-ltmd {
+		display: block;
+	}
 }
 
 .btn-secondary {

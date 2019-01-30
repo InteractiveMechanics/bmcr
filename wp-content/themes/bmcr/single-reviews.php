@@ -21,7 +21,7 @@
 		
 		<div class="entry-header row">
 			
-			<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+			<div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
 		
 				<small class="ref-id">BMCR <?php echo $bmcr_id; ?></small>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -102,7 +102,7 @@
 		
 		<div class="entry-meta row">
 			
-			<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+			<div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
 			
 				<h4>Review by</h4>
 				
@@ -115,7 +115,7 @@
 		
 		<div class="entry-content row">
 			
-			<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+			<div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
 			
 				<?php the_content(); ?>
 			
@@ -126,7 +126,7 @@
 		
 		<div class="entry-footer row">
 			
-			<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+			<div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
 			
 			<?php
 				if(get_the_tag_list()) {
@@ -145,7 +145,7 @@
 			if( $posts ): ?>
         		<aside id="responses" class="row">
         			
-        			<div class="col-sm-10 offset-sm-1">
+        			<div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
         			
             			<div class="responses-header">
             				

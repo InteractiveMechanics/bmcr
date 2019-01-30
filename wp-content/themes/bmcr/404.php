@@ -14,7 +14,7 @@ get_header();
 		<main id="main" class="site-main">
 		
 			<div class="row">
-        		<div class="col-sm-10 offset-sm-1">
+        		<div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
 					<section class="error-404 not-found">
 						<header class="page-header">
 							<h1 class="page-title"><?php esc_html_e( 'That page can&rsquo;t be found.', 'bmcr' ); ?></h1>

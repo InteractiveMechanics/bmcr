@@ -20,7 +20,7 @@ get_header();
         			<div class="col-sm-10 offset-sm-1 page-header-wrapper">
         				<h1 class="page-title">Available Books</h1>
         					
-        				<div>
+        				<div class="page-header-filters">
         					<a href="<?php echo get_permalink(); ?>"><p>All</p></a>
         					<a data-toggle="collapse" data-target="#toggle-authors" role="button" aria-expanded="false" aria-controls="toggle-authors"><p>Authors</p></a>
         				</div>

@@ -1,6 +1,6 @@
 <aside id="comments-wrapper" class="row">
 	
-	<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+	<div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
 		
 		<h2>Comments</h2>
 		

@@ -48,7 +48,9 @@
 					<a class="navbar-brand navbar-brand-lg" href="<?php echo esc_url( home_url( '/' ) ); ?>"><h1 class="site-title"><?php the_field('site_full_name', 'option'); ?></h1></a>
 					<a class="navbar-brand navbar-brand-sm" href="<?php echo esc_url( home_url( '/' ) ); ?>"><h1 class="site-title"><?php the_field('site_acronym', 'option'); ?></h1><small><?php the_field('site_full_name', 'option'); ?></small></a>
 
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+						<span class="navbar-toggler-icon"></span>
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<form class="form-inline my-2 my-lg-0" method="get" action="<?php echo home_url( '/' ); ?>">
@@ -56,8 +58,8 @@
     				</form>
 				</div><!--/.col-sm-10 -->
 			</div><!--/.row -->
-			<div class="row">
-				<div class="col-sm-10 offset-sm-1 nav-wrapper">
+			<div class="row mobile-nav-menu">
+				<div class="col-xs-12 col-sm-10 offset-sm-1 nav-wrapper">
 					<?php wp_nav_menu( array(
 						'theme_location'  => 'menu-1',
 						'depth'	          => 2, // 1 = no dropdowns, 2 = with dropdowns.
@@ -79,74 +81,9 @@
 						'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
 						'walker'          => new WP_Bootstrap_Navwalker(),
 					) ); ?>
-					
-					
-<!--
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav mr-auto">
-							<li class="nav-item active">
-								<a class="nav-link" href="#">Publications</a>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          For Reviewers
-        						</a>
-								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<a class="dropdown-item" href="#">Action</a>
-									<a class="dropdown-item" href="#">Another action</a>
-									<a class="dropdown-item" href="#">Something else here</a>
-        						</div>
-							</li>
-
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          For Publishers
-        						</a>
-								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<a class="dropdown-item" href="#">Books For Review</a>
-									<a class="dropdown-item" href="#">Reviewer Guidlines</a>
-									<a class="dropdown-item" href="#">Apply to Be a Reviewer</a>
-        						</div>
-							</li>
-    					</ul>
-    					<p class="nav-link-wrapper"><a class="nav-link" href="#">About BMCR</a></p>
-  					</div>
---><!-- /.collapse -->
   				</div><!-- /.col-sm-10 -->
   			</div><!-- /.row -->
-</nav>
-<!--
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$bmcr_description = get_bloginfo( 'description', 'display' );
-			if ( $bmcr_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $bmcr_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div>
---><!-- .site-branding -->
-
-<!--
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bmcr' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
 		</nav>
---><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

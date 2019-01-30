@@ -1,5 +1,10 @@
 .jumbotron {
 	background-color: $grey7;
+	
+	@include screen-xs {
+		padding: 20px 20px 40px;
+	}
+	
 	h2, p {
 		color: $white;
 	}
@@ -7,8 +12,17 @@
 		font-family: $noto-sans;
 		font-size: 20px;
 		line-height: 35px;
+		
+		@include screen-xs {
+			font-size: 18px;
+		}
 	}
 	.btn-secondary {
 		margin-left: 25px;
+		
+		@include screen-ltmd {
+			margin-left: 0;
+			margin-top: 10px;
+		}
 	}
 }

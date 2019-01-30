@@ -20,7 +20,7 @@
 	
 		<div class="entry-header row">
 		
-    		<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+    		<div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
     			
     		<?php 
     
@@ -75,7 +75,7 @@
 				
 		<div class="entry-meta row">
 			
-			<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+			<div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
 			
 				<h4>Response by</h4>
 				
@@ -87,7 +87,7 @@
 		
 		<div class="entry-content row">
 			
-			<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+			<div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
 			
 			<?php the_content(); ?>
 			
@@ -98,7 +98,7 @@
 		
 		<div class="entry-footer row">
 			
-			<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+			<div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
 			
 			<?php
 				if(get_the_tag_list()) {

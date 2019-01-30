@@ -110,11 +110,17 @@
 	display: block;
 	padding-bottom: 0px;
     background: $white;
+    
+    @include screen-ltmd {
+		height: 80px;   
+	}
 }
 
 .brand-wrapper,
 .nav-wrapper {
-	padding: 0px;
+	@include screen-gtsm {
+		padding: 0px;
+	}
 }
 
 .nav-wrapper {
@@ -125,6 +131,14 @@
 	display: flex;
 	justify-content: space-between;
 	border-bottom: 1px solid $blue;
+	
+	@include screen-ltmd {
+		border: none;
+		
+		form {
+			display: none;
+		}
+	}
 }
 
 .site-title {
@@ -256,6 +270,11 @@
 
 .login-wrapper {
 	background: $blue;
+	
+	@include screen-ltmd {
+		display: none;
+	}
+	
 	.col-sm-10 {
 	    height: 47px;
 		display: flex;
@@ -281,10 +300,113 @@
 }
 
 .navbar-brand-sm {
+	padding: 10px 0px;
+	
 	@include screen-gtsm {
 		display: none;
 	}
 	.site-title {
-		margin-bottom: 0px;
+		margin: 0px;
+		line-height: 24px;
+	}
+	small {
+		font-size: 70%;
+	}
+}
+
+.mobile-nav-menu {
+	@include screen-ltmd {
+		margin-left: -16px;
+	    margin-right: -16px;
+	    margin-top: -2px;
+	    
+	    .nav-wrapper {
+			background: $white3;
+			z-index: 9;
+			
+			.navbar-nav {
+				height: auto;
+				padding-bottom: 10px;
+				
+				> li {
+					border: none;
+					line-height: 1.6;
+					padding: 0;
+					
+					a {
+						top: 0;
+					    padding: 6px 0 !important;
+					    margin: 0;
+					    line-height: 1.6;
+					}
+					
+					.dropdown-menu {
+						left: 0;
+						top: 0;
+						background: none;
+						box-shadow: none;
+						display: block;
+						padding: 0 0 0 15px;
+						border-left: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+.navbar-toggler {
+	@include screen-ltmd {
+		border: none;
+		background: none;
+		width: 60px;
+	    height: 60px;
+	    position: relative;
+	    box-shadow: none;
+	    top: 5px;
+		
+		.navbar-toggler-icon {
+			width: 30px;
+			height: 3px;
+			background: gray;
+			margin: 4px 0;
+			position: absolute;
+			transition: 0.5s all;
+			
+			&:nth-child(1){
+				transform: rotate(-45deg);
+				top: 20px;
+			}
+			&:nth-child(2){
+				opacity: 0;
+			}
+			&:nth-child(3){
+				transform: rotate(45deg);
+				top: 20px;
+			}
+		}
+		
+		&.collapsed {
+			.navbar-toggler-icon {
+				&:nth-child(1){
+					transform: rotate(0);
+					top: 10px;
+				}
+				&:nth-child(2){
+					opacity: 1;
+					top: 18px;
+				}
+				&:nth-child(3){
+					transform: rotate(0);
+					top: 26px;
+				}
+			}
+		}
+	}
+}
+
+#menu-item-1324 {
+	@include screen-gtsm {
+		display: none;
 	}
 }

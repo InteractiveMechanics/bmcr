@@ -28,6 +28,10 @@
 	color: $grey3;
 	text-decoration: none;
 	border-bottom: none;
+	
+	@include screen-xs {
+	    line-height: 24px;
+    }
 }
 
 .ref-author {
@@ -50,6 +54,10 @@
 	color: $grey6;
 	text-decoration: none;
 	border-bottom: none;
+	
+	@include screen-xs {
+	    line-height: 18px;
+    }
 }
 
 .ref-status-pitch {

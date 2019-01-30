@@ -5,6 +5,11 @@ div[type="notes"] {
 	font-size: 20px;
 	line-height: 32px;
 	color: $grey;
+	
+	@include screen-xs {
+		font-size: 18px;
+	    line-height: 27px;
+    }
 }
 
 dfn, cite, em, i, emph[rend="italic"] {
@@ -18,6 +23,10 @@ blockquote {
 	box-shadow: 3px 3px 2px rgba(0,0,0, 0.04);
 	font-size: 24px;
 	color: $grey4;
+	
+	@include screen-xs {
+		font-size: 21px;	
+	}
 }
 
 address {
