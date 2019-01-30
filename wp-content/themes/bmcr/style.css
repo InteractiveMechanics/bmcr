@@ -893,6 +893,10 @@ a[rel="tag"]:active {
       top: 30px;
       bottom: auto; } }
 
+@media print {
+  .pagination {
+    display: none; } }
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -986,6 +990,9 @@ a[rel="tag"]:active {
       border: none; }
       .brand-wrapper form {
         display: none; } }
+  @media print {
+    .brand-wrapper form {
+      display: none; } }
 
 .site-title {
   color: #707070;
@@ -1087,6 +1094,9 @@ a[rel="tag"]:active {
 
 .login-wrapper {
   background: #03335F; }
+  @media print {
+    .login-wrapper {
+      display: none; } }
   @media (max-width: 991px) {
     .login-wrapper {
       display: none; } }
@@ -1106,18 +1116,31 @@ a[rel="tag"]:active {
 @media (max-width: 991px) {
   .navbar-brand-lg {
     display: none; } }
+@media print {
+  .navbar-brand-lg {
+    display: none; } }
 
 .navbar-brand-sm {
   padding: 10px 0px; }
   @media (min-width: 992px) {
     .navbar-brand-sm {
       display: none; } }
+  @media print {
+    .navbar-brand-sm {
+      display: block;
+      padding: 0;
+      margin-bottom: 30px; }
+      .navbar-brand-sm * {
+        text-decoration: none; } }
   .navbar-brand-sm .site-title {
     margin: 0px;
     line-height: 24px; }
   .navbar-brand-sm small {
     font-size: 70%; }
 
+@media print {
+  .mobile-nav-menu {
+    display: none; } }
 @media (max-width: 991px) {
   .mobile-nav-menu {
     margin-left: -16px;
@@ -1482,6 +1505,9 @@ note {
 #comments-wrapper {
   border-top: 1px solid #03335F;
   padding: 40px 0 0; }
+  @media print {
+    #comments-wrapper {
+      display: none; } }
   #comments-wrapper .comments-title {
     display: none; }
   #comments-wrapper .comment-list .comment-body {
@@ -1540,6 +1566,9 @@ footer {
   padding: 34px 0px;
   background-color: #03335F;
   color: #FFFFFF; }
+  @media print {
+    footer {
+      display: none; } }
   footer h4 {
     color: #FFFFFF;
     font-size: 20px;
@@ -1623,6 +1652,9 @@ footer {
   .ref-wrapper:hover {
     text-decoration: none;
     opacity: 0.5; }
+  @media print {
+    .ref-wrapper {
+      padding: 0; } }
 
 .ref-id {
   font-family: "Noto Serif", serif;
@@ -1679,11 +1711,17 @@ footer {
 --------------------------------------------------------------*/
 .jumbotron {
   background-color: #8C8C8C; }
+  @media print {
+    .jumbotron {
+      padding: 0; } }
   @media (max-width: 767px) {
     .jumbotron {
       padding: 20px 20px 40px; } }
   .jumbotron h2, .jumbotron p {
     color: #FFFFFF; }
+    @media print {
+      .jumbotron h2, .jumbotron p {
+        color: black; } }
   .jumbotron p {
     font-family: "Noto Sans", sans-serif;
     font-size: 20px;
@@ -1691,6 +1729,12 @@ footer {
     @media (max-width: 767px) {
       .jumbotron p {
         font-size: 18px; } }
+    @media print {
+      .jumbotron p {
+        color: black; } }
+  @media print {
+    .jumbotron .btn {
+      display: none; } }
   .jumbotron .btn-secondary, .jumbotron a[rel="tag"] {
     margin-left: 25px; }
     @media (max-width: 991px) {

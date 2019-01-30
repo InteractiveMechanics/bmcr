@@ -143,6 +143,11 @@
 			display: none;
 		}
 	}
+	@media print {
+		form {
+			display: none;
+		}
+	}
 }
 
 .site-title {
@@ -275,6 +280,9 @@
 .login-wrapper {
 	background: $blue;
 	
+	@media print {
+		display: none;
+	}
 	@include screen-ltmd {
 		display: none;
 	}
@@ -301,6 +309,9 @@
 	@include screen-ltmd {
 		display: none;
 	}
+	@media print {
+		display: none;
+	}
 }
 
 .navbar-brand-sm {
@@ -309,6 +320,16 @@
 	@include screen-gtsm {
 		display: none;
 	}
+	@media print {
+		display: block;	
+		padding: 0;
+		margin-bottom: 30px;
+		
+		* {
+			text-decoration: none;
+		}
+	}
+	
 	.site-title {
 		margin: 0px;
 		line-height: 24px;
@@ -319,6 +340,9 @@
 }
 
 .mobile-nav-menu {
+	@media print {
+		display: none;
+	}
 	@include screen-ltmd {
 		margin-left: -16px;
 	    margin-right: -16px;

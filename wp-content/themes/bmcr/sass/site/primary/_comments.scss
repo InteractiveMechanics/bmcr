@@ -2,6 +2,10 @@
     border-top: 1px solid $blue;
     padding: 40px 0 0;
     
+    @media print {
+	    display: none;
+    }
+    
     .comments-title {
 	    display: none;
     }

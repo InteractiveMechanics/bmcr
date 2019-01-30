@@ -65,3 +65,9 @@ a[rel="tag"] {
     }
 }
 
+.pagination {
+	@media print {
+		display: none;
+	}
+}
+

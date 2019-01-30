@@ -7,6 +7,10 @@
 		text-decoration: none;
 		opacity: 0.5;
 	}
+	
+	@media print {
+		padding: 0;	
+	}
 }
 
 .ref-id {

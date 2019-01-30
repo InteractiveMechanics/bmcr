@@ -1,12 +1,19 @@
 .jumbotron {
 	background-color: $grey7;
 	
+	@media print {
+		padding: 0;	
+	}
 	@include screen-xs {
 		padding: 20px 20px 40px;
 	}
 	
 	h2, p {
 		color: $white;
+		
+		@media print {
+			color: black;
+		}
 	}
 	p {
 		font-family: $noto-sans;
@@ -15,6 +22,14 @@
 		
 		@include screen-xs {
 			font-size: 18px;
+		}
+		@media print {
+			color: black;	
+		}
+	}
+	.btn {
+		@media print {
+			display: none;	
 		}
 	}
 	.btn-secondary {
