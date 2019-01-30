@@ -102,7 +102,7 @@
 
 /* front-page */
 .recent-posts {
-	padding: 40px 0px 60px;
+	padding: 40px 0px 0;
 }
 
 .post-list-wrapper {
@@ -131,6 +131,10 @@
 		p {
 			margin: 0px;
 			line-height: 1;
+			
+			@include screen-ltmd {
+				font-size: 16px;
+			}
 		}
 	}
 }

@@ -8,6 +8,10 @@
 	color: $grey3;
 	font-weight: 400 !important;
 	font-size: 24px;
+	
+	@include screen-xs {
+		font-size: 18px;
+	}
 }
 
 .nf-form-fields-required {
@@ -21,4 +25,12 @@
 /* do not display application status */
 #nf-field-16-wrap {
 	display: none;
+}
+
+.submit-container {
+	input.btn-lg {
+		@include screen-xs {
+			width: 100% !important;
+		}
+	}
 }

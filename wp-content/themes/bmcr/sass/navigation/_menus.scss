@@ -125,6 +125,10 @@
 
 .nav-wrapper {
 	display: flex;
+	
+	@include screen-ltmd {
+		min-height: 0;	
+	}
 }
 
 .brand-wrapper {

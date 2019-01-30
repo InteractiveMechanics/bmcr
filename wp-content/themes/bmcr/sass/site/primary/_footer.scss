@@ -2,10 +2,16 @@ footer {
 	padding: 34px 0px;
 	background-color: $blue;
 	color: $white;
+	
 	h4 {
 		color: $white;
 		font-size: 20px;
+		line-height: 27px;
 		-webkit-font-smoothing: antialiased;
+		
+		@include screen-xs {
+			font-size: 16px;	
+		}
 	}
 	h6 {
 		color: $white;
@@ -13,37 +19,69 @@ footer {
 		font-size: 14px;
 		font-weight: 700;
 		-webkit-font-smoothing: antialiased;
+		
+		@include screen-xs {
+			font-size: 16px;	
+		}
 	}
+	address, 
 	small {
 		font-size: 16px;
 		-webkit-font-smoothing: antialiased;
+		
+		@include screen-xs {
+			font-size: 14px;	
+		}
 	}
 }
 
 .newsletter-wrapper {
+	@include screen-xxs {
+		text-align: center;	
+	}
+	
 	small {
 		display: block;
 		margin-bottom: 16px;
 		font-size: 16px;
 		font-style: italic;
+		
+		@include screen-xs {
+			display: none;
+		}
 	}
-	button {
-		width: 100%;
-		font-size: 20px;
+	a {		
+		@include screen-xs {
+			font-size: 14px;	
+		}
+		@include screen-xxs {
+			margin-bottom: 15px;
+		}
 	}
 }
 
 #address-line,
 #footer-email {
 	color: $white2;
+	
+	@include screen-xxs {
+		text-align: center;
+	}
 }
 
 #footer-email {
 	border-bottom: 1px solid rgba(250, 250, 250, 0.3);
 	padding-bottom: 1px;
 	padding-right: 3px;
+	
 	&:hover {
 		text-decoration: none;
+	}
+}
+
+.site-info {
+	@include screen-xxs {
+		text-align: center;
 	}
 }
 
@@ -51,4 +89,9 @@ footer {
 	display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    
+    @include screen-xxs {
+		margin-top: 15px;
+	}
 }

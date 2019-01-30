@@ -724,6 +724,25 @@ textarea {
   input[type="color"]:focus,
   textarea:focus {
     box-shadow: 6px 6px 7px rgba(0, 0, 0, 0.08); }
+  @media (max-width: 767px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="range"],
+    input[type="date"],
+    input[type="month"],
+    input[type="week"],
+    input[type="time"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="color"],
+    textarea {
+      font-size: 18px;
+      padding: 20px; } }
 
 select {
   height: 90px !important;
@@ -737,6 +756,11 @@ select {
   background: white;
   text-indent: 30px;
   font-style: italic; }
+  @media (max-width: 767px) {
+    select {
+      text-indent: 0;
+      height: 67px !important;
+      font-size: 18px; } }
 
 .select-wrapper {
   position: relative; }
@@ -750,12 +774,17 @@ select {
     height: 90px;
     background: #03335F;
     width: 90px;
-    padding: 15px;
+    padding: 25px;
     color: white;
     text-align: center;
     font-weight: 700;
     font-size: 36px;
     pointer-events: none; }
+    @media (max-width: 767px) {
+      .select-wrapper .nf-field-element:after {
+        height: 67px;
+        width: 67px;
+        font-family: 27px; } }
 
 textarea {
   width: 100%; }
@@ -777,6 +806,9 @@ textarea {
   color: #5D5D5D;
   font-weight: 400 !important;
   font-size: 24px; }
+  @media (max-width: 767px) {
+    .nf-field-label label {
+      font-size: 18px; } }
 
 .nf-form-fields-required {
   margin-bottom: 25px; }
@@ -787,6 +819,10 @@ textarea {
 /* do not display application status */
 #nf-field-16-wrap {
   display: none; }
+
+@media (max-width: 767px) {
+  .submit-container input.btn-lg {
+    width: 100% !important; } }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -846,6 +882,16 @@ a[rel="tag"]:active {
   position: absolute;
   bottom: 28px;
   right: 21px; }
+  @media (max-width: 991px) {
+    .apply-link {
+      position: relative;
+      bottom: 0;
+      right: 0;
+      margin-top: 10px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .apply-link {
+      top: 30px;
+      bottom: auto; } }
 
 /*--------------------------------------------------------------
 ## Menus
@@ -927,6 +973,9 @@ a[rel="tag"]:active {
 
 .nav-wrapper {
   display: flex; }
+  @media (max-width: 991px) {
+    .nav-wrapper {
+      min-height: 0; } }
 
 .brand-wrapper {
   display: flex;
@@ -1308,7 +1357,7 @@ a[rel="tag"]:active {
 
 /* front-page */
 .recent-posts {
-  padding: 40px 0px 60px; }
+  padding: 40px 0px 0; }
 
 .post-list-wrapper {
   padding-top: 20px; }
@@ -1331,6 +1380,9 @@ a[rel="tag"]:active {
     .responses-header a p {
       margin: 0px;
       line-height: 1; }
+      @media (max-width: 991px) {
+        .responses-header a p {
+          font-size: 16px; } }
 
 .page-header-wrapper {
   display: flex;
@@ -1491,29 +1543,54 @@ footer {
   footer h4 {
     color: #FFFFFF;
     font-size: 20px;
+    line-height: 27px;
     -webkit-font-smoothing: antialiased; }
+    @media (max-width: 767px) {
+      footer h4 {
+        font-size: 16px; } }
   footer h6 {
     color: #FFFFFF;
     font-family: "Noto Sans", sans-serif;
     font-size: 14px;
     font-weight: 700;
     -webkit-font-smoothing: antialiased; }
+    @media (max-width: 767px) {
+      footer h6 {
+        font-size: 16px; } }
+  footer address,
   footer small {
     font-size: 16px;
     -webkit-font-smoothing: antialiased; }
+    @media (max-width: 767px) {
+      footer address,
+      footer small {
+        font-size: 14px; } }
 
+@media (max-width: 480px) {
+  .newsletter-wrapper {
+    text-align: center; } }
 .newsletter-wrapper small {
   display: block;
   margin-bottom: 16px;
   font-size: 16px;
   font-style: italic; }
-.newsletter-wrapper button {
-  width: 100%;
-  font-size: 20px; }
+  @media (max-width: 767px) {
+    .newsletter-wrapper small {
+      display: none; } }
+@media (max-width: 767px) {
+  .newsletter-wrapper a {
+    font-size: 14px; } }
+@media (max-width: 480px) {
+  .newsletter-wrapper a {
+    margin-bottom: 15px; } }
 
 #address-line,
 #footer-email {
   color: #FCFCFC; }
+  @media (max-width: 480px) {
+    #address-line,
+    #footer-email {
+      text-align: center; } }
 
 #footer-email {
   border-bottom: 1px solid rgba(250, 250, 250, 0.3);
@@ -1522,10 +1599,18 @@ footer {
   #footer-email:hover {
     text-decoration: none; }
 
+@media (max-width: 480px) {
+  .site-info {
+    text-align: center; } }
+
 .social {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  text-align: center; }
+  @media (max-width: 480px) {
+    .social {
+      margin-top: 15px; } }
 
 /*--------------------------------------------------------------
 ## References
@@ -1553,13 +1638,11 @@ footer {
   font-family: "Noto Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 21px;
+  line-height: 24px;
   font-weight: 700;
   color: #5D5D5D;
   text-decoration: none;
   border-bottom: none; }
-  @media (max-width: 767px) {
-    .ref-title {
-      line-height: 24px; } }
 
 .ref-author {
   margin: 0px;
@@ -1577,17 +1660,19 @@ footer {
   -webkit-font-smoothing: antialiased;
   font-size: 13px;
   font-weight: 400;
+  line-height: 18px;
   color: #7F7F7F;
   text-decoration: none;
   border-bottom: none; }
-  @media (max-width: 767px) {
-    .ref-details {
-      line-height: 18px; } }
 
 .ref-status-pitch {
   position: relative; }
   .ref-status-pitch:hover {
     opacity: 1; }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .ref-status-pitch .ref-title,
+    .ref-status-pitch .ref-details {
+      max-width: 60%; } }
 
 /*--------------------------------------------------------------
 ## Jumbotron

@@ -25,6 +25,11 @@ textarea {
 	&:focus {
 		box-shadow: 6px 6px 7px rgba(0,0,0,0.08);
 	}
+	
+	@include screen-xs {
+		font-size: 18px;
+		padding: 20px;
+	}
 }
 
 select {
@@ -39,6 +44,12 @@ select {
     background: white;
     text-indent: 30px;
     font-style: italic;
+    
+    @include screen-xs {
+	    text-indent: 0;
+	    height: 67px !important;
+	    font-size: 18px;
+    }
 }
 
 .select-wrapper {
@@ -55,12 +66,18 @@ select {
 		    height: 90px;
 		    background: $blue;
 		    width: 90px;
-		    padding: 15px;
+		    padding: 25px;
 		    color: white;
 		    text-align: center;
 		    font-weight: 700;
 		    font-size: 36px;
 		    pointer-events: none;
+		    
+		    @include screen-xs {
+				height: 67px;
+				width: 67px;   
+				font-family: 27px;
+			}
 	    }
 	}
 }

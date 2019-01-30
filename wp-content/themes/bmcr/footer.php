@@ -15,14 +15,14 @@
 
 	<footer id="colophon" class="site-footer container-fluid">
 		<div class="row">
-			<div class="newsletter-wrapper col-sm-4 offset-sm-1">
+			<div class="newsletter-wrapper col-sm-5 col-md-4 offset-md-1">
 				<h4><?php the_field('newsletter_heading', 'option'); ?></h4>
 				<small><?php the_field('newsletter_subheading', 'option'); ?></small>
 				<a target="_blank"
                    href="https://brynmawr.us1.list-manage.com/subscribe?u=c302ee634698194cc76ef8a8b&id=dec0468354" 
                    class="btn-secondary"><?php the_field('newsletter_button_text', 'option'); ?></a>
 			</div>
-			<div class="site-info col-sm-4 offset-sm-1">
+			<div class="site-info col-sm-5 col-md-4 offset-md-1">
 				<h4>Contact Us</h4>
 				<small>
 					<?php the_field('address_1', 'option'); ?><br/>
@@ -42,7 +42,7 @@
                     <a href="tel:<?php the_field('phone', 'option'); ?>" target="_blank" id="footer-email"><?php the_field('phone', 'option'); ?></a>
 				</small>
 			</div><!-- .site-info -->
-			<div class="social col-sm-1">
+			<div class="social col-sm-2 col-md-1">
 				<h6>Follow Us</h6>
 				<a href="http://www.twitter.com/<?php the_field('twitter', 'option'); ?>">
 				

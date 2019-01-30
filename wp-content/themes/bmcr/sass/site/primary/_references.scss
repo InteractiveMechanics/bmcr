@@ -24,14 +24,11 @@
 	font-family: $noto-sans;
 	-webkit-font-smoothing: antialiased;
 	font-size: 21px;
+	line-height: 24px;
 	font-weight: 700;
 	color: $grey3;
 	text-decoration: none;
 	border-bottom: none;
-	
-	@include screen-xs {
-	    line-height: 24px;
-    }
 }
 
 .ref-author {
@@ -51,19 +48,24 @@
 	-webkit-font-smoothing: antialiased;
 	font-size: 13px;
 	font-weight: 400;
+	line-height: 18px;
 	color: $grey6;
 	text-decoration: none;
 	border-bottom: none;
-	
-	@include screen-xs {
-	    line-height: 18px;
-    }
 }
 
 .ref-status-pitch {
 	position: relative;
+	
 	&:hover {
 		opacity: 1;
+	}
+	
+	.ref-title,
+	.ref-details {
+		@include screen-md {
+			max-width: 60%;
+		}
 	}
 }
 

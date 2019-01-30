@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="container-fluid">
+<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="container-fluid">
 	<header class="entry-header row">
 		<div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
 
@@ -28,4 +28,4 @@
 		</div>
 	</div><!-- .entry-content -->
 
-</article><!-- #post-<?php the_ID(); ?> -->
+</div><!-- #post-<?php the_ID(); ?> -->
