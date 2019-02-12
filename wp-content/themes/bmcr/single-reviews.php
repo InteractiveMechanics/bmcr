@@ -17,14 +17,18 @@
 
 <main>
 	
-	<article id="post-<?php the_ID(); ?>" class="container-fluid">
+	<article id="post-<?php the_ID(); ?>" class="container-fluid" itemscope itemtype="http://schema.org/Review">
 		
 		<div class="entry-header row">
 			
 			<div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
 		
 				<small class="ref-id">BMCR <?php echo $bmcr_id; ?></small>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
+				<h1 class="entry-title" itemprop="name"><?php the_title(); ?></h1>
+				
+				<div class="d-none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+					<meta itemprop="name" content="Bryn Mawr Classical Review" />
+				</div>
 				
                 <?php 
                     if( have_rows('books') ):
@@ -40,7 +44,7 @@
                                     <?php endif; ?>
 
                                     <?php if (get_sub_field('title')): ?>
-                                        <em><?php echo the_sub_field('title'); ?>.</em>
+                                        <em itemprop="itemReviewed"><?php echo the_sub_field('title'); ?>.</em>
                                     <?php endif; ?>
                                     <?php if (get_sub_field('series_title')): ?>
                                         <em><?php echo the_sub_field('series_title'); ?></em>. 
@@ -115,7 +119,7 @@
 		
 		<div class="entry-content row">
 			
-			<div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
+			<div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2" itemprop="reviewBody">
 			
 				<?php the_content(); ?>
 			
