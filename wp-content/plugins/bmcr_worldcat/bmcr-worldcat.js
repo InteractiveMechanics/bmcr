@@ -36,12 +36,12 @@ $(function() {
                 !$worldcat_oclc.val()) {
                     getWorldCatValues($(this));
             } else {
-                if (confirm("Values already exist for this book. Are you sure you want to override with WorldCat data?")) {
+                if (confirm("Values already exist for this title. Are you sure you want to override with WorldCat data?")) {
                     getWorldCatValues($(this));
                 }
             }
         } else {
-            alert("Please enter a valid OCLC number.");
+            alert("Please enter a valid ISBN number.");
         }
     });
 
@@ -51,7 +51,7 @@ $(function() {
         if ($worldcat_oclc) {
             showWorldCatResponse($worldcat_oclc);
         } else {
-            alert("Please enter a valid OCLC number.");
+            alert("Please enter a valid ISBN number.");
         }
     });
 
@@ -61,8 +61,6 @@ $(function() {
 
     function getWorldCatValues(that) {
         var $worldcat_isbn = that.prev().val();
-
-        console.log($worldcat_isbn);
 
         var $worldcat_title = that.parents('.acf-fields').find('[data-name="title"] .acf-input textarea');
         var $worldcat_series_title = that.parents('.acf-fields').find('[data-name="series_title"] .acf-input input');
@@ -90,6 +88,7 @@ $(function() {
                 ($(xml).find('datafield[tag="490"]:first subfield[code="a"]').text()) + ' ' + 
                 ($(xml).find('datafield[tag="490"]:first subfield[code="v"]').text());
 
+			// SPLIT THIS
             var author = 
                 ($(xml).find('datafield[tag="100"]:first subfield[code="a"]').text()) + ' ' + 
                 ($(xml).find('datafield[tag="100"]:first subfield[code="e"]').text());

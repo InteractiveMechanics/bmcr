@@ -216,9 +216,9 @@ if( function_exists('acf_add_options_page') ) {
     ));
     
     acf_add_options_sub_page(array(
-        'page_title' => 'Theme Header Settings',
-        'menu_title' => 'Header',
-        'parent_slug' => 'theme-general-settings',
+        'page_title' 	=> 'Theme Header Settings',
+        'menu_title' 	=> 'Header',
+        'parent_slug' 	=> 'theme-general-settings',
     ));
     acf_add_options_sub_page(array(
         'page_title'    => 'Theme Footer Settings',
@@ -439,10 +439,12 @@ function filter_posts_where( $where ) {
 }
 add_filter('posts_where', 'filter_posts_where');
 
+
 function post_page_removal() {
     remove_menu_page( 'edit.php' );
 }
 add_action( 'admin_menu', 'post_page_removal' );
+
 
 function posts_link_attributes() {
     return 'class="page-link"';
@@ -451,3 +453,105 @@ add_filter('next_posts_link_attributes', 'posts_link_attributes');
 add_filter('previous_posts_link_attributes', 'posts_link_attributes');
 
 
+function custom_menu_page_removal() {	
+	if (!current_user_can('administrator')) {
+		remove_menu_page( 'tools.php' );
+		remove_menu_page( 'options-general.php' );
+		remove_menu_page( 'customize.php' );
+		remove_menu_page( 'edit.php?post_type=acf-field-group' );
+		remove_menu_page( 'pmxi-admin-home' );
+		remove_menu_page( 'wp-tweets-pro' );
+		remove_menu_page( 'themes.php' );
+		
+		add_submenu_page( 'theme-general-settings', 'Menus', 'Menus', 'senior_editor', 'nav-menus.php');	
+	}
+}
+add_action( 'admin_init', 'custom_menu_page_removal', 999 );
+
+
+/*
+ * Add columns to review post list
+ */
+function add_acf_columns ( $columns ) {
+	return array_merge ( $columns, array ( 
+		'date_received' => ( 'Date Received' ),
+		'date_assigned' => ( 'Date Assigned' ),
+		'date_review_received' => ( 'Date Review Received' ),
+		'first_reminder_date' => ( 'First Reminder Date' ),
+		'second_reminder_date' => ( 'Second Reminder Date' )
+	));
+}
+add_filter ( 'manage_reviews_posts_columns', 'add_acf_columns' );
+
+
+/*
+ * Add columns to exhibition post list
+ */
+function review_custom_column ( $column, $post_id ) {
+	switch ( $column ) {
+		case 'date_received':
+			echo get_post_meta ( $post_id, 'date_received', true );
+			break;
+		case 'date_assigned':
+			echo get_post_meta ( $post_id, 'date_assigned', true );
+			break;
+		case 'date_review_received':
+			echo get_post_meta ( $post_id, 'date_review_received', true );
+			break;
+		case 'first_reminder_date':
+			echo get_post_meta ( $post_id, 'first_reminder_date', true );
+			break;
+		case 'second_reminder_date':
+			echo get_post_meta ( $post_id, 'second_reminder_date', true );
+			break;
+	}
+}
+add_action ( 'manage_reviews_posts_custom_column', 'review_custom_column', 10, 2 );
+
+
+function set_custom_review_sortable_columns( $columns ) {
+  	$columns['date_received'] = 'date_received';
+  	$columns['date_assigned'] = 'date_assigned';
+  	$columns['date_review_received'] = 'date_review_received';
+  	$columns['first_reminder_date'] = 'first_reminder_date';
+  	$columns['second_reminder_date'] = 'second_reminder_date';
+
+  	return $columns;
+}
+add_filter( 'manage_edit-reviews_sortable_columns', 'set_custom_review_sortable_columns' );
+
+
+function review_custom_orderby( $query ) {
+  	if ( ! is_admin() )
+    	return;
+
+	$orderby = $query->get( 'orderby');
+
+  	if ( 'date_received' == $orderby ) {
+    	$query->set( 'meta_key', 'date_received' );
+    	$query->set( 'orderby', 'meta_value_num' );
+  	}
+  	if ( 'date_assigned' == $orderby ) {
+    	$query->set( 'meta_key', 'date_assigned' );
+    	$query->set( 'orderby', 'meta_value_num' );
+  	}
+  	if ( 'date_review_received' == $orderby ) {
+    	$query->set( 'meta_key', 'date_review_received' );
+    	$query->set( 'orderby', 'meta_value_num' );
+  	}
+  	if ( 'first_reminder_date' == $orderby ) {
+    	$query->set( 'meta_key', 'first_reminder_date' );
+    	$query->set( 'orderby', 'meta_value_num' );
+  	}
+  	if ( 'second_reminder_date' == $orderby ) {
+    	$query->set( 'meta_key', 'second_reminder_date' );
+    	$query->set( 'orderby', 'meta_value_num' );
+  	}
+}
+add_action( 'pre_get_posts', 'review_custom_orderby' );
+
+
+function admin_style() {
+  	wp_enqueue_style('admin-styles', get_template_directory_uri().'/admin.css');
+}
+add_action('admin_enqueue_scripts', 'admin_style');
