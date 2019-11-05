@@ -15,7 +15,7 @@ add_action( 'save_post', 'save_datesetter', 10 , 3);
 function save_datesetter($post_id, $post, $update) {
 
     $post_type  = get_post_type($post_id);
-    if ( $post_type !== "reviews" ){ return; }
+    if ( $post_type !== "reviews" ){ return; };
     //if ( $update ){ return; }
 
 
