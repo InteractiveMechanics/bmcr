@@ -11,6 +11,24 @@ License: GPLv2
 
 
 add_action( 'save_post', 'save_datesetter', 10 , 3);
+//add_action( 'save_post', 'schedule_reminders', 10, 3 );
+
+//similar to schudule_emails() in publishpress/notifications/notifications.
+function schedule_reminders( $recipients, $subject, $message, $message_headers = '', $time_offset = 1 ) {
+
+      $recipients = (array) $recipients;
+
+      $send_time = time();
+
+      foreach ( $recipients as $recipient ) {
+        wp_schedule_single_event( $send_time, 'pp_send_scheduled_notification',
+          [ $recipient, $subject, $message, $message_headers ] );
+        $send_time += $time_offset;
+      }
+    }
+
+
+// time() + 3600 = one hour from now.
 
 function save_datesetter($post_id, $post, $update) {
 
@@ -32,11 +50,17 @@ function save_datesetter($post_id, $post, $update) {
 	// SET THE REMINDER DATES 4 AND 8 MONTHS OUT
   $date_assigned =  get_field('date_assigned');
   if ( $date_assigned ) {
+
+
     $first_reminder_date = date('F j, Y', strtotime('+4 month', strtotime($date_assigned)));
     update_post_meta( $post_id, 'first_reminder_date', $first_reminder_date);
 
     $second_reminder_date = date('F j, Y', strtotime('+8 month', strtotime($date_assigned)));
     update_post_meta( $post_id, 'second_reminder_date', $second_reminder_date);
+
+    $reviewers = get_field('reviewers');
+
+    schedule_reminders( 'mattlovedesign@gmail.com', 'test subject', 'testemail', '', 1);
   }
 
 	// IF THERE IS A VALUE IN date_review_received
@@ -45,7 +69,11 @@ function save_datesetter($post_id, $post, $update) {
   if ( $date_review_received ) {
     delete_post_meta( $post_id, 'first_reminder_date');
     delete_post_meta( $post_id, 'second_reminder_date');
+
+    //delete any scheduled reminders
   }
+
+
 }
 
 ?>
