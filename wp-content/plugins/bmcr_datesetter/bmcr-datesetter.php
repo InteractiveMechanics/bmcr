@@ -44,18 +44,33 @@ function save_datesetter($post_id, $post, $update) {
 	// IF THERE IS A VALUE IN date_assigned
 	// SET THE REMINDER DATES 4 AND 8 MONTHS OUT
   $date_assigned =  get_field('date_assigned');
-  $reviewers = get_field('reviewers');
+
+  //get reviewers
+  $reviewers = get_post_meta($post_id, 'reviewers', true);
+  $recipients = [];
+
+  if ($reviewers) {
+    for ($i=0; $i<$reviewers, $i++) {
+      $meta_key = 'reviewers_'.$i.'_reviewer_email';
+      $sub_field_value = get_post_meta($post_id, $meta_key, true);
+      array_push($recipients, $sub_field_value);
+    }
+  }
+
   if ( $date_assigned ) {
 
-    $first_reminder_date = date('F j, Y', strtotime('+4 month', strtotime($date_assigned)));
+    $first_reminder_date = date('F j, Y', strtotime('+1 day', strtotime($date_assigned)));
     update_post_meta( $post_id, 'first_reminder_date', $first_reminder_date);
-    $second_reminder_date = date('F j, Y', strtotime('+8 month', strtotime($date_assigned)));
+    $second_reminder_date = date('F j, Y', strtotime('+2 day', strtotime($date_assigned)));
     update_post_meta( $post_id, 'second_reminder_date', $second_reminder_date);
 
 
-    //render date_time for email set to noon)
-    $first_reminder_date_time = strtotime('2:30 AM', strtotime( 'November 19, 2019' ));
-    wp_schedule_single_event( $first_reminder_date_time, 'send_single_reminder',[ 'mattlovedesign@gmail.com', $first_reminder_date, $first_reminder_date_time, '' ] );
+
+
+    //render date_time for email set to noon eastern (1600 UST)
+    // $first_reminder_date_time = strtotime('16:00', strtotime( '$first_reminder_date'));
+    $first_reminder_date_time = strtotime('now');
+    wp_schedule_single_event( $first_reminder_date_time, 'send_single_reminder',[ 'mattlovedesign@gmail.com', $recipients, $first_reminder_date_time, '' ] );
 
 
     // $second_reminder_date_time = strtotime('+ 10 minutes');
