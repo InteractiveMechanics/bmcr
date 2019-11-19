@@ -21,6 +21,18 @@ add_action('send_single_reminder', 'send_single_reminder', 10, 4);
 //
 // }
 
+function schedule_reminders( $recipients, $subject, $message, $message_headers = '', $time_offset = 1, $date ) {
+  $recipients = (array) $recipients;
+
+  $send_time = $date;
+
+  foreach ( $recipients as $recipient ) {
+    wp_schedule_single_event( $send_time, 'send_single_reminder',
+      [ $recipient, $subject, $message, $message_headers ] );
+    $send_time += $time_offset;
+  }
+}
+
 function send_single_reminder( $to, $subject, $message, $message_headers = '' ) {
 	wp_mail( $to, $subject, $message, $message_headers );
 }
@@ -72,11 +84,7 @@ function save_datesetter($post_id, $post, $update) {
     $first_reminder_date_time = strtotime('now');
     wp_schedule_single_event( $first_reminder_date_time, 'send_single_reminder',[ 'mattlovedesign@gmail.com', $recipients, $first_reminder_date_time, '' ] );
 
-
-    // $second_reminder_date_time = strtotime('+ 10 minutes');
-    // schedule_reminder( 'mattlovedesign@gmail.com', 'test reminder 2 delayed 2 mins', 'test reminder 2 body', '', 1, $second_reminder_date_time);
-
-
+    schedule_reminders( $recipients, 'test with multiple emails', 'this is a test email', '', 1, $first_reminder_date_time )
   }
 
 	// IF THERE IS A VALUE IN date_review_received
