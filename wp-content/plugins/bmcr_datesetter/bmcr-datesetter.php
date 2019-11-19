@@ -50,7 +50,7 @@ function save_datesetter($post_id, $post, $update) {
   $recipients = [];
 
   if ($reviewers) {
-    for ($i=0; $i<$reviewers, $i++) {
+    for ($i=0; $i<$reviewers; $i++) {
       $meta_key = 'reviewers_'.$i.'_reviewer_email';
       $sub_field_value = get_post_meta($post_id, $meta_key, true);
       array_push($recipients, $sub_field_value);
