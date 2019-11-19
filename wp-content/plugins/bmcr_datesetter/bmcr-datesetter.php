@@ -64,12 +64,15 @@ function save_datesetter($post_id, $post, $update) {
     }
   }
 
-  $first_reminder_date =  get_field('first_reminder_date');
-  $second_reminder_date =  get_field('second_reminder_date');
 
+  $date_assigned =  get_field( 'date_assigned');
+  $first_reminder =  get_field('first_reminder_date');
+  $second_reminder =  get_field( 'second_reminder_date');
   $date_review_received =  get_field('date_review_received');
 
-  if ( $date_assigned  && !$first_reminder_date && !$second_reminder_date &&  !$date_review_received) {
+
+  //only set reminders and schedule emails if no reminder dates set
+  if ( $date_assigned && !$first_reminder && !$second_reminder ) {
 
     $first_reminder_date = date('F j, Y', strtotime('+1 day', strtotime($date_assigned)));
     update_post_meta( $post_id, 'first_reminder_date', $first_reminder_date);
