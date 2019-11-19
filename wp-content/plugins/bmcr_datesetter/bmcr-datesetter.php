@@ -84,7 +84,7 @@ function save_datesetter($post_id, $post, $update) {
     $first_reminder_date_time = strtotime('now');
     wp_schedule_single_event( $first_reminder_date_time, 'send_single_reminder',[ 'mattlovedesign@gmail.com', $recipients, $first_reminder_date_time, '' ] );
 
-    schedule_reminders( $recipients, 'test with multiple emails', 'this is a test email', '', 1, $first_reminder_date_time )
+    schedule_reminders( $recipients, 'test with multiple emails', 'this is a test email', '', 1, $first_reminder_date_time );
   }
 
 	// IF THERE IS A VALUE IN date_review_received
