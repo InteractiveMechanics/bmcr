@@ -71,7 +71,7 @@ function save_datesetter($post_id, $post, $update) {
   $date_review_received =  get_field('date_review_received');
 
 
-  //only set reminders and schedule emails if no reminder dates set
+  //only set reminders and schedule emails if no reminder dates set, date must be assigned first
   if ( $date_assigned && !$first_reminder && !$second_reminder ) {
 
     $first_reminder_date = date('F j, Y', strtotime('+1 day', strtotime($date_assigned)));
