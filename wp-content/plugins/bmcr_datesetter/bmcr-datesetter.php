@@ -54,7 +54,7 @@ function save_datesetter($post_id, $post, $update) {
 
 
     //render date_time for email set to noon)
-    $first_reminder_date_time = strtotime('9:00 PM', strtotime( 'November 18, 2019' ));
+    $first_reminder_date_time = strtotime('9:10 PM', strtotime( 'November 18, 2019' ));
     wp_schedule_single_event( $first_reminder_date_time, 'send_single_reminder',[ 'mattlovedesign@gmail.com', $first_reminder_date, $first_reminder_date_time, '' ] );
 
 
