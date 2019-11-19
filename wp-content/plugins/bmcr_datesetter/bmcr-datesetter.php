@@ -15,11 +15,11 @@ add_action('send_single_reminder', 'send_single_reminder', 10, 4);
 //add_action( 'save_post', 'schedule_reminders', 10, 3 );
 
 //similar to schudule_emails() in publishpress/notifications/notifications.
-function schedule_reminder( $recipient, $subject, $message, $message_headers = '', $date ) {
-
-  wp_schedule_single_event( $date, 'send_single_reminder',[ $recipient, $subject, $message, $message_headers ] );
-
-}
+// function schedule_reminder( $recipient, $subject, $message, $message_headers = '', $date ) {
+//
+//   wp_schedule_single_event( $date, 'send_single_reminder',[ $recipient, $subject, $message, $message_headers ] );
+//
+// }
 
 function send_single_reminder( $to, $subject, $message, $message_headers = '' ) {
 	wp_mail( $to, $subject, $message, $message_headers );
@@ -54,12 +54,12 @@ function save_datesetter($post_id, $post, $update) {
 
 
     //render date_time for email set to noon)
-    $first_reminder_date_time = strtotime('+ 5 minutes');
-    schedule_reminder( 'mattlovedesign@gmail.com', $first_reminder_date, $first_reminder_date_time, '', 1, $first_reminder_date_time);
+    $first_reminder_date_time = strtotime('+ 5 minutes', strtotime( 'now' ));
+    wp_schedule_single_event( $first_reminder_date_time, 'send_single_reminder',[ 'mattlovedesign@gmail.com', $first_reminder_date, $first_reminder_date_time, '' ] );
 
 
-    $second_reminder_date_time = strtotime('+ 10 minutes');
-    schedule_reminder( 'mattlovedesign@gmail.com', 'test reminder 2 delayed 2 mins', 'test reminder 2 body', '', 1, $second_reminder_date_time);
+    // $second_reminder_date_time = strtotime('+ 10 minutes');
+    // schedule_reminder( 'mattlovedesign@gmail.com', 'test reminder 2 delayed 2 mins', 'test reminder 2 body', '', 1, $second_reminder_date_time);
 
 
   }
