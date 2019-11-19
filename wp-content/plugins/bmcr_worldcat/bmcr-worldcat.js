@@ -15,7 +15,9 @@ $(function() {
 
         var $worldcat_title = $(this).parents('td.acf-fields').find('[data-name="title"] .acf-input textarea');
         var $worldcat_series_title = $(this).parents('td.acf-fields').find('[data-name="series_title"] .acf-input input');
-        var $worldcat_book_author = $(this).parents('td.acf-fields').find('[data-name="authors"] [data-id="0"] [data-name="author_full_name"] .acf-input input');
+        var $worldcat_book_author_0_full = $(this).parents('td.acf-fields').find('[data-name="authors"] [data-id="0"] [data-name="author_full_name"] .acf-input input');
+        var $worldcat_book_author_0_first = $(this).parents('td.acf-fields').find('[data-name="authors"] [data-id="0"] [data-name="author_first_name"] .acf-input input');
+        var $worldcat_book_author_0_last = $(this).parents('td.acf-fields').find('[data-name="authors"] [data-id="0"] [data-name="author_last_name"] .acf-input input');
         var $worldcat_publisher = $(this).parents('td.acf-fields').find('[data-name="publisher"] .acf-input input');
         var $worldcat_pub_location = $(this).parents('td.acf-fields').find('[data-name="pub_location"] .acf-input input');
         var $worldcat_pub_date = $(this).parents('td.acf-fields').find('[data-name="pub_date"] .acf-input input');
@@ -28,7 +30,9 @@ $(function() {
         if ($worldcat_isbn) {
             if (!$worldcat_title.val() &&
                 !$worldcat_series_title.val() &&
-                !$worldcat_book_author.val() &&
+                !$worldcat_book_author_0_full.val() &&
+                !$worldcat_book_author_0_first.val() &&
+                !$worldcat_book_author_0_last.val() &&
                 !$worldcat_publisher.val() &&
                 !$worldcat_pub_location.val() &&
                 !$worldcat_extent.val() &&
@@ -67,7 +71,9 @@ $(function() {
 
         var $worldcat_title = that.parents('td.acf-fields').find('[data-name="title"] .acf-input textarea');
         var $worldcat_series_title = that.parents('td.acf-fields').find('[data-name="series_title"] .acf-input input');
-        var $worldcat_book_author = that.parents('td.acf-fields').find('[data-name="authors"] [data-id="0"] [data-name="author_full_name"] .acf-input input');
+        var $worldcat_book_author_0_full = that.parents('td.acf-fields').find('[data-name="authors"] [data-id="0"] [data-name="author_full_name"] .acf-input input');
+        var $worldcat_book_author_0_first = that.parents('td.acf-fields').find('[data-name="authors"] [data-id="0"] [data-name="author_first_name"] .acf-input input');
+        var $worldcat_book_author_0_last = that.parents('td.acf-fields').find('[data-name="authors"] [data-id="0"] [data-name="author_last_name"] .acf-input input');
         var $worldcat_publisher = that.parents('td.acf-fields').find('[data-name="publisher"] .acf-input input');
         var $worldcat_pub_location = that.parents('td.acf-fields').find('[data-name="pub_location"] .acf-input input');
         var $worldcat_pub_date = that.parents('td.acf-fields').find('[data-name="pub_date"] .acf-input input');
@@ -100,6 +106,17 @@ $(function() {
                 ($(xml).find('datafield[tag="100"]:first subfield[code="e"]').text());
             console.log(author);
 
+            //splits at combinations of commas and spaces
+            //0 is last name, 1 is first
+            var author_0_name_array = author.split(/[ ,]+/)
+            var author_0_first_name = author_0_name_array[1];
+            var author_0_last_name = author_0_name_array[0];
+            //reorder for display
+            var author_0_full_name = author_0_first_name + ' ' + author_0_last_name;
+
+
+            //additional authors here
+
             var publisher =
                 ($(xml).find('datafield[tag="264"]:first subfield[code="b"]').text());
 
@@ -131,7 +148,9 @@ $(function() {
 
             $worldcat_title.val(title);
             $worldcat_series_title.val(seriestitle);
-            $worldcat_book_author.val(author);
+            $worldcat_book_author_0_full.val(author_0_full_name);
+            $worldcat_book_author_0_first.val(author_0_first_name);
+            $worldcat_book_author_0_last.val(author_0_last_name);
             $worldcat_publisher.val(publisher);
             $worldcat_pub_location.val(pub_location);
             $worldcat_pub_date.val(pub_date);
