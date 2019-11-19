@@ -61,7 +61,7 @@ function save_datesetter($post_id, $post, $update) {
 
 
     // $second_reminder_date_time = date('F j, Y H:i:s', strtotime('noon', strtotime($second_reminder_date)));
-    $second_reminder_date_time = strtotime('F j, Y H:i:s', '+2 minutes', 'now');
+    $second_reminder_date_time = strtotime(strtotime($first_reminder_date_time), '+2 minutes');
     schedule_reminder( 'mattlovedesign@gmail.com', 'test reminder 2 delayed 2 mins', 'test reminder 2 body', '', 1, $second_reminder_date_time);
 
 
