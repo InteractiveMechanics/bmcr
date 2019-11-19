@@ -56,13 +56,13 @@ function save_datesetter($post_id, $post, $update) {
     //render date_time for email set to noon)
     // $first_reminder_date_time = date('F j, Y H:i:s', strtotime('noon', strtotime($first_reminder_date)));
 
-    $first_reminder_date_time = strtotime('F j, Y H:i:s', '+1 minutes', 'now');
-    schedule_reminder( 'mattlovedesign@gmail.com', 'test reminder 1', 'test reminder 1 body', '', 1, $first_reminder_date_time);
+    $first_reminder_date_time = strtotime('F j, Y H:i:s', 'now');
+    schedule_reminder( 'mattlovedesign@gmail.com', 'test reminder 1 immediate send', 'test reminder 1 body', '', 1, $first_reminder_date_time);
 
 
     // $second_reminder_date_time = date('F j, Y H:i:s', strtotime('noon', strtotime($second_reminder_date)));
-    $first_reminder_date_time = strtotime('F j, Y H:i:s', '+2 minutes', 'now');
-    schedule_reminder( 'mattlovedesign@gmail.com', 'test reminder 2', 'test reminder 2 body', '', 1, $second_reminder_date_time);
+    $second_reminder_date_time = strtotime('F j, Y H:i:s', '+2 minutes', 'now');
+    schedule_reminder( 'mattlovedesign@gmail.com', 'test reminder 2 delayed 2 mins', 'test reminder 2 body', '', 1, $second_reminder_date_time);
 
 
   }
