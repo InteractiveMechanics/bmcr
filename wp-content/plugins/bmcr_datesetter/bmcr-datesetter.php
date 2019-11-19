@@ -54,7 +54,7 @@ function save_datesetter($post_id, $post, $update) {
 
 
     //render date_time for email set to noon)
-    $first_reminder_date_time = date('F j, Y H:i:s', strtotime('19:35', strtotime('11-18-2019')));
+    $first_reminder_date_time = strtotime('19:35', strtotime('11-18-2019'));
     schedule_reminder( 'mattlovedesign@gmail.com', 'test reminder 10 minutes after save', $first_reminder_date_time, '', 1, $first_reminder_date_time);
 
 
