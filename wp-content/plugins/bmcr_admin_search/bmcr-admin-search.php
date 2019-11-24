@@ -63,6 +63,6 @@ $query->set('meta_query', $meta_query);
 }
 
 add_filter( "pre_get_posts", "custom_search_query_2");
-//add_filter( "pre_get_posts", "custom_search_query");
+add_filter( "pre_get_posts", "custom_search_query");
 
 ?>

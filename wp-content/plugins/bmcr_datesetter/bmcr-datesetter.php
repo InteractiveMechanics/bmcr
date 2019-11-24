@@ -114,7 +114,7 @@ function save_datesetter($post_id, $post, $update) {
 
 }
 
-//move to another plugin
+//move to another plugin, bmcr_ninjaforms?
 add_filter( 'ninja_forms_render_options', function($options,$settings){
    if( $settings['key'] == 'reviews' ){
        $args = array(
@@ -122,7 +122,7 @@ add_filter( 'ninja_forms_render_options', function($options,$settings){
            'orderby' => 'menu_order',
            'order' => 'ASC',
            'posts_per_page' => 100,
-           'post_status' => 'title-added'
+           'post_status' => 'pitch'
        );
        $the_query = new WP_Query( $args );
        if ( $the_query->have_posts() ){
