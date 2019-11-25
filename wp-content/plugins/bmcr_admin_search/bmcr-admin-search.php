@@ -27,7 +27,13 @@ function custom_search_query( $query ) {
                 'value' => $searchterm,
                 'compare' => 'LIKE'
             ));
-        }
+
+        };
+        array_push($meta_query, array(
+          'key'		=> 'reviewers_$_reviewer_last_name',
+    			'compare'	=> '=',
+    			'value'		=> $searchterm,
+          ));
         $query->set("meta_query", $meta_query);
     };
 }
@@ -37,7 +43,7 @@ function custom_search_query( $query ) {
 function my_posts_where( $where ) {
 
 	$where = str_replace("meta_key = 'reviewers_$", "meta_key LIKE 'reviewers_%", $where);
-  $where = str_replace("meta_key = 'books_$", "meta_key LIKE 'books_%", $where);
+  // $where = str_replace("meta_key = 'books_$_authors_$", "meta_key LIKE 'books_%_authors_%", $where);
 
 	return $where;
 }
@@ -62,7 +68,10 @@ $query->set('meta_query', $meta_query);
 }
 }
 
-add_filter( "pre_get_posts", "custom_search_query_2");
+
+
 add_filter( "pre_get_posts", "custom_search_query");
+//add_filter( "pre_get_posts", "custom_search_query_2");
+
 
 ?>

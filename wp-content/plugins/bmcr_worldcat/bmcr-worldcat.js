@@ -1,12 +1,16 @@
 $(function() {
     var plugin_url = '//dev.interactivemechanics.com/bmcr/wp-content/plugins/bmcr_worldcat/worldcat-search-api.php?oclc=';
     var print_url = '//dev.interactivemechanics.com/bmcr/wp-content/plugins/bmcr_worldcat/worldcat-search-api-friendly.php?oclc=';
-    var $worldcat_oclc_wrapper = $('#worldcat-plugin-hook');
+    var $worldcat_oclc_wrapper = $('.worldcat-plugin-hook');
 
     var html  = '<input type="button" name="worldcat-merge" id="worldcat-merge" class="worldcat-merge button button-secondary" style="margin-right: 10px;" value="Get WorldCat Data">';
         html += '<input type="button" name="worldcat-show-result" id="worldcat-show-result" class="worldcat-show-result button button-secondary" value="Show WorldCat Response">';
 
-    $worldcat_oclc_wrapper.find('.acf-input-wrap').append(html);
+    $worldcat_oclc_wrapper.each(function(i){
+      console.log($(this).find('.acf-input-wrap'));
+      $(this).find('.acf-input-wrap').append(html);
+    });
+
     $worldcat_oclc_wrapper.find('.acf-input-wrap input:first-of-type').css({ "width": "50%", "margin-right": "10px" });
 
 
@@ -101,14 +105,14 @@ $(function() {
 			// SPLIT THIS
 
 
-            var author =
+            var mainauthor =
                 ($(xml).find('datafield[tag="100"]:first subfield[code="a"]').text()) + ' ' +
                 ($(xml).find('datafield[tag="100"]:first subfield[code="e"]').text());
-            console.log(author);
+            console.log(mainauthor);
 
             //splits at combinations of commas and spaces
             //0 is last name, 1 is first
-            var author_0_name_array = author.split(/[ ,]+/)
+            var author_0_name_array = mainauthor.split(/[ ,]+/)
             var author_0_first_name = author_0_name_array[1];
             var author_0_last_name = author_0_name_array[0];
             //reorder for display
@@ -116,6 +120,19 @@ $(function() {
 
 
             //additional authors here
+
+            // var mainauthor =
+            //     ($(xml).find('datafield[tag="100"]:first subfield[code="a"]').text()) + ' ' +
+            //     ($(xml).find('datafield[tag="100"]:first subfield[code="e"]').text());
+            // console.log(mainauthor);
+            //
+            // //splits at combinations of commas and spaces
+            // //0 is last name, 1 is first
+            // var author_0_name_array = mainauthor.split(/[ ,]+/)
+            // var author_0_first_name = author_0_name_array[1];
+            // var author_0_last_name = author_0_name_array[0];
+            // //reorder for display
+            // var author_0_full_name = author_0_first_name + ' ' + author_0_last_name;
 
             var publisher =
                 ($(xml).find('datafield[tag="264"]:first subfield[code="b"]').text());
