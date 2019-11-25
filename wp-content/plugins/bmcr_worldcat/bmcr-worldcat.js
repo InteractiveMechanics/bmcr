@@ -22,6 +22,15 @@ $(function() {
         var $worldcat_book_author_0_full = $(this).parents('td.acf-fields').find('[data-name="authors"] [data-id="0"] [data-name="author_full_name"] .acf-input input');
         var $worldcat_book_author_0_first = $(this).parents('td.acf-fields').find('[data-name="authors"] [data-id="0"] [data-name="author_first_name"] .acf-input input');
         var $worldcat_book_author_0_last = $(this).parents('td.acf-fields').find('[data-name="authors"] [data-id="0"] [data-name="author_last_name"] .acf-input input');
+        var $worldcat_book_author_1_full = $(this).parents('td.acf-fields').find('[data-name="authors"] [data-id="1"] [data-name="author_full_name"] .acf-input input');
+        var $worldcat_book_author_1_first = $(this).parents('td.acf-fields').find('[data-name="authors"] [data-id="1"] [data-name="author_first_name"] .acf-input input');
+        var $worldcat_book_author_1_last = $(this).parents('td.acf-fields').find('[data-name="authors"] [data-id="1"] [data-name="author_last_name"] .acf-input input');
+        var $worldcat_book_author_2_full = $(this).parents('td.acf-fields').find('[data-name="authors"] [data-id="2"] [data-name="author_full_name"] .acf-input input');
+        var $worldcat_book_author_2_first = $(this).parents('td.acf-fields').find('[data-name="authors"] [data-id="2"] [data-name="author_first_name"] .acf-input input');
+        var $worldcat_book_author_2_last = $(this).parents('td.acf-fields').find('[data-name="authors"] [data-id="2"] [data-name="author_last_name"] .acf-input input');
+        var $worldcat_book_author_3_full = $(this).parents('td.acf-fields').find('[data-name="authors"] [data-id="3"] [data-name="author_full_name"] .acf-input input');
+        var $worldcat_book_author_3_first = $(this).parents('td.acf-fields').find('[data-name="authors"] [data-id="3"] [data-name="author_first_name"] .acf-input input');
+        var $worldcat_book_author_3_last = $(this).parents('td.acf-fields').find('[data-name="authors"] [data-id="3"] [data-name="author_last_name"] .acf-input input');
         var $worldcat_publisher = $(this).parents('td.acf-fields').find('[data-name="publisher"] .acf-input input');
         var $worldcat_pub_location = $(this).parents('td.acf-fields').find('[data-name="pub_location"] .acf-input input');
         var $worldcat_pub_date = $(this).parents('td.acf-fields').find('[data-name="pub_date"] .acf-input input');
@@ -78,6 +87,15 @@ $(function() {
         var $worldcat_book_author_0_full = that.parents('td.acf-fields').find('[data-name="authors"] [data-id="0"] [data-name="author_full_name"] .acf-input input');
         var $worldcat_book_author_0_first = that.parents('td.acf-fields').find('[data-name="authors"] [data-id="0"] [data-name="author_first_name"] .acf-input input');
         var $worldcat_book_author_0_last = that.parents('td.acf-fields').find('[data-name="authors"] [data-id="0"] [data-name="author_last_name"] .acf-input input');
+        var $worldcat_book_author_1_full = that.parents('td.acf-fields').find('[data-name="authors"] [data-id="1"] [data-name="author_full_name"] .acf-input input');
+        var $worldcat_book_author_1_first = that.parents('td.acf-fields').find('[data-name="authors"] [data-id="1"] [data-name="author_first_name"] .acf-input input');
+        var $worldcat_book_author_1_last = that.parents('td.acf-fields').find('[data-name="authors"] [data-id="1"] [data-name="author_last_name"] .acf-input input');
+        var $worldcat_book_author_2_full = that.parents('td.acf-fields').find('[data-name="authors"] [data-id="2"] [data-name="author_full_name"] .acf-input input');
+        var $worldcat_book_author_2_first = that.parents('td.acf-fields').find('[data-name="authors"] [data-id="2"] [data-name="author_first_name"] .acf-input input');
+        var $worldcat_book_author_2_last = that.parents('td.acf-fields').find('[data-name="authors"] [data-id="2"] [data-name="author_last_name"] .acf-input input');
+        var $worldcat_book_author_3_full = that.parents('td.acf-fields').find('[data-name="authors"] [data-id="3"] [data-name="author_full_name"] .acf-input input');
+        var $worldcat_book_author_3_first = that.parents('td.acf-fields').find('[data-name="authors"] [data-id="3"] [data-name="author_first_name"] .acf-input input');
+        var $worldcat_book_author_3_last = that.parents('td.acf-fields').find('[data-name="authors"] [data-id="3"] [data-name="author_last_name"] .acf-input input');
         var $worldcat_publisher = that.parents('td.acf-fields').find('[data-name="publisher"] .acf-input input');
         var $worldcat_pub_location = that.parents('td.acf-fields').find('[data-name="pub_location"] .acf-input input');
         var $worldcat_pub_date = that.parents('td.acf-fields').find('[data-name="pub_date"] .acf-input input');
@@ -105,14 +123,14 @@ $(function() {
 			// SPLIT THIS
 
 
-            var mainauthor =
+            var author0 =
                 ($(xml).find('datafield[tag="100"]:first subfield[code="a"]').text()) + ' ' +
                 ($(xml).find('datafield[tag="100"]:first subfield[code="e"]').text());
-            console.log(mainauthor);
+            //console.log(author0);
 
             //splits at combinations of commas and spaces
             //0 is last name, 1 is first
-            var author_0_name_array = mainauthor.split(/[ ,]+/)
+            var author_0_name_array = author0.split(/[ ,]+/)
             var author_0_first_name = author_0_name_array[1];
             var author_0_last_name = author_0_name_array[0];
             //reorder for display
@@ -121,18 +139,45 @@ $(function() {
 
             //additional authors here
 
-            // var mainauthor =
-            //     ($(xml).find('datafield[tag="100"]:first subfield[code="a"]').text()) + ' ' +
-            //     ($(xml).find('datafield[tag="100"]:first subfield[code="e"]').text());
-            // console.log(mainauthor);
-            //
-            // //splits at combinations of commas and spaces
-            // //0 is last name, 1 is first
-            // var author_0_name_array = mainauthor.split(/[ ,]+/)
-            // var author_0_first_name = author_0_name_array[1];
-            // var author_0_last_name = author_0_name_array[0];
-            // //reorder for display
-            // var author_0_full_name = author_0_first_name + ' ' + author_0_last_name;
+            var author1 =
+                ($(xml).find('datafield[tag="700"]:eq(0) subfield[code="a"]').text()) + ' ' +
+                ($(xml).find('datafield[tag="700"]:eq(0) subfield[code="e"]').text());
+            //console.log(author1);
+
+            //splits at combinations of commas and spaces
+            //0 is last name, 1 is first
+            var author_1_name_array = author1.split(/[ ,]+/)
+            var author_1_first_name = author_1_name_array[1];
+            var author_1_last_name = author_1_name_array[0];
+            //reorder for display
+            var author_1_full_name = author_1_first_name + ' ' + author_1_last_name;
+
+            var author2 =
+                ($(xml).find('datafield[tag="700"]:eq(1) subfield[code="a"]').text()) + ' ' +
+                ($(xml).find('datafield[tag="700"]:eq(1) subfield[code="e"]').text());
+            console.log(author2);
+
+            //splits at combinations of commas and spaces
+            //0 is last name, 1 is first
+            var author_2_name_array = author2.split(/[ ,]+/)
+            var author_2_first_name = author_2_name_array[1];
+            var author_2_last_name = author_2_name_array[0];
+            //reorder for display
+            var author_2_full_name = author_2_first_name + ' ' + author_2_last_name;
+
+            var author3 =
+                ($(xml).find('datafield[tag="700"]:eq(2) subfield[code="a"]').text()) + ' ' +
+                ($(xml).find('datafield[tag="700"]:eq(2) subfield[code="e"]').text());
+            //console.log(author3);
+
+            //splits at combinations of commas and spaces
+            //0 is last name, 1 is first
+            var author_3_name_array = author3.split(/[ ,]+/)
+            var author_3_first_name = author_3_name_array[1];
+            var author_3_last_name = author_3_name_array[0];
+            //reorder for display
+            var author_3_full_name = author_3_first_name + ' ' + author_3_last_name;
+
 
             var publisher =
                 ($(xml).find('datafield[tag="264"]:first subfield[code="b"]').text());
@@ -168,6 +213,15 @@ $(function() {
             $worldcat_book_author_0_full.val(author_0_full_name);
             $worldcat_book_author_0_first.val(author_0_first_name);
             $worldcat_book_author_0_last.val(author_0_last_name);
+            $worldcat_book_author_1_full.val(author_1_full_name);
+            $worldcat_book_author_1_first.val(author_1_first_name);
+            $worldcat_book_author_1_last.val(author_1_last_name);
+            $worldcat_book_author_2_full.val(author_2_full_name);
+            $worldcat_book_author_2_first.val(author_2_first_name);
+            $worldcat_book_author_2_last.val(author_2_last_name);
+            $worldcat_book_author_3_full.val(author_3_full_name);
+            $worldcat_book_author_3_first.val(author_3_first_name);
+            $worldcat_book_author_3_last.val(author_3_last_name);
             $worldcat_publisher.val(publisher);
             $worldcat_pub_location.val(pub_location);
             $worldcat_pub_date.val(pub_date);
