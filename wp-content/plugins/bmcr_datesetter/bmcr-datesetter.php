@@ -121,7 +121,7 @@ add_filter( 'ninja_forms_render_options', function($options,$settings){
            'post_type' => 'reviews',
            'orderby' => 'menu_order',
            'order' => 'ASC',
-           'posts_per_page' => 100,
+           'posts_per_page' => 20,
            'post_status' => 'pitch'
        );
        $the_query = new WP_Query( $args );
@@ -129,11 +129,35 @@ add_filter( 'ninja_forms_render_options', function($options,$settings){
            global $post;
            while ( $the_query->have_posts() ){
                $the_query->the_post();
-               $options[] = array('label' => get_the_title( ), 'value' => get_the_title( ));
+               $options[] = array('label' => get_the_title( ), 'value' => get_the_title( ),
+               'calc' => 0
+           );
            }
-           wp_reset_postdata();
+
        }
+
+       // If viewing a submission get the submitted value in case it is no longer an option in the form.
+		if ( is_admin() && array_key_exists( 'post', $_GET ) ) {
+			$post_id = absint( $_GET[ 'post' ] );
+			$selected_value = get_post_meta( $post_id, '_field_13', true );
+      //echo print_r(get_post_meta( $post_id));
+
+			// Check whether the selected value is already in $options (either part of the form or added above).
+			$key = array_search( $selected_value, array_column( $options, 'value' ) );
+			// Only add the selected value if it's not present.
+			if ( false === $key ) {
+				$options[] = [
+					'label' => $selected_value,  // The original display label is not available.
+					'value' => $selected_value,
+					'calc' => 0,
+					'selected' => true,
+				];
+			}
+		}
+        //wp_reset_postdata();
    }
+
+
    return $options;
 },10,2);
 
