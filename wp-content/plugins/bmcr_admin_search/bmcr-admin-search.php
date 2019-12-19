@@ -12,7 +12,7 @@ License: GPLv2
 
 function custom_search_query( $query ) {
     $custom_fields = array(
-        "bmcr_id"
+        "searchable_content"
     );
     $searchterm = $query->query_vars['s'];
 
@@ -29,14 +29,16 @@ function custom_search_query( $query ) {
             ));
 
         };
-        array_push($meta_query, array(
-          'key'		=> 'reviewers_$_reviewer_last_name',
-    			'compare'	=> '=',
-    			'value'		=> $searchterm,
-          ));
+        // array_push($meta_query, array(
+        //   'key'		=> 'reviewers_$_reviewer_last_name',
+    		// 	'compare'	=> '=',
+    		// 	'value'		=> $searchterm,
+        //   ));
         $query->set("meta_query", $meta_query);
     };
 }
+
+//add_filter( "pre_get_posts", "custom_search_query");
 
 
 //add wildcard string replace to subfield queries
@@ -48,7 +50,7 @@ function my_posts_where( $where ) {
 	return $where;
 }
 
-add_filter('posts_where', 'my_posts_where');
+//add_filter('posts_where', 'my_posts_where');
 
 
 //make similar to functionality above, pass in array of search params
@@ -68,10 +70,43 @@ $query->set('meta_query', $meta_query);
 }
 }
 
-
-
-add_filter( "pre_get_posts", "custom_search_query");
 //add_filter( "pre_get_posts", "custom_search_query_2");
+
+
+
+
+function save_searchable_content_meta($post_id, $post, $update) {
+    $fields = get_fields($post->ID);
+    if (array_key_exists("searchable_content", $fields)) {
+      $bmcr_id = get_field("bmcr_id");
+	    $first_reviewer_first_name = get_field("reviewers_0_reviewer_first_name");
+      $first_reviewer_last_name = get_field("reviewers_0_reviewer_last_name");
+      $first_book_title = get_field("books_0_title");
+      $first_book_isbn = get_field("books_0_isbn");
+      $first_author_first_name = get_field("books_0_authors_0_author_first_name");
+      $first_author_last_name = get_field("books_0_authors_0_author_last_name");
+
+      $searchterms = $bmcr_id . ', ' . $first_reviewer_first_name . ', ' . $first_reviewer_last_name . ', ' . $first_book_title . ', ' . $first_book_isbn . ', ' . $first_author_first_name . ', ' . $first_author_last_name;
+      //don't need title or content for search
+	    //array_unshift($fields, $post->post_title, $post->post_content);
+	    $str = sanitize_text_field($searchterms);
+	    update_field("searchable_content", $str, $post_id);
+	}
+}
+
+//add_action('save_post', 'save_searchable_content_meta', 10, 3);
+
+function relevanssi_add_custom_fields( $fields )
+{
+	$fields = array(); // I like to start fresh
+	$fields[] = 'bmcr_id';
+	$fields[] = 'reviewers_0_reviewer_last_name'; // meta key for 'firstname' field inside 'people' repeater.
+
+	$fields = implode( ',', $fields );
+
+	return $fields;
+}
+add_filter( 'option_relevanssi_index_fields', 'relevanssi_add_custom_fields' );
 
 
 ?>
