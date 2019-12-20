@@ -96,17 +96,62 @@ function save_searchable_content_meta($post_id, $post, $update) {
 
 //add_action('save_post', 'save_searchable_content_meta', 10, 3);
 
+// function relevanssi_add_custom_fields( $fields )
+// {
+// 	$fields = array();
+// 	$fields[] = 'bmcr_id';
+// 	$fields[] = 'books_0_title';
+//   $fields[] = 'books_0_isbn';
+//   $fields[] = 'reviewers_0_reviewer_first_name';
+//   $fields[] = 'reviewers_0_reviewer_last_name';
+//   $fields[] = 'books_0_authors_0_author_first_name';
+//   $fields[] = 'books_0_authors_0_author_last_name';
+// 	$fields = implode( ',', $fields );
+//
+// 	return $fields;
+// }
+// add_filter( 'option_relevanssi_index_fields', 'relevanssi_add_custom_fields' );
+
+
+add_filter( 'relevanssi_index_content', '__return_false' );
+
+add_filter( 'relevanssi_index_titles', '__return_false' );
+
+// function index_custom_fields( $fields )
+// {
+// 	$fields = array();
+// 	$fields[] = 'bmcr_id';
+// 	$fields[] = 'books_0_title';
+//   $fields[] = 'books_0_isbn';
+//   $fields[] = 'reviewers_0_reviewer_first_name';
+//   $fields[] = 'reviewers_0_reviewer_last_name';
+//   $fields[] = 'books_0_authors_0_author_first_name';
+//   $fields[] = 'books_0_authors_0_author_last_name';
+// 	$fields = implode( ',', $fields );
+//
+// 	return $fields;
+// }
+//
+// add_filter( 'relevanssi_index_custom_fields', 'index_custom_fields' );
+
+
 function relevanssi_add_custom_fields( $fields )
 {
-	$fields = array(); // I like to start fresh
+	$fields = array();
 	$fields[] = 'bmcr_id';
-	$fields[] = 'reviewers_0_reviewer_last_name'; // meta key for 'firstname' field inside 'people' repeater.
-
+	$fields[] = 'books_0_title';
+  $fields[] = 'books_0_isbn';
+  $fields[] = 'reviewers_0_reviewer_first_name';
+  $fields[] = 'reviewers_0_reviewer_last_name';
+  $fields[] = 'books_0_authors_0_author_first_name';
+  $fields[] = 'books_0_authors_0_author_last_name';
 	$fields = implode( ',', $fields );
 
 	return $fields;
 }
 add_filter( 'option_relevanssi_index_fields', 'relevanssi_add_custom_fields' );
+
+
 
 
 ?>
