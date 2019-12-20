@@ -2,7 +2,7 @@
 /**
  * /uninstall.php
  *
- * @package Relevanssi
+ * @package Relevanssi Premium
  * @author  Mikko Saari
  * @license https://wordpress.org/about/gpl/ GNU General Public License
  * @see     https://www.relevanssi.com/
@@ -13,19 +13,20 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 }
 
 global $wpdb;
-if ( ! defined( 'RELEVANSSI_PREMIUM' ) ) {
-	define( 'RELEVANSSI_PREMIUM', false );
-}
+define( 'RELEVANSSI_PREMIUM', true );
 require_once 'lib/uninstall.php';
+require_once 'premium/uninstall.php';
 
 if ( function_exists( 'is_multisite' ) && is_multisite() ) {
 	$blogids    = $wpdb->get_col( "SELECT blog_id FROM $wpdb->blogs" );
 	$old_blogid = $wpdb->blogid;
-	foreach ( $blogids as $uninstall_blog_id ) {
-		switch_to_blog( $uninstall_blog_id );
-		relevanssi_uninstall_free();
+	foreach ( $blogids as $blog_id ) {
+		switch_to_blog( $blog_id );
+		relevanssi_uninstall();
 	}
 	switch_to_blog( $old_blogid );
+
+	delete_site_option( 'relevanssi_api_key' );
 } else {
-	relevanssi_uninstall_free();
+	relevanssi_uninstall();
 }
