@@ -1,0 +1,275 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PressPermit File Access Module\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-27 12:23-0500\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Kevin Behrens <kevin@publishpress.com>\n"
+"Language-Team: PublishPress <help@publishpress.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: F:\\snapshot\\presspermit-pro\n"
+"X-Poedit-KeywordsList: __;_e;_c;__ngettext;_n;pp_po_trigger;_x\n"
+"X-Poedit-SearchPath-0: F:\\snapshot\\presspermit-pro\\modules\\presspermit-file-access\n"
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/presspermit-file-access.php:64
+msgid "File Access"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess.php:57
+msgid "File attachment access keys and rewrite rules were regenerated for this site."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccessHooksAdmin.php:20
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccessHooksAdmin.php:21
+msgid "Attachment Utility"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/RuleFlush.php:12
+msgid "Invalid argument."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/RuleFlush.php:14
+msgid "Please configure File Filtering options!"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/RuleFlush.php:35
+msgid "File attachment access keys and rewrite rules were regenerated for this site ("
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/RuleFlush.php:48
+msgid "File attachment access keys and rewrite rules for other sites will be regenerated at next access."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:39
+msgid "File Filtering"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:51
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:290
+msgid "File Filtering Reset Key:"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:52
+msgid "Small Thumbnails Unfiltered"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:53
+msgid "Make Unattached Files Private"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:54
+msgid "Make Attached Files Private"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:80
+msgid "Settings related to the regulation of direct file access (by file URL)."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:98
+msgid "<strong>Note</strong>: Direct access to uploaded file attachments cannot be filtered because mod_rewrite is not enabled on your server."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:101
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsUtility.php:97
+msgid "<strong>Note</strong>: Direct access to uploaded file attachments cannot be filtered because your WP_CONTENT_DIR is not in the WordPress branch."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:104
+msgid "<strong>Note</strong>: Direct access to uploaded file attachments will not be filtered due to your nonstandard UPLOADS path."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:107
+msgid "<strong>Note</strong>: Direct access to uploaded file attachments cannot be filtered because WordPress permalinks are set to default."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:116
+msgid "Filter Uploaded File Attachments"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:121
+msgid "Block direct URL access to images and other uploaded files in the WordPress uploads folder which are attached to posts that the user cannot read.  For each protected file, a separate RewriteRule will be added to the .htaccess file in this site&apos;s uploads folder.  Non-protected files are returned with no script execution whatsoever."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:154
+msgid "Multisite File Filtering Configuration:"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:156
+msgid "File Filtering on multisite installations will require the following rules to be inserted above the stock ms-files.php rules in the <strong>main .htaccess file</strong>:"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:168
+msgid "show required rules"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:188
+msgid "But your .htaccess is missing or not writeable!"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:197
+msgid ".htaccess needs to be updated to include these rules."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:202
+msgid ".htaccess file has all required rules."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:212
+msgid "These rules will not be inserted automatically.  You are responsible for editing .htaccess and later removing the rules if the functionality is no longer desired."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:214
+msgid "Note that an additional rule will need to be added with each new site. <em>To eliminate this requirement, research \"WordPress remove ms-files\".</em>"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:221
+msgid "You will need to manually restore the .htacces file to default contents if anything goes wrong. Proceed?"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:225
+msgid "Update .htaccess now"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:233
+msgid "only for sites with protected files"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:234
+msgid "for all sites"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:235
+msgid "NONE: remove PressPermit rules"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:241
+msgid "Since the plugin is not network-activated, you will need to modify the .htaccess file manually, inserting a RewriteRule as shown above for each site which needs file filtering."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:265
+msgid "Make unattached files unreadable to users who do not have the edit_private_files or pp_list_all_files capability."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:271
+msgid "Make attached files unreadable to users who do not have the edit_private_files or pp_list_all_files capability."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:278
+msgid "If Media Library performance and disclosure would be acceptable, you can disable file filtering for thumbnails (size specified in Settings > Media)."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:303
+msgid "To force regeneration of <strong>uploads/.htaccess</strong> with new file URL keys (at next site access), execute the following URL:"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:305
+msgid "To force regeneration of <strong>uploads/.htaccess</strong> with new file URL keys, execute the following URL:"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:311
+msgid "Best practice is to access the above url periodically (using your own cron service) to prevent long-term bookmarking of protected files."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:315
+msgid "Supply a custom key which will enable a support url to regenerate file access keys.  Then execute the url regularly (using your own cron service) to prevent long-term bookmarking of protected files."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:322
+#, php-format
+msgid "<strong>Note:</strong> FTP-uploaded files will not be filtered correctly until you run the %1$sAttachments Utility%2$s."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsTabFileAccess.php:330
+msgid "For Nginx integration, see readme.txt in your plugins/file-access folder."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsUtility.php:13
+msgid "Attachments Utility"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsUtility.php:21
+#, php-format
+msgid "Back to %1$sPressPermit Settings%2$s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsUtility.php:27
+msgid "Update &raquo;"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsUtility.php:43
+msgid "PressPermit can limit direct URL access to files linked from your posts and pages, <strong>but only if</strong> the following requirements are met:"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsUtility.php:45
+msgid "Your WP content directory must be a branch of the WordPress directory tree (i.e. wp-config.php must not be customized to separate WP_CONTENT_DIR and WP_CONTENT_URL from the main WordPress folder)."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsUtility.php:51
+msgid "Note that to be detected as attachments, your file references must <strong>include www.</strong>"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsUtility.php:53
+msgid "Note that to be detected as attachments, your file references must <strong>NOT include www.</strong>"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsUtility.php:55
+#, php-format
+msgid "Files linked from WP Posts and Pages must be in %1$s (or a subdirectory of it) to be filtered. After moving files, you may use %2$s a search and replace plugin%3$s to conveniently update the URLs stored in your Post / Page content. %4$s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsUtility.php:57
+msgid "Files which are <strong>already appropriately located and linked</strong> must also have their post-file attachment relationship stored to the WP database.  This is normally accomplished by clicking the \"Insert into Post\" button in the WP file uploader / Media Library.  Files which were instead uploaded manually via FTP or CPanel <strong>can receive their attachment record via this utility</strong>."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsUtility.php:66
+msgid "Register File Attachments &raquo;"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsUtility.php:99
+msgid "The operation was terminated due to an invalid configuration."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsUtility.php:126
+#, php-format
+msgid "<strong>checking %s posts / pages...</strong>"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsUtility.php:170
+#, php-format
+msgid "<span class=\"pp-brown\">skipping unfilterable file in %1$s \"%2$s\":</span> %3$s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsUtility.php:180
+#, php-format
+msgid "<span class=\"pp-red\">skipping missing file in %1$s \"%2$s\":</span> %3$s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsUtility.php:222
+#, php-format
+msgid "<span class=\"pp-green\"><strong>new attachment</strong> in %1$s \"%2$s\":</span> %3$s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsUtility.php:228
+#, php-format
+msgid "<span class=\"pp-blue\">attachment OK in %1$s \"%2$s\":</span> %3$s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsUtility.php:244
+#, php-format
+msgid "Operation complete: %s linked uploads were found in your post / page content."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsUtility.php:247
+#, php-format
+msgid "<strong>%s attachment records were added to the database.</strong>"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-file-access/classes/Permissions/FileAccess/UI/SettingsUtility.php:250
+msgid "All linked uploads are already registered as attachments."
+msgstr ""
+

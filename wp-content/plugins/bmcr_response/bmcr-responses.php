@@ -4,7 +4,7 @@ Plugin Name: BMCR Responses
 Plugin URI: http://dev.interactivemechanics.com/bmcr
 Description: Declares a plugin that will create a custom post type displaying responses.
 Version: 1.0
-Author: Interactive Mechanics 
+Author: Interactive Mechanics
 Author URI: http://www.interactivemechanics.com/
 License: GPLv2
 */
@@ -56,4 +56,3 @@ function create_response() {
 
 
 ?>
-

@@ -1,0 +1,14 @@
+.publishpress-extended-post-status {
+  flex-flow: row wrap;
+  > * {
+    flex-basis: 45%;
+  }
+
+  .publishpress-extended-post-status-note {
+    flex-basis: 100%;
+  }
+}
+
+.publishpress-extended-post-status select {
+  width: 120px;
+}

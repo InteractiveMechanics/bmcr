@@ -1,0 +1,817 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PressPermit Statuses Module\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-02 15:14-0500\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Kevin Behrens <kevin@publishpress.com>\n"
+"Language-Team: PublishPress <help@publishpress.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: F:\\snapshot\\presspermit-pro\n"
+"X-Poedit-KeywordsList: __;_e;_c;__ngettext;_n;pp_po_trigger;_x\n"
+"X-Poedit-SearchPath-0: F:\\snapshot\\presspermit-pro\\modules\\presspermit-status-control\n"
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/presspermit-status-control.php:64
+msgid "Status Control"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/StatusesHooks.php:64
+msgid "Pending Review"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/StatusesHooks.php:200
+msgid "Member"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/StatusesHooks.php:207
+msgid "Premium"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/StatusesHooks.php:214
+msgid "Staff"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/StatusesHooks.php:453
+msgid "Submitters"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/StatusesHooks.php:454
+msgid "Submitter"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/StatusesHooks.php:474
+msgid "Force Visibility"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/StatusesHooks.php:481
+msgid "Post Status"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/StatusesHooksAdmin.php:121
+msgid "Draft"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/StatusesHooksAdmin.php:133
+msgid "Pending"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/StatusesHooksAdmin.php:176
+msgid "Add New Status"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/StatusesHooksAdmin.php:177
+msgid "Edit Status"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/StatusesHooksAdmin.php:210
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/StatusesHooksAdmin.php:211
+msgid "Post Statuses"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Admin.php:66
+msgid "PublishPress integration also requires the PressPermit Collaborative Publishing module."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Admin.php:106
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:34
+msgid "Visibility"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Attributes.php:35
+#, php-format
+msgid "%s: "
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Attributes.php:35
+#, php-format
+msgid "Custom %s: "
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Attributes.php:48
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/PermissionsAjax.php:24
+msgid "Workflow: "
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Attributes.php:49
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/PermissionsAjax.php:25
+msgid "Visibility: "
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/PublishPressSettings.php:24
+msgid "Please enable the Status dropdown for Gutenberg compatibility."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/PublishPressSettings.php:29
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/PublishPressSettings.php:40
+msgid "Additional Status Settings:"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/PublishPressSettings.php:29
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/PublishPressSettings.php:40
+msgid "Workflow Order, Branching, Permissions, Button Labels"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/PublishPressSettings.php:29
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/PublishPressSettings.php:40
+msgid "Workflow Options"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/PublishPressSettings.php:33
+#, php-format
+msgid "%sNote%s: \"Change post status\" capabilities can be overriden by %sPressPermit editing permissions enabled for specific post types%s."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/PublishPressSettings.php:37
+#, php-format
+msgid "Please %senable the Status dropdown%s for Gutenberg compatibility."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:27
+msgid "Statuses"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:38
+msgid "Workflow"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:50
+msgid "Custom Visibility Statuses require status-specific editing capabilities"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:51
+msgid "Drafts visible on front end if Reading Exception assigned"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:54
+msgid "Supplemental Editor Role for \"standard statuses\" also grants capabilities for Workflow Statuses"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:55
+msgid "Publish button defaults to next workflow status (instead of highest permitted)"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:105
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:133
+msgid "Additional Configuration:"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:108
+msgid "Define Privacy Statuses"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:118
+msgid "Should pages with privacy status \"premium\" require set_pages_premium and edit_premium_pages capabilities (to be supplied by a supplemental status-specific Page Editor role)?"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:139
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:157
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:179
+msgid "Define Workflow Statuses"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:144
+msgid "Enable PublishPress Status Dropdown"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:148
+msgid "Turn on PublishPress Statuses"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:152
+msgid "Activate PublishPress"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:157
+msgid "Workflow Order, Branching, Permissions"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:169
+msgid "Note, this only applies if the role definition includes the pp_moderate_any capability"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:173
+#, php-format
+msgid "Workflow sequence and branching for pre-publication may be defined %shere%s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:186
+msgid "Create or edit custom Privacy or Workflow statuses"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:187
+msgid "Create or edit Publication Workflow statuses"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:188
+msgid "Create or edit custom Privacy statuses"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:189
+msgid "Pertains to assignment of a custom privacy or moderation status. This capability in a WP role enables PP to assign a type-specific supplemental role with custom capabilities such as \"set_pages_approved\""
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/SettingsTabStatuses.php:190
+msgid "Editors can edit posts having a moderation status (i.e. Approved) without a supplemental status-specific role"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:48
+#, php-format
+msgid "This is a PublishPress status with additional settings here. %sEdit in PublishPress%s."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:50
+msgid "This is a PublishPress status, but the PublishPress plugin seems to be inactive."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:58
+msgid "Slug"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:60
+msgid "(Latin alphanumeric, maximum 20 characters)"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:66
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:91
+msgid "Capability Mapping"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:69
+msgid "(Default Capabilities)"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:71
+msgid "Custom Capabilities for this Status"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:83
+#, php-format
+msgid "same as WORKFLOW BRANCH PARENT (%s)"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:83
+#, php-format
+msgid "same as %s status"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:89
+msgid "Simplify administration by making related statuses share capability requirements."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:95
+msgid "Label"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:105
+msgid "Save As Label"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:113
+msgid "Submit Button Label"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:119
+msgid "Workflow Branch"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:122
+msgid "(Main Workflow)"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:139
+#, php-format
+msgid "Workflow Order <br />(in %s branch)"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:139
+msgid "Workflow Order"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:143
+msgid "(none)"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:144
+msgid "If no order is set, this status will be available, but not offered as a default next step."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:150
+msgid "Note: Branch ordering starts at 1, separate from main workflow order."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:152
+msgid "To make this status later in the workflow sequence, give it a higher number. To exclude it from workflow automation, give it a zero value."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:159
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:92
+msgid "Post Types"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:183
+msgid "Apply custom permissions for:"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:191
+msgid "(All Types)"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusAdmin.php:205
+#, php-format
+msgid "Note: Post Types must also be enabled in %1$sPublishPress settings%2$s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusEdit.php:38
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:38
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusNew.php:41
+msgid "You are not permitted to do that."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusEdit.php:63
+msgid "Status updated."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusEdit.php:65
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusNew.php:49
+msgid "Back to Statuses"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusEdit.php:78
+msgid "Edit Post Status"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:87
+msgid "Delete Statuses"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:88
+msgid "You have specified this status for deletion:"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:105
+msgid "Confirm Deletion"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:107
+msgid "There are no valid statuses selected for deletion."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:122
+msgid "Post Status Created."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:136
+#, php-format
+msgid "%s status deleted"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:139
+msgid "Status edited."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:143
+msgid "New status created."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:176
+msgid "Define Post Privacy Statuses"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:177
+msgid "Statuses enabled here are available as Visibility options for post publishing. Affected posts become inaccessable without a corresponding status-specific role assignment."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:179
+msgid "Configure PublishPress Workflow Statuses"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:181
+msgid "Statuses enabled here are available in the editor as additional steps between Draft and Published."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:183
+msgid "Define Post Statuses"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:185
+#, php-format
+msgid "Define Statuses: %s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:186
+msgid "Statuses alter your content's accessibility by imposing additional capability requirements."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:234
+#, php-format
+msgid "Set permissions, workflow order, post type usage or button labels for %sPublishPress Statuses%s below. See also %sPermissions > Settings > Statuses%s."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:237
+#, php-format
+msgid "For best results, activate the PublishPress plugin. See also %sPermissions > Settings > Statuses%s."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:241
+#, php-format
+msgid "Please turn on the %sPublishPress Status Dropdown%s for Gutenberg. Then come back to set workflow status order, permissions and post type usage."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:244
+#, php-format
+msgid "For best results, please turn on the %sPublishPress Statuses Module%s. See also %sPermissions > Settings > Statuses%s."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:281
+#, php-format
+msgid "Enable Custom Capabilities by toggling the link below status name. If enabled, non-Editors will need a corresponding %ssupplemental role%s to edit posts of that status."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:287
+#, php-format
+msgid "For post edit by a user who cannot publish, %sworkflow is configured%s to make the Publish button increment the post to the next workflow status permitted."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:290
+#, php-format
+msgid "For post edit by a user who cannot publish, %sworkflow is configured%s to make the Publish button escalate the post to the highest-ordered workflow status permitted."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:292
+msgid "For post edit by a user cannot publish, the Publish button will escalate the post to the highest-order status permitted to the user."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:301
+#, php-format
+msgid "Note that the Post Type itself will also need to have %sCustom Statuses%s and %sPermissions%s enabled."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:303
+#, php-format
+msgid "Note that the Post Type itself will also need to have %sPermissions%s enabled."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:314
+msgid "To define moderation statuses, activate the Compatibility Pack module."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:316
+#, php-format
+msgid "To define moderation statuses, %1$sinstall%2$s the Compatibility Pack module."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:318
+#, php-format
+msgid "To define moderation statuses, %1$spurchase a license key%2$s and install the Compatibility Pack module."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:326
+msgid "show capability mapping"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Statuses.php:328
+msgid "<strong>Note</strong>: Capabilities are also mapped uniquely per post type."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:68
+msgid "No matching statuses were found."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:84
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/Ajax.php:34
+msgid "Status"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:88
+msgid "Order"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:93
+msgid "Capabilities"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:167
+msgid "Enable Custom Capabilities"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:169
+msgid "Disable Custom Capabilities"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:172
+msgid "Enable"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:174
+msgid "Disable"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:179
+msgid "Delete"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:221
+#, php-format
+msgid "Normal order for workflow progression within the %s branch."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:225
+#, php-format
+msgid "This status will be available within the %s branch, but not offered as a default next step."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:227
+msgid "This status will be available in the main workflow, but not offered as a default next step."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:230
+msgid "Normal order for workflow progression."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:248
+#, php-format
+msgid "%s, more..."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:250
+msgid "All"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:268
+msgid "Disabled"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:272
+msgid "(Standard)"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:276
+#, php-format
+msgid "(same as %s)"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:278
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:281
+msgid "Custom"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusListTable.php:285
+msgid "Enabled"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusNew.php:18
+msgid "Please use PublishPress to create custom statuses for publishing workflow."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusNew.php:47
+msgid "Status created."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusNew.php:62
+msgid "Create Post Moderation Status"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusNew.php:62
+msgid "Create Post Privacy Status"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/StatusNew.php:87
+msgid "Create"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/Ajax.php:29
+msgid "No items found."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/Ajax.php:31
+msgid "Title"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/Ajax.php:32
+msgid "Type"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/Ajax.php:33
+msgid "Date"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/Ajax.php:39
+msgid "(no title)"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/Ajax.php:45
+msgid "Published"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/Ajax.php:48
+msgid "Scheduled"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/Ajax.php:67
+msgid "Y/m/d"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostAdmin.php:74
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostEditSubmitMetabox.php:344
+#, php-format
+msgid "%s, Sticky"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostAdmin.php:129
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostAdmin.php:130
+#, php-format
+msgid "%s <span class=\"count\">()</span>"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostAdmin.php:174
+msgid "Approve"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostAdmin.php:176
+msgid "Assign"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostAdmin.php:178
+msgid "Mark In Progress"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostAdmin.php:180
+#, php-format
+msgid "Submit as %s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostAdmin.php:186
+#, php-format
+msgid "Save as %s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostAdmin.php:190
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostEdit.php:156
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Gutenberg/PostEditPrivacy.php:145
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Gutenberg/PostEditPrivacySub.php:84
+msgid "Public"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostAdmin.php:194
+#, php-format
+msgid "Public (%s)"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostEdit.php:66
+#, php-format
+msgid "Post set as %s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostEdit.php:67
+#, php-format
+msgid "Page set as %s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostEdit.php:109
+msgid "Current Time"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostEdit.php:164
+#, php-format
+msgid "Visibility forced to %1$s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostEditSubmitMetabox.php:80
+#, php-format
+msgid "force visibility of all sub%s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostEditSubmitMetabox.php:96
+#, php-format
+msgid "Your site is configured to keep only the last %s revisions."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostEditSubmitMetabox.php:98
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostEditSubmitMetabox.php:101
+#, php-format
+msgid "Revisions: %s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostEditSubmitMetabox.php:250
+msgid "Define Permission Groups"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostEditSubmitMetabox.php:250
+msgid "groups"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostEditSubmitMetabox.php:289
+msgid "add workflow status"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostEditSubmitMetabox.php:433
+msgid "define privacy types"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostEditSubmitMetabox.php:448
+#, php-format
+msgid "mirror selection to %1$s sub%2$s%3$s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostEditSubmitMetabox.php:479
+#, php-format
+msgid "Sub%1$s %2$s: "
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostEditSubmitMetabox.php:486
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostEditSubmitMetabox.php:502
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostsListing.php:305
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Gutenberg/PostEditPrivacySub.php:83
+msgid "(manual)"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostEditSubmitMetabox.php:501
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostEditSubmitMetabox.php:506
+msgid "visibility of subpages set individually"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostsListing.php:101
+msgid "post"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostsListing.php:103
+#, php-format
+msgid "Your %1$s was successfully submitted, but you cannot make further edits at this time. The current status of the %1$s is %2$s."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostsListing.php:134
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Gutenberg/PostEditPrivacy.php:146
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Gutenberg/PostEditPrivacySub.php:85
+msgid "Private"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostsListing.php:136
+msgid "Trash"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostsListing.php:296
+msgid "Subpage Vis."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostsListing.php:296
+#, php-format
+msgid "Force visibility of sub-%s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostsListing.php:296
+#, php-format
+msgid "existing sub-%s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostsListing.php:306
+msgid "&mdash; No Change &mdash;"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostsListing.php:309
+msgid "Status may also be altered by category or term"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Dashboard/PostsListing.php:402
+msgid "Visibility locked"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Gutenberg/PostEdit.php:99
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Gutenberg/PostEdit.php:110
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Gutenberg/PostEdit.php:114
+msgid "Update"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Gutenberg/PostEdit.php:126
+msgid "Workflow&hellip;"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Gutenberg/PostEditPrivacySub.php:68
+#, php-format
+msgid "Sub-%s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Gutenberg/PostEditPrivacySub.php:70
+msgid "Subpage Privacy"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Handlers/Status.php:48
+msgid "You can&#8217;t delete that status."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Handlers/StatusSave.php:19
+msgid "<strong>ERROR</strong>: That status name is already registered. Please choose another one."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Handlers/StatusSave.php:27
+msgid "<strong>ERROR</strong>: Please enter a label for the status."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-status-control/classes/Permissions/Statuses/UI/Handlers/StatusSave.php:143
+msgid "<strong>ERROR</strong>: The specified status does not exist."
+msgstr ""
+

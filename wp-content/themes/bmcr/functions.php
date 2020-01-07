@@ -7,6 +7,23 @@
  * @package bmcr
  */
 
+ // function my_update_posts() {
+ //     //$myposts = get_posts('showposts=-1');//Retrieve the posts you are targeting
+ //     $args = array(
+ //         'post_type' => 'reviews',
+	// 			 'orderby' => 'date',
+	// 			 'order'            => 'DESC',
+ //         'numberposts' => 100
+ //     );
+ //     $myposts = get_posts($args);
+ //     foreach ($myposts as $mypost){
+ //         $mypost->post_title = $mypost->post_title.'';
+ //         wp_update_post( $mypost );
+ //     }
+ // }
+
+ //add_action( 'wp_loaded', 'my_update_posts' );
+
 if ( ! function_exists( 'bmcr_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -96,6 +113,8 @@ require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 
 
 
+
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -131,8 +150,17 @@ add_action( 'widgets_init', 'bmcr_widgets_init' );
 
 
 function add_custom_post_types_to_loop( $query ) {
-	if ( $query->is_front_page() && $query->is_main_query() || $query->is_home() && $query->is_main_query() || is_archive() && $query->is_main_query() && !is_post_type_archive() )
+	if ( $query->is_front_page() && $query->is_main_query() || $query->is_home() && $query->is_main_query() || is_archive() && $query->is_main_query() && !is_post_type_archive() ) {
 		$query->set( 'post_type', array( 'articles', 'reviews', 'responses' ) );
+		$query->set( 'orderby', 'meta_value' );
+		$query->set( 'meta_key', 'bmcr_id');
+		$query->set('order', 'DESC');
+
+	}
+
+
+
+
 	return $query;
 }
 add_action( 'pre_get_posts', 'add_custom_post_types_to_loop' );
@@ -140,7 +168,7 @@ add_action( 'pre_get_posts', 'add_custom_post_types_to_loop' );
 
 add_filter('ninja_forms_render_options', 'my_pre_population_callback', 10, 2);
 function my_pre_population_callback($options, $settings) {
-  
+
   // target only the field with this key
   if( $settings['key'] == 'listselect_1534176698515' ) {
 
@@ -161,11 +189,11 @@ function my_pre_population_callback($options, $settings) {
       while ( $posts->have_posts() ) {
 
         $posts->the_post();
-        
+
         if (isset($_GET['bid'])){
 	        $bid = $_GET['bid'];
         }
-        
+
         // $options is the variable which contains tha values rendered
         // we will use the post title as label and the ID as value
         if ($bid == get_the_id()) {
@@ -206,15 +234,15 @@ function my_pre_population_callback($options, $settings) {
  */
 
 if( function_exists('acf_add_options_page') ) {
-    
+
     acf_add_options_page(array(
         'page_title'    => 'Theme General Settings',
         'menu_title'    => 'Theme Settings',
         'menu_slug'     => 'theme-general-settings',
-        'capability'    => 'edit_posts', 
+        'capability'    => 'edit_posts',
         'redirect'      => false
     ));
-    
+
     acf_add_options_sub_page(array(
         'page_title' 	=> 'Theme Header Settings',
         'menu_title' 	=> 'Header',
@@ -225,14 +253,14 @@ if( function_exists('acf_add_options_page') ) {
         'menu_title'    => 'Footer',
         'parent_slug'   => 'theme-general-settings',
     ));
-    
+
      acf_add_options_sub_page(array(
         'page_title'    => '404 Page Settings',
         'menu_title'    => '404 Page',
         'parent_slug'   => 'theme-general-settings',
     ));
 
-    
+
 }
 
 
@@ -240,98 +268,98 @@ if( function_exists('acf_add_options_page') ) {
 
 // enables relationships field to update between CPTs; that is, if a response is connected to a review, it will automatically update on the review's record and vice versa
 function bidirectional_acf_update_value( $value, $post_id, $field  ) {
-	
+
 	// vars
 	$field_name = $field['name'];
 	$field_key = $field['key'];
 	$global_name = 'is_updating_' . $field_name;
-	
-	
+
+
 	// bail early if this filter was triggered from the update_field() function called within the loop below
 	// - this prevents an inifinte loop
 	if( !empty($GLOBALS[ $global_name ]) ) return $value;
-	
-	
+
+
 	// set global variable to avoid inifite loop
 	// - could also remove_filter() then add_filter() again, but this is simpler
 	$GLOBALS[ $global_name ] = 1;
-	
-	
+
+
 	// loop over selected posts and add this $post_id
 	if( is_array($value) ) {
-	
+
 		foreach( $value as $post_id2 ) {
-			
+
 			// load existing related posts
 			$value2 = get_field($field_name, $post_id2, false);
-			
-			
+
+
 			// allow for selected posts to not contain a value
 			if( empty($value2) ) {
-				
+
 				$value2 = array();
-				
+
 			}
-			
-			
+
+
 			// bail early if the current $post_id is already found in selected post's $value2
 			if( in_array($post_id, $value2) ) continue;
-			
-			
+
+
 			// append the current $post_id to the selected post's 'related_posts' value
 			$value2[] = $post_id;
-			
-			
+
+
 			// update the selected post's value (use field's key for performance)
 			update_field($field_key, $value2, $post_id2);
-			
+
 		}
-	
+
 	}
-	
-	
+
+
 	// find posts which have been removed
 	$old_value = get_field($field_name, $post_id, false);
-	
+
 	if( is_array($old_value) ) {
-		
+
 		foreach( $old_value as $post_id2 ) {
-			
+
 			// bail early if this value has not been removed
 			if( is_array($value) && in_array($post_id2, $value) ) continue;
-			
-			
+
+
 			// load existing related posts
 			$value2 = get_field($field_name, $post_id2, false);
-			
-			
+
+
 			// bail early if no value
 			if( empty($value2) ) continue;
-			
-			
+
+
 			// find the position of $post_id within $value2 so we can remove it
 			$pos = array_search($post_id, $value2);
-			
-			
+
+
 			// remove
 			unset( $value2[ $pos] );
-			
-			
+
+
 			// update the un-selected post's value (use field's key for performance)
 			update_field($field_key, $value2, $post_id2);
-			
+
 		}
-		
+
 	}
-	
-	
+
+
 	// reset global varibale to allow this filter to function as per normal
 	$GLOBALS[ $global_name ] = 0;
-	
-	
+
+
 	// return
     return $value;
-    
+
 }
 
 add_filter('acf/update_value/name=relationships', 'bidirectional_acf_update_value', 10, 3);
@@ -341,23 +369,23 @@ add_filter('acf/update_value/name=relationships', 'bidirectional_acf_update_valu
 /**
  * Enqueue scripts and styles.
  */
-function bmcr_scripts() {	
+function bmcr_scripts() {
 	wp_enqueue_style( 'bootstrap-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
-	
+
 	wp_enqueue_style( 'bootstrapselect-style', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css');
-	
-	wp_enqueue_style( 'bmcr-style', get_stylesheet_uri() );	
+
+	wp_enqueue_style( 'bmcr-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'bmcr-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
     wp_enqueue_script( 'bmcr-notes', get_template_directory_uri() . '/js/notes.js', array('jquery'), null, true );
 
 	wp_enqueue_script( 'bmcr-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-	
+
 	wp_enqueue_script( 'popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', array('jquery'), null, true );
 
 	wp_enqueue_script( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', array('jquery'), null, true );
-	
+
 	wp_enqueue_script( 'bootstrapselect', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js', array('jquery', 'bootstrap'), null, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -429,10 +457,10 @@ add_filter('sanitize_title', 'sanitize_title_with_dots_and_dashes');
 
 
 function filter_posts_where( $where ) {
-    if ( isset( $_GET['auth'] )){ 
+    if ( isset( $_GET['auth'] )){
 	    $where = str_replace("meta_key = 'books_$", "meta_key LIKE 'books_%", $where);
     }
-    if ( isset( $_GET['reviewer'] )){ 
+    if ( isset( $_GET['reviewer'] )){
 	    $where = str_replace("meta_key = 'reviewers_$", "meta_key LIKE 'reviewers_%", $where);
     }
 	return $where;
@@ -453,7 +481,7 @@ add_filter('next_posts_link_attributes', 'posts_link_attributes');
 add_filter('previous_posts_link_attributes', 'posts_link_attributes');
 
 
-function custom_menu_page_removal() {	
+function custom_menu_page_removal() {
 	if (!current_user_can('administrator')) {
 		remove_menu_page( 'tools.php' );
 		remove_menu_page( 'options-general.php' );
@@ -462,8 +490,8 @@ function custom_menu_page_removal() {
 		remove_menu_page( 'pmxi-admin-home' );
 		remove_menu_page( 'wp-tweets-pro' );
 		remove_menu_page( 'themes.php' );
-		
-		add_submenu_page( 'theme-general-settings', 'Menus', 'Menus', 'senior_editor', 'nav-menus.php');	
+
+		add_submenu_page( 'theme-general-settings', 'Menus', 'Menus', 'senior_editor', 'nav-menus.php');
 	}
 }
 add_action( 'admin_init', 'custom_menu_page_removal', 999 );
@@ -473,7 +501,7 @@ add_action( 'admin_init', 'custom_menu_page_removal', 999 );
  * Add columns to review post list
  */
 function add_acf_columns ( $columns ) {
-	return array_merge ( $columns, array ( 
+	return array_merge ( $columns, array (
 		'date_received' => ( 'Date Received' ),
 		'date_assigned' => ( 'Date Assigned' ),
 		'date_review_received' => ( 'Date Review Received' ),

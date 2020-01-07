@@ -1,0 +1,310 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PressPermit Sync Posts Module\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-27 12:24-0500\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Kevin Behrens <kevin@publishpress.com>\n"
+"Language-Team: PublishPress <help@publishpress.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: F:\\snapshot\\presspermit-pro\n"
+"X-Poedit-KeywordsList: __;_e;_c;__ngettext;_n;_x\n"
+"X-Poedit-SearchPath-0: F:\\snapshot\\presspermit-pro\\modules\\presspermit-sync\n"
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/presspermit-sync.php:55
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:31
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:92
+msgid "Sync Posts"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:60
+#, php-format
+msgid "%s: Skipping because no role is selected"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:86
+#, php-format
+msgid "%s: Enabled PressPermit filtering (Core > Filtered Post Types)"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:101
+#, php-format
+msgid "%1$s: Assigned supplemental %2$s Author role to [WP %3$s] group"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:199
+#, php-format
+msgid "Ambiguous %1$s match (%2$s)"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:230
+#, php-format
+msgid "Ambiguous user match for %1$s (%2$s, post id %3$s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:255
+#, php-format
+msgid "Ambiguous user match for %1$s (%2$s, $post id %3$s)"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:381
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:405
+#, php-format
+msgid "Ambiguous user match for %1$s (%2$s)"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:432
+#, php-format
+msgid "%1$s: %2$s posts created"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:438
+#, php-format
+msgid "%1$s: %2$s posts updated"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:449
+#, php-format
+msgid "%1$s: Synchronization done for %2$s role."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:451
+#, php-format
+msgid "%s: Synchronization done."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/Helper.php:54
+#, php-format
+msgid "You seem to be using a Team / Staff plugin. To have PressPermit synchronize posts to users and give them editing permission, go to %1$sPermissions > Settings > Sync Posts%2$s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/Helper.php:66
+msgid "Dismiss this notice."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:39
+msgid "Synchronize Posts"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:52
+msgid "Synchronize Posts to Users"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:53
+msgid "Grant Author Permissions"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:54
+msgid "Post Types"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:55
+msgid "Match Post Field"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:56
+msgid "Match User Field"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:57
+msgid "User Role"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:58
+msgid "Parent Post"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:91
+#, php-format
+msgid "Additional settings provided by the %s module."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:114
+msgid "Establish a dedicated post for each qualified user."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:135
+msgid "Post property or meta field to match with user field"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:136
+msgid "User property or meta field to match with post field"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:137
+msgid "User meta field to match with post field"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:138
+msgid "User role to include in synchronization"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:139
+msgid "Parent id for created posts"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:140
+msgid "Choose post field from suggested meta key names"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:306
+msgid "When a new user of specified role is added, create or designate a post for them."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:310
+msgid "Create or designate a post for existing users."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:314
+msgid "Post Title"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:315
+msgid "Post slug"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:319
+msgid "User Display Name"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:320
+msgid "User email"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:321
+msgid "User login"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:322
+msgid "User nicename"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:343
+msgid "Sync to New Users"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:344
+msgid "Sync to Current Users"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:345
+msgid "Role to Sync"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:346
+msgid "Post Match Field"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:348
+msgid "User Match Field"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:351
+msgid "Parent"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:398
+msgid "please select..."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:399
+msgid "(all roles)"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:457
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:500
+msgid "(other)"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:469
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:512
+msgid "select..."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:470
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:513
+msgid "cancel"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:522
+msgid "This post type is not hierarchical"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:541
+msgid "Sync to Selected Users"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:555
+msgid "Enable users to edit their own synchronized post."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:565
+msgid "Synchronization Results:"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:579
+#, php-format
+msgid "Note: This generates a post (of selected type) for each current or future %suser%s in the selected role."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:582
+msgid "Read more..."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:585
+msgid "It is designed to bring setup convenience and delegated editing permissions to Team / Staff plugins, but has broad usage potential."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:588
+msgid "Post / User match fields allow existing Users to be designated as the Author (owner) of an exiting post."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:591
+msgid "If a user cannot be matched to an existing post, a new post is created for them."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:594
+msgid "These users will be enabled to edit their synchronized post if \"Grant Author Permissions\" is enabled.  This works by automating the following configuration:"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:596
+#, php-format
+msgid "PressPermit filtering is turned on for the post type: %1$sPermissions > Core > Filtered Post Types%2$s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:598
+#, php-format
+msgid "The synchronized role is supplemented with Author capabilities for the post type: %1$sPermissions > Groups%2$s > [WP Role Name]"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:602
+msgid "Developer note: User matches and Post data may be customized using filters and actions."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:605
+msgid "This feature works with most Team / Staff plugins. However, the following are NOT fully compatible. With these plugins, PressPermit can sync and set editing permissions for teams, but not individual team members:"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:607
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:608
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:609
+msgid "This plugin is NOT fully compatible."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:607
+msgid "Team Members by WP Darko"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:608
+msgid "Team Builder by smartshop"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:609
+msgid "Team Dazzler"
+msgstr ""
+

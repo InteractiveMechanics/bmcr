@@ -10,6 +10,46 @@ License: GPLv2
 */
 
 
+
+//integrates with publishpress to  autopopulate reviewers if unpublished
+add_action( 'save_post', 'save_reviewers', 10 , 3);
+function save_reviewers($post_id, $post, $update) {
+  $post_status =  get_post_status($post_id);
+  if($post_status !== 'publish'){
+    $reviewers = get_post_meta($post_id, 'reviewers', true);
+    //$authors = get_coauthors( $post_id );
+    $emailstring = coauthors_emails( ",", ",", null, null, false );
+    $firstnamestring = coauthors_firstnames( ",", ",", null, null, false );
+    $lastnamestring = coauthors_lastnames( ",", ",", null, null, false );
+    $emails = explode ( "," , $emailstring);
+    $firstnames = explode ( "," , $firstnamestring);
+    $lastnames = explode ( "," , $lastnamestring);
+
+    //not needed
+    //$current_emails = get_reviewers($post_id);
+    //var_dump($current_emails);
+    //
+
+    // if ($emails) {
+    //   for ($i=0; $i<$emails; $i++) {
+    //     // $meta_key = 'reviewers_'.$i.'_reviewer_email';
+    //     // $sub_field_value = get_post_meta($post_id, $meta_key, true);
+    //     // array_push($recipients, $sub_field_value);
+    //     $user_id = get_user_by('email', $emails[$i]);
+    //     $user_meta = get_userdata ($user_id);
+    //     $user_roles=$user_meta->roles;
+    //     var_dump($user_roles);
+    //     if(in_array('author',$user_roles)){
+    //       update_post_meta( $post_id, 'reviewers_'.$i.'_reviewer_email', $emails[$i]);
+    //     }
+    //
+    //
+    //
+    //   }
+    // }
+  }
+}
+
 add_action( 'save_post', 'save_datesetter', 10 , 3);
 add_action('send_single_reminder', 'send_single_reminder', 10, 4);
 
@@ -53,16 +93,9 @@ function save_datesetter($post_id, $post, $update) {
 
 
   //get reviewers
-  $reviewers = get_post_meta($post_id, 'reviewers', true);
-  $recipients = [];
+  $recipients = get_reviewers($post_id);
 
-  if ($reviewers) {
-    for ($i=0; $i<$reviewers; $i++) {
-      $meta_key = 'reviewers_'.$i.'_reviewer_email';
-      $sub_field_value = get_post_meta($post_id, $meta_key, true);
-      array_push($recipients, $sub_field_value);
-    }
-  }
+
 
 
   $date_assigned =  get_field( 'date_assigned');
@@ -113,6 +146,20 @@ function save_datesetter($post_id, $post, $update) {
 
 
 }
+function get_reviewers($post_id){
+  $reviewers = get_post_meta($post_id, 'reviewers', true);
+  $recipients = [];
+
+  if ($reviewers) {
+    for ($i=0; $i<$reviewers; $i++) {
+      $meta_key = 'reviewers_'.$i.'_reviewer_email';
+      $sub_field_value = get_post_meta($post_id, $meta_key, true);
+      array_push($recipients, $sub_field_value);
+    }
+  }
+  return $recipients;
+}
+
 
 //move to another plugin, bmcr_ninjaforms?
 add_filter( 'ninja_forms_render_options', function($options,$settings){

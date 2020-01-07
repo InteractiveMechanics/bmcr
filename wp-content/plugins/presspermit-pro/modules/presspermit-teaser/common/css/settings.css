@@ -1,0 +1,82 @@
+.pp-textentries {
+    margin-top: 0.15em;
+    padding-left: 1.2em;
+}
+
+.pp-textentries li {
+    list-style: none;
+    padding-left: 0.4em;
+    margin-right: 2em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    background-color: #FFFEEB; /*#f8f8f8;*/
+}
+
+.pp-textentries input {
+    margin-top: 0.15em;
+    background-color: white;
+    width: 100%;
+}
+
+.pp-textentries ul {
+    margin-top: 0;
+    padding-left: 1.2em;
+}
+
+.pp-textentries ul li {
+    list-style: none;
+    border: none;
+    background-color: #FFFEEB; /*#f8f8f8;*/
+}
+
+.pp-textentries table {
+    width: 100%;
+}
+
+.pp-textentries table tr td {
+    border-bottom: none;
+    background: none;
+    padding: 0 10px 0 15px;
+    margin-bottom: 0;
+}
+
+.pp-textentries table tr td.td-label {
+    width: 90px;
+}
+
+.pp-options-indent {
+    margin-left: 25px;
+}
+
+#teaser_usage-post table tr td, #teaser_usage-post table tr th {
+    border-bottom: none;
+    background: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+#teaser_usage-post table tr.teaser_vspace td {
+    padding-bottom: 10px;
+    padding-left: 5px;
+}
+
+#pptx-options-teaser-links {
+    margin-top: 5px;
+}
+
+#pptx-options-teaser-links td {
+    border-bottom: none;
+    background: none;
+    margin-bottom: 0;
+    padding: 0 5px 0 5px;
+}
+
+.pp-teaser-redirect-table tr, .pp-teaser-redirect-table tr td {
+    border-bottom: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.pp-teaser-redirect-table input {
+    width: 175px;
+}

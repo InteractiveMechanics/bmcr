@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PressPermit Compatibility Pack\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-27 12:22-0500\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Kevin Behrens <kevin@publishpress.com>\n"
+"Language-Team: PublishPress <help@publishpress.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: F:\\snapshot\\presspermit-pro\n"
+"X-Poedit-KeywordsList: __;_e;_c;__ngettext;_n;_x\n"
+"X-Poedit-SearchPath-0: F:\\snapshot\\presspermit-pro\\modules\\presspermit-compatibility\n"
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/presspermit-compatibility.php:55
+msgid "Compatibility Pack"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:90
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:94
+msgid "[This topic requires additional permissions or membership.]"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:91
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:95
+msgid "[...]"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:92
+msgid "[This topic requires site login.]"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:93
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:97
+msgid "[login required]"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:96
+msgid "[This reply requires site login.]"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/CMSTreeView.php:81
+msgid "Page creation was blocked because you are not allowed to select that parent page."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/CMSTreeView.php:82
+msgid "Back to Dashboard"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/CMSTreeView.php:84
+msgid "Permission Denied"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/CMSTreeView.php:86
+msgid "You are not allowed to select that parent page."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/NetwideGroups.php:19
+msgid "Network Groups"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/NetwideGroups.php:19
+msgid "Network Group"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/PublicPostPreview.php:26
+msgid "The link has been expired!"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/PublicPostPreview.php:30
+msgid "No Public Preview available!"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BBPress/HooksAdmin.php:30
+msgid "Create Topics in"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BBPress/HooksAdmin.php:31
+msgid "Topic Creation"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BBPress/HooksAdmin.php:32
+msgid "Create Topic"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BBPress/HooksAdmin.php:37
+msgid "Submit Replies in"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BBPress/HooksAdmin.php:38
+msgid "Reply Submission"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BBPress/HooksAdmin.php:39
+msgid "Submit Reply"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/GroupsListTable.php:84
+msgid "No matching groups were found."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/GroupsListTable.php:101
+msgid "ID"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/GroupsListTable.php:102
+msgid "Name"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/GroupsListTable.php:103
+msgid "Users"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/GroupsListTable.php:104
+msgid "Sitewide Roles"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/GroupsListTable.php:105
+msgid "Content Roles"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/GroupsListTable.php:106
+msgid "Description"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/GroupsListTable.php:166
+msgid "Permissions"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/GroupsListTable.php:210
+msgid "BuddyPress Group Admin"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/GroupsListTable.php:231
+msgid "Visibility"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/GroupsListTable.php:232
+msgid "Editorial"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/Hooks.php:35
+msgid "BuddyPress Groups"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/Hooks.php:35
+msgid "BuddyPress Group"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:66
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:74
+msgid "none"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:79
+msgid "Roles"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:82
+msgid "Exceptions"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:91
+msgid "Supplemental roles and exceptions assigned to this group by PressPermit"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:91
+msgid "Click to toggle"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:91
+msgid "Content Permissions"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:120
+msgid "BuddyPress Group Members"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:45
+msgid "fixed teaser (specify topic and reply parameters below)"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:55
+msgid "Network"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:67
+msgid "Groups"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:76
+msgid "Forum Teaser"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:93
+msgid "Network-wide groups"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:97
+msgid "Teaser Topics"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:98
+msgid "Hide Topic / Reply Author Link"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:131
+#, php-format
+msgid "Additional settings provided by the %s module."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:152
+msgid "If enabled, custom group membership is applied network-wide (though role assignments are still site-specific)."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:197
+#, php-format
+msgid "Topic Teaser Text (%s):"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:198
+#, php-format
+msgid "Reply Teaser Text (%s):"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:202
+msgid "First Reply"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:203
+msgid "Other Replies"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:220
+msgid "anonymous users"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:220
+msgid "logged users"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:289
+msgid "Can create network-wide permission groups"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:290
+msgid "If group editing is allowed, can also modify network group membership"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:304
+#, php-format
+msgid "%sTopics:%s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:310
+msgid "Hide topics and replies"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:311
+msgid "Tease topics and replies"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:312
+msgid "Show topics, tease replies"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:325
+msgid "The single forum teaser may be customized by STYLESHEETPATH/press-permit/teaser-content-forum.php"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/WPML/HooksAdmin.php:179
+msgid "WPML Integration"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/WPML/HooksAdmin.php:185
+msgid "Mirror Post Exceptions to translations"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/WPML/HooksAdmin.php:186
+msgid "Mirror Term Exceptions to translations"
+msgstr ""
+

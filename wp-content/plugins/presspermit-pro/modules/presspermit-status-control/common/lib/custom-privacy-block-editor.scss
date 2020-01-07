@@ -1,0 +1,15 @@
+.publishpress-extended-post-privacy {
+  flex-flow: row wrap;
+  > * {
+    flex-basis: 45%;
+    margin-top:0;
+  }
+
+  .publishpress-extended-post-privacy-note {
+    flex-basis: 100%;
+  }
+}
+
+.publishpress-extended-post-privacy select {
+  width: 120px;
+}

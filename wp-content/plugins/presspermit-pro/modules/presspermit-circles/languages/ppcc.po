@@ -1,0 +1,109 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PressPermit Circles Module\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-27 12:20-0500\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Kevin Behrens <kevin@publishpress.com>\n"
+"Language-Team: PublishPress <help@publishpress.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: F:\\snapshot\\presspermit-pro\n"
+"X-Poedit-KeywordsList: __;_e;_c;__ngettext;_n;_x\n"
+"X-Poedit-SearchPath-0: F:\\snapshot\\presspermit-pro\\modules\\presspermit-circles\n"
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/presspermit-circles.php:54
+msgid "Access Circles"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/CirclesHooksAdmin.php:118
+msgid "Visibility Circle membership does not limit viewing access"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/CirclesHooksAdmin.php:119
+msgid "Editorial Circle membership does not limit editing access"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/Circles/UI/GroupEdit.php:19
+msgid "Circle Activation"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/Circles/UI/GroupEdit.php:31
+msgid "Visibility Circle"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/Circles/UI/GroupEdit.php:31
+msgid "Editability Circle"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/Circles/UI/GroupEdit.php:53
+#, php-format
+msgid "This group is a %s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/Circles/UI/GroupEdit.php:70
+#, php-format
+msgid "Members of this role are exempted from all %s restrictions, due to the %s capability."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/Circles/UI/GroupEdit.php:87
+msgid "apply limitation for post types:"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/Circles/UI/GroupEdit.php:104
+msgid "more..."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/Circles/UI/GroupEdit.php:121
+msgid "edit"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/Circles/UI/GroupEdit.php:126
+msgid "hide"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/Circles/UI/GroupEdit.php:141
+msgid "(toggle all)"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/Circles/UI/GroupEdit.php:157
+msgid "<strong>Block</strong> viewing or editing of posts not authored by a fellow Circle Group member. Users may be a member of multiple circles. Note that an appropriate role assignment (either WP role or supplemental) is still required."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/Circles/UI/GroupEdit.php:161
+msgid "Users may be exempted by adding the pp_exempt_read_circle or pp_exempt_edit_circle capability to their primary WP role."
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/Circles/UI/GroupsListing.php:14
+msgid "Circle Type"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/Circles/UI/GroupsListing.php:38
+msgid "Visibility"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/Circles/UI/GroupsListing.php:39
+msgid "Editorial"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/Circles/UI/Dashboard/Profile.php:19
+msgid "Circle Membership"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/Circles/UI/Dashboard/Profile.php:21
+msgid "Viewing"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/Circles/UI/Dashboard/Profile.php:21
+msgid "Editing"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/Circles/UI/Dashboard/Profile.php:27
+#, php-format
+msgid "<strong>%s</strong> is limited to circle authors only, for these post types:"
+msgstr ""
+

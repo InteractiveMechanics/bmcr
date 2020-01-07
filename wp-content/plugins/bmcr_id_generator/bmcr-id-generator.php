@@ -4,7 +4,7 @@ Plugin Name: BMCR ID Generator
 Plugin URI: http://dev.interactivemechanics.com/bmcr
 Description: Declares a plugin that will auto-increments BMCR IDs.
 Version: 1.0
-Author: Interactive Mechanics 
+Author: Interactive Mechanics
 Author URI: http://www.interactivemechanics.com/
 License: GPLv2
 */
@@ -40,16 +40,16 @@ function set_bmcr_id_on_publish() {
     if (!$cur_id || empty($cur_id)) {
         $now_year   = date("Y");
         $now_mo     = date("m");
-        
+
         if ((int)$now_mo == (int)$last_mo) {
             $now_inc = (int)$last_inc + 1;
             if ((int)$now_inc < 10) { $now_inc = '0' . (string)$now_inc; }
         } else {
             $now_inc = '01';
         }
-        
+
         $new_id = $now_year . "." . $now_mo . "." . $now_inc;
-        
+
         update_field('bmcr_id', $new_id);
         update_option($name, $new_id);
     } else {
@@ -58,10 +58,10 @@ function set_bmcr_id_on_publish() {
 }
 
 
-add_action( 'save_post', 'save_bmcr_id' );
+add_action( 'save_post', 'save_bmcr_id', 10, 3 );
 
 function save_bmcr_id($post_id, $post, $update) {
-    
+
     $post_type  = get_post_type($post_id);
 
     if ( $post_type !== "articles" || "reviews" || "responses" ){ return; }
