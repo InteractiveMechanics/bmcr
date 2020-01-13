@@ -7,15 +7,6 @@
     <small class="ref-id">BMCR <?php echo the_field('bmcr_id'); ?></small>
     <p class="ref-title"><?php echo the_title(); ?></p>
 
-    <p class="ref-author">Reviewed by
-        <?php if( have_rows('reviewers') ): ?>
-            <?php while ( have_rows('reviewers') ) : the_row(); ?>
-                <?php echo the_sub_field('reviewer_first_name'); ?>
-                <?php echo the_sub_field('reviewer_last_name'); ?><span class="comma">,&nbsp;</span>
-            <?php endwhile; ?>
-        <?php endif; ?>
-    </p>
-
     <p class="ref-details">
         <?php if( have_rows('books') ): ?>
             <?php while ( have_rows('books') ) : the_row(); ?>
@@ -44,6 +35,15 @@
             		endif;
             	?>
 
+            <?php endwhile; ?>
+        <?php endif; ?>
+    </p>
+
+		<p class="ref-author">Reviewed by
+        <?php if( have_rows('reviewers') ): ?>
+            <?php while ( have_rows('reviewers') ) : the_row(); ?>
+                <?php echo the_sub_field('reviewer_first_name'); ?>
+                <?php echo the_sub_field('reviewer_last_name'); ?><span class="comma">,&nbsp;</span>
             <?php endwhile; ?>
         <?php endif; ?>
     </p>

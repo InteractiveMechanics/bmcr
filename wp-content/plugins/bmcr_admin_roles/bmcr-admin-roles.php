@@ -37,6 +37,7 @@ if( is_admin() && !current_user_can('edit_others_posts') ) {
   unset($views['title-added']);
   unset($views['merged']);
   unset($views['pending']);
+  unset($views['pitch']);
 }
 
   return $views;

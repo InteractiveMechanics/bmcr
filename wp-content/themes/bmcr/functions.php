@@ -150,16 +150,14 @@ add_action( 'widgets_init', 'bmcr_widgets_init' );
 
 
 function add_custom_post_types_to_loop( $query ) {
-	if ( $query->is_front_page() && $query->is_main_query() || $query->is_home() && $query->is_main_query() || is_archive() && $query->is_main_query() && !is_post_type_archive() ) {
+
+	if ( $query->is_front_page() && $query->is_main_query() || is_archive() && $query->is_main_query() && !is_post_type_archive()  ) {
 		$query->set( 'post_type', array( 'articles', 'reviews', 'responses' ) );
 		$query->set( 'orderby', 'meta_value' );
 		$query->set( 'meta_key', 'bmcr_id');
-		$query->set('order', 'DESC');
+		$query->set('order', 'ASC');
 
-	}
-
-
-
+	};
 
 	return $query;
 }
