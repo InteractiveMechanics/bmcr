@@ -30,22 +30,23 @@
 
 use PublishPress\Legacy\Auto_loader;
 
-if (!defined('PP_LOADED')) {
+if ( ! defined('PP_LOADED')) {
     $settingsPage = add_query_arg(
-        array(
+        [
             'page'   => 'pp-modules-settings',
             'module' => 'pp-modules-settings-settings',
-        ),
+        ],
         get_admin_url(null, 'admin.php')
     );
 
     // Define contants
-    define('PUBLISHPRESS_VERSION', '1.14.1');
+    define('PUBLISHPRESS_VERSION', '1.21.2');
     define('PUBLISHPRESS_BASE_PATH', __DIR__);
-    define('PUBLISHPRESS_FILE_PATH', PUBLISHPRESS_BASE_PATH . '/' . basename(__FILE__));
+    define('PUBLISHPRESS_FILE_PATH', PUBLISHPRESS_BASE_PATH . '/publishpress.php');
     define('PUBLISHPRESS_URL', plugins_url('/', __FILE__));
     define('PUBLISHPRESS_SETTINGS_PAGE', $settingsPage);
     define('PUBLISHPRESS_LIBRARIES_PATH', PUBLISHPRESS_BASE_PATH . '/libraries');
+    define('PUBLISHPRESS_BASENAME', plugin_basename(PUBLISHPRESS_FILE_PATH));
 
     /**
      * Use PUBLISHPRESS_BASE_PATH instead.
@@ -56,7 +57,7 @@ if (!defined('PP_LOADED')) {
 
     // Define the Priority for the notification/notification_status_change method
     // Added to allow users select a custom priority
-    if (!defined('PP_NOTIFICATION_PRIORITY_STATUS_CHANGE')) {
+    if ( ! defined('PP_NOTIFICATION_PRIORITY_STATUS_CHANGE')) {
         define('PP_NOTIFICATION_PRIORITY_STATUS_CHANGE', 10);
     }
 
@@ -65,7 +66,7 @@ if (!defined('PP_LOADED')) {
     }
 
     // Register the autoloader
-    if (!class_exists('\\PublishPress\\Legacy\\Auto_loader')) {
+    if ( ! class_exists('\\PublishPress\\Legacy\\Auto_loader')) {
         require_once PUBLISHPRESS_LIBRARIES_PATH . '/Legacy/Auto_loader.php';
     }
 

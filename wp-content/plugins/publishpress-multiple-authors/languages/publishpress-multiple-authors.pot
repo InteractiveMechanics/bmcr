@@ -1,0 +1,1971 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: PublishPress Multiple Authors Pro\n"
+"POT-Creation-Date: 2019-09-30 16:01-0300\n"
+"PO-Revision-Date: 2016-04-22 07:37+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: publishpress-multiple-authors.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: core/Classes/Author_Editor.php:47
+#: modules/author-custom-layouts/author-custom-layouts.php:388
+#: modules/author-custom-layouts/author-custom-layouts.php:449
+msgid "Name"
+msgstr ""
+
+#: core/Classes/Author_Editor.php:48 core/Classes/Author_Editor.php:241
+msgid "Email"
+msgstr ""
+
+#: core/Classes/Author_Editor.php:84
+msgid "User"
+msgstr ""
+
+#: core/Classes/Author_Editor.php:86
+msgid "Guest Author"
+msgstr ""
+
+#: core/Classes/Author_Editor.php:125 core/Classes/Author_Editor.php:182
+msgid "Edit User"
+msgstr ""
+
+#: core/Classes/Author_Editor.php:133
+msgid "Edit Author"
+msgstr ""
+
+#: core/Classes/Author_Editor.php:143
+msgid "Create Author"
+msgstr ""
+
+#: core/Classes/Author_Editor.php:172
+msgid "Edit Author Profile"
+msgstr ""
+
+#: core/Classes/Author_Editor.php:228
+msgid "Mapped User"
+msgstr ""
+
+#: core/Classes/Author_Editor.php:233
+msgid "First Name"
+msgstr ""
+
+#: core/Classes/Author_Editor.php:237
+msgid "Last Name"
+msgstr ""
+
+#: core/Classes/Author_Editor.php:243
+msgid "To show the avatar from the Mapped User, enter the same email address as the Mapped User. <br> To show the avatar for a Guest Author, enter the email for their Gravatar account."
+msgstr ""
+
+#: core/Classes/Author_Editor.php:247
+msgid "Custom Avatar"
+msgstr ""
+
+#: core/Classes/Author_Editor.php:252
+msgid "Website"
+msgstr ""
+
+#: core/Classes/Author_Editor.php:257
+msgid "Biographical Info"
+msgstr ""
+
+#: core/Classes/Author_Editor.php:310
+msgid "Select image"
+msgstr ""
+
+#: core/Classes/Author_Editor.php:314
+msgid "Remove this image"
+msgstr ""
+
+#: core/Classes/Author_Editor.php:328
+msgid "Select a user"
+msgstr ""
+
+#: core/Classes/Author_Editor.php:424
+msgid "Mapped User (optional)"
+msgstr ""
+
+#: core/Classes/Author_Editor.php:430
+msgid "You don’t have to choose a Mapped User. Leave this choice blank and you can create a Guest Author with no WordPress account."
+msgstr ""
+
+#: core/Classes/Author_Editor.php:488
+msgid "Update data from mapped user"
+msgstr ""
+
+#: core/Classes/Author_Editor.php:538
+msgid "No authors were updated"
+msgstr ""
+
+#: core/Classes/Author_Editor.php:540
+#, php-format
+msgid "Updated %d authors"
+msgstr ""
+
+#: core/Classes/Authors_Iterator.php:31
+msgid "No post ID provided for Multiple_authors_iterator constructor. Are you not in a loop or is $post not set?"
+msgstr ""
+
+#: core/Classes/CustomFieldsModel.php:43
+msgid "Text"
+msgstr ""
+
+#: core/Classes/CustomFieldsModel.php:44
+msgid "Multiline text"
+msgstr ""
+
+#: core/Classes/CustomFieldsModel.php:45
+msgid "WYSIWYG Editor"
+msgstr ""
+
+#: core/Classes/CustomFieldsModel.php:46
+msgid "Link"
+msgstr ""
+
+#: core/Classes/CustomFieldsModel.php:47
+#: modules/author-custom-layouts/author-custom-layouts.php:391
+msgid "Email address"
+msgstr ""
+
+#: core/Classes/Integrations/Theme.php:37
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: core/Classes/Legacy/LegacyPlugin.php:207
+msgid "Configure"
+msgstr ""
+
+#: core/Classes/Legacy/LegacyPlugin.php:210
+msgid "Please correct your form errors below and try again."
+msgstr ""
+
+#: core/Classes/Legacy/LegacyPlugin.php:212 modules/settings/settings.php:330
+msgid "Cheatin&#8217; uh?"
+msgstr ""
+
+#: core/Classes/Legacy/LegacyPlugin.php:213
+msgid "You do not have necessary permissions to complete this action."
+msgstr ""
+
+#: core/Classes/Legacy/LegacyPlugin.php:215
+msgid "Post does not exist"
+msgstr ""
+
+#: core/Classes/Legacy/LegacyPlugin.php:344 core/Classes/Post_Editor.php:52
+#: core/Classes/Post_Editor.php:118 core/Plugin.php:502 core/Plugin.php:503
+#: core/Plugin.php:529 core/Plugin.php:567 core/Plugin.php:1298
+#: core/Traits/Author_box.php:91 core/Widget.php:48 core/Widget.php:79
+#: modules/multiple-authors/multiple-authors.php:212
+#: modules/multiple-authors/multiple-authors.php:213
+#: modules/multiple-authors/multiple-authors.php:237
+msgid "Authors"
+msgstr ""
+
+#: core/Classes/Legacy/Module.php:74
+msgid "Post"
+msgstr ""
+
+#: core/Classes/Legacy/Module.php:75
+msgid "Page"
+msgstr ""
+
+#: core/Classes/Objects/Author.php:52
+msgid "User doesn't exist"
+msgstr ""
+
+#: core/Classes/Objects/Author.php:57
+msgid "User already has a author."
+msgstr ""
+
+#: core/Classes/Objects/Author.php:113
+msgid "'slug' is a required argument"
+msgstr ""
+
+#: core/Classes/Objects/Author.php:117
+msgid "'display_name' is a required argument"
+msgstr ""
+
+#: core/Classes/Post_Editor.php:96
+msgid "No author"
+msgstr ""
+
+#: core/Classes/Post_Editor.php:161 core/Plugin.php:1152
+msgid "Search for an author"
+msgstr ""
+
+#: core/Classes/Utils.php:59
+msgid "Co-Authors Plus must be installed and active."
+msgstr ""
+
+#: core/Plugin.php:305
+msgctxt "taxonomy general name"
+msgid "Authors"
+msgstr ""
+
+#: core/Plugin.php:307
+msgctxt "taxonomy singular name"
+msgid "Author"
+msgstr ""
+
+#: core/Plugin.php:309
+msgid "Search authors"
+msgstr ""
+
+#: core/Plugin.php:310
+msgid "Popular authors"
+msgstr ""
+
+#: core/Plugin.php:311
+msgid "All authors"
+msgstr ""
+
+#: core/Plugin.php:312
+msgid "Parent author"
+msgstr ""
+
+#: core/Plugin.php:313
+msgid "Parent author:"
+msgstr ""
+
+#: core/Plugin.php:314
+msgid "Edit author"
+msgstr ""
+
+#: core/Plugin.php:315
+msgid "View author"
+msgstr ""
+
+#: core/Plugin.php:316
+msgid "Update author"
+msgstr ""
+
+#: core/Plugin.php:317 core/Plugin.php:318
+msgid "New author"
+msgstr ""
+
+#: core/Plugin.php:319
+msgid "Separate authors with commas"
+msgstr ""
+
+#: core/Plugin.php:321
+msgid "Add or remove authors"
+msgstr ""
+
+#: core/Plugin.php:322
+msgid "Choose from the most used authors"
+msgstr ""
+
+#: core/Plugin.php:324
+msgid "No authors found."
+msgstr ""
+
+#: core/Plugin.php:325 modules/multiple-authors/multiple-authors.php:507
+msgid "Author"
+msgstr ""
+
+#: core/Plugin.php:326
+msgid "Back to Authors"
+msgstr ""
+
+#. Author of the plugin/theme
+#: core/Plugin.php:460
+msgid "PublishPress"
+msgstr ""
+
+#: core/Plugin.php:463
+#, php-format
+msgid "If you like %s please leave us a %s rating. Thank you!"
+msgstr ""
+
+#: core/Plugin.php:569
+msgid "Click on an author to change them. Drag to change their order."
+msgstr ""
+
+#: core/Plugin.php:598
+msgid "No co-author exists for that term"
+msgstr ""
+
+#: core/Plugin.php:1147
+msgid "Edit"
+msgstr ""
+
+#: core/Plugin.php:1148
+msgid "Are you sure you want to remove this author?"
+msgstr ""
+
+#: core/Plugin.php:1150
+msgid "Click to change this author, or drag to change their position"
+msgstr ""
+
+#: core/Plugin.php:1153
+msgid "Click on an author to change them. Drag to change their order. Click on <strong>Remove</strong> to remove them."
+msgstr ""
+
+#: core/Plugin.php:1155
+msgid "Are you sure you want to delete the authors profiles mapped to users? This action can't be undone."
+msgstr ""
+
+#: core/Plugin.php:1157
+msgid "Are you sure you want to delete the guest authors profiles? This action can't be undone."
+msgstr ""
+
+#: core/Plugin.php:1159
+msgid "Are you sure you want to create author profiles for the missed post authors?"
+msgstr ""
+
+#: core/Plugin.php:1161
+msgid "Are you sure you want to create authors for the selected roles?"
+msgstr ""
+
+#: core/Plugin.php:1165
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Assets.php:117
+msgid "Please, wait..."
+msgstr ""
+
+#: core/Plugin.php:1166
+msgid "Sorry, the request returned an error."
+msgstr ""
+
+#: core/Plugin.php:1214
+msgid "Mine"
+msgstr ""
+
+#: core/WP_Cli.php:230
+msgid "Please specify a valid user_login"
+msgstr ""
+
+#: core/WP_Cli.php:234
+msgid "Please specify a valid co-author login"
+msgstr ""
+
+#: core/WP_Cli.php:245
+#, php-format
+msgid "Skipping - Post #%d already has co-authors assigned: %s"
+msgstr ""
+
+#: core/WP_Cli.php:253
+#, php-format
+msgid "Updating - Adding %s's byline to post #%d"
+msgstr ""
+
+#: core/WP_Cli.php:260
+#, php-format
+msgid "All done! %d posts were affected."
+msgstr ""
+
+#: core/Widget.php:26
+msgid "Display a list of authors for the current post."
+msgstr ""
+
+#: core/Widget.php:32 modules/multiple-authors/multiple-authors.php:83
+msgid "Multiple Authors"
+msgstr ""
+
+#: core/Widget.php:88
+msgid "Title"
+msgstr ""
+
+#: core/Widget.php:89
+msgid "Layout"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:125
+msgid "Test Metabox"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:138
+#: libraries/cmb2/example-functions.php:478
+msgid "Test Text"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:139
+#: libraries/cmb2/example-functions.php:152
+#: libraries/cmb2/example-functions.php:165
+#: libraries/cmb2/example-functions.php:172
+#: libraries/cmb2/example-functions.php:185
+#: libraries/cmb2/example-functions.php:193
+#: libraries/cmb2/example-functions.php:202
+#: libraries/cmb2/example-functions.php:210
+#: libraries/cmb2/example-functions.php:225
+#: libraries/cmb2/example-functions.php:233
+#: libraries/cmb2/example-functions.php:241
+#: libraries/cmb2/example-functions.php:258
+#: libraries/cmb2/example-functions.php:267
+#: libraries/cmb2/example-functions.php:283
+#: libraries/cmb2/example-functions.php:290
+#: libraries/cmb2/example-functions.php:297
+#: libraries/cmb2/example-functions.php:322
+#: libraries/cmb2/example-functions.php:335
+#: libraries/cmb2/example-functions.php:348
+#: libraries/cmb2/example-functions.php:360
+#: libraries/cmb2/example-functions.php:369
+#: libraries/cmb2/example-functions.php:377
+#: libraries/cmb2/example-functions.php:386
+#: libraries/cmb2/example-functions.php:393
+#: libraries/cmb2/example-functions.php:407
+#: libraries/cmb2/example-functions.php:479
+#: libraries/cmb2/example-functions.php:573
+#: libraries/cmb2/example-functions.php:581
+#: libraries/cmb2/example-functions.php:588
+#: libraries/cmb2/example-functions.php:595
+#: libraries/cmb2/example-functions.php:602
+#: libraries/cmb2/example-functions.php:609
+#: libraries/cmb2/example-functions.php:616
+#: libraries/cmb2/example-functions.php:643
+#: libraries/cmb2/example-functions.php:651
+#: libraries/cmb2/example-functions.php:658
+#: libraries/cmb2/example-functions.php:709
+msgid "field description (optional)"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:151
+msgid "Test Text Small"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:164
+msgid "Test Text Medium"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:171
+msgid "Read-only Disabled Field"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:175
+msgid "Hey there, I'm a read-only field"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:184
+msgid "Custom Rendered Field"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:192
+msgid "Website URL"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:201
+msgid "Test Text Email"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:209
+msgid "Test Time"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:217
+#: libraries/cmb2/example-functions.php:218
+msgid "Time zone"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:224
+msgid "Test Date Picker"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:232
+msgid "Test Date Picker (UNIX timestamp)"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:240
+msgid "Test Date/Time Picker Combo (UNIX timestamp)"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:257
+msgid "Test Money"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:266
+msgid "Test Color Picker"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:282
+msgid "Test Text Area"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:289
+msgid "Test Text Area Small"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:296
+msgid "Test Text Area for Code"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:314
+msgid "Test Title Weeeee"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:315
+msgid "This is a title description"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:321
+msgid "Test Select"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:327
+#: libraries/cmb2/example-functions.php:340
+#: libraries/cmb2/example-functions.php:352
+msgid "Option One"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:328
+#: libraries/cmb2/example-functions.php:341
+#: libraries/cmb2/example-functions.php:353
+msgid "Option Two"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:329
+#: libraries/cmb2/example-functions.php:342
+#: libraries/cmb2/example-functions.php:354
+msgid "Option Three"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:334
+msgid "Test Radio inline"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:347
+msgid "Test Radio"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:359
+msgid "Test Taxonomy Radio"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:368
+msgid "Test Taxonomy Select"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:376
+msgid "Test Taxonomy Multi Checkbox"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:385
+msgid "Test Checkbox"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:392
+msgid "Test Multi Checkbox"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:398
+msgid "Check One"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:399
+msgid "Check Two"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:400
+msgid "Check Three"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:406
+msgid "Test wysiwyg"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:416
+msgid "Test Image"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:417
+msgid "Upload an image or enter a URL."
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:423
+msgid "Multiple Files"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:424
+msgid "Upload or add multiple images/attachments."
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:431
+msgid "oEmbed"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:434
+#, php-format
+msgid "Enter a youtube, twitter, or instagram URL. Supports services listed at %s."
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:467
+msgid "About Page Metabox"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:498
+msgid "Repeating Field Group"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:506
+msgid "Generates reusable form entries"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:508
+msgid "Entry {#}"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:509
+msgid "Add Another Entry"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:510
+msgid "Remove Entry"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:523
+msgid "Entry Title"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:530
+#: modules/author-custom-fields/author-custom-fields.php:290
+#: modules/author-custom-layouts/author-custom-layouts.php:390
+msgid "Description"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:531
+msgid "Write a short description for this entry"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:537
+msgid "Entry Image"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:543
+msgid "Image Caption"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:562
+msgid "User Profile Metabox"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:572
+#: libraries/cmb2/example-functions.php:642
+msgid "Extra Info"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:580
+msgid "Avatar"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:587
+msgid "Facebook URL"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:594
+msgid "Twitter URL"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:601
+msgid "Google+ URL"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:608
+msgid "Linkedin URL"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:615
+msgid "User Field"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:635
+msgid "Category Metabox"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:650
+msgid "Term Image"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:657
+msgid "Arbitrary Term Field"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:676
+msgid "Theme Options"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:708
+msgid "Site Background Color"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:744
+#, php-format
+msgid "%s &mdash; Updated!"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:780
+msgid "REST Test Box"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:791
+msgid "REST Test Text"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:792
+msgid "Will show in the REST API for this box and for pages."
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:798
+msgid "REST Editable Test Text"
+msgstr ""
+
+#: libraries/cmb2/example-functions.php:799
+msgid "Will show in REST API \"editable\" contexts only (`POST` requests)."
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2.php:202
+msgid "Metabox configuration is required to have an ID parameter."
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2.php:617
+msgid "Click to toggle"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_Ajax.php:80
+msgid "Please Try Again"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_Ajax.php:190
+msgid "Remove Embed"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_Ajax.php:199
+#: libraries/cmb2/includes/helper-functions.php:116
+#, php-format
+msgid "No oEmbed Results Found for %1$s. View more info at %2$s."
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_Base.php:464
+#, php-format
+msgid "The \"%1$s\" field parameter has been deprecated in favor of the \"%2$s\" parameter."
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_Base.php:469
+#, php-format
+msgid "Using the \"%1$s\" field parameter as a callback has been deprecated in favor of the \"%2$s\" parameter."
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_Base.php:500
+#, php-format
+msgid "%1$s was called with a parameter that is <strong>deprecated</strong> since version %2$s! %3$s"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_Base.php:503
+#, php-format
+msgid "%1$s was called with a parameter that is <strong>deprecated</strong> since version %2$s with no alternative available."
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_Base.php:542
+#: libraries/cmb2/includes/CMB2_Hookup_Base.php:110
+#: libraries/cmb2/includes/CMB2_Options_Hookup.php:358
+#: libraries/cmb2/includes/types/CMB2_Type_Base.php:191
+#, php-format
+msgid "Invalid %1$s property: %2$s"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_Base.php:559
+#: libraries/cmb2/includes/types/CMB2_Type_Base.php:173
+#, php-format
+msgid "Invalid %1$s method: %2$s"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_Field.php:1382
+msgid "Add Group"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_Field.php:1383
+msgid "Remove Group"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_Field.php:1418
+#: libraries/cmb2/includes/CMB2_Field.php:1423
+msgid "None"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_Field.php:1544
+msgid "Sorry, this field does not have a cmb_id specified."
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_Field_Display.php:467
+#: libraries/cmb2/includes/CMB2_JS.php:247
+#: libraries/cmb2/includes/types/CMB2_Type_File_Base.php:92
+msgid "File:"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_Hookup_Base.php:45
+#, php-format
+msgid "%1$s should be implemented by the extended class."
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:178
+#: libraries/cmb2/includes/CMB2_JS.php:226
+msgid "Clear"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:179
+msgid "Default"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:180
+msgid "Select Color"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:181
+msgid "Current Color"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:212
+msgctxt "Valid formatDate string for jquery-ui datepicker"
+msgid "mm/dd/yy"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:214
+msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:215
+msgid "Su, Mo, Tu, We, Th, Fr, Sa"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:216
+msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:218
+msgid "January, February, March, April, May, June, July, August, September, October, November, December"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:221
+msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:222
+msgid "Next"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:223
+msgid "Prev"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:224
+msgid "Today"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:225
+#: libraries/cmb2/includes/CMB2_JS.php:235
+msgid "Done"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:229
+msgid "Choose Time"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:230
+msgid "Time"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:231
+msgid "Hour"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:232
+msgid "Minute"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:233
+msgid "Second"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:234
+msgid "Now"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:236
+msgctxt "Valid formatting string, as per http://trentrichardson.com/examples/timepicker/"
+msgid "hh:mm TT"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:243
+msgid "Use this file"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:244
+msgid "Use these files"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:245
+#: libraries/cmb2/includes/types/CMB2_Type_File_Base.php:73
+msgid "Remove Image"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:246
+#: libraries/cmb2/includes/CMB2_Types.php:451
+#: libraries/cmb2/includes/types/CMB2_Type_File_Base.php:97
+msgid "Remove"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:248
+#: libraries/cmb2/includes/types/CMB2_Type_File_Base.php:95
+msgid "Download"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_JS.php:249
+msgid "Select / Deselect All"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_Options_Hookup.php:138
+msgid "Nothing to update."
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_Options_Hookup.php:142
+msgid "Settings updated."
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_Types.php:244
+msgid "Custom CMB2 field type classes must extend CMB2_Type_Base."
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_Types.php:382
+msgid "Add Row"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_Types.php:450
+msgid "Remove Row"
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_hookup.php:188
+msgid "Term Metadata is a WordPress 4.4+ feature. Please upgrade your WordPress install."
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_hookup.php:193
+msgid "Term metaboxes configuration requires a \"taxonomies\" parameter."
+msgstr ""
+
+#: libraries/cmb2/includes/CMB2_hookup.php:473
+#, php-format
+msgid "Toggle panel: %s"
+msgstr ""
+
+#: libraries/cmb2/includes/helper-functions.php:340
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Upgrade.php:142
+msgid "Save"
+msgstr ""
+
+#: libraries/cmb2/includes/rest-api/CMB2_REST_Controller.php:270
+msgid "This box does not have read permissions."
+msgstr ""
+
+#: libraries/cmb2/includes/rest-api/CMB2_REST_Controller.php:292
+msgid "This box does not have write permissions."
+msgstr ""
+
+#: libraries/cmb2/includes/rest-api/CMB2_REST_Controller.php:316
+msgid "No box found by that id. A box needs to be registered with the \"show_in_rest\" parameter configured."
+msgstr ""
+
+#: libraries/cmb2/includes/rest-api/CMB2_REST_Controller.php:397
+msgid "A human-readable description of the object."
+msgstr ""
+
+#: libraries/cmb2/includes/rest-api/CMB2_REST_Controller.php:404
+msgid "The id for the object."
+msgstr ""
+
+#: libraries/cmb2/includes/rest-api/CMB2_REST_Controller.php:411
+msgid "The title for the object."
+msgstr ""
+
+#: libraries/cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:55
+msgid "Includes the registered fields for the box in the response."
+msgstr ""
+
+#: libraries/cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:76
+msgid "Includes the fully rendered attributes, 'form_open', 'form_close', as well as the enqueued 'js_dependencies' script handles, and 'css_dependencies' stylesheet handles."
+msgstr ""
+
+#: libraries/cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:131
+msgid "No boxes found."
+msgstr ""
+
+#: libraries/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:30
+msgid "Includes the box object which the fields are registered to in the response."
+msgstr ""
+
+#: libraries/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:34
+msgid "When the '_rendered' argument is passed, the renderable field attributes will be returned fully rendered. By default, the names of the callback handers for the renderable attributes will be returned."
+msgstr ""
+
+#: libraries/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:38
+#: libraries/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:42
+msgid "To view or modify the field's value, the 'object_id' and 'object_type' arguments are required."
+msgstr ""
+
+#: libraries/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:260
+msgid "CMB2 Field value cannot be updated without the value parameter specified."
+msgstr ""
+
+#: libraries/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:328
+msgid "CMB2 Field value cannot be modified without the object_id and object_type parameters specified."
+msgstr ""
+
+#: libraries/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:344
+#: libraries/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:375
+msgid "No field found by that id."
+msgstr ""
+
+#: libraries/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:451
+#, php-format
+msgid "Value Error for %s"
+msgstr ""
+
+#: libraries/cmb2/includes/shim/WP_REST_Controller.php:28
+#, php-format
+msgid "Method '%s' must be overridden."
+msgstr ""
+
+#: libraries/cmb2/includes/shim/WP_REST_Controller.php:41
+#: libraries/cmb2/includes/shim/WP_REST_Controller.php:56
+#: libraries/cmb2/includes/shim/WP_REST_Controller.php:71
+#: libraries/cmb2/includes/shim/WP_REST_Controller.php:86
+#: libraries/cmb2/includes/shim/WP_REST_Controller.php:101
+#: libraries/cmb2/includes/shim/WP_REST_Controller.php:116
+#: libraries/cmb2/includes/shim/WP_REST_Controller.php:131
+#: libraries/cmb2/includes/shim/WP_REST_Controller.php:146
+#: libraries/cmb2/includes/shim/WP_REST_Controller.php:161
+#: libraries/cmb2/includes/shim/WP_REST_Controller.php:176
+#: libraries/cmb2/includes/shim/WP_REST_Controller.php:191
+#: libraries/cmb2/includes/shim/WP_REST_Controller.php:207
+#, php-format
+msgid "Method '%s' not implemented. Must be overridden in subclass."
+msgstr ""
+
+#: libraries/cmb2/includes/shim/WP_REST_Controller.php:317
+msgid "Current page of the collection."
+msgstr ""
+
+#: libraries/cmb2/includes/shim/WP_REST_Controller.php:325
+msgid "Maximum number of items to be returned in result set."
+msgstr ""
+
+#: libraries/cmb2/includes/shim/WP_REST_Controller.php:334
+msgid "Limit results to those matching a string."
+msgstr ""
+
+#: libraries/cmb2/includes/shim/WP_REST_Controller.php:354
+msgid "Scope under which the request is made; determines fields present in response."
+msgstr ""
+
+#: libraries/cmb2/includes/types/CMB2_Type_File.php:80
+msgid "Add or Upload File"
+msgstr ""
+
+#: libraries/cmb2/includes/types/CMB2_Type_File_List.php:43
+msgid "Add or Upload Files"
+msgstr ""
+
+#: libraries/cmb2/includes/types/CMB2_Type_Taxonomy_Base.php:122
+msgid "No terms"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:62
+#: modules/author-custom-fields/author-custom-fields.php:120
+#: modules/author-custom-fields/author-custom-fields.php:175
+msgid "Author Fields"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:63
+#: modules/author-custom-fields/author-custom-fields.php:65
+msgid "Add support for custom fields in the author profiles."
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:119
+msgid "Author Field"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:123
+#, php-format
+msgctxt "Custom Field post type name"
+msgid "%2$s"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:124
+#, php-format
+msgctxt "singular custom field post type name"
+msgid "%1$s"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:126
+#: modules/author-custom-layouts/author-custom-layouts.php:133
+#, php-format
+msgid "New %1s"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:127
+#: modules/author-custom-layouts/author-custom-layouts.php:134
+#, php-format
+msgid "Add New %1$s"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:128
+#: modules/author-custom-layouts/author-custom-layouts.php:135
+#, php-format
+msgid "Edit %1$s"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:129
+#: modules/author-custom-layouts/author-custom-layouts.php:136
+#, php-format
+msgid "New %1$s"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:130
+#: modules/author-custom-layouts/author-custom-layouts.php:137
+#, php-format
+msgid "%2$s"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:131
+#: modules/author-custom-layouts/author-custom-layouts.php:138
+#, php-format
+msgid "View %1$s"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:132
+#: modules/author-custom-layouts/author-custom-layouts.php:139
+#, php-format
+msgid "Search %2$s"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:133
+#: modules/author-custom-layouts/author-custom-layouts.php:140
+#, php-format
+msgid "No %2$s found"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:134
+#: modules/author-custom-layouts/author-custom-layouts.php:141
+#, php-format
+msgid "No %2$s found in Trash"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:136
+#, php-format
+msgctxt "custom field post type menu name"
+msgid "%2$s"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:137
+#: modules/author-custom-layouts/author-custom-layouts.php:144
+#, php-format
+msgid "%1$s Image"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:138
+#: modules/author-custom-layouts/author-custom-layouts.php:145
+#, php-format
+msgid "Set %1$s Image"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:139
+#: modules/author-custom-layouts/author-custom-layouts.php:146
+#, php-format
+msgid "Remove %1$s Image"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:140
+#: modules/author-custom-layouts/author-custom-layouts.php:147
+#, php-format
+msgid "Use as %1$s Image"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:141
+#: modules/author-custom-layouts/author-custom-layouts.php:148
+#, php-format
+msgid "Filter %2$s list"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:142
+#: modules/author-custom-layouts/author-custom-layouts.php:149
+#, php-format
+msgid "%2$s list navigation"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:143
+#: modules/author-custom-layouts/author-custom-layouts.php:150
+#, php-format
+msgid "%2$s list"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:176
+msgid "Fields"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:192
+#: modules/author-custom-fields/author-custom-fields.php:193
+msgid "Custom Field updated."
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:194
+msgid "Custom Field published."
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:195
+msgid "Custom Field saved."
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:196
+msgid "Custom Field submitted."
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:218
+msgid "Custom Field"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:219
+msgid "Custom Fields"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:223
+#: modules/author-custom-layouts/author-custom-layouts.php:230
+#, php-format
+msgid "%1$s %2$s updated."
+msgid_plural "%1$s %3$s updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/author-custom-fields/author-custom-fields.php:229
+#: modules/author-custom-layouts/author-custom-layouts.php:236
+#, php-format
+msgid "%1$s %2$s not updated, somebody is editing it."
+msgid_plural "%1$s %3$s updated, somebody is editing them."
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/author-custom-fields/author-custom-fields.php:236
+#: modules/author-custom-layouts/author-custom-layouts.php:243
+#, php-format
+msgid "%1$s %2$s permanently deleted."
+msgid_plural "%1$s %3$s permanently deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/author-custom-fields/author-custom-fields.php:242
+#: modules/author-custom-layouts/author-custom-layouts.php:249
+#, php-format
+msgid "%1$s %2$s moved to the Trash."
+msgid_plural "%1$s %3$s moved to the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/author-custom-fields/author-custom-fields.php:248
+#: modules/author-custom-layouts/author-custom-layouts.php:255
+#, php-format
+msgid "%1$s %2$s restored from the Trash."
+msgid_plural "%1$s %3$s restored from the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/author-custom-fields/author-custom-fields.php:265
+#: modules/author-custom-layouts/author-custom-layouts.php:272
+msgid "Details"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:273
+msgid "Field Slug"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:276
+msgid "The slug allows only lowercase letters, numbers and underscore. It is used as an author's attribute when referencing the field in the custom layouts."
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:283
+msgid "Field Type"
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:291
+msgid "This description appears under the fields and helps users understand their choice."
+msgstr ""
+
+#: modules/author-custom-fields/author-custom-fields.php:524
+msgid "Slug"
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:66
+#: modules/author-custom-layouts/author-custom-layouts.php:127
+#: modules/author-custom-layouts/author-custom-layouts.php:182
+#: modules/author-custom-layouts/author-custom-layouts.php:226
+msgid "Author Layouts"
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:67
+#: modules/author-custom-layouts/author-custom-layouts.php:69
+msgid "Add support for custom layouts in the author boxes."
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:126
+#: modules/author-custom-layouts/author-custom-layouts.php:225
+msgid "Author Layout"
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:130
+#, php-format
+msgctxt "Author Layout post type name"
+msgid "%2$s"
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:131
+#, php-format
+msgctxt "singular author layout post type name"
+msgid "%1$s"
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:143
+#, php-format
+msgctxt "custom layout post type menu name"
+msgid "%2$s"
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:183
+msgid "Layouts"
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:199
+#: modules/author-custom-layouts/author-custom-layouts.php:200
+msgid "Author Layout updated."
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:201
+msgid "Author Layout published."
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:202
+msgid "Author Layout saved."
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:203
+msgid "Author Layout submitted."
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:280
+msgid "Layout Slug"
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:283
+msgid "The slug allows only lowercase letters, numbers and underscore. It is used for referencing the layout in shortcodes, hooks and functions."
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:288
+msgid "Layout Code"
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:289
+msgid "You can use Twig syntax here."
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:366
+msgid "Help"
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:380
+#, php-format
+msgid "The author layout accepts HTML and %s code. Javascript code is not accepted."
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:386
+msgid "Show author details:"
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:389
+msgid "URL for the Author's page"
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:392
+msgid "Author's website URL"
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:405
+msgid "Show avatar:"
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:412
+#, php-format
+msgid "Check the %s for additional variables and more detailed information."
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:412
+msgid "documentation"
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:620
+msgid "Boxed"
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:621
+msgid "Centered"
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:622
+msgid "Inline"
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:623
+msgid "Inline with Avatars"
+msgstr ""
+
+#: modules/author-custom-layouts/author-custom-layouts.php:624
+msgid "Simple List"
+msgstr ""
+
+#: modules/modules-settings/modules-settings.php:53
+msgid "Authors Settings"
+msgstr ""
+
+#: modules/modules-settings/modules-settings.php:222
+msgid "Features"
+msgstr ""
+
+#: modules/modules-settings/modules-settings.php:223
+msgid "Feel free to select only the features you need."
+msgstr ""
+
+#: modules/modules-settings/modules-settings.php:229
+msgid "Enabled features"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:84
+#: modules/multiple-authors/multiple-authors.php:86
+msgid "Add support for multiple authors on your content"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:128
+#: modules/settings/settings.php:283
+msgid "Posts"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:129
+#: modules/settings/settings.php:284
+msgid "Pages"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:281
+msgid "License key:"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:290
+msgid "Display PublishPress branding in the admin:"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:299
+msgid "Add to these post types:"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:307
+msgid "Automatically create author profiles:"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:316
+msgid "Remove author from new posts:"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:336
+msgid "Show below the content:"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:344
+msgid "Title for the author box:"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:352
+msgid "Layout:"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:360
+msgid "Show email link:"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:368
+msgid "Show site link:"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:431
+msgid "This will remove the default author when creating posts. This means that new posts will have no author until you select one."
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:447
+#: vendor/alledia/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:132
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Assets.php:124
+msgid "Activated"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:449
+msgid "Inactive"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:454
+msgid "Status: "
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:456
+msgid "Enter the license key for being able to update the plugin."
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:493
+msgid "This will display the authors box at the end of the content."
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:559
+msgid "Author profiles can be mapped to WordPress user accounts. This option allows you to automatically create author profiles when users are created in these roles. You can also do this for existing users by clicking the \"Create missed authors from role\" button in the Maintenance tab."
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:578
+msgid "This will display the authors email in the author box."
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:596
+msgid "This will display the authors site in the author box."
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:613
+#: modules/multiple-authors/multiple-authors.php:615
+msgid "Create missed post authors"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:619
+#: modules/multiple-authors/multiple-authors.php:621
+msgid "Create missed authors from role"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:625
+#: modules/multiple-authors/multiple-authors.php:628
+msgid "Create default layouts"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:632
+msgid "Delete Mapped Authors"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:634
+msgid "Delete all authors mapped to users"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:638
+msgid "Delete Guest Authors"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:640
+msgid "Delete all guest authors"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:646
+msgid "Please be careful clicking these buttons. Before clicking, we recommend taking a site backup in case anything goes wrong."
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:787
+msgid "General"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:788
+msgid "Display"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:789
+msgid "Maintenance"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:838
+msgid "This is how the author’s name will appears on your site."
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:846
+msgid "Author URL"
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:850
+msgid "This forms part of the URL for the author’s profile page. If you choose a Mapped User, this URL is taken from the user’s account and can not be changed."
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:982
+msgid "Error. Author terms could not be reseted."
+msgstr ""
+
+#: modules/multiple-authors/multiple-authors.php:991
+msgid "Maintenance completed successfully."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+#: modules/settings/settings.php:59
+msgid "PublishPress Multiple Authors Pro"
+msgstr ""
+
+#: modules/settings/settings.php:102
+msgid "PublishPress Settings"
+msgstr ""
+
+#: modules/settings/settings.php:103
+msgid "Settings"
+msgstr ""
+
+#: modules/settings/settings.php:216
+msgid "There are no PublishPress modules registered"
+msgstr ""
+
+#: modules/settings/settings.php:306
+#, php-format
+msgid "Disabled because add_post_type_support('%1$s', '%2$s') is included in a loaded file."
+msgstr ""
+
+#: publishpress-multiple-authors.php:41
+#, php-format
+msgid "Error: %1$s is not compatible with PressPermit Pro v2.7.23 or prior. Sorry, but we recommend updating PressPermit."
+msgstr ""
+
+#: publishpress-multiple-authors.php:123
+#, php-format
+msgid "New comment on your post \"%s\""
+msgstr ""
+
+#: publishpress-multiple-authors.php:125
+#, php-format
+msgid "Author : %1$s (IP: %2$s , %3$s)"
+msgstr ""
+
+#: publishpress-multiple-authors.php:127
+#, php-format
+msgid "E-mail : %s"
+msgstr ""
+
+#: publishpress-multiple-authors.php:128 publishpress-multiple-authors.php:140
+#: publishpress-multiple-authors.php:150
+#, php-format
+msgid "URL    : %s"
+msgstr ""
+
+#: publishpress-multiple-authors.php:129
+#, php-format
+msgid "Whois  : http://whois.arin.net/rest/ip/%s"
+msgstr ""
+
+#: publishpress-multiple-authors.php:131
+msgid "Comment: "
+msgstr ""
+
+#: publishpress-multiple-authors.php:132
+msgid "You can see all comments on this post here: "
+msgstr ""
+
+#: publishpress-multiple-authors.php:134
+#, php-format
+msgid "[%1$s] Comment: \"%2$s\""
+msgstr ""
+
+#: publishpress-multiple-authors.php:136
+#, php-format
+msgid "New trackback on your post \"%s\""
+msgstr ""
+
+#: publishpress-multiple-authors.php:138 publishpress-multiple-authors.php:148
+#, php-format
+msgid "Website: %1$s (IP: %2$s , %3$s)"
+msgstr ""
+
+#: publishpress-multiple-authors.php:141 publishpress-multiple-authors.php:151
+msgid "Excerpt: "
+msgstr ""
+
+#: publishpress-multiple-authors.php:142
+msgid "You can see all trackbacks on this post here: "
+msgstr ""
+
+#: publishpress-multiple-authors.php:144
+#, php-format
+msgid "[%1$s] Trackback: \"%2$s\""
+msgstr ""
+
+#: publishpress-multiple-authors.php:146
+#, php-format
+msgid "New pingback on your post \"%s\""
+msgstr ""
+
+#: publishpress-multiple-authors.php:153
+msgid "You can see all pingbacks on this post here: "
+msgstr ""
+
+#: publishpress-multiple-authors.php:155
+#, php-format
+msgid "[%1$s] Pingback: \"%2$s\""
+msgstr ""
+
+#: publishpress-multiple-authors.php:158
+#, php-format
+msgid "Permalink: %s"
+msgstr ""
+
+#: publishpress-multiple-authors.php:161
+#, php-format
+msgid "Trash it: %s"
+msgstr ""
+
+#: publishpress-multiple-authors.php:164
+#, php-format
+msgid "Delete it: %s"
+msgstr ""
+
+#: publishpress-multiple-authors.php:167
+#, php-format
+msgid "Spam it: %s"
+msgstr ""
+
+#: template-tags.php:175 template-tags.php:740
+msgid " and "
+msgstr ""
+
+#: template-tags.php:311
+#, php-format
+msgid "Posts by %s"
+msgstr ""
+
+#: template-tags.php:464 template-tags.php:712
+#, php-format
+msgid "Visit %s&#8217;s website"
+msgstr ""
+
+#: template-tags.php:659
+#, php-format
+msgid "Posts by %1$s"
+msgstr ""
+
+#: template-tags.php:741
+msgid ", and "
+msgstr ""
+
+#: tests/phpunit/bylines/test-bylines-rss.php:53
+msgid "ERROR: This is not a valid feed template."
+msgstr ""
+
+#: vendor/alledia/edd-sl-plugin-updater/EDD_SL_Plugin_Updater.php:332
+#, php-format
+msgid "There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr ""
+
+#: vendor/alledia/edd-sl-plugin-updater/EDD_SL_Plugin_Updater.php:341
+#, php-format
+msgid "There is a new version of %1$s available. %2$sView version %3$s details%4$s or %5$supdate now%6$s."
+msgstr ""
+
+#: vendor/alledia/edd-sl-plugin-updater/EDD_SL_Plugin_Updater.php:476
+msgid "You do not have permission to install plugin updates"
+msgstr ""
+
+#: vendor/alledia/edd-sl-plugin-updater/EDD_SL_Plugin_Updater.php:477
+msgid "Error"
+msgstr ""
+
+#: vendor/alledia/wordpress-edd-license-integration/src/core/License.php:122
+msgid "An error occurred. Please, try again."
+msgstr ""
+
+#: vendor/alledia/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:108
+msgid "Missing license"
+msgstr ""
+
+#: vendor/alledia/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:111
+msgid "Your license key is expired"
+msgstr ""
+
+#: vendor/alledia/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:114
+msgid "Your license key has been disabled"
+msgstr ""
+
+#: vendor/alledia/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:118
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Assets.php:123
+msgid "Invalid license"
+msgstr ""
+
+#: vendor/alledia/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:121
+msgid "Your license is not active for this URL"
+msgstr ""
+
+#: vendor/alledia/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:124
+msgid "This appears to be an invalid license key for this product"
+msgstr ""
+
+#: vendor/alledia/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:127
+msgid "Your license key has reached its activation limit"
+msgstr ""
+
+#: vendor/alledia/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:135
+msgid "Not validated yet"
+msgstr ""
+
+#: vendor/alledia/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:148
+msgid "Status"
+msgstr ""
+
+#: vendor/alledia/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:150
+msgid "Click here to read more about licenses."
+msgstr ""
+
+#: vendor/alledia/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:151
+msgid "More information"
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:193
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Assets.php:110
+msgid "Installed Extensions"
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:194
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Assets.php:111
+msgid "Browse More Extensions"
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:195
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Assets.php:112
+msgid "Enter your license key"
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:196
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Assets.php:113
+msgid "Activate"
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:197
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Assets.php:114
+msgid "License Key"
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:198
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Assets.php:115
+msgid "Change"
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:199
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Assets.php:116
+msgid "Get Pro Add-ons!"
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:339
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:347
+msgid "You're not allowed to do this."
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:343
+msgid "Invalid request."
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:352
+msgid "Invalid plugin name."
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:357
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:388
+msgid "Invalid addon name."
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:362
+msgid "Invalid addon EDD ID."
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:367
+msgid "Invalid license key."
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:384
+msgid "Invalid add-on."
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:416
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:428
+msgid "An error occurred. Please, try again or contact the support team."
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:516
+msgid "Please enter a valid license key to enable automatic updates."
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:518
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:555
+msgid "Enter License Key"
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:529
+msgid "Sorry, we couldn’t access the files for this update."
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Addons.php:530
+msgid "Please click this link for more details."
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Assets.php:118
+msgid "Please, enter a license key."
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Assets.php:119
+msgid "If the error persists, please contact the support team."
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Assets.php:121
+msgid "Awesome, it seems like you have all the add-ons installed. Thank you for supporting us."
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Assets.php:125
+msgid "This license key was not found."
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Assets.php:126
+msgid "This license key is disabled."
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Assets.php:127
+msgid "This license key has expired."
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Assets.php:128
+msgid "This license key has no activations left. Please, consider upgrading your plan."
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Reviews.php:242
+msgid "Ok, you deserve it"
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Reviews.php:243
+msgid "I already did"
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Reviews.php:244
+msgid "No, not good enough for now"
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Upgrade.php:86
+msgid "Upgrade"
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Upgrade.php:144
+#, php-format
+msgid "off the %s extensions"
+msgstr ""
+
+#: vendor/alledia/wordpress-plugin-framework/src/library/Module/Upgrade.php:145
+msgid "Get it"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://publishpress.com/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Add support for multiple authors"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://publishpress.com"
+msgstr ""

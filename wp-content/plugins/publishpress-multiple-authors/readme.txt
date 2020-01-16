@@ -1,11 +1,11 @@
-=== PublishPress Multiple Authors ===
+=== PublishPress Multiple Authors Pro ===
 Contributors: publishpress, andergmartins, stevejburge, pressshack
 Author: PublishPress, PressShack
 Author URI: https://publishpress.com
 Tags: publishpress, authors
 Requires at least: 4.6
-Tested up to: 4.9.5
-Stable tag: 2.1.3
+Tested up to: 5.2
+Stable tag: 3.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,6 +47,70 @@ There're two ways to install PublishPress plugin:
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec/v2.0.0.html).
+
+= [3.1.0] - 2019-11-19 =
+
+* Added: Added support to the function "do_shortcode" in the custom layouts;
+* Added: Added a shortcode for testing the output in the frontend (ppma_test);
+* Added: Expose the method "author.has_custom_avatar" method on custom layouts;
+* Added: New argument for post ID in the action "pp_multiple_authors_show_author_box";
+* Changed: Updated the EDD library;
+* Fixed: The React library is being downgraded (overridden) in WP 5.3;
+
+= [3.0.1] - 2019-09-30 =
+
+* Fixed: Backward compatibility issue with themes using the class PP_Multiple_authors_plugin and other legacy classes for custom layouts;
+* Fixed: Wrong size for avatars in Twenty Nineteen theme and probably other themes where the author avatar is using the CSS class "photo" instead of "avatar" for the image;
+* Fixed: JS error related to select2 being undefined;
+* Fixed: The author field was not working if no author was set for new posts;
+* Changed: Simplified the documentation on the sidebar for custom layouts;
+
+= [3.0.0] - 2019-09-24 =
+
+* Changed: Converted to a standalone plugin removing any dependency of PublishPress. Some constants and methods where renamed to avoid name collisions;
+* Added: Custom fields for authors;
+* Added: Custom layouts for customising the output;
+* Added: New filter for customising the rendered author box markup: pp_multiple_authors_author_box_rendered_markup;
+* Added: A warning message advising to update PressPermit Pro to the version 2.7.24 or later, if installed. This is not compatible with prior versions;
+* Added: Menu item specific for Authors;
+* Added: Settings field to hide the PublishPress brand in the admin;
+* Fixed: The shortcode was not supported in the archive page for displaying the author box;
+* Fixed: Incompatibility with legacy version of select2;
+* Fixed: PHP notice when the capability "ppma_edit_orphan_post" was not defined;
+* Fixed: WSOD in Gutenberg when a user tried to edit an orphan post (with no author);
+* Fixed: Some style issues related to settings fields and delete button on author fields;
+* Fixed: The query on author pages was catching diverse post types for logged in users with the capability ppma_edit_orphan_post;
+* Fixed: Error in the author page regarding the class Author not being found;
+* Fixed: Invalid rewrite rules being defined for custom post types, but not implemented;
+* Fixed: Author page displaying auto-drafts for logged in authors;
+* Fixed: Custom author's name being overwritten after select a mapped user;
+* Fixed: The query for deleting Guest authors is not detecting/deleting authors with custom avatar;
+* Fixed: Fix an issue related to wrong paths for assets in installations where ABSPATH = //;
+* Changed: Improved the settings page adding tabs;
+* Changed: The license key field was moved from PublishPress to the Multiple Authors Settings page;
+* Changed: The filter "pp_multiple_authors_filter_author_box_markup" is deprecated in favor of "pp_multiple_authors_author_box_rendered_markup";
+* Changed: Posts and Pages are enabled by default for Multiple Authors;
+* Changed: Updated the POT file;
+* Changed: Updated the text of notices for maintenance actions;
+
+= [2.3.0] - 2019-02-11 =
+
+* Fixed the authors column removing it from unselected post types;
+* Fixed the social icons in the frontend if not logged in;
+* Fixed PT-BR translations (Thanks to Dionizio Bach);
+* Fixed hardcoded table names in some queries;
+* Added support to custom avatars for guest and user mapped authors;
+* Added new inline layout with avatar;
+
+= [2.2.0] - 2019-01-14 =
+
+* Added support for the attributes: "show_title" and "layout" in the shortcode "author_box";
+* Added new layout: inline. This is good for using in theme builders or themes to replace standard author links. Fix support for Beaver Themer and Beaver Builder.
+* Removed the legacy field for the license key;
+* Fixed author metabox in the post form when the post has no author;
+* Fixed Author column in the post for no author;
+* Fixed the widget to not display anything if there is no author;
+* Added option to create posts with no author by default;
 
 = [2.1.3] - 2018-07-19 =
 

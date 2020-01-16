@@ -1,17 +1,18 @@
 <?php
 /**
- * @package     PublishPress\Multiple_authors
+ * @package     MultipleAuthors
  * @author      PublishPress <help@publishpress.com>
  * @copyright   Copyright (C) 2018 PublishPress. All rights reserved.
  * @license     GPLv2 or later
  * @since       1.0.0
  */
 
-namespace PublishPress\Addon\Multiple_authors;
+namespace MultipleAuthors;
 
+use Allex\Core;
+use MultipleAuthors\Classes\Legacy\LegacyPlugin;
 use Pimple\Container as Pimple;
 use Pimple\ServiceProviderInterface;
-use PP_Multiple_Authors;
 use PublishPress\EDD_License\Core\Container as EDDContainer;
 use PublishPress\EDD_License\Core\Services as EDDServices;
 use PublishPress\EDD_License\Core\ServicesConfig as EDDServicesConfig;
@@ -19,130 +20,143 @@ use Twig_Environment;
 use Twig_Loader_Filesystem;
 use Twig_SimpleFunction;
 
-defined( 'ABSPATH' ) or die( 'No direct script access allowed.' );
+defined('ABSPATH') or die('No direct script access allowed.');
 
 /**
  * Class Services
  */
-class Services implements ServiceProviderInterface {
-	/**
-	 * @since 1.2.3
-	 * @var PP_Multiple_Authors
-	 */
-	protected $module;
+class Services implements ServiceProviderInterface
+{
+    /**
+     * Registers services on the given container.
+     *
+     * This method should only be used to configure services and parameters.
+     * It should not get services.
+     *
+     * @param Pimple $container A container instance
+     *
+     * @since 1.2.3
+     *
+     */
+    public function register(Pimple $container)
+    {
+        $container['legacy_plugin'] = function ($c) {
+            return new LegacyPlugin();
+        };
 
-	/**
-	 * Services constructor.
-	 *
-	 * @since 1.2.3
-	 *
-	 * @param PP_Multiple_Authors $module
-	 */
-	public function __construct( PP_Multiple_Authors $module ) {
-		$this->module = $module;
-	}
+        $container['module'] = function ($c) {
+            $legacyPlugin = $c['legacy_plugin'];
 
-	/**
-	 * Registers services on the given container.
-	 *
-	 * This method should only be used to configure services and parameters.
-	 * It should not get services.
-	 *
-	 * @since 1.2.3
-	 *
-	 * @param Pimple $container A container instance
-	 */
-	public function register( Pimple $container ) {
-		$container['module'] = function ( $c ) {
-			return $this->module;
-		};
+            return $legacyPlugin->multiple_authors;
+        };
 
-		$container['LICENSE_KEY'] = function ( $c ) {
-			$key = '';
-			if ( isset( $c['module']->module->options->license_key ) ) {
-				$key = $c['module']->module->options->license_key;
-			}
+        $container['module_author_custom_fields'] = function ($c) {
+            $legacyPlugin = $c['legacy_plugin'];
 
-			return $key;
-		};
+            return $legacyPlugin->author_custom_fields;
+        };
 
-		$container['LICENSE_STATUS'] = function ( $c ) {
-			$status = '';
+        $container['LICENSE_KEY'] = function ($c) {
+            $key = '';
+            if (isset($c['module']->module->options->license_key)) {
+                $key = $c['module']->module->options->license_key;
+            }
 
-			if ( isset( $c['module']->module->options->license_status ) ) {
-				$status = $c['module']->module->options->license_status;
-			}
+            return $key;
+        };
 
-			return $status;
-		};
+        $container['LICENSE_STATUS'] = function ($c) {
+            $status = \MA_Multiple_Authors::LICENSE_STATUS_INVALID;
 
-		$container['edd_container'] = function ( $c ) {
-			$config = new EDDServicesConfig();
-			$config->setApiUrl( 'https://publishpress.com' );
-			$config->setLicenseKey( $c['LICENSE_KEY'] );
-			$config->setLicenseStatus( $c['LICENSE_STATUS'] );
-			$config->setPluginVersion( PUBLISHPRESS_MULTIPLE_AUTHORS_VERSION );
-			$config->setEddItemId( PP_MULTIPLE_AUTHORS_ITEM_ID );
-			$config->setPluginAuthor( 'PublishPress' );
-			$config->setPluginFile( PP_MULTIPLE_AUTHORS_FILE );
+            if (isset($c['module']->module->options->license_status)) {
+                $status = $c['module']->module->options->license_status;
+            }
 
-			$services = new EDDServices( $config );
+            return $status;
+        };
 
-			$eddContainer = new EDDContainer();
-			$eddContainer->register( $services );
+        $container['edd_container'] = function ($c) {
+            $config = new EDDServicesConfig();
+            $config->setApiUrl(PP_MULTIPLE_AUTHORS_SITE_URL);
+            $config->setLicenseKey($c['LICENSE_KEY']);
+            $config->setLicenseStatus($c['LICENSE_STATUS']);
+            $config->setPluginVersion(PUBLISHPRESS_MULTIPLE_AUTHORS_VERSION);
+            $config->setEddItemId(PP_MULTIPLE_AUTHORS_ITEM_ID);
+            $config->setPluginAuthor(PP_MULTIPLE_AUTHORS_PLUGIN_AUTHOR);
+            $config->setPluginFile(PP_MULTIPLE_AUTHORS_FILE);
 
-			return $eddContainer;
-		};
+            $services = new EDDServices($config);
 
-		$container['twig_loader'] = function ( $c ) {
-			$loader = new Twig_Loader_Filesystem( PP_MULTIPLE_AUTHORS_PATH_BASE . '/twig' );
+            $eddContainer = new EDDContainer();
+            $eddContainer->register($services);
 
-			return $loader;
-		};
+            return $eddContainer;
+        };
 
-		$container['twig'] = function ( $c ) {
-			$twig = new Twig_Environment( $c['twig_loader'], [
-				'debug' => true,
-			] );
+        $container['framework'] = function ($c) {
+            // The 4th param is there just for backward compatibility with older versions of the Allex framework
+            // packed in UpStream (in case it is installed and loaded).
+            return new Core(
+                PP_MULTIPLE_AUTHORS_BASENAME,
+                PP_MULTIPLE_AUTHORS_SITE_URL,
+                PP_MULTIPLE_AUTHORS_PLUGIN_AUTHOR,
+                ''
+            );
+        };
 
-			$twig->addExtension(new \Twig_Extension_Debug());
+        $container['twig_loader'] = function ($c) {
+            $loader = new Twig_Loader_Filesystem(PP_MULTIPLE_AUTHORS_BASE_PATH . 'twig');
 
-			$function = new Twig_SimpleFunction( 'settings_fields', function () use ( $c ) {
-				return settings_fields( 'publishpress_multiple_authors_options' );
-			} );
-			$twig->addFunction( $function );
+            return $loader;
+        };
 
-			$function = new Twig_SimpleFunction( 'nonce_field', function ( $context ) {
-				return wp_nonce_field( $context );
-			} );
-			$twig->addFunction( $function );
+        $container['twig'] = function ($c) {
+            $twig = new Twig_Environment($c['twig_loader']);
 
-			$function = new Twig_SimpleFunction( 'submit_button', function () {
-				return submit_button();
-			} );
-			$twig->addFunction( $function );
+            $function = new Twig_SimpleFunction('settings_fields', function () use ($c) {
+                return settings_fields('multiple_authors_options');
+            });
+            $twig->addFunction($function);
 
-			$function = new Twig_SimpleFunction( '__', function ( $id ) {
-				return __( $id, 'publishpress-multiple-authors' );
-			} );
-			$twig->addFunction( $function );
+            $function = new Twig_SimpleFunction('nonce_field', function ($context) {
+                return wp_nonce_field($context);
+            });
+            $twig->addFunction($function);
 
-			$function = new Twig_SimpleFunction( 'do_settings_sections', function ( $section ) {
-				return do_settings_sections( $section );
-			} );
-			$twig->addFunction( $function );
+            $function = new Twig_SimpleFunction('submit_button', function () {
+                return submit_button();
+            });
+            $twig->addFunction($function);
 
-			$function = new \Twig_SimpleFunction( 'esc_attr', function ( $string ) {
-				return esc_attr( $string );
-			} );
-			$twig->addFunction( $function );
+            $function = new Twig_SimpleFunction('__', function ($id) {
+                return __($id, 'publishpress-multiple-authors');
+            });
+            $twig->addFunction($function);
 
-			$function = new \Twig_SimpleFunction( 'get_avatar', function ( $user_email, $size = 35) {
-				return get_avatar( $user_email, $size );
-			} );
-			$twig->addFunction( $function );
+            $function = new Twig_SimpleFunction('do_settings_sections', function ($section) {
+                return do_settings_sections($section);
+            });
+            $twig->addFunction($function);
 
-			return $twig;
-		};
-	}
+            $function = new \Twig_SimpleFunction('esc_attr', function ($string) {
+                return esc_attr($string);
+            });
+            $twig->addFunction($function);
+
+            $function = new \Twig_SimpleFunction('do_shortcode', function ($string) {
+                do_shortcode($string);
+            });
+            $twig->addFunction($function);
+
+            /**
+             * @deprecated 2.2.1 Replaced by the author.avatar attribute, which includes avatar for guest authors.
+             */
+            $function = new \Twig_SimpleFunction('get_avatar', function ($user_email, $size = 35) {
+                return get_avatar($user_email, $size);
+            });
+            $twig->addFunction($function);
+
+            return $twig;
+        };
+    }
 }

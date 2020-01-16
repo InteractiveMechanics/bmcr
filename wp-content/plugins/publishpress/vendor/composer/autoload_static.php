@@ -4,18 +4,30 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit07ee49dc1d4d96922078443d4192a8c4
+class ComposerStaticInitd5e787e66010b2dddd004eb4f8b991d6
 {
+    public static $files = array (
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'T' => 
         array (
             'Twig\\' => 5,
         ),
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Ctype\\' => 23,
+        ),
         'P' => 
         array (
             'PublishPress\\Core\\' => 18,
-            'PublishPress\\Builder\\' => 21,
             'Psr\\Container\\' => 14,
+        ),
+        'A' => 
+        array (
+            'Allex\\' => 6,
+            'Alledia\\Builder\\' => 16,
         ),
     );
 
@@ -24,17 +36,25 @@ class ComposerStaticInit07ee49dc1d4d96922078443d4192a8c4
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
         ),
+        'Symfony\\Polyfill\\Ctype\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
         'PublishPress\\Core\\' => 
         array (
             0 => __DIR__ . '/../..' . '/core',
         ),
-        'PublishPress\\Builder\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/publishpress/wordpress-plugin-builder/src',
-        ),
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'Allex\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/alledia/wordpress-plugin-framework/src/library',
+        ),
+        'Alledia\\Builder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/alledia/wordpress-plugin-builder/src',
         ),
     );
 
@@ -58,9 +78,9 @@ class ComposerStaticInit07ee49dc1d4d96922078443d4192a8c4
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit07ee49dc1d4d96922078443d4192a8c4::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit07ee49dc1d4d96922078443d4192a8c4::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit07ee49dc1d4d96922078443d4192a8c4::$prefixesPsr0;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitd5e787e66010b2dddd004eb4f8b991d6::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitd5e787e66010b2dddd004eb4f8b991d6::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitd5e787e66010b2dddd004eb4f8b991d6::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

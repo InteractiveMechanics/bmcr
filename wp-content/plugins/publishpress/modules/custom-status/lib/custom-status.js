@@ -1,6 +1,5 @@
 jQuery(document).ready(function () {
 
-
     jQuery('label[for=post_status]').show();
     jQuery('#post-status-display').show();
 
@@ -108,7 +107,7 @@ jQuery(document).ready(function () {
     }
 
     // Add custom statuses to Status dropdown
-    function pp_append_to_dropdown(id) {
+    function pp_append_to_dropdown (id) {
 
         // Empty dropdown except for 'future' because we need to persist that
         jQuery(id + ' option').not('[value="future"]').remove();
@@ -121,6 +120,11 @@ jQuery(document).ready(function () {
             );
         }
 
+        var status_select_options_values = jQuery('option', jQuery(id))
+          .map(function getSelectOptionValue(option_index, option) { return option.value; })
+          .toArray()
+          .filter(function isSelectOptionUnique(option_value, option_value_index, self) { return self.indexOf(option_value) === option_value_index });
+
         // Add remaining statuses to dropdown. 'private' is always handled by a checkbox, and 'future' already exists if we need it
         jQuery.each(custom_statuses, function () {
             if (this.slug == 'private' || this.slug == 'future')
@@ -128,6 +132,8 @@ jQuery(document).ready(function () {
 
             if (current_status != 'publish' && this.slug == 'publish')
                 return;
+
+            if (status_select_options_values.indexOf(this.slug) >= 0) return;
 
             var $option = jQuery('<option></option>')
                 .text(this.name)
@@ -138,10 +144,12 @@ jQuery(document).ready(function () {
             if (current_status == this.slug) $option.attr('selected', 'selected');
 
             $option.appendTo(jQuery(id));
+
+            status_select_options_values.push(this.slug);
         });
     }
 
-    function pp_can_change_status(slug) {
+    function pp_can_change_status (slug) {
         var change = false;
 
         jQuery.each(custom_statuses, function () {
@@ -153,22 +161,22 @@ jQuery(document).ready(function () {
         return change;
     }
 
-    function pp_add_tooltips_to_filter_links(selector) {
+    function pp_add_tooltips_to_filter_links (selector) {
         jQuery.each(custom_statuses, function () {
             jQuery(selector + ':contains("' + this.name + '")')
-                .attr('title', this.description)
-        })
+                .attr('title', this.description);
+        });
 
     }
 
     // Update "Save" button text
-    function pp_update_save_button(text) {
+    function pp_update_save_button (text) {
         if (!text) text = 'Save as ' + jQuery('select[name="post_status"] :selected').text();
         jQuery(':input#save-post').attr('value', text);
     }
 
     // Returns the name of the status given a slug
-    function pp_get_status_name(slug) {
+    function pp_get_status_name (slug) {
         var name = '';
         jQuery.each(custom_statuses, function () {
             if (this.slug == slug) name = this.name;
@@ -189,9 +197,9 @@ jQuery(document).ready(function () {
 
     // Remove the " - " in between a post title and the post-state span (separately hidden via CSS).
     // This will not affect the dash before post-state-format spans.
-    function pp_remove_post_title_trailing_dashes() {
+    function pp_remove_post_title_trailing_dashes () {
         jQuery('.post-title.column-title strong').each(function () {
-            jQuery(this).html(jQuery(this).html().replace(/(.*) - (<span class="post-state".*<\/span>)$/g, "$1$2"));
+            jQuery(this).html(jQuery(this).html().replace(/(.*) - (<span class="post-state".*<\/span>)$/g, '$1$2'));
         });
     }
 });

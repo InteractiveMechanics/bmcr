@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PressPermit Teaser Module\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-27 12:25-0500\n"
+"POT-Creation-Date: 2020-01-09 13:00-0500\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Kevin Behrens <kevin@publishpress.com>\n"
 "Language-Team: PublishPress <help@publishpress.com>\n"
@@ -16,33 +16,33 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_c;__ngettext;_n;_pptx_po_trigger;_x\n"
 "X-Poedit-SearchPath-0: F:\\snapshot\\presspermit-pro\\modules\\presspermit-teaser\n"
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-teaser/presspermit-teaser.php:55
+#: F:\snapshot\presspermit-pro\modules\presspermit-teaser/presspermit-teaser.php:53
 #: F:\snapshot\presspermit-pro\modules\presspermit-teaser/classes/Permissions/Teaser/UI/SettingsTabTeaser.php:21
 #: F:\snapshot\presspermit-pro\modules\presspermit-teaser/classes/Permissions/Teaser/UI/SettingsTabTeaser.php:77
 msgid "Teaser"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-teaser/classes/Permissions/TeaserHooks.php:23
+#: F:\snapshot\presspermit-pro\modules\presspermit-teaser/classes/Permissions/TeaserHooks.php:25
 msgid "View the content of this <a href='%permalink%'>article</a>"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-teaser/classes/Permissions/TeaserHooks.php:38
+#: F:\snapshot\presspermit-pro\modules\presspermit-teaser/classes/Permissions/TeaserHooks.php:40
 msgid "Sorry, this content requires additional permissions.  Please contact an administrator for help."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-teaser/classes/Permissions/TeaserHooks.php:39
+#: F:\snapshot\presspermit-pro\modules\presspermit-teaser/classes/Permissions/TeaserHooks.php:41
 msgid "Sorry, you don't have access to this content.  Please log in or contact a site administrator for help."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-teaser/classes/Permissions/TeaserHooks.php:48
+#: F:\snapshot\presspermit-pro\modules\presspermit-teaser/classes/Permissions/TeaserHooks.php:50
 msgid "note: This content requires a higher login level."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-teaser/classes/Permissions/TeaserHooks.php:49
+#: F:\snapshot\presspermit-pro\modules\presspermit-teaser/classes/Permissions/TeaserHooks.php:51
 msgid "note: This content requires site login."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-teaser/classes/Permissions/Teaser/PostsTeaser.php:360
+#: F:\snapshot\presspermit-pro\modules\presspermit-teaser/classes/Permissions/Teaser/PostsTeaser.php:356
 #, php-format
 msgid "%s..."
 msgstr ""
@@ -204,7 +204,7 @@ msgid "Page slug (logged users):"
 msgstr ""
 
 #: F:\snapshot\presspermit-pro\modules\presspermit-teaser/classes/Permissions/Teaser/UI/SettingsTabTeaser.php:459
-msgid "Optionally, specify page slug for redirect when teased content is accessed."
+msgid "Optionally, specify page slug or \"[login]\" for redirect when teased content is accessed."
 msgstr ""
 
 #: F:\snapshot\presspermit-pro\modules\presspermit-teaser/classes/Permissions/Teaser/UI/SettingsTabTeaser.php:465

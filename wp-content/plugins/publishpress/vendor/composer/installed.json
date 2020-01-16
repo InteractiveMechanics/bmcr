@@ -1,5 +1,116 @@
 [
     {
+        "name": "alledia/wordpress-plugin-builder",
+        "version": "dev-development",
+        "version_normalized": "dev-development",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/publishpress/WordPress-Plugin-Builder.git",
+            "reference": "1bf3a36415281289623492efdd4841308a2f6e94"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/publishpress/WordPress-Plugin-Builder/zipball/1bf3a36415281289623492efdd4841308a2f6e94",
+            "reference": "1bf3a36415281289623492efdd4841308a2f6e94",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0"
+        },
+        "time": "2019-01-04T14:59:35+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Alledia\\Builder\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "PublishPress",
+                "email": "help@publishpress.com",
+                "homepage": "https://publishpress.com"
+            },
+            {
+                "name": "Alledia",
+                "email": "help@alledia.com"
+            },
+            {
+                "name": "UpStream",
+                "email": "help@upstream.com"
+            },
+            {
+                "name": "Anderson Grudtner Martins",
+                "email": "anderson@grudtner.me",
+                "homepage": "http://anderson.grudtner.me",
+                "role": "Lead Developer"
+            }
+        ],
+        "description": "Base classes and Phing scripts for building WordPress plugins",
+        "keywords": [
+            "builder",
+            "phing",
+            "plugin",
+            "wordpress"
+        ]
+    },
+    {
+        "name": "alledia/wordpress-plugin-framework",
+        "version": "0.6.8",
+        "version_normalized": "0.6.8.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/publishpress/WordPress-Plugin-Framework.git",
+            "reference": "d92bdbda933412f8d04f7088b758c81f1eb4fba0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/publishpress/WordPress-Plugin-Framework/zipball/d92bdbda933412f8d04f7088b758c81f1eb4fba0",
+            "reference": "d92bdbda933412f8d04f7088b758c81f1eb4fba0",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "pimple/pimple": "~3.0",
+            "twig/twig": "~1.20"
+        },
+        "time": "2019-11-19T16:38:51+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Allex\\": "src/library"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Alledia",
+                "email": "help@alledia.com",
+                "homepage": "https://alledia.com"
+            },
+            {
+                "name": "Anderson Grudtner Martins",
+                "email": "anderson@grudtner.me",
+                "homepage": "http://anderson.grudtner.me",
+                "role": "Lead Developer"
+            }
+        ],
+        "description": "Alledia framework for creating WordPress plugins.",
+        "keywords": [
+            "framework",
+            "plugin",
+            "wordpress"
+        ]
+    },
+    {
         "name": "pimple/pimple",
         "version": "v3.2.3",
         "version_normalized": "3.2.3.0",
@@ -103,62 +214,94 @@
         ]
     },
     {
-        "name": "publishpress/wordpress-plugin-builder",
-        "version": "2.1.6",
-        "version_normalized": "2.1.6.0",
+        "name": "symfony/polyfill-ctype",
+        "version": "v1.12.0",
+        "version_normalized": "1.12.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/OSTraining/WordPress-Plugin-Builder",
-            "reference": "92d16a9b3f48898e09ccf9f89cf0e1e9467c8a63"
-        },
-        "time": "2018-05-17T22:26:21+00:00",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "PublishPress\\Builder\\": "src/"
-            }
-        },
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "PublishPress",
-                "email": "help@publishpress.com",
-                "homepage": "https://publishpress.com"
-            }
-        ],
-        "description": "Base class for WordPress plugin builder"
-    },
-    {
-        "name": "twig/twig",
-        "version": "v1.35.3",
-        "version_normalized": "1.35.3.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/twigphp/Twig.git",
-            "reference": "b48680b6eb7d16b5025b9bfc4108d86f6b8af86f"
+            "url": "https://github.com/symfony/polyfill-ctype.git",
+            "reference": "550ebaac289296ce228a706d0867afc34687e3f4"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/twigphp/Twig/zipball/b48680b6eb7d16b5025b9bfc4108d86f6b8af86f",
-            "reference": "b48680b6eb7d16b5025b9bfc4108d86f6b8af86f",
+            "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/550ebaac289296ce228a706d0867afc34687e3f4",
+            "reference": "550ebaac289296ce228a706d0867afc34687e3f4",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.3"
         },
-        "require-dev": {
-            "psr/container": "^1.0",
-            "symfony/debug": "^2.7",
-            "symfony/phpunit-bridge": "^3.3"
+        "suggest": {
+            "ext-ctype": "For best performance"
         },
-        "time": "2018-03-20T04:25:58+00:00",
+        "time": "2019-08-06T08:03:45+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.35-dev"
+                "dev-master": "1.12-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Polyfill\\Ctype\\": ""
+            },
+            "files": [
+                "bootstrap.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Gert de Pagter",
+                "email": "BackEndTea@gmail.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony polyfill for ctype functions",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "compatibility",
+            "ctype",
+            "polyfill",
+            "portable"
+        ]
+    },
+    {
+        "name": "twig/twig",
+        "version": "v1.37.1",
+        "version_normalized": "1.37.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/twigphp/Twig.git",
+            "reference": "66be9366c76cbf23e82e7171d47cbfa54a057a62"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/twigphp/Twig/zipball/66be9366c76cbf23e82e7171d47cbfa54a057a62",
+            "reference": "66be9366c76cbf23e82e7171d47cbfa54a057a62",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0",
+            "symfony/polyfill-ctype": "^1.8"
+        },
+        "require-dev": {
+            "psr/container": "^1.0",
+            "symfony/debug": "^2.7",
+            "symfony/phpunit-bridge": "^3.4.19|^4.1.8"
+        },
+        "time": "2019-01-14T14:59:29+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.37-dev"
             }
         },
         "installation-source": "dist",
@@ -188,12 +331,12 @@
             },
             {
                 "name": "Twig Team",
-                "homepage": "http://twig.sensiolabs.org/contributors",
+                "homepage": "https://twig.symfony.com/contributors",
                 "role": "Contributors"
             }
         ],
         "description": "Twig, the flexible, fast, and secure template language for PHP",
-        "homepage": "http://twig.sensiolabs.org",
+        "homepage": "https://twig.symfony.com",
         "keywords": [
             "templating"
         ]

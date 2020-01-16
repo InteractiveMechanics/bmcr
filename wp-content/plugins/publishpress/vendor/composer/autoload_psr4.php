@@ -7,7 +7,9 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Twig\\' => array($vendorDir . '/twig/twig/src'),
+    'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
     'PublishPress\\Core\\' => array($baseDir . '/core'),
-    'PublishPress\\Builder\\' => array($vendorDir . '/publishpress/wordpress-plugin-builder/src'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
+    'Allex\\' => array($vendorDir . '/alledia/wordpress-plugin-framework/src/library'),
+    'Alledia\\Builder\\' => array($vendorDir . '/alledia/wordpress-plugin-builder/src'),
 );

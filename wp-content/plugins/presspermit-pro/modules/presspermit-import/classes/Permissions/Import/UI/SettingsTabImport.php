@@ -84,7 +84,7 @@ class SettingsTabImport
             <table class="form-table pp-form-table pp-options-table">
                 <tr>
                     <td>
-                        <h3><?php _e('PressPermit Import Results:', 'ppi'); ?></h3>
+                        <h3><?php _e('Permissions Import Results:', 'ppi'); ?></h3>
                         <?php
 
                         if ($pp_import->timed_out && array_diff($pp_import->num_imported, ['0'])) :

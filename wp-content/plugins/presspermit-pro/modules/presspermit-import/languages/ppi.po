@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PressPermit Import Module\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-27 12:23-0500\n"
+"POT-Creation-Date: 2020-01-09 12:59-0500\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Kevin Behrens <kevin@publishpress.com>\n"
 "Language-Team: PublishPress <kevin@agapetry.net>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_c;__ngettext;_n;pp_po_trigger;_x\n"
 "X-Poedit-SearchPath-0: F:\\snapshot\\presspermit-pro\\modules\\presspermit-import\n"
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-import/presspermit-import.php:54
+#: F:\snapshot\presspermit-pro\modules\presspermit-import/presspermit-import.php:52
 #: F:\snapshot\presspermit-pro\modules\presspermit-import/classes/Permissions/Import/UI/SettingsTabImport.php:22
 msgid "Import"
 msgstr ""
@@ -24,7 +24,7 @@ msgstr ""
 #: F:\snapshot\presspermit-pro\modules\presspermit-import/classes/Permissions/Import/Importer.php:36
 #: F:\snapshot\presspermit-pro\modules\presspermit-import/classes/Permissions/Import/Importer.php:44
 #: F:\snapshot\presspermit-pro\modules\presspermit-import/classes/Permissions/Import/Importer.php:52
-msgid "You are not allowed to manage PressPermit settings"
+msgid "You are not allowed to manage Permissions settings"
 msgstr ""
 
 #: F:\snapshot\presspermit-pro\modules\presspermit-import/classes/Permissions/Import/Updated.php:10
@@ -96,7 +96,7 @@ msgid "%1$s imported: %2$s"
 msgstr ""
 
 #: F:\snapshot\presspermit-pro\modules\presspermit-import/classes/Permissions/Import/UI/SettingsTabImport.php:87
-msgid "PressPermit Import Results:"
+msgid "Permissions Import Results:"
 msgstr ""
 
 #: F:\snapshot\presspermit-pro\modules\presspermit-import/classes/Permissions/Import/UI/SettingsTabImport.php:131
@@ -178,7 +178,7 @@ msgid "Current Press Permit 0.9/1.x configuration is not modified or deleted. Yo
 msgstr ""
 
 #: F:\snapshot\presspermit-pro\modules\presspermit-import/classes/Permissions/Import/UI/SettingsTabImport.php:229
-msgid "Editability conditions are converted to Post Edit Exceptions for specific posts, assigned to applicable WP Role metagroups."
+msgid "Editorial conditions are converted to Post Edit Exceptions for specific posts, assigned to applicable WP Role metagroups."
 msgstr ""
 
 #: F:\snapshot\presspermit-pro\modules\presspermit-import/classes/Permissions/Import/UI/SettingsTabImport.php:230

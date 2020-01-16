@@ -6,13 +6,16 @@ Section II  : GNU General Public License
 Section I   : Credits
 =====================================================================
 Code contributors include (but not limited to):
-Kevin Behrens - Agapetry Creations LLC
+* Kevin Behrens - Agapetry Creations LLC
+* PublishPress
 
 Copyrights:
-All works distributed with the PressPermit Plugin for WordPress are
-copyrighted by their respective authors.  For more complete copyright
-and licensing information, see the copyright notices contained in the
-source code files.
+Copyright 2020 PublishPress
+
+All works distributed with the PublishPress Permissions Pro plugin for 
+WordPress are copyrighted by their respective authors.  For more 
+complete copyright and licensing information, see the copyright notices 
+contained in the source code files.
 
 Section II  : GNU General Public License
 =====================================================================

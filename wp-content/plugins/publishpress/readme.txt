@@ -1,56 +1,52 @@
-=== PublishPress helps WordPress teams create great content ===
-Contributors: publishpress, andergmartins, stevejburge, pressshack
+=== PublishPress Content Calendar and Notifications ===
+Contributors: publishpress, andergmartins, stevejburge, pressshack, kevinb, deenison
 Author: PublishPress, PressShack
 Author URI: https://publishpress.com
-Tags: Content Calendar, Editorial Calendar, workflow, checklist, permissions
+Tags: notifications, Editorial Calendar, workflow, statuses, permissions
 Requires at least: 4.6
 Requires PHP: 5.4
-Tested up to: 4.9.5
-Stable tag: 1.14.1
+Tested up to: 5.3
+Stable tag: 1.21.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-PublishPress is the plugin for WordPress teams. Your team gets an editorial calendar, flexible permissions and notification workflows.
+PublishPress is the plugin for professional publishers. Get an editorial calendar, flexible permissions and notifications.
 
 == Description ==
 
-The slogan of PublishPress is “WordPress for Teams”.
+PublishPress can help you create great content in WordPress. Here’s an overview of the publishing tools you’ll find in PublishPress:
 
-PublishPress is the essential plugin for any WordPress site with multiple team members.
 
-PublishPress has multiple tools that help your team stay organized when creating content:
-
-* Use the [Editorial Calendar](https://publishpress.com/docs/calendar/) and [Content Overview](https://publishpress.com/docs/content-overview/) to get a clear picture of all your planned and published content.
-* You can write [Comments](https://publishpress.com/docs/editorial-comments/) to leave feedback.
-* Set up [Notification Workflows](https://publishpress.com/docs/notifications/) to keep your team up-to-date with what’s happening.
+* There’s a beautiful [Editorial Calendar](https://publishpress.com/docs/calendar/) to give a clear picture of all your planned and published content.
+* You can create [Notifications](https://publishpress.com/docs/notifications/) to keep your team up-to-date with what’s happening.
+* You can write [Editorial Comments](https://publishpress.com/docs/editorial-comments/) to leave feedback for your site’s authors.
+* There are [Custom Statuses](https://publishpress.com/docs/custom-statuses/) so you can see where content is in your publishing workflow.
+* The [Content Overview](https://publishpress.com/docs/calendar/) screen allows you to drill down and analyze your site’s content.
 * You can add [Metadata](https://publishpress.com/docs/editorial-metadata/) to give your team extra information about each post.
-* Create [Custom Statuses](https://publishpress.com/docs/custom-statuses/) so that WordPress matches your team’s workflow.
 
-Interested in finding out more?
+Interested in finding out more about PublishPress?
 
-[Click here to try a free demo of PublishPress](https://publishpress.com/demo/).
-[Check out premium add-ons](https://publishpress.com/pricing/) for access to all the PublishPress features.
-
+* [Check out the premium add-ons](https://publishpress.com/pricing/) for access to all the PublishPress features.
 
 = WHO SHOULD USE PUBLISHPRESS? =
 
-PublishPress is ideal for WordPress sites that have content teams. With PublishPress, you can collaborate much more effectively. This makes PublishPress a great solution for any site with multiple users. PublishPress is often used by companies and non-profits, universities and schools, plus by magazines, newspapers and blogs.
+PublishPress is ideal for WordPress sites that publish high-quality content. With PublishPress, you can collaborate much more effectively. This makes PublishPress a great solution for any site with multiple users. PublishPress is often used by companies and non-profits, universities and schools, plus by magazines, newspapers and blogs.
 
 = PREMIUM ADD-ONS FOR PUBLISHPRESS =
 
-* [Content Checklist](https://publishpress.com/addons/content-checklist/): Set high standards for all your published content
-* [Multiple Authors](https://publishpress.com/addons/multiple-authors-publishpress/): Easily assign multiple authors to one content item
-* [Permissions](https://publishpress.com/addons/publishpress-permissions/): Control who gets the click the “Publish” button
-* [WooCommerce Checklist](https://publishpress.com/addons/woocommerce-checklist/): Set high standards for all your WooCommerce products
-* [Slack Notifications](https://publishpress.com/addons/publishpress-slack/): Get Slack updates for all content changes
-
-[Check out premium add-ons](https://publishpress.com/pricing/) for access to all the PublishPress features.
+* [Content Checklist](https://publishpress.com/addons/content-checklist/): Set high standards for all your published content.
+* [Multiple Authors](https://publishpress.com/addons/multiple-authors-publishpress/): Easily assign multiple authors to one content item.
+* [Reminders](http://publishpress.com/addons/reminders): Automatically send notifications before or after content is published.
+* [Permissions](https://publishpress.com/addons/publishpress-permissions/): Control who gets to click the “Publish” button.
+* [WooCommerce Checklist](https://publishpress.com/addons/woocommerce-checklist/): Set high standards for all your WooCommerce products.
+* [Slack Notifications](https://publishpress.com/addons/publishpress-slack/): Get Slack updates for all content changes.
 
 = EDITORIAL CALENDAR =
 
 The calendar gives you a powerful overview of your publishing schedule. Using the Editorial Calendar, you can easily see when content is planned, and when it was published. You can also drag-and-drop content to a new publication date. By default, you see all the WordPress content you have planned for the next six weeks. If you need to drill down, you can filter the calendar by post status, categories, users or post types.
 
-* [Click here for more on the PublishPress Editorial Calendar](https://publishpress.com/docs/calendar/)
+[Click here for more on the PublishPress Editorial Calendar](https://publishpress.com/docs/calendar/)
+
 
 = NOTIFICATION WORKFLOWS =
 
@@ -65,7 +61,7 @@ The Content Overview screen is a companion to the Calendar screen. Whereas the C
 * [Click here for more on the PublishPress Content Overview](https://publishpress.com/docs/content-overview/)
 
 = CUSTOM STATUSES =
-
+ tru
 This feature allows you to create custom post statuses such as “In Progress” or “Pending Review”. You can define statuses to match the stages of your team’s publishing workflow.
 
 By default, WordPress provides you with a very limited set of status choices: Draft and Pending Review. With PublishPress you’ll see a much wider range of options. When you first install PublishPress, you’ll see these extra statuses: Pitch, Assigned, and In Progress. You can then create more custom post statuses to define the stages of your publishing workflow.
@@ -78,21 +74,21 @@ A very important feature in PublishPress is commenting. You can leave comments u
 
 * [Click here for more on PublishPress Editorial Comments](https://publishpress.com/docs/editorial-comments/)
 
-= EDITORIAL METADATA =
+= METADATA =
 
-Metadata enabled you to keep track of important requirements for your content. This feature allows you to create fields and store information about content items.
+Metadata enables you to keep track of important requirements for your content. This feature allows you to create fields and store information about content items.
 
 By default, PublishPress provide 4 examples of metadata, but you can add your own to meet your team’s needs.
 
 * [Click here for more on PublishPress Editorial Metadata](https://publishpress.com/docs/editorial-metadata/)
 
-= CUSTOM USER ROLES =
+= USER GROUPS =
 
-For larger organizations, user roles can keep your publishing workflows organized and make sure notifications are sent to the correct people.
+For larger organizations with many people involved in the publishing process, user groups help keep your workflow organized and informed.
 
-To find the role settings, go to the PublishPress link in your WordPress admin area, and click the “Roles” link.
+To find the user settings, go to the PublishPress link in your WordPress admin area, and click the “User Groups” tab. By default, PublishPress provides four user groups: Copy Editors, Photographers, Reporters and Section Editors.
 
-* [Click here for more on PublishPress Custom User Roles](https://publishpress.com/docs/roles/)
+* [Click here for more on PublishPress User Groups](https://publishpress.com/docs/user-groups/)
 
 = IMPORTING FROM EDITFLOW =
 
@@ -101,22 +97,9 @@ PublishPress is based on the EditFlow plugin. It is easy for Edit Flow users to 
 * [Click here for full instructions on moving from Edit Flow to PublishPress](https://publishpress.com/docs/migrate/)
 
 = I FOUND A BUG, OR WANT TO CONTRIBUTE CODE =
+Great! We’d love to hear from you! PublishPress [is available on Github](https://github.com/AllediaWordPress/PublishPress), and we welcome contributions from everyone.
 
-Great! We’d love to hear from you! PublishPress [is available on Github](https://github.com/OSTraining/PublishPress), and we welcome contributions from everyone.
-
-== Frequently Asked Questions ==
-
-= Where Can I Get Support? =
-
-You can ask for help via [the PublishPress contact form](https://publishpress.com/contact/).
-
-= Do I Need Coding Skills to Use PublishPress? =
-
-Not at all. You can set up everything your team needs without any coding knowledge. We made it super easy.
-
-== Screenshots ==
-
-1. With Calendar you can see your posts over a customizable date range
+= FAQ =
 
 == Installation ==
 
@@ -128,10 +111,272 @@ You can install PublishPress through your WordPress admin area:
 1. Install the PublishPress plugin.
 1. Activate the PublishPress plugin.
 
+= Where Can I Get Support? =
+
+You can ask for help via [the PublishPress contact form](https://publishpress.com/contact/).
+ph
+= Do I Need Coding Skills to Use PublishPress? =
+
+Not at all. You can set up everything your team needs without any coding knowledge. We made it super easy.
+
+== Screenshots ==
+
+1. With Calendar you can see your posts over a customizable date range.
+
 == Changelog ==
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
+
+= [1.21.2] - 2019-11-19 =
+
+* Added: New action for writing a debug log message: publishpress_debug_write_log;
+* Added: Show receiver's data in the notifications log;
+* Fixed: Email errors in the log for the Post SMTP plugin;
+* Fixed: Wrong URL protocols in the Notifications\Table\Base class;
+* Fixed: Wrong ordering for items in the calendar;
+* Fixed: UTC time is always used in the exported ICS file. Now it is exporting time in the current timezone;
+* Fixed: The React library is being downgraded (overridden) in WP 5.3;
+* Changed: Removed not used methods from the Notifications\Table\Base class: hide_months_dropdown_filter and months_dropdown;
+
+= [1.21.1] - 2019-10-23 =
+
+* Fixed: Updated the Plugin Framework removing a debug statement;
+* Changed: Removed the Async column from the Notifications Log and added text to the Status column for async notifications;
+
+= [1.21.0] - 2019-10-22 =
+
+* Feature: Implement a log for notifications, #500;
+* Feature: Implement support for pages in the content overview, #503
+* Fixed: Fix PHP notices with statuses coming from PressShack, #506;
+* Fixed: Sending notifications when there is no status change, #515;
+* Fixed: Fix error when there is no follower for a post, #509;
+* Fixed: Uncaught TypeError: Cannot read property 'length' of undefined, #499;
+* Fixed: Error "Can't read prop of null" in the pp_date.js file;
+* Fixed: Custom statuses was not accepting numbers in the name;
+* Fixed: Fixed message for async notifications when a post changes the status;
+* Fixed: Remove a PHP short tag;
+* Removed: Removed Multiple Authors from the add-ons list since the plugin is standalone now;
+* Removed: Removed leftovers from the Freemius integration;
+* Changed: Renamed the file common/js/admin.js to common/js/admin-menu.js;
+
+= [1.20.9] - 2019-09-11 =
+
+* Fixed: Too many Notifications sent for wc_admin_unsnooze_admin_notes posts created by WooCommerce Admin. Notifications were being sent for non supported post types;
+* Fixed: JavaScript breaks when Alledia framework object is not found;
+* Fixed: Notification workflows are not saving when ACF is installed;
+* Fixed: Wrong help text for [psppno_post] shortcode in the notification workflows;
+* Fixed: Missed rewrite rules for the post types: dashboard-note and psppnotif_workflow.
+* Fixed: Undefined index: REQUEST_METHOD for $_SERVER.
+* Fixed: The logo is missed on the Notification Workflows page.
+
+= [1.20.8] - 2019-08-19 =
+
+* Feature: Support post meta fields in notification body (also requires PublishPress Reminders 1.1.1)
+* Feature: Added general debug information and settings to the Site Health page
+* Feature: Added a list of installed modules to the Site Health page
+* Feature: Added a list of scheduled notifications ot the Site Health page
+* Changed: Convert debug panel to read only
+* Changed: symfony/polyfill-ctype library updated from 1.11.0 to 1.12.0
+* Fixed: If Async Notifications enabled and more than one workflow notification applies to a post, the additional notifications were not sent (corresponding fix in PublishPress Reminders 1.1.1)
+* Fixed: PHP warning "date() expects parameter 2 to be int, string given"
+* Fixed: Hidden calendar on datepicker fields in Gutenberg due to negative z-index
+* Fixed: The column "Last Updated" on content overview had a wrong date format
+* Fixed: Missed "use" statement for Dependency Injection on the custom status module
+
+= [1.20.7] - 2019-06-17 =
+
+* Fix fatal error in wp-admin when active alongside WPML or another plugin that uses an obsolete version of the Twig library
+* Fix alignment of stars on "please leave us a rating" footer
+* Fix redirect behavior on "Already reviewed" selection from "Please leave a review" notice
+* Fix PHP warning when a invalid taxonomy is loaded
+* Fix an empty space on the statuses screen
+* Add publish time field on New Post popup within Calendar
+* Add post status field on New Post popup within Calendar
+* Fix call-time passed-by-reference occurrences
+* Changed calendar to display or hide the publish time according to the post status
+* Add new PublishPress icon to the Settings screen
+* Update the menu icon
+* Fix calendar subscription after a fresh install, don't require saving the settings before it works
+* Fix the empty author list in the calendar popup
+* For PublishPress Reminders, support status selection in "Before Publication" workflow notifications
+* Fix double slash on some assets URLs
+
+= [1.20.6] - 2019-05-16 =
+* Fix fatal error on Edit Notification Workflow screen
+* Fix JS error in wp-admin (blocking other plugin JS) for sites running on localhost and Windows servers
+
+= [1.20.5] - 2019-05-15 =
+* Fix blacklisting taxonomies causing WSOD in some envs containing a lot of Terms
+* Fix Calendar displaying times on wrong Timezones
+* Fix Custom Statuses listing on Settings page not being reordable anymore
+
+= [1.20.4] - 2019-05-03 =
+* Fix JS error in wp-admin (blocking other plugin JS) for sites running on localhost and Windows servers
+
+= [1.20.3] - 2019-05-03 =
+
+* Fix fatal error in Calendar module: "undefined function mb_strtolower()" on servers that don't have PHP multibyte string extension
+* Fix PHP notice in Unpublished Content dashboard metabox
+
+= [1.20.2] - 2019-05-02 =
+
+* Partially adds support for Gutenberg-Ramp plugin
+* Fix PublishPress icon missing on admin sidebar in some envs
+* Fix PHP warnings on Calendar module
+* Fix issue on posts where MetaData date fields were losing their formats and values after saving
+* Fix Calendar date filter going back to 1970 if user edits filter value but doesn't change it
+* Fix PHP warnings on Notifications section on Posts form if WP_DEBUG is on
+* Add option to blacklist taxonomies-slugs on the taxonomies filter for adding New Notification Workflow
+
+= [1.20.1] - 2019-04-16 =
+
+* Fix PHP warning regarding missing variable reference
+* Fix custom statuses not being available for Quick/Bulk post editing
+* Fix publish time being displayed on any post regardless of its status on Calendar
+* Fix missing default value for the Display Publish Time calendar option
+* Fix a performance issue caused by duplicated DB queries calls on Calendar
+
+= [1.20.0] - 2019-04-08 =
+
+* Fix metadata not showing up on Content Overview;
+* Fix Content Overview Start Date filter not detecting current date;
+* Fix minor inconsistency on Content Overview datepicker filter output format;
+* Fix Custom Statuses table squeezing up content on settings page when a lot of custom post types are in use;
+* Add "new" to available statuses for notification workflow;
+* Add Author field on Calendar item pop up;
+* Add option to toggle posts/pages publish time on Calendar;
+
+= [1.19.4] - 2019-02-22 =
+
+* Fixed the list of notification receivers for not excluding emails with numeric chars;
+* Fixed email notifications for email addresses added directly into the post, using the "Notify" box;
+* Fixed the method to detect when a post is using the block editor, checking additionally the filter "use_block_editor_for_post_type";
+* Fixed default state for custom statuses, do not disabling it by default when the block editor is being used;
+* Updated Tested Up To version to 5.1 and added kevinb as contributor;
+* Fixed compatibility with Revisionary < v1.2.3 and Statuses;
+
+= [1.19.3] - 2019-02-15 =
+
+* Fixed the publishing workflow, removing Published from the select box of post statuses;
+* Fixed the list of statuses applying the filter which allows to add-ons like Permissions to filter the list;
+
+= [1.19.2] - 2019-02-12 =
+
+* Fixed bug preventing to unpublish posts;
+
+= [1.19.1] - 2019-02-12 =
+
+* Fixed method that detects the block editor, restoring the publish button in the classic editor;
+* Fixed the Save button for custom statuses in the block editor;
+
+= [1.19.0] - 2019-02-11 =
+
+* Fixed PHP Warning about to_notify variable;
+* Removed the requirement for the classic editor when the Content Checklist is active;
+* Removed the 20% discount subscription form and replaced with a simple banner;
+* Added support to custom statuses for posts in Gutenberg;
+* Improved text for custom status settings options;
+
+= [1.18.5] - 2019-01-30 =
+
+* Fixed warning message when a string is added as param for the shortcode psppno_workflow;
+* Fixed redirection after dismissing the alert regarding reviewing PublishPress, when calendar is not activated;
+* Fixed Gutenberg compatibility do not falling off to the classic editor;
+* Fixed compatibility with Bedrock, fixing paths for assets and the plugin;
+
+= [1.18.4] - 2019-01-25 =
+
+* Fixed incompatibility with UpStream 1.23.1;
+
+= [1.18.3] - 2019-01-23 =
+
+* Released only to trigger a new update on sites due to corrupted package for 1.18.2;
+
+= [1.18.2] - 2019-01-23 =
+
+* Updated the subscription form for discount coupon, for the new Mailchimp account;
+* Updated the settings tabs for the editorial metadata and custom statuses moving Options before Add New;
+* Removed warning about Classic Editor as requirement;
+* Updated the default value for selected post types for the custom status module, disabling by default if Gutenberg is installed;
+
+= [1.18.1] - 2019-01-14 =
+
+* Fixed minor performance issue in the settings page removing a code from a loop;
+* Added an option for selecting a default notification channel;
+* Fixed the position of the editorial comments metabox removing from the sidebar and added as high priority;
+* Fixed the output of boolean values in the Debug page;
+
+= [1.18.0] - 2018-12-06 =
+
+* Fixed non-escaped attributes and URLs in the whole plugin;
+* Fixed style of editorial comments for fitting the sidebar in Gutenberg;
+* Added a new filter for get_post_types methods: "publishpress_supported_module_post_types";
+* Fixed a missed ";" from the admin interface;
+* Changed the action publishpress is hooked to. From "plugins_loaded" to "init";
+* Fixed double "use" statement for Dependence_Injector in the PublishPress\Notifications\Workflow\Step\Channel\Base class;
+* Added the option to add non-users emails (and name) in the notify box for posts;
+* Improved the title and text for the notify box;
+* Added a new shortcode "psppno_receiver" for the notification content, which supports name and email params;
+* Added a list of active workflows to the notify box;
+* Added a slightly darker background color to the month name row in the calendar;
+* Added a check for Gutenberg, disabling the block editor for post types where custom statuses and the content-checklist (add-on) are enabled;
+* Added a check for Classic Editor in WordPress 5.0, showing a notice advising to install and activate it;
+* Fixed broken HTML syntax in some settings panels;
+* Updated the "Tested up" version to 5.0
+
+= [1.17.0] - 2018-11-08 =
+
+* Fixed permalink for posts in multisite URLs;
+* Fixed the position for the editorial comments metabox for Gutenberg;
+* Fixed dashboard widget hiding Published and Private Posts counts, since the box relates to unpublished content;
+* Fixed method that changes user's data to make a verification before change anything;
+* Added a new capability, "pp_set_notification_channel", for controlling who can select a different notification channel in the profile page;
+* Added a new option to disable PublishPress' branding for who has at least one activated license key;
+* Added a debug module with basic information for debugging, and log viewer;
+
+= [1.16.4] - 2018-10-03 =
+
+*Fixed:*
+
+* Fixed properties (color and icon) for customizing core statuses;
+* Fixed fatal error in shortcode processing when the param is sent as string - for notifications' body;
+
+= [1.16.3] - 2018-09-19 =
+
+*Fixed:*
+
+* Fixed compatibility with UpStream fixing a PHP warning displayed in the UpStream settings page, related to PublishPress getting confuse with both using Allex Framework for dealing with add-ons. You need to update UpStream as well;
+* Fixed some queries executed when they were not useful. The queries are related to the options for icon and color of custom statuses;
+* Fixed license key activation and upgrade form when installed alongside UpStream - requires to update UpStream as well;
+* Fixed icon of Multiple Authors add-on in the add-ons page;
+* Fixed wrong URL for assets on Windows machines;
+
+= [1.16.2] - 2018-08-28 =
+
+*Fixed:*
+
+* Fixed a bug in the URL sent in the validation of license keys for add-ons;
+
+= [1.16.1] - 2018-08-27 =
+
+*Fixed:*
+
+* Fixed a bug in the validation of license keys for add-ons;
+
+= [1.16.0] - 2018-08-27 =
+
+* Changed:*
+
+* Refactored the add-ons page centralizing the license key management;
+* Rebranded with the new logo;
+* Added sidebar with form offering discount of 20% in a plan when the user doesn't have any plugin installed;
+
+= [1.15.0] - 2018-07-19 =
+
+*Added:*
+
+* Added filter for taxonomies and improved custom post type support in notification workflows;
 
 = [1.14.1] - 2018-07-12 =
 

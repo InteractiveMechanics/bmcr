@@ -285,7 +285,7 @@ class SettingsTabInstall
 
                     ?>
                     <p>
-                        <?php printf(__('PressPermit Pro Version: %1$s %2$s', 'press-permit-core'), PRESSPERMIT_VERSION, $info_link); ?>
+                        <?php printf(__('Permissions Pro Version: %1$s %2$s', 'press-permit-core'), PRESSPERMIT_VERSION, $info_link); ?>
 
                         &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="admin.php?page=presspermit-settings&amp;presspermit_refresh_updates=1"><?php _e('update check / install', 'press-permit-core'); ?></a>
 
@@ -293,12 +293,15 @@ class SettingsTabInstall
                         <span style="display:none"><?php printf(__("Database Schema Version: %s", 'press-permit-core'), PRESSPERMIT_DB_VERSION); ?><br/></span>
                     </p>
 
+                    <p>
                     <?php
                     global $wp_version;
                     printf(__("WordPress Version: %s", 'press-permit-core'), $wp_version);
                     ?>
-                    <br/>
+                    </p>
+                    <p>
                     <?php printf(__("PHP Version: %s", 'press-permit-core'), phpversion()); ?>
+                    </p>
                 </td>
             </tr>
         <?php
@@ -492,7 +495,7 @@ class SettingsTabInstall
 
                             if (!$activated) {
                                 echo '<span class="pp-red">'
-                                    . __('For updates, please activate your PressPermit Pro license key above.', 'press-permit-core')
+                                    . __('For updates, please activate your Permissions Pro license key above.', 'press-permit-core')
                                     . '<span>';
                             }
                             ?>
@@ -500,7 +503,7 @@ class SettingsTabInstall
 
                     <?php elseif (!defined('PRESSPERMIT_PRO_VERSION')) : ?>
                         <p class="pp-feature-list-caption">
-                            <strong><?php _e('PressPermit Pro features include:', 'press-permit-core'); ?></strong></p>
+                            <strong><?php _e('Permissions Pro features include:', 'press-permit-core'); ?></strong></p>
                         <ul class="pp-bullet-list">
                             <li><?php printf(__('%1$sContent-specific editing permissions, with PublishPress and Revisionary support%2$s', 'press-permit-core'), '<a href="https://publishpress.com/presspermit/?pp_module=collaboration">', '</a>'); ?></li>
                             <li><?php printf(__('%1$sCustom Post Statuses (for visibility or workflow moderation)%2$s', 'press-permit-core'), '<a href="https://publishpress.com/presspermit/?pp_module=status_control">', '</a>'); ?></li>
@@ -529,7 +532,7 @@ class SettingsTabInstall
                         ?>
                         <ul class="pp-support-list">
                             <li><a href='https://publishpress.com/presspermit/'
-                                   target='pp_doc'><?php _e('PressPermit Documentation', 'press-permit-core'); ?></a></li>
+                                   target='pp_doc'><?php _e('Permissions Documentation', 'press-permit-core'); ?></a></li>
 
                             <li class="pp-support-forum">
                                 <a href="admin.php?page=presspermit-settings&amp;pp_help_ticket=1"
@@ -559,8 +562,8 @@ class SettingsTabInstall
                             $ui->all_options[] = 'support_data';
 
                             $avail = [
-                                'ver' => __('Version info for server, WP, PressPermit and various other plugins', 'press-permit-core'),
-                                'pp_options' => __('PressPermit Settings and related WP Settings', 'press-permit-core'),
+                                'ver' => __('Version info for server, WP, PublishPress Permissions and various other plugins', 'press-permit-core'),
+                                'pp_options' => __('Permissions Settings and related WP Settings', 'press-permit-core'),
                                 'theme' => __('Theme name, version and status', 'press-permit-core'),
                                 'active_plugins' => __('Activated plugins list', 'press-permit-core'),
                                 'installed_plugins' => __('Inactive plugins list', 'press-permit-core'),
@@ -652,7 +655,7 @@ class SettingsTabInstall
         */
     } // end function optionsUI()
 
-    public function footer_js($activated, $expired)
+    private static function footer_js($activated, $expired)
     {
         $vars = [
             'activated' => ($activated || !empty($expired)) ? true : false,

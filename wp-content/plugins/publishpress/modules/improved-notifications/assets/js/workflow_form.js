@@ -21,7 +21,7 @@
  */
 (function ($) {
     $(function () {
-        function setupFieldFilters(name) {
+        function setupFieldFilters (name) {
             // "When the content is moved to a new status"'s filters
             if ($('#publishpress_notif_' + name).length > 0) {
                 var $chkb = $('#publishpress_notif_' + name),
@@ -44,9 +44,21 @@
         setupFieldFilters('event_post_save');
         setupFieldFilters('event_content_post_type');
         setupFieldFilters('event_content_category');
-        setupFieldFilters('event_content_category');
+        setupFieldFilters('event_content_taxonomy');
         setupFieldFilters('user');
         setupFieldFilters('role');
+
+        function getEditor() {
+            var editor = tinymce.activeEditor;
+
+            for (var editorIndex = 0; editorIndex < tinymce.editors.length; editorIndex++) {
+                if (tinymce.editors[editorIndex].id === 'input_id') {
+                  return tinymce.editors[editorIndex];
+                }
+            }
+
+            return editor;
+        }
 
         // List search
         $('.publishpress-filter-checkbox-list select').multipleSelect({
@@ -65,7 +77,7 @@
              * @param section
              * @param status
              */
-            function set_validation_status(section, status) {
+            function set_validation_status (section, status) {
                 var selector = '#psppno-workflow-metabox-section-' + section + ' .psppno_workflow_metabox_section_header';
 
                 if (status) {
@@ -75,7 +87,7 @@
                 }
             }
 
-            function set_tooltip(section) {
+            function set_tooltip (section) {
                 var selector = '#psppno-workflow-metabox-section-' + section + ' .psppno_workflow_metabox_section_header';
 
                 $(selector).tooltip();
@@ -89,7 +101,7 @@
                 if (selected === 0) {
                     set_validation_status(section, false);
 
-                        messages.push(workflowFormData.messages['selectAllIn_' + section]);
+                    messages.push(workflowFormData.messages['selectAllIn_' + section]);
                 } else {
                     set_validation_status(section, true);
                 }
@@ -136,6 +148,17 @@
                 }
             }
 
+            // Check if any taxonomy was selected (if checked)
+            if ($('#publishpress_notif_event_content_taxonomy:checked').length > 0) {
+                if ($('#publishpress_notif_event_content_taxonomy_filters_term').val() == null) {
+                    set_validation_status('event_content', false);
+
+                    messages.push(workflowFormData.messages['selectTaxonomy']);
+                } else {
+                    set_validation_status('event_content', true);
+                }
+            }
+
             // Check the Receivers section
             if ($('#psppno-workflow-metabox-section-receiver input[type="checkbox"][name^="publishpress_notif"]:checked').length === 0) {
                 set_validation_status('receiver', false);
@@ -167,16 +190,18 @@
                 }
             }
 
+
+
             // Check the Content section
             if ($('#publishpress_notification_content_main_subject').val().trim() == ''
-                || tinymce.activeEditor.getContent().trim() === '') {
+                || getEditor().getContent().trim() === '') {
                 set_validation_status('content', false);
 
                 if ($('#publishpress_notification_content_main_subject').val().trim() == '') {
                     messages.push(workflowFormData.messages['setASubject']);
                 }
 
-                if (tinymce.activeEditor.getContent().trim() === '') {
+                if (getEditor().getContent().trim() === '') {
                     messages.push(workflowFormData.messages['setABody']);
                 }
             } else {

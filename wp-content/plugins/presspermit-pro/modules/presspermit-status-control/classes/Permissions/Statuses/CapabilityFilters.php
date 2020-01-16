@@ -34,7 +34,7 @@ class CapabilityFilters
         global $current_user;
 
         // PostFilters::generate_where_clause selectively enables this (rather than repeatedly adding/removing filter)
-        if (!$this->do_status_cap_map || (($user_id == $current_user->ID) && presspermit()->isContentAdministrator())) {
+        if (empty($args['force']) && (!$this->do_status_cap_map || (($user_id == $current_user->ID) && presspermit()->isContentAdministrator()))) {
             return $caps;
         }
 
@@ -62,7 +62,17 @@ class CapabilityFilters
             : [];
 
             if ($custom_mapped_caps = array_intersect_key($attributes->condition_cap_map, $caps)) {
-                $map_caps = array_merge($map_caps, $custom_mapped_caps['post_status']);
+                foreach(array_keys($custom_mapped_caps) as $_mapped_cap) {
+                    foreach($custom_mapped_caps[$_mapped_cap]['post_status'] as $_status => $status_cap) {
+                        if (!isset($map_caps[$_status])) {
+                            $map_caps[$_status] = $status_cap;
+                        } else {
+                            $map_caps[$_status] = array_merge($map_caps[$_status], $status_cap);
+                        }
+                    }
+
+                    //$map_caps = array_merge($map_caps, $custom_mapped_caps[$_mapped_cap]['post_status']);
+                }
             }
 
             if (isset($map_caps[$post->post_status])) {

@@ -217,3 +217,80 @@ body.taxonomy-author .form-field.term-description-wrap {
 .edit-tags-php.taxonomy-author #addtag .term-slug-wrap {
     display: none;
 }
+
+/* Hide the default author field when Gutenberg is loaded */
+body.block-editor-page label[for^="post-author-selector-"],
+body.block-editor-page select[id^="post-author-selector-"] {
+    display: none !important;
+}
+
+/* Fix the size of a settings field */
+#multiple_authors_multiple_authors_options_author_for_new_users_chosen {
+    max-width: 350px;
+}
+
+/* Hide the author field in the quick-edit panel until we support it */
+.inline-edit-author {
+    display: none !important;
+}
+
+
+#delete-link {
+    margin-left: 28px;
+}
+
+#ppma_maintenance_settings .ppma_maintenance_action_wrapper {
+    border-bottom: 1px solid silver;
+    padding-bottom: 10px;
+}
+
+#ppma_maintenance_settings .ppma_warning {
+    background-color: #f9fbe4;
+    border: 1px solid #d6d8b6;
+    box-sizing: border-box;
+    padding: 13px 20px;
+    margin-bottom: 10px;
+}
+
+#ppma_maintenance_settings .ppma_maintenance_button {
+    margin-bottom: 5px;
+}
+
+.ppma_settings_field_description {
+    margin-bottom: 10px !important;
+    color: gray;
+}
+
+.ppma-module-settings table[id="ppma-tab-maintenance"] th {
+    display: none;
+}
+
+.ppma-module-settings input[type="submit"] {
+    margin-top: 20px;
+}
+
+#multiple_authors_multiple_authors_options_license_key {
+    width: 300px;
+}
+
+.ppma_license_key_status {
+    margin-left: 0;
+    font-weight: bold;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding: 4px;
+}
+
+.ppma_license_key_status.valid {
+    color: #8181da;
+}
+
+.ppma_license_key_status.invalid {
+color: #f54d4d;
+}
+
+.ppma_license_key_status_label {
+color: black;
+font-weight: normal;
+}
+

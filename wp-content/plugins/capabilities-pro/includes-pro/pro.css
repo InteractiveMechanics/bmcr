@@ -1,0 +1,48 @@
+.publishpress-caps-manage #edd_key {
+width: 220px;
+font-size: 12px;
+margin-bottom: 5px;
+}
+
+.publishpress-caps-manage div.edd-key-links {
+margin-top: 10px;
+display: block;
+clear: both;
+}
+
+.publishpress-caps-manage div.edd-key-links a, .publishpress-caps-manage #akmin div.edd-key-links a {
+display: inline;
+padding: 4px;
+background-position: inherit;
+}
+
+.publishpress-caps-manage div.pp-key-label {
+float: left;
+padding-top:8px;
+}
+
+.publishpress-caps-manage #activation-button {
+float: left;
+margin-left: 10px;
+margin-bottom: 10px;
+}
+
+.publishpress-caps-manage #pp_support_waiting {
+float: left;
+margin-left: 5px;
+}
+
+.publishpress-caps-manage span.pp-key-active {
+font-weight: bold;
+color: #080;
+}
+
+.publishpress-caps-manage #activation-status {
+margin-top: 10px;
+margin-bottom: 10px;
+max-width: 200px;
+}
+
+.cme-custom-status-hints, .cme-custom-status-hints a {
+font-style: italic;
+}

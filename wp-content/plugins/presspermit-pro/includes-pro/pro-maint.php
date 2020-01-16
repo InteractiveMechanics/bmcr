@@ -6,12 +6,24 @@ class PressPermitMaint {
         if (!empty($_REQUEST['presspermit_refresh_updates'])) {
             presspermit()->keyStatus(true);
             set_transient('presspermit-pro-refresh-update-info', true, 86400);
-    
+
+            $opt_val = get_option('presspermit_edd_key');
+            if (is_array($opt_val) && !empty($opt_val['license_key'])) {
+                $plugin_slug = basename(PRESSPERMIT_FILE, '.php'); // 'presspermit-pro';
+                $plugin_relpath = basename(dirname(PRESSPERMIT_FILE)) . '/' . basename(PRESSPERMIT_FILE);  // $_REQUEST['plugin']
+                $license_key = $opt_val['license_key'];
+                $beta = false;
+
+                delete_option(md5(serialize($plugin_slug . $license_key . $beta)));
+                delete_option('edd_api_request_' . md5(serialize($plugin_slug . $license_key . $beta)));
+                delete_option(md5('edd_plugin_' . sanitize_key($plugin_relpath) . '_' . $beta . '_version_info'));
+            }
+
             delete_site_transient('update_plugins');
             delete_option('_site_transient_update_plugins');
             wp_update_plugins();
             //wp_version_check(array(), true);
-    
+
             $url = remove_query_arg('presspermit_refresh_updates', $_SERVER['REQUEST_URI']);
             $url = add_query_arg('presspermit_refresh_done', 1, $url);
             $url = "//" . $_SERVER['HTTP_HOST'] . $url;

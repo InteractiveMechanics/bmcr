@@ -7,9 +7,10 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Twig\\' => array($vendorDir . '/twig/twig/src'),
-    'PublishPress\\EDD_License\\Core\\' => array($vendorDir . '/publishpress/wordpress-edd-license-integration/src/core'),
-    'PublishPress\\Builder\\' => array($vendorDir . '/publishpress/wordpress-plugin-builder/src'),
-    'PublishPress\\Addon\\Multiple_authors\\' => array($baseDir . '/core'),
-    'PublishPressAddonFramework\\' => array($vendorDir . '/publishpress/addon-framework/library'),
+    'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
+    'PublishPress\\EDD_License\\Core\\' => array($vendorDir . '/alledia/wordpress-edd-license-integration/src/core'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
+    'MultipleAuthors\\' => array($baseDir . '/core'),
+    'Allex\\' => array($vendorDir . '/alledia/wordpress-plugin-framework/src/library'),
+    'Alledia\\Builder\\' => array($vendorDir . '/alledia/wordpress-plugin-builder/src'),
 );

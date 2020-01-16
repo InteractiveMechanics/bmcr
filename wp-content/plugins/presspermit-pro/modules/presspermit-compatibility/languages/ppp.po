@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PressPermit Compatibility Pack\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-27 12:22-0500\n"
+"POT-Creation-Date: 2020-01-09 12:59-0500\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Kevin Behrens <kevin@publishpress.com>\n"
 "Language-Team: PublishPress <help@publishpress.com>\n"
@@ -16,46 +16,46 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_c;__ngettext;_n;_x\n"
 "X-Poedit-SearchPath-0: F:\\snapshot\\presspermit-pro\\modules\\presspermit-compatibility\n"
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/presspermit-compatibility.php:55
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/presspermit-compatibility.php:53
 msgid "Compatibility Pack"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:90
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:94
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:105
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:109
 msgid "[This topic requires additional permissions or membership.]"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:91
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:95
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:106
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:110
 msgid "[...]"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:92
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:107
 msgid "[This topic requires site login.]"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:93
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:97
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:108
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:112
 msgid "[login required]"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:96
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/CompatHooks.php:111
 msgid "[This reply requires site login.]"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/CMSTreeView.php:81
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/CMSTreeView.php:93
 msgid "Page creation was blocked because you are not allowed to select that parent page."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/CMSTreeView.php:82
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/CMSTreeView.php:94
 msgid "Back to Dashboard"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/CMSTreeView.php:84
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/CMSTreeView.php:96
 msgid "Permission Denied"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/CMSTreeView.php:86
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/CMSTreeView.php:98
 msgid "You are not allowed to select that parent page."
 msgstr ""
 
@@ -67,11 +67,11 @@ msgstr ""
 msgid "Network Group"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/PublicPostPreview.php:26
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/PublicPostPreview.php:28
 msgid "The link has been expired!"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/PublicPostPreview.php:30
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/PublicPostPreview.php:32
 msgid "No Public Preview available!"
 msgstr ""
 
@@ -127,23 +127,24 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/GroupsListTable.php:166
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/GroupsListTable.php:169
 msgid "Permissions"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/GroupsListTable.php:210
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/GroupsListTable.php:213
 msgid "BuddyPress Group Admin"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/GroupsListTable.php:231
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/GroupsListTable.php:234
 msgid "Visibility"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/GroupsListTable.php:232
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/GroupsListTable.php:235
 msgid "Editorial"
 msgstr ""
 
 #: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/Hooks.php:35
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:195
 msgid "BuddyPress Groups"
 msgstr ""
 
@@ -151,33 +152,45 @@ msgstr ""
 msgid "BuddyPress Group"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:66
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:74
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:78
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:86
 msgid "none"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:79
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:91
 msgid "Roles"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:82
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:94
 msgid "Exceptions"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:91
-msgid "Supplemental roles and exceptions assigned to this group by PressPermit"
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:103
+msgid "Supplemental roles and exceptions assigned to this group by PublishPress Permissions"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:91
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:103
 msgid "Click to toggle"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:91
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:103
 msgid "Content Permissions"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:120
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:132
 msgid "BuddyPress Group Members"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:170
+msgid "BP Permission Group"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:171
+msgid "BP Permission Groups"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/BuddyPress/PermissionGroups/HooksAdmin.php:184
+msgid "Manage"
 msgstr ""
 
 #: F:\snapshot\presspermit-pro\modules\presspermit-compatibility/classes/Permissions/Compat/UI/Settings.php:45

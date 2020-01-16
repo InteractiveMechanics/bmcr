@@ -26,7 +26,7 @@ class PublishPressSettings
                     $status_dropdown_nag = '';
                 }
                 ?>
-                $('div.pp-module-settings form').first().after('<div class="pp-statuses-other-config"><h4><?php _e('Additional Status Settings:', 'pps');?></h4><ul><li><a href="<?php echo $url;?>"><?php _e('Workflow Order, Branching, Permissions, Button Labels', 'pps');?></a></li><li><a href="<?php echo $url;?>"><?php _e('Workflow Options', 'pps');?></a></li></ul></div><?php echo $status_dropdown_nag;?>');
+                $('div.pp-module-settings form').first().after('<div class="pp-statuses-other-config"><h4><?php _e('Additional Status Settings:', 'pps');?></h4><ul><li><a href="<?php echo $url;?>"><?php _e('Require Custom Permissions per-Status', 'pps');?></a></li><li><a href="<?php echo $url;?>"><?php _e('Workflow Order, Branching, Button Labels', 'pps');?></a></li><li><a href="<?php echo $url;?>"><?php _e('Set Post Types per-Status', 'pps');?></a></li></ul></div><?php echo $status_dropdown_nag;?>');
 
                 <?php
                 $url = admin_url("admin.php?page=presspermit-statuses&attrib_type=moderation");
@@ -37,11 +37,17 @@ class PublishPressSettings
                     $last_item .= '<br /><div class="update-nag">' . sprintf(__('Please %senable the Status dropdown%s for Gutenberg compatibility.', 'pps'), '<a href="' . $_url . '" style="text-decoration:underline">', '</a>') . '</div>';
                 }
                 ?>
-                $('#capabilities_groups ul').last().after('<div class="pp-statuses-other-config"><h4><?php _e('Additional Status Settings:', 'pps');?></h4><ul><li><a href="<?php echo $url;?>"><?php _e('Workflow Order, Branching, Permissions, Button Labels', 'pps');?></a></li><li><a href="<?php echo $url;?>"><?php _e('Workflow Options', 'pps');?></a></li></ul></div><div><?php echo $last_item;?></div>');
+                $('#capabilities_groups ul').last().after('<div class="pp-statuses-other-config"><h4><?php _e('Additional Status Settings:', 'pps');?></h4><ul><li><a href="<?php echo $url;?>"><?php _e('Require Custom Permissions per-Status', 'pps');?></a></li><li><a href="<?php echo $url;?>"><?php _e('Workflow Order, Branching, Button Labels', 'pps');?></a></li><li><a href="<?php echo $url;?>"><?php _e('Set Post Types per-Status', 'pps');?></a></li></ul></div><div><?php echo $last_item;?></div>');
             });
             /* ]]> */
         </script>
         <style type="text/css">
+            div.pp-statuses-other-config {
+                background-color: white;
+                padding: 2px 2px 2px 10px;
+                margin-top: 25px;
+            }
+
             div.pp-statuses-other-config h4 {
                 margin-top: 5px;
                 margin-bottom: 6px;

@@ -231,7 +231,7 @@ class SettingsTabFileAccess
                         <label for='<?php echo $name ?>'><select name='<?php echo $name; ?>' id='<?php echo $name; ?>'>
                                 <option value="0"><?php _e('only for sites with protected files', 'ppff'); ?></option>
                                 <option value="1" <?php if ($default_all_sites) echo ' selected=selected"'; ?>><?php _e('for all sites', 'ppff'); ?></option>
-                                <option value="remove"><?php _e('NONE: remove PressPermit rules', 'ppff'); ?></option>
+                                <option value="remove"><?php _e('NONE: remove Permissions rules', 'ppff'); ?></option>
                             </select></label>
                     </div>
                 <?php else : ?>

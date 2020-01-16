@@ -80,7 +80,7 @@ class RoleUsage
             <?php
             if (presspermit()->getOption('display_hints')) {
                 echo '<div class="pp-hint">';
-                _e("These <strong>optional</strong> settings customize how PressPermit applies <strong>supplemental roles</strong>. Your existing WP Role Definitions can be applied in two different ways:", 'presspermit');
+                _e("These <strong>optional</strong> settings customize how PublishPress Permissions applies <strong>supplemental roles</strong>. Your existing WP Role Definitions can be applied in two different ways:", 'presspermit');
                 
                 echo '<ul style="list-style-type:disc;list-style-position:outside;margin:1em 0 0 2em"><li>' 
                 . __("Pattern Roles convert 'post' capabilities to the corresponding type-specific capability.  In a normal WP installation, this is the easiest solution.", 'presspermit') 

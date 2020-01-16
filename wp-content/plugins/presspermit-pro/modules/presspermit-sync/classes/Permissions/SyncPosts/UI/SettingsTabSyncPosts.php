@@ -595,7 +595,7 @@ class SettingsTabSyncPosts
                     <li>
                         <?php _e('These users will be enabled to edit their synchronized post if "Grant Author Permissions" is enabled.  This works by automating the following configuration:', 'ppsync'); ?>
                         <ol>
-                            <li><?php printf(__('PressPermit filtering is turned on for the post type: %1$sPermissions > Core > Filtered Post Types%2$s', 'ppsync'), '<a class="pp-options-core-tab" href="javascript:void(0)">', '</a>'); ?></li>
+                            <li><?php printf(__('Permissions filtering is turned on for the post type: %1$sPermissions > Core > Filtered Post Types%2$s', 'ppsync'), '<a class="pp-options-core-tab" href="javascript:void(0)">', '</a>'); ?></li>
                             <li><?php
                                 printf(__('The synchronized role is supplemented with Author capabilities for the post type: %1$sPermissions > Groups%2$s > [WP Role Name]', 'ppsync'), '<a href="' . admin_url("admin.php?page=presspermit-groups") . '" target="_blank">', '</a>'); ?></li>
                         </ol>
@@ -604,7 +604,7 @@ class SettingsTabSyncPosts
                         <?php _e('Developer note: User matches and Post data may be customized using filters and actions.', 'ppsync'); ?>
                     </li>
                     <li>
-                        <?php _e('This feature works with most Team / Staff plugins. However, the following are NOT fully compatible. With these plugins, PressPermit can sync and set editing permissions for teams, but not individual team members:', 'ppsync'); ?>
+                        <?php _e('This feature works with most Team / Staff plugins. However, the following are NOT fully compatible. With these plugins, PublishPress Permissions can sync and set editing permissions for teams, but not individual team members:', 'ppsync'); ?>
                         <ul>
                             <li class="pp-strikethru"><span title="<?php _e('This plugin is NOT fully compatible.', 'ppsync'); ?>"><?php _e('Team Members by WP Darko', 'ppsync'); ?></span></li>
                             <li class="pp-strikethru"><span title="<?php _e('This plugin is NOT fully compatible.', 'ppsync'); ?>"><?php _e('Team Builder by smartshop', 'ppsync'); ?></span></li>

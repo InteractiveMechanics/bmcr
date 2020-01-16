@@ -1,18 +1,15 @@
 == PP File URL Filter for WordPress ==
-	An extension to the PressPermit plugin, an advanced content permissions engine and management interface. 
+	An extension to the PublishPress Permissions Pro plugin, an advanced content permissions engine and management interface. 
 	
 	This extension plugin blocks direct file url access to attachments whose parent post is unreadable to the logged user.
 	
 	Author: Kevin Behrens
 	
-	Copyright 2019 PublishPress
+	Copyright 2020 PublishPress
+
 	See license.txt and copyright notices within the code for further details.
 
 	To receive a copy of the current version, one-click updates and expert support, purchase a license key at https://publishpress.com/pricing/
-	
-== Requirements ==
-	Minimum WordPress version: 3.4
-	Tested up to: 4.9.8
 	
 == Change Log ==
 

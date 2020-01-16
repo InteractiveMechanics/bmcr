@@ -4,11 +4,17 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit37b9f22cb848523c33ea26fe89f616a0
+class ComposerStaticInit15b4a69baabb834f3c86115212ea8b0f
 {
     public static $files = array (
-        '46a06f2cec651588901bf1ff51ef5979' => __DIR__ . '/..' . '/publishpress/edd-license-handler/EDD_License_Handler.php',
-        '9e7913fda8218537ad84c3389047ab16' => __DIR__ . '/..' . '/publishpress/edd-license-handler/EDD_SL_Plugin_Updater.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        'c92bf23a32412037ecdc51806b458c36' => __DIR__ . '/..' . '/alledia/edd-sl-plugin-updater/EDD_SL_Plugin_Updater.php',
+        '9d3cec7d24498379c4edf825eff47fdf' => __DIR__ . '/../..' . '/template-tags.php',
+        '003c8bfa9ed0ac4dc20f819ac89107e7' => __DIR__ . '/../..' . '/integrations/amp.php',
+        '45c7e4dac0bde6b25b8d84fa85a67d6c' => __DIR__ . '/../..' . '/libraries/cmb2/init.php',
+        '0aeab6f5aa99ce1b58ecd61c9927478d' => __DIR__ . '/../..' . '/modules/author-custom-fields/author-custom-fields.php',
+        '33b9136e162bbe1c1b32c2781d96be6c' => __DIR__ . '/../..' . '/modules/author-custom-layouts/author-custom-layouts.php',
+        '57e75bff1094a6722d379f700027d379' => __DIR__ . '/../..' . '/modules/multiple-authors/multiple-authors.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -16,13 +22,23 @@ class ComposerStaticInit37b9f22cb848523c33ea26fe89f616a0
         array (
             'Twig\\' => 5,
         ),
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Ctype\\' => 23,
+        ),
         'P' => 
         array (
             'PublishPress\\EDD_License\\Core\\' => 30,
-            'PublishPress\\Builder\\' => 21,
-            'PublishPress\\Addon\\Multiple_authors\\' => 36,
-            'PublishPressAddonFramework\\' => 27,
             'Psr\\Container\\' => 14,
+        ),
+        'M' => 
+        array (
+            'MultipleAuthors\\' => 16,
+        ),
+        'A' => 
+        array (
+            'Allex\\' => 6,
+            'Alledia\\Builder\\' => 16,
         ),
     );
 
@@ -31,25 +47,29 @@ class ComposerStaticInit37b9f22cb848523c33ea26fe89f616a0
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
         ),
+        'Symfony\\Polyfill\\Ctype\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
         'PublishPress\\EDD_License\\Core\\' => 
         array (
-            0 => __DIR__ . '/..' . '/publishpress/wordpress-edd-license-integration/src/core',
-        ),
-        'PublishPress\\Builder\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/publishpress/wordpress-plugin-builder/src',
-        ),
-        'PublishPress\\Addon\\Multiple_authors\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/core',
-        ),
-        'PublishPressAddonFramework\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/publishpress/addon-framework/library',
+            0 => __DIR__ . '/..' . '/alledia/wordpress-edd-license-integration/src/core',
         ),
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'MultipleAuthors\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/core',
+        ),
+        'Allex\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/alledia/wordpress-plugin-framework/src/library',
+        ),
+        'Alledia\\Builder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/alledia/wordpress-plugin-builder/src',
         ),
     );
 
@@ -73,9 +93,9 @@ class ComposerStaticInit37b9f22cb848523c33ea26fe89f616a0
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit37b9f22cb848523c33ea26fe89f616a0::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit37b9f22cb848523c33ea26fe89f616a0::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit37b9f22cb848523c33ea26fe89f616a0::$prefixesPsr0;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit15b4a69baabb834f3c86115212ea8b0f::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit15b4a69baabb834f3c86115212ea8b0f::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit15b4a69baabb834f3c86115212ea8b0f::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

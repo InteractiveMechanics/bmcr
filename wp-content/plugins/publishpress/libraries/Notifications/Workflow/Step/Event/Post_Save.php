@@ -9,12 +9,10 @@
 
 namespace PublishPress\Notifications\Workflow\Step\Event;
 
-use PublishPress\Notifications\Traits\Dependency_Injector;
 use PublishPress\Notifications\Workflow\Step\Event\Filter;
 
 class Post_Save extends Base
 {
-
     const META_KEY_SELECTED = '_psppno_evtpostsave';
 
     const META_VALUE_SELECTED = 'post_save';
@@ -31,6 +29,7 @@ class Post_Save extends Base
 
         // Add filter to return the metakey representing if it is selected or not
         add_filter('psppno_events_metakeys', [$this, 'filter_events_metakeys']);
+        add_filter('publishpress_notif_workflow_actions', [$this, 'filter_workflow_actions']);
     }
 
     /**
@@ -42,8 +41,7 @@ class Post_Save extends Base
      */
     protected function get_filters($filters = [])
     {
-        if (!empty($this->cache_filters))
-        {
+        if ( ! empty($this->cache_filters)) {
             return $this->cache_filters;
         }
 
@@ -60,13 +58,16 @@ class Post_Save extends Base
      *
      * @param array $query_args
      * @param array $action_args
+     *
      * @return array
      */
     public function filter_run_workflow_query_args($query_args, $action_args)
     {
+        if ($this->should_ignore_event_on_query($action_args)) {
+            return $query_args;
+        }
 
-        if ('transition_post_status' === $action_args['action'])
-        {
+        if ('transition_post_status' === $action_args['action']) {
             $query_args['meta_query'][] = [
                 'key'     => static::META_KEY_SELECTED,
                 'value'   => 1,
@@ -77,12 +78,22 @@ class Post_Save extends Base
             // Check the filters
             $filters = $this->get_filters();
 
-            foreach ($filters as $filter)
-            {
+            foreach ($filters as $filter) {
                 $query_args = $filter->get_run_workflow_query_args($query_args, $action_args);
             }
         }
 
         return $query_args;
+    }
+
+    public function filter_workflow_actions($actions)
+    {
+        if ( ! is_array($actions) || empty($actions)) {
+            $actions = [];
+        }
+
+        $actions[] = 'transition_post_status';
+
+        return $actions;
     }
 }

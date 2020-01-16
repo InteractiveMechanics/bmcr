@@ -100,7 +100,7 @@ class HooksAdmin
                 <script type="text/javascript">
                     /* <![CDATA[ */
                     jQuery(document).ready(function ($) {
-                        $('#side-sortables').append('<div id="pp-permissions" class="postbox" title="<?php _e('Supplemental roles and exceptions assigned to this group by PressPermit', 'presspermit');?>"><div class="handlediv" title="<?php _e('Click to toggle');?>"><br></div><h3 class="hndle"><span><?php _e('Content Permissions', 'presspermit');?></span></h3><div class="inside"><?php echo $html;?></div></div>');
+                        $('#side-sortables').append('<div id="pp-permissions" class="postbox" title="<?php _e('Supplemental roles and exceptions assigned to this group by PublishPress Permissions', 'presspermit');?>"><div class="handlediv" title="<?php _e('Click to toggle');?>"><br></div><h3 class="hndle"><span><?php _e('Content Permissions', 'presspermit');?></span></h3><div class="inside"><?php echo $html;?></div></div>');
                     });
                     /* ]]> */
                 </script>

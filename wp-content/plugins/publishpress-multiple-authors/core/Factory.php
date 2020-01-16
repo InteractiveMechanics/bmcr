@@ -1,41 +1,54 @@
 <?php
 /**
- * @package     PublishPress\Multiple_authors\
+ * @package     MultipleAuthors\
  * @author      PublishPress <help@publishpress.com>
  * @copyright   Copyright (C) 2018 PublishPress. All rights reserved.
  * @license     GPLv2 or later
  * @since       1.0.0
  */
 
-namespace PublishPress\Addon\Multiple_authors;
+namespace MultipleAuthors;
 
-defined( 'ABSPATH' ) or die( 'No direct script access allowed.' );
+use MultipleAuthors\Classes\Legacy\LegacyPlugin;
 
-if ( ! defined( 'PP_MULTIPLE_AUTHORS_LOADED' ) ) {
-	require_once __DIR__ . '/../includes.php';
+defined('ABSPATH') or die('No direct script access allowed.');
+
+if ( ! defined('MULTIPLE_AUTHORS_LOADED')) {
+    require_once __DIR__ . '/../defines.php';
 }
 
 /**
  * Class Factory
  */
-abstract class Factory {
-	/**
-	 * @var Container
-	 */
-	protected static $container = null;
+abstract class Factory
+{
+    /**
+     * @var Container
+     */
+    protected static $container = null;
 
-	/**
-	 * @return Container
-	 */
-	public static function get_container() {
-		if ( static::$container === null ) {
-			$module   = PublishPress()->multiple_authors;
-			$services = new Services( $module );
+    /**
+     * @return Container
+     */
+    public static function get_container()
+    {
+        if (static::$container === null) {
+            $services = new Services();
 
-			static::$container = new Container();
-			static::$container->register( $services );
-		}
+            static::$container = new Container();
+            static::$container->register($services);
+        }
 
-		return static::$container;
-	}
+        return static::$container;
+    }
+
+    /**
+     * @return LegacyPlugin
+     */
+    public static function getLegacyPlugin()
+    {
+        $container = self::get_container();
+
+        return $container['legacy_plugin'];
+    }
 }

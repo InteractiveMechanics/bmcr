@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PressPermit Circles Module\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-27 12:20-0500\n"
+"POT-Creation-Date: 2020-01-09 12:58-0500\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Kevin Behrens <kevin@publishpress.com>\n"
 "Language-Team: PublishPress <help@publishpress.com>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_c;__ngettext;_n;_x\n"
 "X-Poedit-SearchPath-0: F:\\snapshot\\presspermit-pro\\modules\\presspermit-circles\n"
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-circles/presspermit-circles.php:54
+#: F:\snapshot\presspermit-pro\modules\presspermit-circles/presspermit-circles.php:52
 msgid "Access Circles"
 msgstr ""
 
@@ -37,7 +37,7 @@ msgid "Visibility Circle"
 msgstr ""
 
 #: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/Circles/UI/GroupEdit.php:31
-msgid "Editability Circle"
+msgid "Editorial Circle"
 msgstr ""
 
 #: F:\snapshot\presspermit-pro\modules\presspermit-circles/classes/Permissions/Circles/UI/GroupEdit.php:53

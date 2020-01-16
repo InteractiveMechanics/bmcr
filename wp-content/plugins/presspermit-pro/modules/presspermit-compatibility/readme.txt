@@ -1,5 +1,5 @@
 == PP Compatibility Pack for WordPress ==
-	An extension to the PressPermit plugin, an advanced content permissions engine and management interface. 
+	An extension to the PublishPress Permissions Pro plugin, an advanced content permissions engine and management interface. 
 	
 	Integration with bbPress, BuddyPress, Co-Authors Plus, WPML, Public Post Preview, Custom Post Type UI, various other plugins. For multisite, provides network-wide permission groups.
 	
@@ -7,16 +7,13 @@
 
 	Author: Kevin Behrens
 	
-	Copyright 2019, PublishPress
+	Copyright 2020 PublishPress
 	
 	See license.txt and copyright notices within the code for further details.
 
 	To receive a copy of the current version, one-click updates and expert support, purchase a license key at https://publishpress.com/pricing/
 	
 == Requirements ==
-	Minimum WordPress version: 4.7
-	Tested up to: 5.1
-	
 	Minimum bbPress version: 2.0.2
 	bbPress tested up to: 2.5.9
 	

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PressPermit Sync Posts Module\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-27 12:24-0500\n"
+"POT-Creation-Date: 2020-01-09 13:00-0500\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Kevin Behrens <kevin@publishpress.com>\n"
 "Language-Team: PublishPress <help@publishpress.com>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_c;__ngettext;_n;_x\n"
 "X-Poedit-SearchPath-0: F:\\snapshot\\presspermit-pro\\modules\\presspermit-sync\n"
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/presspermit-sync.php:55
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/presspermit-sync.php:53
 #: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:31
 #: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:92
 msgid "Sync Posts"
@@ -52,28 +52,28 @@ msgstr ""
 msgid "Ambiguous user match for %1$s (%2$s, $post id %3$s)"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:381
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:405
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:374
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:398
 #, php-format
 msgid "Ambiguous user match for %1$s (%2$s)"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:432
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:430
 #, php-format
 msgid "%1$s: %2$s posts created"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:438
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:436
 #, php-format
 msgid "%1$s: %2$s posts updated"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:449
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:447
 #, php-format
 msgid "%1$s: Synchronization done for %2$s role."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:451
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UserSync.php:449
 #, php-format
 msgid "%s: Synchronization done."
 msgstr ""
@@ -216,95 +216,95 @@ msgstr ""
 msgid "(all roles)"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:457
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:500
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:459
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:502
 msgid "(other)"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:469
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:512
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:471
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:514
 msgid "select..."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:470
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:513
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:472
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:515
 msgid "cancel"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:522
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:524
 msgid "This post type is not hierarchical"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:541
-msgid "Sync to Selected Users"
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:543
+msgid "Sync to Selected Role"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:555
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:557
 msgid "Enable users to edit their own synchronized post."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:565
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:567
 msgid "Synchronization Results:"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:579
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:581
 #, php-format
 msgid "Note: This generates a post (of selected type) for each current or future %suser%s in the selected role."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:582
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:584
 msgid "Read more..."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:585
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:587
 msgid "It is designed to bring setup convenience and delegated editing permissions to Team / Staff plugins, but has broad usage potential."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:588
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:590
 msgid "Post / User match fields allow existing Users to be designated as the Author (owner) of an exiting post."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:591
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:593
 msgid "If a user cannot be matched to an existing post, a new post is created for them."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:594
-msgid "These users will be enabled to edit their synchronized post if \"Grant Author Permissions\" is enabled.  This works by automating the following configuration:"
-msgstr ""
-
 #: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:596
-#, php-format
-msgid "PressPermit filtering is turned on for the post type: %1$sPermissions > Core > Filtered Post Types%2$s"
+msgid "These users will be enabled to edit their synchronized post if \"Grant Author Permissions\" is enabled.  This works by automating the following configuration:"
 msgstr ""
 
 #: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:598
 #, php-format
+msgid "Permissions filtering is turned on for the post type: %1$sPermissions > Core > Filtered Post Types%2$s"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:600
+#, php-format
 msgid "The synchronized role is supplemented with Author capabilities for the post type: %1$sPermissions > Groups%2$s > [WP Role Name]"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:602
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:604
 msgid "Developer note: User matches and Post data may be customized using filters and actions."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:605
-msgid "This feature works with most Team / Staff plugins. However, the following are NOT fully compatible. With these plugins, PressPermit can sync and set editing permissions for teams, but not individual team members:"
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:607
+msgid "This feature works with most Team / Staff plugins. However, the following are NOT fully compatible. With these plugins, PublishPress Permissions can sync and set editing permissions for teams, but not individual team members:"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:607
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:608
 #: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:609
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:610
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:611
 msgid "This plugin is NOT fully compatible."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:607
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:609
 msgid "Team Members by WP Darko"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:608
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:610
 msgid "Team Builder by smartshop"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:609
+#: F:\snapshot\presspermit-pro\modules\presspermit-sync/classes/Permissions/SyncPosts/UI/SettingsTabSyncPosts.php:611
 msgid "Team Dazzler"
 msgstr ""
 

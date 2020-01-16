@@ -6,6 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    '46a06f2cec651588901bf1ff51ef5979' => $vendorDir . '/publishpress/edd-license-handler/EDD_License_Handler.php',
-    '9e7913fda8218537ad84c3389047ab16' => $vendorDir . '/publishpress/edd-license-handler/EDD_SL_Plugin_Updater.php',
+    '320cde22f66dd4f5d3fd621d3e88b98f' => $vendorDir . '/symfony/polyfill-ctype/bootstrap.php',
+    'c92bf23a32412037ecdc51806b458c36' => $vendorDir . '/alledia/edd-sl-plugin-updater/EDD_SL_Plugin_Updater.php',
+    '9d3cec7d24498379c4edf825eff47fdf' => $baseDir . '/template-tags.php',
+    '003c8bfa9ed0ac4dc20f819ac89107e7' => $baseDir . '/integrations/amp.php',
+    '45c7e4dac0bde6b25b8d84fa85a67d6c' => $baseDir . '/libraries/cmb2/init.php',
+    '0aeab6f5aa99ce1b58ecd61c9927478d' => $baseDir . '/modules/author-custom-fields/author-custom-fields.php',
+    '33b9136e162bbe1c1b32c2781d96be6c' => $baseDir . '/modules/author-custom-layouts/author-custom-layouts.php',
+    '57e75bff1094a6722d379f700027d379' => $baseDir . '/modules/multiple-authors/multiple-authors.php',
 );

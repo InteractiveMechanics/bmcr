@@ -107,7 +107,8 @@ class Capabilities
                 // Default plural slug
                 //$plural_type = "{$taxonomy}s";
 
-                $plural_type = presspermit()->capDefs()->getPlural($taxonomy, $wp_taxonomies[$taxonomy]);
+                //$plural_type = presspermit()->capDefs()->getPlural($taxonomy, $wp_taxonomies[$taxonomy]);
+                $plural_type = \PublishPress\Permissions\Capabilities::getPlural($taxonomy, $wp_taxonomies[$taxonomy]);
 
                 if ("{$taxonomy}s" != $plural_type) {
                     // ... unless any role already has capabilities based on simple plural form

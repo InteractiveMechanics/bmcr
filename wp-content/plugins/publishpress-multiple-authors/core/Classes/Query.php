@@ -1,189 +1,197 @@
 <?php
 /**
- * @package     PublishPress\Multiple_authors
+ * @package     MultipleAuthors
  * @author      PublishPress <help@publishpress.com>
  * @copyright   Copyright (C) 2018 PublishPress. All rights reserved.
  * @license     GPLv2 or later
  * @since       1.1.0
  */
 
-namespace PublishPress\Addon\Multiple_authors\Classes;
+namespace MultipleAuthors\Classes;
 
-use PublishPress\Addon\Multiple_authors\Classes\Objects\Author;
+use MultipleAuthors\Classes\Objects\Author;
 
 /**
  * Modifications to the main query, and helper query methods
  *
  * Based on Bylines.
  *
- * @package PublishPress\Addon\Multiple_authors\Classes
+ * @package MultipleAuthors\Classes
  */
-class Query {
+class Query
+{
 
-	/**
-	 * Fix for author pages 404ing or not properly displaying on author pages
-	 *
-	 * If an author has no posts, we only want to force the queried object to be
-	 * the author if they're a member of the blog.
-	 *
-	 * If the author does have posts, it doesn't matter that they're not an author.
-	 *
-	 * @param WP_Query $query Query object.
-	 */
-	public static function action_pre_get_posts( $query ) {
+    /**
+     * Fix for author pages 404ing or not properly displaying on author pages
+     *
+     * If an author has no posts, we only want to force the queried object to be
+     * the author if they're a member of the blog.
+     *
+     * If the author does have posts, it doesn't matter that they're not an author.
+     *
+     * @param WP_Query $query Query object.
+     */
+    public static function action_pre_get_posts($query)
+    {
+        if ( ! $query->is_author()) {
+            return;
+        }
 
-		if ( ! $query->is_author() ) {
-			return;
-		}
+        $author_name = $query->get('author_name');
+        if ( ! $author_name) {
+            return;
+        }
 
-		$author_name = $query->get( 'author_name' );
-		if ( ! $author_name ) {
-			return;
-		}
+        $term = get_term_by('slug', $author_name, 'author');
+        $user = get_user_by('slug', $author_name);
+        if ($term) {
+            $author                   = Author::get_by_term_id($term->term_id);
+            $query->queried_object    = $author;
+            $query->queried_object_id = $author->term_id;
+        } elseif (is_object($user)) {
+            $query->queried_object    = $user;
+            $query->queried_object_id = $user->ID;
+        } else {
+            $query->queried_object    = null;
+            $query->queried_object_id = null;
+            $query->is_author         = false;
+            $query->is_archive        = false;
+        }
+    }
 
-		$term = get_term_by( 'slug', $author_name, 'author' );
-		$user = get_user_by( 'slug', $author_name );
-		if ( $term ) {
-			$author                   = Author::get_by_term_id( $term->term_id );
-			$query->queried_object    = $author;
-			$query->queried_object_id = $author->term_id;
-		} elseif ( is_object( $user ) ) {
-			$query->queried_object    = $user;
-			$query->queried_object_id = $user->ID;
-		} else {
-			$query->queried_object    = null;
-			$query->queried_object_id = null;
-			$query->is_author         = false;
-			$query->is_archive        = false;
-		}
-	}
+    /**
+     * Modify the WHERE clause on author queries.
+     *
+     * @param string   $where Existing WHERE clause.
+     * @param WP_Query $query Query object.
+     *
+     * @return string
+     */
+    public static function filter_posts_where($where, $query)
+    {
+        global $wpdb;
 
-	/**
-	 * Modify the WHERE clause on author queries.
-	 *
-	 * @param string   $where Existing WHERE clause.
-	 * @param WP_Query $query Query object.
-	 *
-	 * @return string
-	 */
-	public static function filter_posts_where( $where, $query ) {
-		global $wpdb;
+        if ( ! $query->is_author()) {
+            return $where;
+        }
 
+        if ( ! empty($query->query_vars['post_type']) && ! is_object_in_taxonomy($query->query_vars['post_type'],
+                'author')) {
+            return $where;
+        }
 
-		if ( ! $query->is_author() ) {
-			return $where;
-		}
+        $author_name = sanitize_title($query->get('author_name'));
 
-		if ( ! empty( $query->query_vars['post_type'] ) && ! is_object_in_taxonomy( $query->query_vars['post_type'],
-				'author' ) ) {
-			return $where;
-		}
+        if (empty($author_name)) {
+            $author_id = (int)$query->get('author');
+            $user      = get_user_by('id', $author_id);
 
-		$author_name = sanitize_title( $query->get( 'author_name' ) );
+            if ( ! $author_id || ! $user) {
+                return $where;
+            }
 
-		if ( empty( $author_name ) ) {
-			$author_id = (int) $query->get( 'author' );
-			$user      = get_user_by( 'id', $author_id );
+            $author_name = $user->user_nicename;
+        }
 
-			if ( ! $author_id || ! $user ) {
-				return $where;
-			}
+        $terms = [];
+        $term  = get_term_by('slug', $author_name, 'author');
 
-			$author_name = $user->user_nicename;
-		}
+        if ( ! empty($term)) {
+            $terms[] = $term;
+        }
 
-		$terms = [];
-		$term  = get_term_by( 'slug', $author_name, 'author' );
+        // Shamelessly copied from CAP, because it'd be a shame to have to deal with this twice.
+        if (stripos($where, '.post_author = 0)')) {
+            $maybe_both = false;
+        } else {
+            $maybe_both = apply_filters('authors_query_post_author', false);
+        }
 
-		if ( ! empty( $term ) ) {
-			$terms[] = $term;
-		}
+        $maybe_both_query = $maybe_both ? '$0 OR ' : '';
 
-		// Shamelessly copied from CAP, because it'd be a shame to have to deal with this twice.
-		if ( stripos( $where, '.post_author = 0)' ) ) {
-			$maybe_both = false;
-		} else {
-			$maybe_both = apply_filters( 'authors_query_post_author', false );
-		}
+        if ( ! empty($terms)) {
+            $terms_implode = '';
 
-		$maybe_both_query = $maybe_both ? '$0 OR ' : '';
+            $query->authors_having_terms = '';
 
-		if ( ! empty( $terms ) ) {
-			$terms_implode = '';
+            foreach ($terms as $term) {
+                $terms_implode .= '(' . $wpdb->term_taxonomy . '.taxonomy = "author" AND ' . $wpdb->term_taxonomy . '.term_id = \'' . $term->term_id . '\') OR ';
 
-			$query->authors_having_terms = '';
+                $query->authors_having_terms .= ' ' . $wpdb->term_taxonomy . '.term_id = \'' . $term->term_id . '\' OR ';
+            }
 
-			foreach ( $terms as $term ) {
-				$terms_implode .= '(' . $wpdb->term_taxonomy . '.taxonomy = "author" AND ' . $wpdb->term_taxonomy . '.term_id = \'' . $term->term_id . '\') OR ';
+            $terms_implode = rtrim($terms_implode, ' OR');
 
-				$query->authors_having_terms .= ' ' . $wpdb->term_taxonomy . '.term_id = \'' . $term->term_id . '\' OR ';
-			}
+            $query->authors_having_terms = rtrim($query->authors_having_terms, ' OR');
 
-			$terms_implode = rtrim( $terms_implode, ' OR' );
+            // post_author = 2 OR post_author IN (2).'/\b(?:' . $wpdb->posts . '\.)?post_author\s*(?:=|IN)\s*\(?(\d+)\)?/'
+            $regex = '/\(?\b(?:' . $wpdb->posts . '\.)?post_author\s*(?:=|IN)\s*\(?(\d+)\)?/';
+            $where = preg_replace($regex, '(' . $maybe_both_query . ' ' . $terms_implode . ')', $where, -1);
+        }
 
-			$query->authors_having_terms = rtrim( $query->authors_having_terms, ' OR' );
+        // Allow users to edit orphan posts.
+        if (current_user_can('ppma_edit_orphan_post')) {
+            $where .= " OR (post_author = 0 && {$wpdb->posts}.post_type = 'post' && {$wpdb->posts}.post_status IN ('publish', 'private'))";
+        }
 
-			// post_author = 2 OR post_author IN (2).'/\b(?:' . $wpdb->posts . '\.)?post_author\s*(?:=|IN)\s*\(?(\d+)\)?/'
-			$regex = '/\(?\b(?:' . $wpdb->posts . '\.)?post_author\s*(?:=|IN)\s*\(?(\d+)\)?/';
-			$where = preg_replace( $regex, '(' . $maybe_both_query . ' ' . $terms_implode . ')', $where, -1 );
-		}
+        return $where;
+    }
 
-		return $where;
-	}
+    /**
+     * Modify the JOIN clause on author queries.
+     *
+     * @param string   $join  Existing JOIN clause.
+     * @param WP_Query $query Query object.
+     *
+     * @return string
+     */
+    public static function filter_posts_join($join, $query)
+    {
+        global $wpdb;
 
-	/**
-	 * Modify the JOIN clause on author queries.
-	 *
-	 * @param string   $join  Existing JOIN clause.
-	 * @param WP_Query $query Query object.
-	 *
-	 * @return string
-	 */
-	public static function filter_posts_join( $join, $query ) {
-		global $wpdb;
+        if ( ! $query->is_author() || empty($query->authors_having_terms)) {
+            return $join;
+        }
 
-		if ( ! $query->is_author() || empty( $query->authors_having_terms ) ) {
-			return $join;
-		}
+        // Check to see that JOIN hasn't already been added. Props michaelingp and nbaxley.
+        $term_relationship_inner_join = " INNER JOIN {$wpdb->term_relationships} ON ({$wpdb->posts}.ID = {$wpdb->term_relationships}.object_id)";
+        $term_relationship_left_join  = " LEFT JOIN {$wpdb->term_relationships} ON ({$wpdb->posts}.ID = {$wpdb->term_relationships}.object_id)";
+        $term_taxonomy_join           = " INNER JOIN {$wpdb->term_taxonomy} ON ( {$wpdb->term_relationships}.term_taxonomy_id = {$wpdb->term_taxonomy}.term_taxonomy_id )";
 
-		// Check to see that JOIN hasn't already been added. Props michaelingp and nbaxley.
-		$term_relationship_inner_join = " INNER JOIN {$wpdb->term_relationships} ON ({$wpdb->posts}.ID = {$wpdb->term_relationships}.object_id)";
-		$term_relationship_left_join  = " LEFT JOIN {$wpdb->term_relationships} ON ({$wpdb->posts}.ID = {$wpdb->term_relationships}.object_id)";
-		$term_taxonomy_join           = " INNER JOIN {$wpdb->term_taxonomy} ON ( {$wpdb->term_relationships}.term_taxonomy_id = {$wpdb->term_taxonomy}.term_taxonomy_id )";
+        // 4.6+ uses a LEFT JOIN for tax queries so we need to check for both.
+        if (false === strpos($join, trim($term_relationship_inner_join))
+            && false === strpos($join, trim($term_relationship_left_join))) {
+            $join .= $term_relationship_left_join;
+        }
 
-		// 4.6+ uses a LEFT JOIN for tax queries so we need to check for both.
-		if ( false === strpos( $join, trim( $term_relationship_inner_join ) )
-		     && false === strpos( $join, trim( $term_relationship_left_join ) ) ) {
-			$join .= $term_relationship_left_join;
-		}
+        if (false === strpos($join, trim($term_taxonomy_join))) {
+            $join .= str_replace('INNER JOIN', 'LEFT JOIN', $term_taxonomy_join);
+        }
 
-		if ( false === strpos( $join, trim( $term_taxonomy_join ) ) ) {
-			$join .= str_replace( 'INNER JOIN', 'LEFT JOIN', $term_taxonomy_join );
-		}
+        return $join;
+    }
 
-		return $join;
-	}
+    /**
+     * Modify the GROUP BY clause on author queries.
+     *
+     * @param string   $groupby Existing GROUP BY clause.
+     * @param WP_Query $query   Query object.
+     *
+     * @return string
+     */
+    public static function filter_posts_groupby($groupby, $query)
+    {
+        global $wpdb;
 
-	/**
-	 * Modify the GROUP BY clause on author queries.
-	 *
-	 * @param string   $groupby Existing GROUP BY clause.
-	 * @param WP_Query $query   Query object.
-	 *
-	 * @return string
-	 */
-	public static function filter_posts_groupby( $groupby, $query ) {
-		global $wpdb;
-
-		if ( ! $query->is_author() || empty( $query->authors_having_terms ) ) {
-			return $groupby;
-		}
+        if ( ! $query->is_author() || empty($query->authors_having_terms)) {
+            return $groupby;
+        }
 
 
-		$having  = 'MAX( IF ( ' . $wpdb->term_taxonomy . '.taxonomy = "author", IF ( ' . $query->authors_having_terms . ',2,1 ),0 ) ) <> 1 ';
-		$groupby = $wpdb->posts . '.ID HAVING ' . $having;
+        $having  = 'MAX( IF ( ' . $wpdb->term_taxonomy . '.taxonomy = "author", IF ( ' . $query->authors_having_terms . ',2,1 ),0 ) ) <> 1 ';
+        $groupby = $wpdb->posts . '.ID HAVING ' . $having;
 
-		return $groupby;
-	}
+        return $groupby;
+    }
 
 }

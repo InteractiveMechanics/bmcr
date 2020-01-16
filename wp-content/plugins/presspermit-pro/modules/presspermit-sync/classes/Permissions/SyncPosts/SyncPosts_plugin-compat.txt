@@ -1,4 +1,4 @@
-PressPermit Pro Sync Posts 2.7
+PublishPress Permissions Pro Sync Posts 2.7
 
 Posts to Users Synchronization feature for Team Member plugins 
 (automated post creation and author editing permissions)

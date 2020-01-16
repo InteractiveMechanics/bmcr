@@ -1,0 +1,1006 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Capabilities Pro\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-09 12:57-0500\n"
+"PO-Revision-Date: 2020-01-09 12:57-0500\n"
+"Last-Translator: Kevin Behrens <kevin@publishpress.com>\n"
+"Language-Team: PublishPress <help@publishpress.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_c;__ngettext;_n;pp_po_trigger;_x\n"
+"X-Poedit-Basepath: F:\\snapshot\\capabilities-pro\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: F:\\snapshot\\capabilities-pro\n"
+"X-Poedit-SearchPath-1: F:\\snapshot\\capabilities-pro\\includes\n"
+"X-Poedit-SearchPath-2: F:\\snapshot\\capabilities-pro\\includes-pro\n"
+
+#: F:\snapshot\capabilities-pro/capabilities-pro.php:41
+msgid "<strong>Error:</strong> PublishPress Capabilities cannot function because another copy of Capability Manager is active."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/capabilities-pro.php:70
+msgid "Warning:"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/capabilities-pro.php:71
+#, php-format
+msgid "The active plugin %s is not compatible with your PHP version."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/capabilities-pro.php:73
+#, php-format
+msgid "%s is required for this plugin."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/framework/lib/formating.php:40
+msgid "Settings saved."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:38
+#, php-format
+msgid "Warning: This role cannot access the dashboard without the read capability. %1$sClick here to fix this now%2$s."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:63
+msgid "Role Capabilities"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:78
+#, php-format
+msgid "Capabilities for %s"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:84
+#: F:\snapshot\capabilities-pro/includes/admin.php:1050
+msgid "Save Changes"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:94
+msgid "<strong>Note:</strong> Capability changes <strong>remain in the database</strong> after plugin deactivation."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:99
+#, php-format
+msgid "<strong>Note:</strong> Capability changes <strong>remain in the database</strong> after plugin deactivation. You can also configure this role as a %sPermission Group%s."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:133
+#: F:\snapshot\capabilities-pro/includes/admin.php:1141
+msgid "PublishPress Permissions"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:135
+msgid "Automatically define type-specific capabilities for your custom post types and taxonomies"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:139
+msgid "Assign standard WP roles supplementally for a specific post type"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:143
+msgid "Assign custom WP roles supplementally for a specific post type <em>(Pro)</em>"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:147
+msgid "Customize reading permissions per-category or per-post"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:151
+msgid "Customize editing permissions per-category or per-post <em>(Pro)</em>"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:155
+msgid "Custom Post Visibility statuses, fully implemented throughout wp-admin <em>(Pro)</em>"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:159
+msgid "Custom Moderation statuses for access-controlled, multi-step publishing workflow <em>(Pro)</em>"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:163
+msgid "Regulate permissions for Edit Flow post statuses <em>(Pro)</em>"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:167
+msgid "Customize the moderated editing of published content with Revisionary or Post Forking <em>(Pro)</em>"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:171
+msgid "Grant Spectator, Participant or Moderator access to specific bbPress forums <em>(Pro)</em>"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:175
+msgid "Grant supplemental content permissions to a BuddyPress group <em>(Pro)</em>"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:179
+msgid "WPML integration to mirror permissions to translations <em>(Pro)</em>"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:183
+msgid "Member support forum"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:190
+#, php-format
+msgid "%1$sgrab%2$s %3$s"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:190
+#, php-format
+msgid "%s (free install)"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:192
+#, php-format
+msgid "%1$sbuy%2$s %3$s"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:192
+#, php-format
+msgid "%s info/purchase"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:269
+msgid "&nbsp;"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:270
+msgid "Reading"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:271
+msgid "Editing Capabilities"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:272
+msgid "Deletion Capabilities"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:276
+msgid "can read posts which are currently published with private visibility"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:277
+msgid "has basic editing capability (but may need other capabilities based on post status and ownership)"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:278
+msgid "can edit posts which were created by other users"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:279
+msgid "can edit posts which are currently published"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:280
+msgid "can edit posts which are currently published with private visibility"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:281
+msgid "can make a post publicly visible"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:282
+msgid "has basic deletion capability (but may need other capabilities based on post status and ownership)"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:283
+msgid "can delete posts which were created by other users"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:284
+msgid "can delete posts which are currently published"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:285
+msgid "can delete posts which are currently published with private visibility"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:417
+#: F:\snapshot\capabilities-pro/includes/admin.php:523
+#: F:\snapshot\capabilities-pro/includes/admin.php:781
+#: F:\snapshot\capabilities-pro/includes/admin.php:876
+#: F:\snapshot\capabilities-pro/includes/admin.php:973
+#, php-format
+msgid "%s: assigned by Permission Group"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:432
+#, php-format
+msgid "shared capability: %s"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:500
+msgid "Other WordPress Core Capabilities"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:542
+msgid "Lockout Prevention: To remove read capability, first remove WordPress admin / editing capabilities, or add \"dashboard_lockout_ok\" capability"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:585
+#: F:\snapshot\capabilities-pro/includes/admin.php:820
+#: F:\snapshot\capabilities-pro/includes/admin.php:929
+#: F:\snapshot\capabilities-pro/includes/admin.php:1016
+msgid "check/uncheck all"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:585
+#: F:\snapshot\capabilities-pro/includes/admin.php:820
+#: F:\snapshot\capabilities-pro/includes/admin.php:929
+#: F:\snapshot\capabilities-pro/includes/admin.php:1016
+msgid "negate all (storing as disabled capabilities)"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:585
+#: F:\snapshot\capabilities-pro/includes/admin.php:820
+#: F:\snapshot\capabilities-pro/includes/admin.php:929
+#: F:\snapshot\capabilities-pro/includes/admin.php:1016
+msgid "negate none (add/remove all capabilities normally)"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:755
+#, php-format
+msgid "%s Capabilities"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:828
+msgid "Additional Capabilities"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:938
+msgid "Meta capabilities are used in code as placeholders for other capabilities. Assiging to a role has no effect."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:939
+msgid "Invalid Capabilities"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1029
+msgid "Role level is mostly deprecated. However, it still determines eligibility for Post Author assignment and limits the application of user editing capabilities."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1030
+msgid "Role Level:"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1053
+msgid "Delete this role"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1053
+#, php-format
+msgid ""
+"You are about to delete the %s role.\n"
+"\n"
+" 'Cancel' to stop, 'OK' to delete."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1053
+msgid "Delete Role"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1060
+msgid "Select New Role"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1069
+msgid "Change"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1088
+msgid "Create New Role"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1091
+#: F:\snapshot\capabilities-pro/includes/admin.php:1107
+msgid "Role Name"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1094
+#: F:\snapshot\capabilities-pro/includes/admin.php:1110
+msgid "Make role available for supplemental assignment to Permission Groups only"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1094
+#: F:\snapshot\capabilities-pro/includes/admin.php:1110
+msgid "hidden"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1098
+msgid "Create"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1104
+msgid "Copy this role to"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1114
+msgid "Copy"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1120
+msgid "Add Capability"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1123
+msgid "Add to role"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1128
+msgid "Backup Tool"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1130
+msgid "Backup / Restore Roles"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1135
+msgid "Related Permissions Plugins"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1138
+msgid "Multiple Authors"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1147
+msgid "PublishPress"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1152
+msgid "PublishPress Revisions"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1154
+msgid "Help / Contact Form"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1192
+msgid "Create this role definition in new (future) sites"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1192
+msgid "include in new sites"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1195
+msgid "Copy / update this role definition to all sites now"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/admin.php:1195
+msgid "sync role to all sites now"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup-handler.php:9
+msgid "You do not have permission to restore roles."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup-handler.php:44
+msgid "New backup saved."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup-handler.php:51
+msgid "Roles and Capabilities restored from initial backup."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup-handler.php:53
+#: F:\snapshot\capabilities-pro/includes/backup-handler.php:63
+msgid "Restore failed. No backup found."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup-handler.php:61
+msgid "Roles and Capabilities restored from last backup."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup-handler.php:82
+msgid "Needed function to create default roles not found!"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup-handler.php:95
+msgid "Roles and Capabilities reset to WordPress defaults"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:36
+#, php-format
+msgid "Backup Tool for %1$sPublishPress Capabilities%2$s"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:45
+msgid "Backup and Restore"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:49
+msgid "Select action:"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:52
+msgid "Backup roles and capabilities"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:56
+msgid "Restore initial backup"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:59
+msgid "Restore last saved backup"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:61
+msgid "Do Action"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:69
+msgid "Show initial backup"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:71
+msgid "Show last backup"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:92
+#, php-format
+msgid "Initial Backup - %s"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:92
+msgid "Initial Backup"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:93
+#, php-format
+msgid "Last Backup - %s"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:93
+msgid "Last Backup"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:103
+#, php-format
+msgid "%s (%s roles)"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:119
+#, php-format
+msgid "%s (level %s)"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:140
+msgid "Reset WordPress Defaults"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:142
+msgid "WARNING:"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:142
+msgid "Reseting default Roles and Capabilities will set them to the WordPress install defaults."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:145
+msgid "If you have installed any plugin that adds new roles or capabilities, these will be lost."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:146
+msgid "It is recommended to use this only as a last resource!"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:147
+msgid "Reset Roles and Capabilities to WordPress defaults"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:147
+msgid ""
+"You are about to reset Roles and Capabilities to WordPress defaults.\n"
+" 'Cancel' to stop, 'OK' to reset."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/backup.php:147
+msgid "Reset to WordPress defaults"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/filters-woocommerce.php:32
+#, php-format
+msgid "All %s"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/filters-woocommerce.php:33
+msgid "Add New"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/filters.php:275
+msgid "Edit Roles"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/functions-admin.php:7
+#: F:\snapshot\capabilities-pro/includes/manager.php:274
+msgid "Capabilities"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/functions-admin.php:29
+#: F:\snapshot\capabilities-pro/includes/manager.php:296
+msgid "Backup"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/handler.php:18
+#: F:\snapshot\capabilities-pro/includes/handler.php:31
+msgid "New role created."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/handler.php:24
+#: F:\snapshot\capabilities-pro/includes/handler.php:37
+msgid "Error: Failed creating the new role."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/handler.php:91
+msgid "Incorrect capability name."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/handler.php:96
+msgid "Type / Taxonomy settings saved."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/handler.php:102
+msgid "Bad form received."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/handler.php:218
+msgid "You cannot remove Manage Capabilities from Administrators"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/handler.php:328
+#, php-format
+msgid "Cannot delete default role. You <a href=\"%s\">have to change it first</a>."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/handler.php:375
+#, php-format
+msgid "Role has been deleted. %1$d users moved to default role %2$s."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/manager.php:165
+msgid "Explicity negate this capability by storing as disabled"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/manager.php:166
+msgid "Explicitly negate these capabilities by storing as disabled"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/manager.php:167
+msgid "Post type registration does not define this capability distinctly"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/manager.php:168
+msgid "This capability is explicitly negated. Click to add/remove normally."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/manager.php:169
+msgid "Add or remove this capability from the WordPress role"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/manager.php:170
+msgid "Add or remove capability from the role normally"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/manager.php:390
+#: F:\snapshot\capabilities-pro/includes/manager.php:431
+#: F:\snapshot\capabilities-pro/includes/manager.php:604
+msgid "What do you think you're doing?!?"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/manager.php:445
+msgid "New capability added to role."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/manager.php:484
+msgid "Bad form Received"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/manager.php:630
+#, php-format
+msgid "If you like %s, please leave us a %s rating. Thank you!"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/manager.php:641
+msgid "About PublishPress Capabilities"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/manager.php:641
+msgid "About"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/manager.php:643
+msgid "Capabilites Documentation"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/manager.php:643
+msgid "Documentation"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/manager.php:645
+msgid "Contact the PublishPress team"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/manager.php:645
+msgid "Contact"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/pp-ui.php:44
+#, php-format
+msgid "see %1$sRole Usage%2$s: \"Pattern Roles\""
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/pp-ui.php:46
+#, php-format
+msgid "activate %1$sAdvanced settings%2$s, see Role Usage"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/pp-ui.php:51
+#, php-format
+msgid "\"Posts\" capabilities selected here also define type-specific role assignment for Permission Groups%s."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/pp-ui.php:53
+#, php-format
+msgid "\"Posts\" capabilities selected here also define type-specific role assignment for Permit Groups%s."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/pp-ui.php:61
+#, php-format
+msgid "Capabilities for custom statuses can be manually added here. (See %sPermissions > Post Statuses%s for applicable names). %sSupplemental status-specific roles%s are usually more convenient, though."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/pp-ui.php:63
+msgid "Capabilities for custom statuses can be manually added here. Or activate the PP Custom Post Statuses extension to assign status-specific supplemental roles."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/pp-ui.php:66
+msgid "Capabilities for custom statuses can be manually added to a role here (see Conditions > Status > Capability Mapping for applicable names). However, it is usually more convenient to use Permit Groups to assign a supplemental status-specific role."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/pp-ui.php:86
+msgid "hidden role"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/pp-ui.php:97
+msgid "Type-Specific Capabilities"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/pp-ui.php:100
+msgid "Ensure permissions can be controlled separately from other post types."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/pp-ui.php:155
+msgid "Make selected post types require a different capability to add new posts."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/pp-ui.php:155
+msgid "Use create_posts capability"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/pp-ui.php:160
+#: F:\snapshot\capabilities-pro/includes/pp-ui.php:221
+#: F:\snapshot\capabilities-pro/includes/pp-ui.php:277
+msgid "Update"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/pp-ui.php:170
+msgid "Taxonomy-Specific Capabilities"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/pp-ui.php:173
+msgid "Ensure permissions can be controlled separately from other taxonomies."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/pp-ui.php:226
+msgid "Detailed Taxonomy Capabilities"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes/pp-ui.php:229
+msgid "Enforce Edit, Delete and Assign capabilities separately from Management capability."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/admin.php:101
+msgid "Custom Statuses"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/admin.php:118
+msgid "Can assign this status (for selected post types)"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/admin.php:119
+msgid "Can edit posts of this status (for selected post types)"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/admin.php:120
+msgid "Can edit other's posts of this status (for selected post types)"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/admin.php:121
+msgid "Can delete posts of this status (for selected post types)"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/admin.php:122
+msgid "Can delete other's posts of this status (for selected post types)"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/admin.php:288
+msgid "Post Types..."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/admin.php:362
+msgid "Enable / Disable Custom Permissions"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/admin.php:368
+msgid "Customize Permissions"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/admin.php:377
+#, php-format
+msgid "%sAdvanced status control...%s"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/admin.php:383
+#, php-format
+msgid "For more control, <br />enable the PublishPress Permissions <br />%sStatus Control module%s"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:14
+msgid "Options"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:20
+msgid "Control selection of custom post statuses."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:20
+msgid "Control Custom Statuses"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:27
+msgid "Hide the PublishPress footer and other branding."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:27
+msgid "Display Branding"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:76
+#, php-format
+msgid "Your PublishPress license key has expired. For continued priority support, <a href=\"%s\">please renew</a>."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:87
+#, php-format
+msgid "Your PublishPress license key will expire today. For updates and priority support, <a href=\"%s\">please renew</a>."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:94
+#, php-format
+msgid "Your PublishPress license key will expire in %d day. For updates and priority support, <a href=\"%s\">please renew</a>."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:116
+msgid "License Key"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:121
+msgid "Key Expired"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:124
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:134
+msgid "Deactivate"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:127
+msgid "Activated"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:130
+msgid "(enter publishpress.com key)"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:134
+msgid "Activate"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:162
+#, php-format
+msgid "view %s&nbsp;details"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:176
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:179
+msgid "Update&nbsp;Available"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:183
+msgid "Update&nbsp;Check"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:189
+msgid "Account"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:195
+#, php-format
+msgid "<a href=\"%s\" target=\"_blank\">Pricing</a>"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:226
+msgid "Activate Key"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:227
+msgid "Deactivate Key"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:228
+msgid "Connecting to publishpress.com server..."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:229
+msgid "The request could not be processed due to a connection failure."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:230
+msgid "Please enter the license key shown on your order receipt."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:231
+msgid "An unidentified error occurred."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:233
+msgid "The key has been deactivated."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:234
+msgid "The key has been activated."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:235
+msgid "The key has expired."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:236
+msgid "The key is invalid."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:237
+msgid "An unknown activation error occurred."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:238
+msgid "The key provided is not valid. Please double-check your entry."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:239
+msgid "This site is not valid to activate the key."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:240
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:246
+msgid "The key provided could not be validated by publishpress.com."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:241
+msgid "The key provided is already active on another site."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:242
+msgid "The key has already been activated on the allowed number of sites."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:243
+msgid "An unknown deactivation error occurred."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:244
+msgid "Unable to deactivate because the provided key is not valid."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:245
+msgid "This site is not valid to deactivate the key."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:247
+msgid "The key provided is not active on the specified site."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:252
+#, php-format
+msgid "If this is incorrect, <a href=\"%s\">request activation help</a>."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/manager-ui.php:253
+msgid "Please save settings before uploading site configuration."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/includes-pro/pro-maint.php:47
+#: F:\snapshot\capabilities-pro/includes-pro/pro-maint.php:61
+msgid "An error occurred. Please, try again or contact the support team."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/vendor/publishpress/edd-license-handler/EDD_License_Handler.php:123
+#, php-format
+msgid "%1$s License Key"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/vendor/publishpress/edd-license-handler/EDD_License_Handler.php:249
+msgid "Deactivate License"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/vendor/publishpress/edd-license-handler/EDD_SL_Plugin_Updater.php:197
+#, php-format
+msgid "There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/vendor/publishpress/edd-license-handler/EDD_SL_Plugin_Updater.php:205
+#, php-format
+msgid "There is a new version of %1$s available. %2$sView version %3$s details%4$s or %5$supdate now%6$s."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/vendor/publishpress/edd-license-handler/EDD_SL_Plugin_Updater.php:392
+msgid "You do not have permission to install plugin updates"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/vendor/publishpress/edd-license-handler/EDD_SL_Plugin_Updater.php:392
+msgid "Error"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/vendor/publishpress/wordpress-edd-license-integration/src/core/License.php:122
+msgid "An error occurred. Please, try again."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/vendor/publishpress/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:108
+msgid "Missing license"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/vendor/publishpress/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:111
+msgid "Your license key is expired"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/vendor/publishpress/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:114
+msgid "Your license key has been disabled"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/vendor/publishpress/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:118
+msgid "Invalid license"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/vendor/publishpress/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:121
+msgid "Your license is not active for this URL"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/vendor/publishpress/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:124
+msgid "This appears to be an invalid license key for this product"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/vendor/publishpress/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:127
+msgid "Your license key has reached its activation limit"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/vendor/publishpress/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:135
+msgid "Not validated yet"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/vendor/publishpress/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:148
+msgid "Status"
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/vendor/publishpress/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:150
+msgid "Click here to read more about licenses."
+msgstr ""
+
+#: F:\snapshot\capabilities-pro/vendor/publishpress/wordpress-edd-license-integration/src/core/Setting/Field/License_key.php:151
+msgid "More information"
+msgstr ""
+

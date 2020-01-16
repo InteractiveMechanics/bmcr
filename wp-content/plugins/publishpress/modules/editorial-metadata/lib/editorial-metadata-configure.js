@@ -9,7 +9,7 @@
         /**
          * Instantiate the drag and drop sorting functionality
          */
-        $("#the-list").sortable({
+        $('#the-list').sortable({
             items: 'tr.term-static',
             placeholder: 'test',
             update: function (event, ui) {
@@ -18,7 +18,7 @@
                 // Reset the position indicies for all terms
                 $('#the-list tr').removeClass('alternate');
 
-                var terms = new Array();
+                var terms = [];
 
                 $('#the-list tr.term-static').each(function (index, value) {
                     var term_id = $(this).attr('id').replace('term-', '');
@@ -34,7 +34,7 @@
                 var params = {
                     action: 'update_term_positions',
                     term_positions: terms,
-                    editorial_metadata_sortable_nonce: $('#editorial-metadata-sortable').val(),
+                    editorial_metadata_sortable_nonce: $('#editorial-metadata-sortable').val()
                 };
 
                 // Inform WordPress of our updated positions
@@ -60,6 +60,6 @@
             }
         });
 
-        $("#the-list tr.term-static").disableSelection();
+        $('#the-list tr.term-static').disableSelection();
     });
 })(jQuery);

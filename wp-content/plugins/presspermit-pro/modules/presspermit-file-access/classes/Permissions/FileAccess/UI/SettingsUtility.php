@@ -18,7 +18,7 @@ class SettingsUtility
 
                     $name = 'admin';
 
-                    printf(__('Back to %1$sPressPermit Settings%2$s', 'presspermit'), "<a href='$name.php?page=presspermit-settings'>", '</a>');
+                    printf(__('Back to %1$Permissions Settings%2$s', 'presspermit'), "<a href='$name.php?page=presspermit-settings'>", '</a>');
                     ?>
                 </td>
                 <td>
@@ -40,7 +40,7 @@ class SettingsUtility
         }
 
         echo '<br />';
-        _e("PressPermit can limit direct URL access to files linked from your posts and pages, <strong>but only if</strong> the following requirements are met:", 'presspermit');
+        _e("PublishPress Permissions can limit direct URL access to files linked from your posts and pages, <strong>but only if</strong> the following requirements are met:", 'presspermit');
         echo '<div class="pp-instructions"><ol><li>';
         _e('Your WP content directory must be a branch of the WordPress directory tree (i.e. wp-config.php must not be customized to separate WP_CONTENT_DIR and WP_CONTENT_URL from the main WordPress folder).', 'presspermit');
         echo '</li><li>';

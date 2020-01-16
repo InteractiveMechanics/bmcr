@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PressPermit Collaborative Publishing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-27 12:21-0500\n"
+"POT-Creation-Date: 2020-01-09 12:58-0500\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Kevin Behrens <kevin@publishpress.com>\n"
 "Language-Team: PublishPress <help@publishpress.com>\n"
@@ -16,11 +16,11 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_c;__ngettext;_n;pp_po_trigger;_x\n"
 "X-Poedit-SearchPath-0: F:\\snapshot\\presspermit-pro\\modules\\presspermit-collaboration\n"
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/presspermit-collaboration.php:54
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/presspermit-collaboration.php:52
 msgid "Collaborative Publishing"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/CollabHooksAdmin.php:197
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/CollabHooksAdmin.php:206
 msgid "access denied"
 msgstr ""
 
@@ -32,11 +32,11 @@ msgstr ""
 msgid "Approve"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/CollabHooksCompat.php:177
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/CollabHooksCompat.php:183
 msgid "Revisors"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/CollabHooksCompat.php:178
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/CollabHooksCompat.php:184
 msgid "Revisor"
 msgstr ""
 
@@ -73,26 +73,26 @@ msgstr ""
 msgid "You do not have permission to delete that Navigation Menu."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/AdminWorkarounds.php:466
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/AdminWorkarounds.php:491
 msgid "(no parent)"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/CapabilityFiltersAdmin.php:435
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/CapabilityFiltersAdmin.php:454
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/CapabilityFiltersAdmin.php:440
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/CapabilityFiltersAdmin.php:459
 #, php-format
 msgid "Go to %s"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/CapabilityFiltersAdmin.php:441
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/CapabilityFiltersAdmin.php:446
 #, php-format
 msgid "The %s was saved, but you can no longer edit it."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/CapabilityFiltersAdmin.php:448
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/CapabilityFiltersAdmin.php:453
 msgid "Dashboard"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/CapabilityFiltersAdmin.php:453
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/CapabilityFiltersAdmin.php:458
 msgid "The requested modification was processed, but you can no longer edit the post."
 msgstr ""
 
@@ -251,10 +251,6 @@ msgstr ""
 msgid ","
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/Updated.php:25
-msgid "You have installed a development / beta version of the PublishPress Collaborative Publishing module. If this is a concern, see Permissions > Settings > Install > Beta Updates."
-msgstr ""
-
 #: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/XmlRpc.php:58
 msgid "Invalid post ID."
 msgstr ""
@@ -281,7 +277,6 @@ msgid "Edit"
 msgstr ""
 
 #: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/AjaxUI.php:8
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:25
 msgid "Editing"
 msgstr ""
 
@@ -342,28 +337,27 @@ msgstr ""
 msgid "Role Usage edited."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsage.php:73
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/Dashboard/DashboardFilters.php:102
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsage.php:74
 msgid "Edit Role Usage"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsage.php:82
-msgid "These <strong>optional</strong> settings customize how PressPermit applies <strong>supplemental roles</strong>. Your existing WP Role Definitions can be applied in two different ways:"
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsage.php:83
+msgid "These <strong>optional</strong> settings customize how PublishPress Permissions applies <strong>supplemental roles</strong>. Your existing WP Role Definitions can be applied in two different ways:"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsage.php:85
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsage.php:86
 msgid "Pattern Roles convert 'post' capabilities to the corresponding type-specific capability.  In a normal WP installation, this is the easiest solution."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsage.php:89
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsage.php:90
 msgid "With Direct Assignment, capabilities are applied without modification (leaving you responsible to add custom type caps to the WP Role Definitions)."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsage.php:100
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsage.php:104
 msgid "All Role Usage settings will be reset to DEFAULTS.  Are you sure?"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsage.php:104
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsage.php:108
 msgid "Revert to Defaults"
 msgstr ""
 
@@ -371,62 +365,58 @@ msgstr ""
 msgid "Role Usage updated."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:72
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:73
 #, php-format
 msgid "Role Usage: %s"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:85
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageListTable.php:73
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:87
 msgid "Usage"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:93
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageListTable.php:159
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:95
 msgid "no supplemental assignment"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:94
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageListTable.php:160
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:96
 msgid "Pattern Role"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:95
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageListTable.php:154
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:97
 msgid "Direct Assignment"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:105
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:107
 msgid "Post Capabilities"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:109
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:111
 #, php-format
 msgid "Type-specific and/or status-specific equivalents of the following capabilities are included in supplemental %s roles:"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:129
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:131
 msgid "Arbitrary Capabilities"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:133
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:135
 #, php-format
 msgid "The following capabilities are included in supplemental %s roles:"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:151
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:153
 msgid "Role Capabilities"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:154
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:156
 msgid "All capabilities defined for this WordPress role will be applied in supplemental assignments:"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:171
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:173
 msgid "Notes regarding Pattern Roles"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:181
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/RoleUsageEdit.php:183
 msgid "Back to Role Usage List"
 msgstr ""
 
@@ -484,7 +474,7 @@ msgid "Pages can be set or removed from Top Level by:"
 msgstr ""
 
 #: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:52
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:318
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:326
 msgid "Specified element IDs also require the following site-wide Role:"
 msgstr ""
 
@@ -529,202 +519,206 @@ msgid "Default visibility for new posts:"
 msgstr ""
 
 #: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:63
-msgid "Bulk-Add Author Pages (on Users screen)"
+msgid "Order Page Parent dropdown by Title"
 msgstr ""
 
 #: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:64
-msgid "Publish Author Pages at bulk creation"
+msgid "Bulk-Add Author Pages (on Users screen)"
 msgstr ""
 
 #: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:65
-msgid "Fork published posts only"
+msgid "Publish Author Pages at bulk creation"
 msgstr ""
 
 #: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:66
-msgid "Forking enforces edit_others_posts capability"
+msgid "Fork published posts only"
 msgstr ""
 
 #: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:67
-msgid "Force taxonomy columns on Edit Posts screen"
+msgid "Forking enforces edit_others_posts capability"
 msgstr ""
 
 #: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:68
+msgid "Add taxonomy columns to Edit Posts screen"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:69
 msgid "Non-Administrators can set Editing Exceptions for their editable posts"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:112
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:113
 #, php-format
 msgid "Settings related to content editing permissions, provided by the %s module."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:171
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:172
 msgid "Public"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:191
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:192
 msgid "lock"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:215
-msgid "Display a custom column on Edit Posts screen for all related taxonomies which are enabled for PressPermit filtering."
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:222
+msgid "Display a custom column on Edit Posts screen for all related taxonomies which are enabled for Permissions filtering."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:218
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:225
 msgid "Allows creation of a new post (of any type) for each selected user, using an existing post as the pattern."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:240
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:248
 msgid "no Page Parent filter"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:240
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:248
 msgid "Page Authors, Editors and Administrators"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:240
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:248
 msgid "Page Editors and Administrators"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:240
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:248
 msgid "Administrators"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:254
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:262
 msgid "Users who do not meet this site-wide role requirement will not be able to publish new top-level pages (Parent = \"Main Page\").  They will also be unable to move a currently published page from \"Main Page\" to a different Page Parent."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:274
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:282
 msgid "Remove Edit Form elements with these html IDs from users who do not have full editing capabilities for the post/page. Separate with&nbsp;;"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:292
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:300
 msgid "Edit Form HTML IDs:"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:302
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:310
 #, php-format
 msgid "%1$s sample IDs:%2$s %3$s"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:320
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:327
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:328
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:335
 msgid "Content Administrator"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:323
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:331
 msgid "no requirement"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:324
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:332
 msgid "Contributor / Author / Editor"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:325
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:333
 msgid "Author / Editor"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:328
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:336
 msgid "User Administrator"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:329
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:337
 msgid "Option Administrator"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:361
-msgid "The following settings are currently overridden by the constant PP_MEDIA_LIB_UNFILTERED (defined in wp-config.php or some other file you maintain). Media Library access will not be altered by PressPermit exceptions."
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:369
+msgid "The following settings are currently overridden by the constant PP_MEDIA_LIB_UNFILTERED (defined in wp-config.php or some other file you maintain). Media Library access will not be altered by Permissions exceptions."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:365
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:373
 msgid "The following settings apply to users who have the upload_files or edit_files capability:"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:369
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:377
 msgid "For non-Administrators, determines visibility of files uploaded by another user and now attached to a post which the logged user can read. To force a user to view all media regardless of this setting, add the pp_list_all_files capability to their role."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:372
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:380
 msgid "For non-Administrators, determines visibility of files uploaded by another user and now attached to a post which the logged user can edit. To force a user to view all media regardless of this setting, add the pp_list_all_files capability to their role."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:375
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:383
 msgid "For non-Administrators, determines editing access to files uploaded by another user and now attached to a post which the logged user can edit."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:378
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:386
 msgid "If enabled, all users who have Media Library access will be implicitly granted the list_others_unattached_files capability. Media Editors can view and edit regardless of this setting."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:381
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:389
 msgid "Ensures users can always edit attachments they have uploaded, even if they are later attached to a post which the user cannot edit. If disabled, you can grant individual users the edit_own_attachments capability or assign Media editing Exceptions for individual files."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:398
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:406
 msgid "Allow non-Administrators to rename menu items they cannot fully edit. Menu items will be locked into current positions."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:401
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:409
 msgid "Prevent creation or editing of custom items for non-Administrators who lack edit_theme_options capability."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:415
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:423
 msgid "If enabled, prevents those with edit_users capability from editing a user with a higher level or assigning a role higher than their own."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:430
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:438
 msgid "Fork published posts only."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:433
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:441
 msgid "If a user lacks the edit_others_posts capability for the post type, they cannot fork other&apos;s posts either."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:445
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:453
 msgid "If enabled, presence of the pp_set_edit_exceptions, pp_set_associate_exceptions, etc. capabilities in the WP role will be honored. See list of capabilities below."
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:453
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:456
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:461
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:464
 msgid "Set Forking Exceptions on Edit Post/Term screen (where applicable)"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:458
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:466
 msgid "Set Editing Exceptions on Edit Post/Term screen (where applicable)"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:459
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:467
 msgid "Set Association (Parent) Exceptions on Edit Post screen (where applicable)"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:460
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:468
 msgid "Set Term Assignment Exceptions on Edit Term screen (in relation to an editable post type)"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:461
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:469
 msgid "Set Term Management Exceptions on Edit Term screen"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:462
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:470
 msgid "Set Term Association (Parent) Exceptions on Edit Term screen"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:464
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:472
 msgid "Edit own file uploads, even if they become attached to an uneditable post"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:465
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:473
 msgid "See other user&apos;s unattached file uploads in Media Library"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:466
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:474
 msgid "Disregard association exceptions (for all hierarchical post types)"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:468
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:476
 msgid "Do not alter the Media Library listing provided by WordPress"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:469
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/SettingsTabEditing.php:477
 msgid "Make Quick Edit and Bulk Edit available to non-Administrators even though some inappropriate selections may be possible"
 msgstr ""
 
@@ -733,7 +727,7 @@ msgstr ""
 msgid "Role Usage"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/Dashboard/DashboardFilters.php:181
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/Dashboard/DashboardFilters.php:186
 msgid "Workflow"
 msgstr ""
 
@@ -747,27 +741,27 @@ msgstr ""
 msgid "You are not permitted to manage menu locations"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/Dashboard/PostEdit.php:92
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/Dashboard/PostEdit.php:93
 msgid "Post Approved"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/Dashboard/PostEdit.php:93
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/Dashboard/PostEdit.php:94
 msgid "Page Approved"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/Dashboard/PostEdit.php:279
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/Dashboard/PostEdit.php:280
 msgid "Author Search / Select"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/Dashboard/PostEdit.php:306
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/Dashboard/PostEdit.php:307
 msgid "select other"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/Dashboard/PostEdit.php:307
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/Dashboard/PostEdit.php:308
 msgid "close"
 msgstr ""
 
-#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/Dashboard/TermEdit.php:65
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/Dashboard/TermEdit.php:66
 #, php-format
 msgid "%1$s %2$s Exceptions"
 msgstr ""
@@ -833,5 +827,9 @@ msgstr ""
 
 #: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/Dashboard/Users.php:111
 msgid "Add Pages"
+msgstr ""
+
+#: F:\snapshot\presspermit-pro\modules\presspermit-collaboration/classes/Permissions/Collab/UI/Gutenberg/PostEdit.php:33
+msgid "(select...)"
 msgstr ""
 

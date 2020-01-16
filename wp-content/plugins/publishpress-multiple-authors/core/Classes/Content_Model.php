@@ -1,246 +1,230 @@
 <?php
 /**
- * @package     PublishPress\Multiple_authors
+ * @package     MultipleAuthors
  * @author      PublishPress <help@publishpress.com>
  * @copyright   Copyright (C) 2018 PublishPress. All rights reserved.
  * @license     GPLv2 or later
  * @since       1.1.0
  */
 
-namespace PublishPress\Addon\Multiple_authors\Classes;
+namespace MultipleAuthors\Classes;
 
-use PublishPress\Addon\Multiple_authors\Classes\Objects\Author;
+use MultipleAuthors\Classes\Objects\Author;
 
 /**
  * Declaration of the content model
  */
-class Content_Model {
-	/**
-	 * Register taxonomies to objects after post types have been registered
-	 */
-	public static function action_init_late_register_taxonomy_for_object_type() {
+class Content_Model
+{
+    /**
+     * Register taxonomies to objects after post types have been registered
+     */
+    public static function action_init_late_register_taxonomy_for_object_type()
+    {
+        foreach (self::get_author_supported_post_types() as $post_type) {
+            register_taxonomy_for_object_type('author', $post_type);
+        }
+    }
 
-		// Check if the notification module is enabled, before register the post type.
-		$options = get_option( 'publishpress_multiple_authors_options', null );
+    /**
+     * Get the supported post types for authors
+     */
+    public static function get_author_supported_post_types()
+    {
+        return Utils::get_supported_post_types();
+    }
 
-		if ( ! is_object( $options ) ) {
-			return;
-		}
+    /**
+     * Filter author term links to look like author links
+     *
+     * @param string $link     Term link URL.
+     * @param object $term     Term object.
+     * @param string $taxonomy Taxonomy slug.
+     *
+     * @return string
+     */
+    public static function filter_term_link($link, $term, $taxonomy)
+    {
+        global $wp_rewrite;
 
-		if ( ! isset( $options->enabled ) || $options->enabled !== 'on' ) {
-			return;
-		}
+        if ('author' !== $taxonomy) {
+            return $link;
+        }
 
-		foreach ( self::get_author_supported_post_types() as $post_type ) {
-			register_taxonomy_for_object_type( 'author', $post_type );
-		}
-	}
+        $author          = Author::get_by_term_id($term->term_id);
+        $author_nicename = is_object($author) ? $author->slug : '';
+        $permastruct     = $wp_rewrite->get_author_permastruct();
 
-	/**
-	 * Get the supported post types for authors
-	 */
-	public static function get_author_supported_post_types() {
-		$post_types_with_authors = array_values( get_post_types() );
-		foreach ( $post_types_with_authors as $key => $name ) {
-			if ( ! post_type_supports( $name, 'author' )
-			     || in_array( $name, [ 'revision', 'attachment' ], true ) ) {
-				unset( $post_types_with_authors[ $key ] );
-			}
-		}
+        if ($permastruct) {
+            $link = str_replace('%author%', $author_nicename, $permastruct);
+            $link = home_url(user_trailingslashit($link));
+        } else {
+            $link = add_query_arg('author_name', rawurlencode($author_nicename), home_url());
+        }
 
-		/**
-		 * Modify post types that use authors.
-		 *
-		 * @param array $post_types_with_authors Post types that support authors.
-		 */
-		return apply_filters( 'authors_post_types', $post_types_with_authors );
-	}
+        return $link;
+    }
 
-	/**
-	 * Filter author term links to look like author links
-	 *
-	 * @param string $link     Term link URL.
-	 * @param object $term     Term object.
-	 * @param string $taxonomy Taxonomy slug.
-	 *
-	 * @return string
-	 */
-	public static function filter_term_link( $link, $term, $taxonomy ) {
-		global $wp_rewrite;
+    /**
+     * Filter author term links to look like author links
+     *
+     * @param $link
+     * @param $author_id
+     * @param $author_nicename
+     *
+     * @return string
+     */
+    public static function filter_author_link($link, $author_id, $author_nicename)
+    {
+        global $wp_rewrite;
 
-		if ( 'author' !== $taxonomy ) {
-			return $link;
-		}
+        $permastruct = $wp_rewrite->get_author_permastruct();
 
-		$author          = Author::get_by_term_id( $term->term_id );
-		$author_nicename = is_object( $author ) ? $author->slug : '';
-		$permastruct     = $wp_rewrite->get_author_permastruct();
+        if (empty($permastruct)) {
+            return $link;
+        }
 
-		if ( $permastruct ) {
-			$link = str_replace( '%author%', $author_nicename, $permastruct );
-			$link = home_url( user_trailingslashit( $link ) );
-		} else {
-			$link = add_query_arg( 'author_name', rawurlencode( $author_nicename ), home_url() );
-		}
+        // We probably have a call for a guest author, without an author_id and a undefined author_nicename argument.
+        if (empty($author_id) && empty($author_nicename)) {
+            // Try to identify the current authors.
 
-		return $link;
-	}
+            $authors = get_multiple_authors();
 
-	/**
-	 * Filter author term links to look like author links
-	 *
-	 * @param $link
-	 * @param $author_id
-	 * @param $author_nicename
-	 *
-	 * @return string
-	 */
-	public static function filter_author_link( $link, $author_id, $author_nicename ) {
-		global $wp_rewrite;
+            if ( ! empty($authors)) {
+                // Even for multiple authors, if not specified one, we will always get the first author.
+                $author = $authors[0];
 
-		$permastruct = $wp_rewrite->get_author_permastruct();
+                // Based on the method get_author_posts_url.
+                $link = str_replace('%author%', $author->user_nicename, $permastruct);
+                $link = home_url(user_trailingslashit($link));
+            }
+        }
 
-		if ( empty( $permastruct ) ) {
-			return $link;
-		}
+        $link_path = str_replace(home_url(), '', $link);
 
-		// We probably have a call for a guest author, without an author_id and a undefined author_nicename argument.
-		if ( empty( $author_id ) && empty( $author_nicename ) ) {
-			// Try to identify the current authors.
+        // Check if the author slug is empty in the link.
+        if ($link_path === str_replace('%author%', '', $permastruct)) {
+            global $wp;
 
-			$authors = get_multiple_authors();
+            // Redirects to the post page.
+            $link = get_the_permalink();
+        }
 
-			if ( ! empty( $authors ) ) {
-				// Even for multiple authors, if not specified one, we will always get the first author.
-				$author = $authors[0];
+        return $link;
+    }
 
-				// Based on the method get_author_posts_url.
-				$link = str_replace('%author%', $author->user_nicename, $permastruct);
-				$link = home_url( user_trailingslashit( $link ) );
-			}
-		}
+    /**
+     * Filters author term display name.
+     *
+     * @param $author_meta
+     * @param $user_id
+     *
+     * @return mixed
+     */
+    public static function filter_author_display_name($author_meta, $user_id)
+    {
+        if (empty($author_meta) && empty($user_id)) {
+            $authors = get_multiple_authors();
 
-		$link_path = str_replace( home_url(), '', $link );
+            if ( ! empty($authors)) {
+                // Even for multiple authors, if not specified one, we will always get the first author.
+                $author = $authors[0];
 
-		// Check if the author slug is empty in the link.
-		if ( $link_path === str_replace( '%author%', '', $permastruct ) ) {
-			global $wp;
+                if (isset($author->display_name)) {
+                    return $author->display_name;
+                }
+            }
+        }
 
-			// Redirects to the post page.
-			$link = get_the_permalink();
-		}
+        return $author_meta;
+    }
 
-		return $link;
-	}
+    /**
+     * Store user id as a term meta key too, for faster querying
+     *
+     * @param mixed   $check      Whether or not the update should be short-circuited.
+     * @param integer $object_id  ID for the author term object.
+     * @param string  $meta_key   Meta key being updated.
+     * @param string  $meta_value New meta value.
+     */
+    public static function filter_update_term_metadata($check, $object_id, $meta_key, $meta_value)
+    {
+        if ('user_id' !== $meta_key) {
+            return $check;
+        }
+        $term = get_term_by('id', $object_id, 'author');
+        if ('author' !== $term->taxonomy) {
+            return $check;
+        }
+        $metas = get_term_meta($object_id);
+        foreach ($metas as $key => $meta) {
+            if (0 === strpos($key, 'user_id_')) {
+                delete_term_meta($object_id, $key);
+            }
+        }
+        if ($meta_value) {
+            update_term_meta($object_id, 'user_id_' . $meta_value, 'user_id');
+        }
 
-	/**
-	 * Filters author term display name.
-	 *
-	 * @param $author_meta
-	 * @param $user_id
-	 *
-	 * @return mixed
-	 */
-	public static function filter_author_display_name( $author_meta, $user_id ) {
-		if ( empty( $author_meta ) && empty( $user_id ) ) {
-			$authors = get_multiple_authors();
+        return $check;
+    }
 
-			if ( ! empty( $authors ) ) {
-				// Even for multiple authors, if not specified one, we will always get the first author.
-				$author = $authors[0];
+    /**
+     * Redirect mapped accounts. If user_nicename and author slug doesn't match,
+     * redirect from the user_nicename to the author slug.
+     *
+     * @param WP $query Current WordPress environment instance.
+     */
+    public static function action_parse_request($query)
+    {
+        if ( ! isset($query->query_vars['author_name'])) {
+            return $query;
+        }
 
-				if ( isset( $author->display_name ) ) {
-					return $author->display_name;
-				}
-			}
-		}
+        // No redirection needed on admin requests.
+        if (is_admin()) {
+            return $query;
+        }
 
-		return $author_meta;
-	}
+        $author = get_user_by('slug', sanitize_title($query->query_vars['author_name']));
+        if (is_a($author, 'WP_User')) {
+            $author = Author::get_by_user_id($author->ID);
+            if ($author && $query->query_vars['author_name'] !== $author->slug) {
+                if (wp_safe_redirect($author->link)) {
+                    exit;
+                }
+            }
+        }
 
-	/**
-	 * Store user id as a term meta key too, for faster querying
-	 *
-	 * @param mixed   $check      Whether or not the update should be short-circuited.
-	 * @param integer $object_id  ID for the author term object.
-	 * @param string  $meta_key   Meta key being updated.
-	 * @param string  $meta_value New meta value.
-	 */
-	public static function filter_update_term_metadata( $check, $object_id, $meta_key, $meta_value ) {
-		if ( 'user_id' !== $meta_key ) {
-			return $check;
-		}
-		$term = get_term_by( 'id', $object_id, 'author' );
-		if ( 'author' !== $term->taxonomy ) {
-			return $check;
-		}
-		$metas = get_term_meta( $object_id );
-		foreach ( $metas as $key => $meta ) {
-			if ( 0 === strpos( $key, 'user_id_' ) ) {
-				delete_term_meta( $object_id, $key );
-			}
-		}
-		if ( $meta_value ) {
-			update_term_meta( $object_id, 'user_id_' . $meta_value, 'user_id' );
-		}
+        return $query;
+    }
 
-		return $check;
-	}
+    public static function filter_ma_get_author_data($data, $field, $post)
+    {
+        $authors = get_multiple_authors($post);
 
-	/**
-	 * Redirect mapped accounts. If user_nicename and author slug doesn't match,
-	 * redirect from the user_nicename to the author slug.
-	 *
-	 * @param WP $query Current WordPress environment instance.
-	 */
-	public static function action_parse_request( $query ) {
-		if ( ! isset( $query->query_vars['author_name'] ) ) {
-			return $query;
-		}
+        if (empty($authors)) {
+            return $data;
+        }
 
-		// No redirection needed on admin requests.
-		if ( is_admin() ) {
-			return $query;
-		}
+        $field_map = [
+            'author_display_name' => 'display_name',
+            'author_email'        => 'user_email',
+            'author_login'        => 'user_login',
+        ];
 
-		$author = get_user_by( 'slug', sanitize_title( $query->query_vars['author_name'] ) );
-		if ( is_a( $author, 'WP_User' ) ) {
-			$author = Author::get_by_user_id( $author->ID );
-			if ( $author && $query->query_vars['author_name'] !== $author->slug ) {
-				if ( wp_safe_redirect( $author->link ) ) {
-					exit;
-				}
-			}
-		}
+        if ( ! isset($field_map[$field])) {
+            return $data;
+        }
 
-		return $query;
-	}
+        $field = $field_map[$field];
+        $data  = [];
+        foreach ($authors as $author) {
+            $data[] = $author->{$field};
+        }
 
-	public static function filter_pp_get_author_data( $data, $field, $post ) {
-		$authors = get_multiple_authors( $post );
+        $data = implode(', ', $data);
 
-		if ( empty( $authors ) ) {
-			return $data;
-		}
-
-		$field_map = [
-			'author_display_name' => 'display_name',
-			'author_email'        => 'user_email',
-			'author_login'        => 'user_login',
-		];
-
-		if ( ! isset( $field_map[ $field ] ) ) {
-			return $data;
-		}
-
-		$field = $field_map[ $field ];
-		$data  = [];
-		foreach ( $authors as $author ) {
-			$data[] = $author->{$field};
-		}
-
-		$data = implode( ', ', $data );
-
-		return $data;
-	}
+        return $data;
+    }
 }

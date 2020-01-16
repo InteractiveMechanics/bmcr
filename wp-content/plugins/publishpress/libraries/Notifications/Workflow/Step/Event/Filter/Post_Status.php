@@ -9,8 +9,11 @@
 
 namespace PublishPress\Notifications\Workflow\Step\Event\Filter;
 
+use PublishPress\Notifications\Traits\Dependency_Injector;
+
 class Post_Status extends Base implements Filter_Interface
 {
+    use Dependency_Injector;
 
     const META_KEY_POST_STATUS_FROM = '_psppno_poststatfrom';
 
@@ -53,21 +56,25 @@ class Post_Status extends Base implements Filter_Interface
         $options  = [];
 
         if ('from' === $group) {
-            // Add an status to represent new posts
+            // Add a status to represent new posts
             $options = [
                 [
-                    'value'    => 'auto-draft',
-                    'label'    => __('"New"', 'publishpress'),
-                    'selected' => in_array('auto-draft', $metadata[$group]),
+                    'value'    => 'new',
+                    'label'    => __('New', 'publishpress'),
+                    'selected' => in_array('new', $metadata[$group]),
                 ],
+                [
+                    'value'    => 'auto-draft',
+                    'label'    => __('Auto-draft', 'publishpress'),
+                    'selected' => in_array('auto-draft', $metadata[$group]),
+                ]
             ];
         }
 
-        foreach ($statuses as $status)
-        {
+        foreach ($statuses as $status) {
             $options[] = [
-                'value'    => $status->slug,
-                'label'    => $status->name,
+                'value'    => esc_attr($status->slug),
+                'label'    => esc_html($status->name),
                 'selected' => in_array($status->slug, $metadata[$group]),
             ];
         }
@@ -80,6 +87,7 @@ class Post_Status extends Base implements Filter_Interface
      *
      * @param string $meta_key
      * @param bool   $single
+     *
      * @return mixed
      */
     public function get_metadata($meta_key, $single = false)
@@ -99,22 +107,18 @@ class Post_Status extends Base implements Filter_Interface
     public function save_metabox_data($id, $post)
     {
         // From
-        if (!isset($_POST['publishpress_notif']["{$this->step_name}_filters"]['post_status']['from']))
-        {
+        if ( ! isset($_POST['publishpress_notif']["{$this->step_name}_filters"]['post_status']['from'])) {
             $from = [];
-        } else
-        {
+        } else {
             $from = $_POST['publishpress_notif']["{$this->step_name}_filters"]['post_status']['from'];
         }
 
         $this->update_metadata_array($id, static::META_KEY_POST_STATUS_FROM, $from);
 
         // To
-        if (!isset($_POST['publishpress_notif']["{$this->step_name}_filters"]['post_status']['to']))
-        {
+        if ( ! isset($_POST['publishpress_notif']["{$this->step_name}_filters"]['post_status']['to'])) {
             $to = [];
-        } else
-        {
+        } else {
             $to = $_POST['publishpress_notif']["{$this->step_name}_filters"]['post_status']['to'];
         }
         $this->update_metadata_array($id, static::META_KEY_POST_STATUS_TO, $to);
@@ -126,6 +130,7 @@ class Post_Status extends Base implements Filter_Interface
      *
      * @param array $query_args
      * @param array $action_args
+     *
      * @return array
      */
     public function get_run_workflow_query_args($query_args, $action_args)

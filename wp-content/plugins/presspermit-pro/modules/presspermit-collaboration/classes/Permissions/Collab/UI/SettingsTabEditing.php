@@ -219,7 +219,7 @@ class SettingsTabEditing
                     $hint = '';
                     $ui->optionCheckbox('page_parent_order', $tab, $section, $hint, '<br />');
 
-                    $hint = __('Display a custom column on Edit Posts screen for all related taxonomies which are enabled for PressPermit filtering.', 'ppce');
+                    $hint = __('Display a custom column on Edit Posts screen for all related taxonomies which are enabled for Permissions filtering.', 'ppce');
                     $ui->optionCheckbox('force_taxonomy_cols', $tab, $section, $hint, '');
 
                     $hint = __('Allows creation of a new post (of any type) for each selected user, using an existing post as the pattern.', 'ppce');
@@ -366,7 +366,7 @@ class SettingsTabEditing
                     if (defined('PP_MEDIA_LIB_UNFILTERED')) :
                         ?>
                         <div><span class="pp-important">
-                            <?php _e('The following settings are currently overridden by the constant PP_MEDIA_LIB_UNFILTERED (defined in wp-config.php or some other file you maintain). Media Library access will not be altered by PressPermit exceptions.', 'presspermit'); ?>
+                            <?php _e('The following settings are currently overridden by the constant PP_MEDIA_LIB_UNFILTERED (defined in wp-config.php or some other file you maintain). Media Library access will not be altered by Permissions exceptions.', 'presspermit'); ?>
                         </span></div><br />
                     <?php else : ?>
                         <div><span style="font-weight:bold">

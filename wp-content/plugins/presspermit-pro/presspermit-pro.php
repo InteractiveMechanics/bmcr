@@ -1,17 +1,16 @@
 <?php
 /**
- * Plugin Name: PressPermit Pro
+ * Plugin Name: PublishPress Permissions Pro
  * Plugin URI:  https://publishpress.com/presspermit
  * Description: Advanced yet accessible content permissions. Give users or groups type-specific roles. Enable or block access for specific posts or terms.
  * Author: PublishPress
  * Author URI:  https://publishpress.com/
- * Version:     2.8.8
- * Text Domain: press-permit-core
- * Domain Path: /languages/
- * Min WP Version: 4.9.7
+ * Requires at least: 4.9.7
+ * Tested up to: 5.3.2
  * Requires PHP: 5.6.20
+ * Stable tag: 2.9
  *
- * Copyright (c) 2019 PublishPress
+ * Copyright (c) 2020 PublishPress
  *
  * GNU General Public License, Free Software Foundation <https://www.gnu.org/licenses/gpl-3.0.html>
  *
@@ -31,7 +30,7 @@
  * @package     PressPermit Pro
  * @category    Core
  * @author      PublishPress
- * @copyright   Copyright (C) 2019 PublishPress. All rights reserved.
+ * @copyright   Copyright (c) 2020 PublishPress. All rights reserved.
  *
  **/
 
@@ -75,8 +74,8 @@ if (! defined('PRESSPERMIT_FILE')) {
                 return;
             }
 
-            define('PRESSPERMIT_VERSION',     '2.8.8');
-            define('PRESSPERMIT_PRO_VERSION', '2.8.8');
+            define('PRESSPERMIT_VERSION',     '2.9');
+            define('PRESSPERMIT_PRO_VERSION', '2.9');
             define('PRESSPERMIT_EDD_ITEM_ID', 21050);
 
             if (!defined('PRESSPERMIT_LEGACY_HOOKS')) {

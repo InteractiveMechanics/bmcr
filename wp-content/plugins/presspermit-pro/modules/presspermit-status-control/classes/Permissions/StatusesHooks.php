@@ -44,11 +44,32 @@ class StatusesHooks
             new Statuses\Revisionary\CapabilityFilters();
         }
 
+        add_filter('presspermit_get_post_statuses', [$this, 'fltGetPostStatuses'], 10, 4);
         add_filter('presspermit_order_statuses', [$this, 'fltOrderStatuses'], 10, 2);
 
         add_filter('user_has_cap', [$this, 'fltPublishPostsContext'], 100, 3);
 
         add_action('rest_api_init', [$this, 'actRestInit'], 1);
+    }
+
+    function fltGetPostStatuses($statuses, $args, $return, $operator) {
+        if (presspermit()->isAdministrator() || (is_multisite() && is_super_admin()) || !get_option('cme_custom_status_control')) {
+            return $statuses;
+        }
+        
+        $user = presspermit()->getUser();
+
+        // Maintain default PublishPress behavior (Permissions add-on / Capabilities Pro) for statuses that do not have custom capabilities enabled
+        foreach ($statuses as $status => $obj) {
+            if (!empty($obj->moderation) 
+            && !in_array($status, ['draft', 'future']) 
+            && !PPS::postStatusHasCustomCaps($status) 
+            && empty($user->allcaps["status_change_{$status}"])) {
+                unset($statuses[$status]);
+            }
+        }
+
+        return $statuses;
     }
 
     function fltPublishPostsContext($wp_sitecaps, $orig_reqd_caps, $args)
@@ -429,11 +450,13 @@ class StatusesHooks
 
             $wp_post_types[$post_type]->cap = (object)array_merge((array)$wp_post_types[$post_type]->cap, $type_caps);
 
+            $plural_type = \PublishPress\Permissions\Capabilities::getPlural($post_type, $wp_post_types[$post_type]);
+
             $pp->capDefs()->all_type_caps = array_merge($pp->capDefs()->all_type_caps, array_fill_keys($type_caps, true));
 
             foreach (PWP::getPostStatuses(['moderation' => true, 'post_type' => $post_type]) as $status_name) {
                 $cap_property = "set_{$status_name}_posts";
-                $wp_post_types[$post_type]->cap->$cap_property = str_replace("_posts", "_$post_type", $cap_property);
+                $wp_post_types[$post_type]->cap->$cap_property = str_replace("_posts", "_{$plural_type}", $cap_property);
             }
         }
     }

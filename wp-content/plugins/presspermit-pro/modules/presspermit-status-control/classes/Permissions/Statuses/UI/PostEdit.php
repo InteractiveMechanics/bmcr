@@ -127,7 +127,10 @@ class PostEdit
             }
 
             if (!$found && is_object($status_obj)) {
-                $return[]= (object)['slug' => $status_obj->name, 'name' => $status_obj->label];
+                // don't insert statues which PublilshPress excluded if status has default capabilities
+                if (!empty($status_obj->capability_status)) {
+                    $return[]= (object)['slug' => $status_obj->name, 'name' => $status_obj->label];
+                }
             }
         }
 

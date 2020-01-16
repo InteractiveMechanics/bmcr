@@ -1,3 +1,10 @@
+/**
+ * @package     MultipleAuthors
+ * @author      PublishPress <help@publishpress.com>
+ * @copyright   Copyright (C) 2018 PublishPress. All rights reserved.
+ * @license     GPLv2 or later
+ * @since       1.0.0
+ */
 jQuery(document).ready(function ($) {
     // Copied from ExtJS.
     window.htmlEnDeCode = (function () {
@@ -63,7 +70,7 @@ jQuery(document).ready(function ($) {
      * Based on Bylines.
      */
     $('.authors-select2.authors-search').each(function () {
-        var authorsSearch = $(this).authorsSelect2({
+        var authorsSearch = $(this).ppma_select2({
             placeholder: $(this).data('placeholder'),
             allowClear: true,
             ajax: {
@@ -95,7 +102,7 @@ jQuery(document).ready(function ($) {
         });
 
     $('.authors-select2-user-select').each(function () {
-        $(this).authorsSelect2({
+        $(this).ppma_select2({
             allowClear: true,
             placeholder: $(this).attr('placeholder'),
             ajax: {
@@ -126,10 +133,10 @@ jQuery(document).ready(function ($) {
                 return;
             }
             frame = wp.media({
-                title: authors.media_upload_title,
-                button: {
-                    text: authors.media_upload_button
-                },
+                // title: 'title',
+                // button: {
+                //     text: 'select'
+                // },
                 multiple: false,
                 library: {
                     type: 'image'
@@ -236,7 +243,9 @@ jQuery(document).ready(function ($) {
 
     if ($mappedUser.length > 0) {
         $mappedUser.on('change', function () {
-            $('#tag-name').val($mappedUser[0].options[$mappedUser[0].selectedIndex].text);
+            if ($('#tag-name').val() == '') {
+                $('#tag-name').val($mappedUser[0].options[$mappedUser[0].selectedIndex].text);
+            }
         });
     }
 
@@ -250,25 +259,21 @@ jQuery(document).ready(function ($) {
         return true;
     });
 
-    $('.chosen-select').chosen({
-        'width': '95%'
-    });
-
     /**
      * Displays a confirmation popup before clicking on the restore authors buttons.
-      */
+     */
 
     var buttons = [
-        '#publishpress_delete_mapped_authors',
-        '#publishpress_delete_guest_authors',
-        '#publishpress_create_post_authors',
-        '#publishpress_create_role_authors'
+        '#create_post_authors',
+        '#create_role_authors',
+        '#delete_mapped_authors',
+        '#delete_guest_authors',
     ];
     var msg;
 
-    $.each(buttons, function(index, item) {
+    $.each(buttons, function (index, item) {
         $(item).click(function (event) {
-            msg = 'confirm_' + item.replace('#publishpress_', '');
+            msg = 'confirm_' + item.replace('#', '');
             if (confirm(MultipleAuthorsStrings[msg])) {
                 return true;
             }
@@ -279,7 +284,7 @@ jQuery(document).ready(function ($) {
     });
 });
 
-if (typeof(console) === 'undefined') {
+if (typeof (console) === 'undefined') {
     var console = {};
     console.log = console.error = function () {};
 }
